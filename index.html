@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Victor Kauê - Desenvolvedor</title>
+    
+    <meta name="description" content="Portfólio de Victor Kauê - Desenvolvedor Full Stack">
+    <meta name="author" content="Victor Kauê">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +23,13 @@
 
     <header class="navbar">
         <div class="container">
-            <a href="#inicio" class="nav-brand" data-translate-key="nav_brand">Victor Dev ✨</a>
+            <a href="#inicio" class="nav-brand" data-translate-key="nav_brand">Victor Kauê</a>
+            
+            <div class="nav-actions">
+                <button id="theme-toggle" aria-label="Alternar tema" title="Alternar tema">
+                    <i data-lucide="sun" class="theme-icon"></i>
+                </button>
+            </div>
             
             <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Menu">
                 <span class="hamburger-line"></span>
@@ -30,13 +39,14 @@
             
             <nav class="nav-menu-wrapper">
                 <ul class="nav-menu">
-                    <li><a href="#inicio" data-translate-key="nav_home" class="nav-link">🏠 Início</a></li>
-                    <li><a href="#sobre" data-translate-key="nav_about" class="nav-link">👨‍💻 Sobre</a></li>
-                    <li><a href="#tecnologias" data-translate-key="nav_tech" class="nav-link">⚡ Tecnologias</a></li>
-                    <li><a href="#ferramentas" data-translate-key="nav_tools" class="nav-link">🛠️ Ferramentas</a></li>
-                    <li><a href="#projetos" data-translate-key="nav_projects" class="nav-link">🚀 Projetos</a></li>
-                    <li><a href="#repositorios" data-translate-key="nav_repos" class="nav-link">📦 Repositórios</a></li>
-                    <li><a href="#contato" data-translate-key="nav_contact" class="nav-link">💬 Contato</a></li>
+                    <li><a href="#inicio" data-translate-key="nav_home" class="nav-link">Início</a></li>
+                    <li><a href="#sobre" data-translate-key="nav_about" class="nav-link"> Sobre</a></li>
+                    <li><a href="#tecnologias" data-translate-key="nav_tech" class="nav-link">Tecnologias</a></li>
+                    <li><a href="#ferramentas" data-translate-key="nav_tools" class="nav-link"> Ferramentas</a></li>
+                    <li><a href="#projetos" data-translate-key="nav_projects" class="nav-link"> Projetos</a></li>
+                    <li><a href="#projetos-reais" class="nav-link"> Experiências</a></li>
+                    <li><a href="#repositorios" data-translate-key="nav_repos" class="nav-link"> Repositórios</a></li>
+                    <li><a href="#contato" data-translate-key="nav_contact" class="nav-link"> Contato</a></li>
                 </ul>
             </nav>
         </div>
@@ -45,23 +55,15 @@
     <main>
         <section id="inicio" class="hero">
             <div class="container text-center">
-                <div class="floating-emojis">
-                    <span class="emoji">🚀</span>
-                    <span class="emoji">💻</span>
-                    <span class="emoji">⚡</span>
-                    <span class="emoji">🎮</span>
-                    <span class="emoji">☕</span>
-                    <span class="emoji">🎯</span>
-                </div>
                 <img src="images/victor.webp" alt="Foto de Victor Kauê" class="profile-pic">
-                <h1 class="hero-title">Victor Kauê 👋</h1>
+                <h1 class="hero-title">Victor Kauê</h1>
                 <p class="hero-subtitle">
                     <span data-translate-key="hero_i_build">Desenvolvedor Full Stack | </span><span id="typed-text"></span>
                 </p>
                 <div class="hero-badges">
-                    <span class="badge">🎓 Estudante GTI</span>
-                    <span class="badge">🎮 Ghost Gamer</span>
-                    <span class="badge">☁️ IA Enthusiast</span>
+                    <span class="badge"> Estudante GTI</span>
+                    <span class="badge"> Ghost Gamer</span>
+                    <span class="badge"> IA Enthusiast</span>
                 </div>
             </div>
         </section>
@@ -70,16 +72,16 @@
             <div class="container">
                 <h2 class="section-title" data-translate-key="about_title">Sobre Mim</h2>
                 <p data-translate-key="about_p1">Olá! Prazer, eu me chamo Victor Kauê, mas pode me chamar de KAUÊ 👋</p>
-                <p data-translate-key="about_p2">🎓 Estudante de Gestão da Tecnologia da Informação (GTI)</p>
-                <p data-translate-key="about_p3">💡 Atualmente explorando novas tecnologias em Inteligência Artificial, Django, Python e Java</p>
-                <p data-translate-key="about_p4">🎮 Gamer nas horas vagas — também conhecido como Ghost</p>
-                <p data-translate-key="about_p5">🤝 Buscando sempre evoluir e colaborar em projetos desafiadores!</p>
+                <p data-translate-key="about_p2"> Atualmente, sou estudante de Gestão da Tecnologia da Informação (GTI)</p>
+                <p data-translate-key="about_p3"> Atualmente explorando novas tecnologias em Inteligência Artificial, Django, Python e Java</p>
+                <p data-translate-key="about_p4"> Gamer nas horas vagas — também conhecido como Ghost</p>
+                <p data-translate-key="about_p5"> Buscando sempre evoluir e colaborar em projetos desafiadores!</p>
             </div>
         </section>
 
         <section id="tecnologias" class="content-section">
             <div class="container">
-                <h2 class="section-title" data-translate-key="tech_title">⚙️ Tecnologias que uso no dia a dia</h2>
+                <h2 class="section-title" data-translate-key="tech_title"> Tecnologias que uso no dia a dia</h2>
                 <div class="tech-grid">
                     <div class="tech-card"> <i class="devicon-html5-plain-wordmark colored"></i> <span>HTML5</span> </div>
                     <div class="tech-card"> <i class="devicon-css3-plain-wordmark colored"></i> <span>CSS3</span> </div>
@@ -99,7 +101,7 @@
 
         <section id="ferramentas" class="content-section">
             <div class="container">
-                <h2 class="section-title" data-translate-key="tools_title">💼 IDEs e Ferramentas que utilizo</h2>
+                <h2 class="section-title" data-translate-key="tools_title"> IDEs e Ferramentas que utilizo</h2>
                 <div class="tech-grid">
                     <div class="tech-card"> <i class="devicon-vscode-plain colored"></i> <span>VS Code</span> </div>
                     <div class="tech-card tool-card"> 
@@ -206,6 +208,53 @@
             </div>
         </section>
 
+        <section id="projetos-reais" class="content-section">
+            <div class="container">
+                <h2 class="section-title"> Projetos em que Participei</h2>
+                
+                <div class="card-grid">
+                    <div class="project-card">
+                        <div class="project-info">
+                            <h3>🏫 SIGREF - Sistema Integrado de Gerência Regional de Educação de Floresta</h3>
+                            <p>O SIGREF é uma iniciativa voltada para a educação e comunicação entre as escolas da Região de Itaparica para a GreFloresta, com foco em conectar os indivíduos e sanar problemas como a falta de integração.</p>
+                            <p style="margin-top: 1rem;">Participei no desenvolvimento da plataforma digital educacional, contribuindo como <strong>desenvolvedor Full-Stack Django</strong> e com melhorias na experiência do usuário.</p>
+                            <div class="project-tags" style="margin-top: 1rem;">
+                                <span class="tag">Django</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">Full-Stack</span>
+                                <span class="tag">Educação</span>
+                            </div>
+                            <div class="project-links" style="margin-top: 1rem;">
+                                <a href="https://www.grefloresta.com.br/" target="_blank">Acesse o site <i data-lucide="external-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-info">
+                            <h3> NTIDI</h3>
+                            <p>A NTIDI é uma empresa especializada em soluções de software personalizadas, oferecendo serviços em Segurança, Inteligência Artificial, Cloud e Desenvolvimento.</p>
+                            <p style="margin-top: 1rem;">Atuei na criação do zero e manutenção de aplicações web, integração de APIs e no aprimoramento de pipelines técnicos para garantir qualidade e escalabilidade das entregas. Também contribui como <strong>desenvolvedor Full-Stack Django</strong> e com melhorias na experiência do usuário.</p>
+                            <div class="project-tags" style="margin-top: 1rem;">
+                                <span class="tag">Django</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">APIs</span>
+                                <span class="tag">Cloud</span>
+                                <span class="tag">Full-Stack</span>
+                            </div>
+                            <div class="project-links" style="margin-top: 1rem;">
+                                <a href="https://www.ntidi.com.br/" target="_blank">Acesse o site <i data-lucide="external-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p style="text-align: center; font-style: italic; color: var(--text-muted-color); margin-top: 2rem; font-size: 1rem;">
+                     Cada projeto representa uma etapa essencial da minha trajetória — aprendizado, colaboração e impacto real através da tecnologia.
+                </p>
+            </div>
+        </section>
+
         <section id="repositorios" class="content-section">
             <div class="container">
                 <h2 class="section-title" data-translate-key="repos_title">📦 Repositórios Públicos</h2>
@@ -308,6 +357,50 @@
             </div>
         </section>
 
+        <section id="depoimentos" class="testimonials-section content-section">
+            <div class="container">
+                <h2 class="section-title">💬 O que dizem sobre mim</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Victor demonstrou grande habilidade técnica e comprometimento no desenvolvimento da plataforma. Sua contribuição foi essencial para o sucesso do projeto."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👨‍💼</div>
+                            <div class="author-info">
+                                <strong>Equipe SIGREF</strong>
+                                <span>Sistema Educacional</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Profissional dedicado com excelente capacidade de resolver problemas complexos. Sempre busca as melhores soluções para cada desafio."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">🧠</div>
+                            <div class="author-info">
+                                <strong>Equipe NTIDI</strong>
+                                <span>Desenvolvimento de Software</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Ótimo colega de equipe, sempre disposto a ajudar e compartilhar conhecimento. Sua paixão por tecnologia é inspiradora!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">🎓</div>
+                            <div class="author-info">
+                                <strong>Colegas de Curso</strong>
+                                <span>GTI - Universidade</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="contato" class="content-section">
             <div class="container text-center">
                 <h2 class="section-title" data-translate-key="contact_title">Conecte-se Comigo</h2>
@@ -335,9 +428,14 @@
                     <i data-lucide="mail"></i>
                 </a>
             </div>
-            <p data-translate-key="footer_copy">© 2025 Victor Kauê. Feito com ❤️ e muito ☕</p>
+            <p data-translate-key="footer_copy">© 2025 Victor Kauê. Feito com muito ☕</p>
         </div>
     </footer>
+
+    <!-- Botão Voltar ao Topo -->
+    <button id="back-to-top" aria-label="Voltar ao topo">
+        <i data-lucide="arrow-up"></i>
+    </button>
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="js/main.js"></script>

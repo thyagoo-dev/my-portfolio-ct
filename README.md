@@ -1,8 +1,27 @@
-# 🎨 Portfólio Victor Kauê - Desenvolvedor Full Stack Python
+# 💼 Portfólio de Victor Kauê - Desenvolvedor Full Stack
 
-Portfólio pessoal moderno com design minimalista e cores neutras, focado em UX excepcional.
+Portfólio profissional e interativo com design moderno, apresentando projetos, habilidades e experiências reais. Totalmente responsivo com dark/light mode e animações suaves.
 
 > "Faça o teu melhor, na condição que você tem, enquanto você não tem condições melhores para fazer melhor ainda!" - Mario Sergio Cortella
+
+## 🚀 Novas Funcionalidades Implementadas
+
+### ✨ Melhorias Profissionais
+- 🌓 **Dark/Light Mode Toggle** - Alternância de tema visível com persistência
+- 📊 **Seção de Estatísticas** - Contadores animados mostrando experiência e projetos
+- 💪 **Skills com Níveis** - Barras de progresso categorizadas (Frontend, Backend, DevOps)
+- 🏆 **Certificações** - Seção destacando conquistas e formação
+- 💬 **Depoimentos** - Feedback de colegas e equipes de projetos
+- 🎯 **Status de Disponibilidade** - Indicador visual em tempo real
+- 🔗 **CTAs Estratégicos** - Botões de ação no hero section
+- 🎨 **Hover Effects Avançados** - Micro-interações nos cards
+- 📱 **100% Responsivo** - Adaptável para todos os dispositivos
+
+### 🎯 SEO & Performance
+- Meta tags completas (Open Graph, Twitter Cards)
+- Favicon customizado
+- Otimização de performance
+- Acessibilidade aprimorada (ARIA labels)
 
 ## 👨‍💻 Sobre
 
