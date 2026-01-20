@@ -86,29 +86,46 @@
         </section>
 
         <!-- SOBRE -->
-        <section id="sobre" class="content-section paper-section">
+        <section id="sobre" class="content-section bg-white">
             <div class="container">
                 <h2 class="section-title">Sobre Mim</h2>
 
-                <div class="paper-box">
-                    <p><strong>Quem eu sou</strong></p>
-                    <ul>
-                        <li>Estudante de GTI</li>
-                        <li>Desenvolvedor Full Stack</li>
-                        <li>Apaixonado por tecnologia e IA</li>
-                    </ul>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <h3>Quem eu sou</h3>
+                        <p>Estudante de GTI e Desenvolvedor Full Stack apaixonado por criar soluções que fazem a diferença.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <i data-lucide="rocket"></i>
+                        </div>
+                        <h3>Minha Missão</h3>
+                        <p>Transformar ideias em código, construindo aplicações modernas e escaláveis com as melhores tecnologias.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <i data-lucide="heart"></i>
+                        </div>
+                        <h3>Paixões</h3>
+                        <p>Tecnologia, Inteligência Artificial e resolver problemas complexos com soluções elegantes.</p>
+                    </div>
+                </div>
 
-                    <p class="paper-quote">
-                        "Busco sempre evoluir e colaborar em projetos desafiadores."
-                    </p>
+                <div class="about-quote">
+                    <i data-lucide="quote"></i>
+                    <p>"Busco sempre evoluir e colaborar em projetos desafiadores."</p>
                 </div>
             </div>
         </section>
 
         <!-- TECNOLOGIAS -->
-        <section id="tecnologias" class="content-section">
+        <section id="tecnologias" class="content-section bg-gradient">
             <div class="container">
-                <h2 class="section-title" data-translate-key="tech_title"> Tecnologias que uso no dia a dia</h2>
+                <h2 class="section-title light">Tecnologias</h2>
+                <p class="section-subtitle">Tecnologias que uso no dia a dia</p>
                 <div class="tech-grid">
                     <div class="tech-card"> <i class="devicon-html5-plain-wordmark colored"></i> <span>HTML5</span> </div>
                     <div class="tech-card"> <i class="devicon-css3-plain-wordmark colored"></i> <span>CSS3</span> </div>
@@ -126,9 +143,10 @@
             </div>
         </section>
 
-        <section id="ferramentas" class="content-section">
+        <section id="ferramentas" class="content-section bg-light">
             <div class="container">
-                <h2 class="section-title" data-translate-key="tools_title"> IDEs e Ferramentas que utilizo</h2>
+                <h2 class="section-title">Ferramentas</h2>
+                <p class="section-subtitle">IDEs e ferramentas que utilizo</p>
                 <div class="tech-grid">
                     <div class="tech-card"> <i class="devicon-vscode-plain colored"></i> <span>VS Code</span> </div>
                     <div class="tech-card tool-card"> 
@@ -175,76 +193,151 @@
         </section>
 
         <!-- PROJETOS -->
-        <section id="projetos" class="content-section paper-section">
+        <section id="projetos" class="content-section bg-white">
             <div class="container">
                 <h2 class="section-title">Projetos</h2>
+                <p class="section-subtitle">Alguns dos meus trabalhos recentes</p>
 
-                <div class="paper-cards">
-                    <div class="paper-card">
-                        <div class="paper-image">IMAGEM PROJETO</div>
-                        <h3>VMEDPharma</h3>
-                        <p>React • JavaScript</p>
-                        <a href="https://github.com/Victorkaue333/VMEDPharma" target="_blank" rel="noopener noreferrer">Ver Repositório</a>
-                    </div>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <a href="https://github.com/Victorkaue333/VMEDPharma" target="_blank" rel="noopener noreferrer" class="project-link" title="Ver projeto VMEDPharma no GitHub" aria-label="Ver projeto VMEDPharma no GitHub">
+                                    <i data-lucide="external-link"></i>
+                                </a>
+                            </div>
+                            <span class="project-placeholder">
+                                <i data-lucide="folder-code"></i>
+                            </span>
+                        </div>
+                        <div class="project-content">
+                            <h3>VMEDPharma</h3>
+                            <p>Sistema de gerenciamento farmacêutico com interface moderna e funcionalidades completas.</p>
+                            <div class="project-tags">
+                                <span>React</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </article>
 
-                    <div class="paper-card">
-                        <div class="paper-image">IMAGEM PROJETO</div>
-                        <h3>Projeto CEDEP</h3>
-                        <p>HTML • CSS • JS</p>
-                        <a href="https://github.com/Victorkaue333/Projeto-CEDEP" target="_blank" rel="noopener noreferrer">Ver Repositório</a>
-                    </div>
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <a href="https://github.com/Victorkaue333/Projeto-CEDEP" target="_blank" rel="noopener noreferrer" class="project-link" title="Ver projeto CEDEP no GitHub" aria-label="Ver projeto CEDEP no GitHub">
+                                    <i data-lucide="external-link"></i>
+                                </a>
+                            </div>
+                            <span class="project-placeholder">
+                                <i data-lucide="folder-code"></i>
+                            </span>
+                        </div>
+                        <div class="project-content">
+                            <h3>Projeto CEDEP</h3>
+                            <p>Plataforma educacional desenvolvida para facilitar o acesso à informação e aprendizado.</p>
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </article>
 
-                    <div class="paper-card">
-                        <div class="paper-image">IMAGEM PROJETO</div>
-                        <h3>To Do New</h3>
-                        <p>HTML • CSS • JS</p>
-                        <a href="https://github.com/Victorkaue333/Projeto_to_do_New" target="_blank" rel="noopener noreferrer">Ver Repositório</a>
-                    </div>
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <a href="https://github.com/Victorkaue333/Projeto_to_do_New" target="_blank" rel="noopener noreferrer" class="project-link" title="Ver projeto To Do New no GitHub" aria-label="Ver projeto To Do New no GitHub">
+                                    <i data-lucide="external-link"></i>
+                                </a>
+                            </div>
+                            <span class="project-placeholder">
+                                <i data-lucide="folder-code"></i>
+                            </span>
+                        </div>
+                        <div class="project-content">
+                            <h3>To Do New</h3>
+                            <p>Aplicativo de gerenciamento de tarefas com design intuitivo e experiência fluida.</p>
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="view-more">
+                    <a href="https://github.com/Victorkaue333" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                        <i data-lucide="github"></i>
+                        Ver mais projetos
+                    </a>
                 </div>
             </div>
         </section>
 
         <!-- EXPERIÊNCIAS -->
-        <section id="projetos-reais" class="content-section paper-section">
+        <section id="projetos-reais" class="content-section bg-gradient">
             <div class="container">
-                <h2 class="section-title">Experiências</h2>
+                <h2 class="section-title light">Experiências</h2>
+                <p class="section-subtitle light">Projetos reais com impacto</p>
 
-                <div class="paper-experience">
-                    <h3>SIGREF</h3>
-                    <ul>
-                        <li>Sistema educacional</li>
-                        <li>Full Stack Django</li>
-                        <li>Impacto real</li>
-                    </ul>
-                </div>
+                <div class="experience-timeline">
+                    <div class="experience-item">
+                        <div class="experience-icon">
+                            <i data-lucide="briefcase"></i>
+                        </div>
+                        <div class="experience-content">
+                            <h3>SIGREF</h3>
+                            <span class="experience-role">Desenvolvedor Full Stack</span>
+                            <ul>
+                                <li>Sistema educacional completo para gestão de refeitório</li>
+                                <li>Desenvolvimento Full Stack com Django e PostgreSQL</li>
+                                <li>Impacto real no dia a dia de centenas de usuários</li>
+                            </ul>
+                        </div>
+                    </div>
 
-                <div class="paper-experience">
-                    <h3>NTIDI</h3>
-                    <ul>
-                        <li>Sistemas web e APIs</li>
-                        <li>Cloud e escalabilidade</li>
-                        <li>Full Stack Django</li>
-                    </ul>
+                    <div class="experience-item">
+                        <div class="experience-icon">
+                            <i data-lucide="code-2"></i>
+                        </div>
+                        <div class="experience-content">
+                            <h3>NTIDI</h3>
+                            <span class="experience-role">Desenvolvedor Full Stack</span>
+                            <ul>
+                                <li>Desenvolvimento de sistemas web e APIs RESTful</li>
+                                <li>Trabalho com cloud computing e escalabilidade</li>
+                                <li>Stack completa com Django, Docker e PostgreSQL</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- CONTATO -->
-        <section id="contato" class="content-section paper-section">
+        <section id="contato" class="content-section bg-white">
             <div class="container text-center">
                 <h2 class="section-title">Vamos Conversar?</h2>
+                <p class="section-subtitle">Estou disponível para novas oportunidades e projetos interessantes</p>
 
-                <p>Estou disponível para novas oportunidades.</p>
-
-                <div class="contact-actions">
-                    <a href="mailto:kaue.alves.pg@gmail.com" class="btn btn-primary">
-                        Email
+                <div class="contact-cards">
+                    <a href="mailto:kaue.alves.pg@gmail.com" class="contact-card">
+                        <div class="contact-icon email">
+                            <i data-lucide="mail"></i>
+                        </div>
+                        <span>Email</span>
                     </a>
-                    <a href="https://www.linkedin.com/in/victor-kauê-419926364/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                        LinkedIn
+                    <a href="https://www.linkedin.com/in/victor-kauê-419926364/" target="_blank" rel="noopener noreferrer" class="contact-card">
+                        <div class="contact-icon linkedin">
+                            <i data-lucide="linkedin"></i>
+                        </div>
+                        <span>LinkedIn</span>
                     </a>
-                    <a href="https://github.com/Victorkaue333" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                        GitHub
+                    <a href="https://github.com/Victorkaue333" target="_blank" rel="noopener noreferrer" class="contact-card">
+                        <div class="contact-icon github">
+                            <i data-lucide="github"></i>
+                        </div>
+                        <span>GitHub</span>
                     </a>
                 </div>
             </div>
@@ -254,7 +347,9 @@
     <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Victor Kauê. Todos os direitos reservados.</p>
+            <div class="footer-content">
+                <p>&copy; 2026 Victor Kauê. Feito com <span class="heart">❤</span> e muito código.</p>
+            </div>
         </div>
     </footer>
 
