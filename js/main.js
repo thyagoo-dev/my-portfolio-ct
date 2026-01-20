@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 2. LÓGICA PARA ANIMAÇÃO DE SCROLL (FADE-IN)
-    const sections = document.querySelectorAll('.content-section');
+    const contentSections = document.querySelectorAll('.content-section');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -39,38 +39,43 @@ document.addEventListener('DOMContentLoaded', () => {
         threshold: 0.15,
         rootMargin: '0px 0px -50px 0px'
     });
-    sections.forEach(section => observer.observe(section));
+    contentSections.forEach(section => observer.observe(section));
 
-    // 3. LÓGICA DO CURSOR PERSONALIZADO
-    const cursor = document.querySelector('.custom-cursor');
-    window.addEventListener('mousemove', e => {
-        cursor.style.top = `${e.clientY}px`;
-        cursor.style.left = `${e.clientX}px`;
-    });
-
-    // Adiciona classe ao cursor quando sobre elementos clicáveis
-    document.querySelectorAll('a, button').forEach(el => {
-        el.addEventListener('mouseover', () => cursor.style.transform = 'translate(-50%, -50%) scale(1.5)');
-        el.addEventListener('mouseout', () => cursor.style.transform = 'translate(-50%, -50%) scale(1)');
-    });
-
-    // 4. ESCONDER NAVBAR AO ROLAR PARA BAIXO
+    // 3. NAVBAR SCROLL EFFECTS E ACTIVE LINK
     let lastScrollTop = 0;
     const navbar = document.querySelector('.navbar');
-    let scrollTimeout;
+    const navLinks = document.querySelectorAll('.nav-menu a');
+    const sections = document.querySelectorAll('section[id]');
     
+    // Adiciona classe scrolled à navbar
     window.addEventListener('scroll', function() {
         let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         
-        clearTimeout(scrollTimeout);
-        scrollTimeout = setTimeout(() => {
-            if (scrollTop > lastScrollTop && scrollTop > 100) {
-                navbar.style.top = '-100px';
-            } else {
-                navbar.style.top = '0';
+        // Adiciona classe scrolled quando rola
+        if (scrollTop > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        
+        // Atualiza link ativo baseado na seção visível
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (scrollTop >= (sectionTop - 100)) {
+                current = section.getAttribute('id');
             }
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-        }, 50);
+        });
+        
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+        
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
     });
 
     // 5. SMOOTH SCROLL PARA LINKS DE NAVEGAÇÃO
@@ -113,38 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 7. TOGGLE DARK/LIGHT MODE
-    const themeToggle = document.getElementById('theme-toggle');
-    const html = document.documentElement;
-    
-    // Carregar preferência salva
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    html.setAttribute('data-theme', savedTheme);
-    updateThemeIcon(savedTheme);
-    
-    if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = html.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
-            html.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            updateThemeIcon(newTheme);
-            
-            // Reinicializar ícones após mudança de tema
-            lucide.createIcons();
-        });
-    }
-    
-    function updateThemeIcon(theme) {
-        const icon = themeToggle?.querySelector('.theme-icon');
-        if (icon) {
-            icon.setAttribute('data-lucide', theme === 'dark' ? 'sun' : 'moon');
-            lucide.createIcons();
-        }
-    }
-
-    // 8. BOTÃO VOLTAR AO TOPO
+    // 7. BOTÃO VOLTAR AO TOPO
     const backToTopButton = document.getElementById('back-to-top');
     
     window.addEventListener('scroll', () => {
