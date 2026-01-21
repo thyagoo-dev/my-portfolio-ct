@@ -120,18 +120,6 @@ git clone https://github.com/Victorkaue333/meu_portifolio.git
    - GitHub Pages
    - Vercel
 
-## 🎨 Personalização
-
-As cores podem ser facilmente personalizadas editando as variáveis CSS em `:root`:
-
-```css
-:root {
-    --bg-color: #0F0F0F;
-    --text-color: #E8E8E8;
-    --accent-color: #6B7280;
-    /* ... */
-}
-```
 
 ## 🌐 Conecte-se Comigo
 
