@@ -141,5 +141,5 @@ As cores podem ser facilmente personalizadas editando as variáveis CSS em `:roo
 
 ---
 
-Feito com ❤️ por Victor Kauê
+Feito por Victor Kauê
 
