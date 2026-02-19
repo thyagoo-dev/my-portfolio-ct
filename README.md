@@ -47,6 +47,7 @@ Olá! Prazer, eu me chamo Victor Kauê, mas pode me chamar de KAUÊ 👋
 - **Scroll suave** para navegação interna
 
 ### 📱 Responsividade
+
 - Design totalmente responsivo
 - Otimizado para mobile, tablet e desktop
 - Grid adaptativo para tecnologias e projetos
