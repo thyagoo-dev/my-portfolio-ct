@@ -4,9 +4,8 @@ Apresento a vocês o meu portfólio profissional e interativo com design moderno
 
 > "Faça o teu melhor, na condição que você tem, enquanto você não tem condições melhores para fazer melhor ainda!" - Mario Sergio Cortella
 
-## 🚀 Novas Funcionalidades Implementadas
+## 🚀Funcionalidades Implementadas
 
-### ✨ Melhorias Profissionais
 
 - 📊 **Seção de Estatísticas** - Contadores animados mostrando experiência e projetos
 - 💪 **Skills com Níveis** - Barras de progresso categorizadas (Frontend, Backend, DevOps)
