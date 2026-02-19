@@ -43,7 +43,9 @@ Olá! Prazer, eu me chamo Victor Kauê, mas pode me chamar de KAUÊ 👋
 - Grid adaptativo para tecnologias e projetos
 
 
-## 📂 Estrutura do Projeto
+## 📂 Estrutura do Projeto:
+
+O projeto está dividio em pastas nesse formato aqui abaixo:
 
 ```
 meu_portifolio/
