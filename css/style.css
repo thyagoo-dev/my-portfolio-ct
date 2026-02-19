@@ -824,6 +824,24 @@ main {
     color: var(--accent-color);
 }
 
+/* DIFERENCIAIS */
+#diferenciais .about-card {
+    text-align: left;
+    padding: 1.8rem;
+}
+
+#diferenciais h3 {
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+/* GitHub Stats */
+img {
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+}
+
+
 /* ========== CONTACT CARDS ========== */
 .contact-cards {
     display: flex;
