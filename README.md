@@ -85,11 +85,6 @@ meu_portifolio/
 
 ## 🚀 Onde posso ver?
 
-1. Clone o repositório
-```bash
-git clone https://github.com/Victorkaue333/meu_portifolio.git
-```
-
 2. Abra `index.html` no navegador
 
 3. Deploy em:
