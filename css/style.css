@@ -287,8 +287,8 @@ main {
 }
 
 .hero-photo img {
-    width: 280px;
-    height: 280px;
+    width: 380px;
+    height: 380px;
     object-fit: cover;
     border-radius: 50%;
     border: 5px solid #F97316;
