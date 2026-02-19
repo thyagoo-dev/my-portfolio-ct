@@ -85,8 +85,7 @@ meu_portifolio/
 
 ## 🚀 Onde posso ver?
 Deploy em:
-   - [Netlify](https://victorkaue.netlify.app/) (atual)
-   - GitHub Pages
+   - [Netlify](https://victorkaue.netlify.app/) (atual)  
    - Vercel
 
 
