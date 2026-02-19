@@ -84,13 +84,6 @@ Sistema desenvolvido para gestão educacional
 Aplicação de lista de tarefas atualizada com interface moderna
 - [Ver no GitHub](https://github.com/Victorkaue333/Projeto_to_do_New)
 
-## 📦 Outros Repositórios Públicos
-
-- **[Projeto-PeNaEstrada](https://github.com/Victorkaue333/Projeto-PeNaEstrada)** - Sistema de gerenciamento e acompanhamento
-
-
-
-
 
 ## 📂 Estrutura do Projeto
 
