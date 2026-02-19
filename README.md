@@ -71,3 +71,7 @@ O deploy desse projeto atualmente está na plataforma da Netlify:
 ---
 
 Esse projeto foi feito por Victor Kauê
+
+## Frase motivacional escolhida pelo desenvolvedor:
+
+> "Faça o teu melhor, na condição que você tem, enquanto você não tem condições melhores para fazer melhor ainda!" - Mario Sergio Cortella
