@@ -7,6 +7,7 @@ Portfólio profissional e interativo com design moderno, apresentando projetos, 
 ## 🚀 Novas Funcionalidades Implementadas
 
 ### ✨ Melhorias Profissionais
+
 - 📊 **Seção de Estatísticas** - Contadores animados mostrando experiência e projetos
 - 💪 **Skills com Níveis** - Barras de progresso categorizadas (Frontend, Backend, DevOps)
 - 🏆 **Certificações** - Seção destacando conquistas e formação
