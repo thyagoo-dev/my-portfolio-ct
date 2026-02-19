@@ -76,9 +76,6 @@ Olá! Prazer, eu me chamo Victor Kauê, mas pode me chamar de KAUÊ 👋
 Projeto desenvolvido com React para gestão farmacêutica
 - [Ver no GitHub](https://github.com/Victorkaue333/VMEDPharma)
 
-### Projeto CEDEP
-Sistema desenvolvido para gestão educacional
-- [Ver no GitHub](https://github.com/Victorkaue333/Projeto-CEDEP)
 
 
 
