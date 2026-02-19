@@ -97,4 +97,4 @@ O deploy desse projeto atualmente está na plataforma da Netlify:
 
 ---
 
-Feito por Victor Kauê
+Esse projeto foi feito por Victor Kauê
