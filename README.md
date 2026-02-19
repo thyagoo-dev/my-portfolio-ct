@@ -8,14 +8,14 @@ Apresento a vocês o meu portfólio profissional e interativo com design moderno
 
 O projeto atualmente utiliza as seguintes tecnologias:
 
-- 📊 **Seção de Estatísticas** - 
-- 💪 **Skills com Níveis** - 
-- 🏆 **Certificações** - 
-- 💬 **Depoimentos** - 
-- 🎯 **Status de Disponibilidade** -  
-- 🔗 **CTAs Estratégicos** - 
-- 🎨 **Hover Effects Avançados** - 
-- 📱 **100% Responsivo** - 
+- 📊 **Seção de Estatísticas**
+- 💪 **Skills com Níveis**
+- 🏆 **Certificações**
+- 💬 **Depoimentos**
+- 🎯 **Status de Disponibilidade**
+- 🔗 **CTAs Estratégicos**
+- 🎨 **Hover Effects Avançados**
+- 📱 **100% Responsivo**
 
 ### 🎯 SEO & Performance
 
