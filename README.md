@@ -44,26 +44,6 @@ Olá! Prazer, eu me chamo Victor Kauê, mas pode me chamar de KAUÊ 👋
 - Otimizado para mobile, tablet e desktop
 - Grid adaptativo para tecnologias e projetos
 
-## 🛠️ Tecnologias que Uso
-
-### ⚙️ Tecnologias do Dia a Dia
-
-- **Frontend**: HTML5, CSS3, JavaScript, Bootstrap
-- **Backend**: Python, Django, Java
-- **Mobile**: Flutter (em aprendizado)
-- **Banco de Dados**: PostgreSQL, MySQL, MongoDB
-- **DevOps**: Docker, Git
-
-### 💼 IDEs e Ferramentas
-
-- VS Code
-- Bruno (API Testing)
-- Docker Desktop
-- GitHub Desktop
-- IntelliJ IDEA
-- DBeaver
-- Android Studio
-- MySQL Workbench
 
 ## 📂 Estrutura do Projeto
 
