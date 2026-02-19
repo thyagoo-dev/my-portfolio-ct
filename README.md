@@ -8,9 +8,9 @@ Apresento a vocês o meu portfólio profissional e interativo com design moderno
 
 O projeto atualmente utiliza as seguintes tecnologias:
 
-- 📊 **Seção de Estatísticas**
-- 💪 **Skills com Níveis**
-- 🏆 **Certificações**
+- 📊 **HTML**
+- 💪 **CSS**
+- 🏆 **JavaScript**
 - 💬 **Depoimentos**
 - 🎯 **Status de Disponibilidade**
 - 🔗 **CTAs Estratégicos**
