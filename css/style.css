@@ -601,7 +601,7 @@ main {
 /* ========== PROJECTS SECTION ========== */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
@@ -628,6 +628,19 @@ main {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+}
+
+.project-logo {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    z-index: 1;
+    transition: all var(--transition-normal);
+}
+
+.project-card:hover .project-logo {
+    opacity: 0.2;
 }
 
 .project-placeholder {
@@ -1302,6 +1315,13 @@ img {
 }
 
 /* ========== RESPONSIVIDADE ========== */
+
+/* Tablets e telas médias */
+@media (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
 /* Tablets */
 @media (max-width: 768px) {
