@@ -61,6 +61,7 @@ Olá! Prazer, eu me chamo Victor Kauê, mas pode me chamar de KAUÊ 👋
 - **DevOps**: Docker, Git
 
 ### 💼 IDEs e Ferramentas
+
 - VS Code
 - Bruno (API Testing)
 - Docker Desktop
