@@ -80,9 +80,7 @@ Projeto desenvolvido com React para gestão farmacêutica
 Sistema desenvolvido para gestão educacional
 - [Ver no GitHub](https://github.com/Victorkaue333/Projeto-CEDEP)
 
-### Projeto To Do New
-Aplicação de lista de tarefas atualizada com interface moderna
-- [Ver no GitHub](https://github.com/Victorkaue333/Projeto_to_do_New)
+
 
 
 ## 📂 Estrutura do Projeto
