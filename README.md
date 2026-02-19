@@ -11,7 +11,7 @@ O projeto atualmente utiliza as seguintes tecnologias:
 - 📊 **Seção de Estatísticas** - 
 - 💪 **Skills com Níveis** - 
 - 🏆 **Certificações** - Seção destacando conquistas e formação
-- 💬 **Depoimentos** - Feedback de colegas e equipes de projetos
+- 💬 **Depoimentos** - 
 - 🎯 **Status de Disponibilidade** - Indicador visual em tempo real
 - 🔗 **CTAs Estratégicos** - Botões de ação no hero section
 - 🎨 **Hover Effects Avançados** - Micro-interações nos cards
