@@ -12,10 +12,6 @@ O projeto atualmente utiliza as seguintes tecnologias:
 - 💪 **CSS**
 - 🏆 **JavaScript**
 - 💬 **Depoimentos**
-- 🎯 **Status de Disponibilidade**
-- 🔗 **CTAs Estratégicos**
-- 🎨 **Hover Effects Avançados**
-- 📱 **100% Responsivo**
 
 ### 🎯 SEO & Performance
 
