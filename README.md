@@ -12,13 +12,6 @@ O projeto atualmente utiliza as seguintes tecnologias:
 - 💪 **CSS**
 - 🏆 **JavaScript**
 
-### 🎯 SEO & Performance
-
-- Meta tags completas (Open Graph, Twitter Cards)
-- Favicon customizado
-- Otimização de performance
-- Acessibilidade aprimorada (ARIA labels)
-
 ## 👨‍💻 Sobre
 
 Olá! Prazer, eu me chamo Victor Kauê, mas pode me chamar de KAUÊ 👋
