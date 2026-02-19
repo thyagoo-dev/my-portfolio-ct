@@ -17,6 +17,7 @@ Portfólio profissional e interativo com design moderno, apresentando projetos, 
 - 📱 **100% Responsivo** - Adaptável para todos os dispositivos
 
 ### 🎯 SEO & Performance
+
 - Meta tags completas (Open Graph, Twitter Cards)
 - Favicon customizado
 - Otimização de performance
