@@ -13,9 +13,9 @@ O projeto atualmente utiliza as seguintes tecnologias:
 - 🏆 **Certificações** - Seção destacando conquistas e formação
 - 💬 **Depoimentos** - 
 - 🎯 **Status de Disponibilidade** - Indicador visual em tempo real
-- 🔗 **CTAs Estratégicos** - Botões de ação no hero section
-- 🎨 **Hover Effects Avançados** - Micro-interações nos cards
-- 📱 **100% Responsivo** - Adaptável para todos os dispositivos
+- 🔗 **CTAs Estratégicos** - 
+- 🎨 **Hover Effects Avançados** - 
+- 📱 **100% Responsivo** - 
 
 ### 🎯 SEO & Performance
 
