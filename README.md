@@ -54,6 +54,7 @@ Olá! Prazer, eu me chamo Victor Kauê, mas pode me chamar de KAUÊ 👋
 ## 🛠️ Tecnologias que Uso
 
 ### ⚙️ Tecnologias do Dia a Dia
+
 - **Frontend**: HTML5, CSS3, JavaScript, Bootstrap
 - **Backend**: Python, Django, Java
 - **Mobile**: Flutter (em aprendizado)
