@@ -10,7 +10,7 @@ O projeto atualmente utiliza as seguintes tecnologias:
 
 - 📊 **Seção de Estatísticas** - 
 - 💪 **Skills com Níveis** - 
-- 🏆 **Certificações** - Seção destacando conquistas e formação
+- 🏆 **Certificações** - 
 - 💬 **Depoimentos** - 
 - 🎯 **Status de Disponibilidade** -  
 - 🔗 **CTAs Estratégicos** - 
