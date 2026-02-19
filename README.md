@@ -70,13 +70,6 @@ Olá! Prazer, eu me chamo Victor Kauê, mas pode me chamar de KAUÊ 👋
 - Android Studio
 - MySQL Workbench
 
-## 🚀 Projetos em Destaque
-
-
-
-
-
-
 ## 📂 Estrutura do Projeto
 
 ```
