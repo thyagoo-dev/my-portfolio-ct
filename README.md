@@ -88,7 +88,7 @@ Aplicação de lista de tarefas atualizada com interface moderna
 
 - **[Projeto-PeNaEstrada](https://github.com/Victorkaue333/Projeto-PeNaEstrada)** - Sistema de gerenciamento e acompanhamento
 - **[23_09_2025_365](https://github.com/Victorkaue333/23_09_2025_365)** - Projeto pessoal especial 
-- **[meu_portifolio](https://github.com/Victorkaue333/meu_portifolio)** - Este portfólio!
+!
 
 
 
