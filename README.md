@@ -34,6 +34,7 @@ Olá! Prazer, eu me chamo Victor Kauê, mas pode me chamar de KAUÊ 👋
 ## ✨ Características de UX Aprimoradas
 
 ### 🎨 Design Visual
+
 - **Paleta neutra e elegante** com tons de cinza e acentos suaves
 - **Modo claro/escuro** com transições suaves
 - **Tipografia moderna** usando Poppins e Space Grotesk
