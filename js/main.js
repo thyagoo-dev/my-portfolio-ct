@@ -45,9 +45,52 @@ document.addEventListener('DOMContentLoaded', () => {
     let lastScrollTop = 0;
     const navbar = document.querySelector('.navbar');
     const navLinks = document.querySelectorAll('.nav-menu a');
-    const sections = document.querySelectorAll('section[id]');
     
-    // Adiciona classe scrolled à navbar
+    // Cria um mapa das seções que têm links na navbar
+    const navSections = {};
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href').substring(1); // Remove o "#"
+        const section = document.getElementById(href);
+        if (section) {
+            navSections[href] = section;
+        }
+    });
+    
+    // Função para atualizar link ativo
+    function updateActiveLink() {
+        const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+        let current = 'inicio'; // Valor padrão
+        
+        // Se estiver no topo da página, manter "Início" ativo
+        if (scrollPosition < 100) {
+            current = 'inicio';
+        } else {
+            // Percorre apenas as seções que têm links na navbar em ordem reversa
+            // para pegar sempre a seção mais atual
+            const entries = Object.entries(navSections).reverse();
+            
+            for (const [id, section] of entries) {
+                const sectionTop = section.offsetTop - 200; // Offset para compensar a navbar
+                
+                // Se o scroll passou desta seção
+                if (scrollPosition >= sectionTop) {
+                    current = id;
+                    break; // Para no primeiro match
+                }
+            }
+        }
+        
+        // Atualiza as classes dos links
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            const href = link.getAttribute('href');
+            if (href === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+    }
+    
+    // Adiciona classe scrolled à navbar e atualiza link ativo
     window.addEventListener('scroll', function() {
         let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         
@@ -58,25 +101,14 @@ document.addEventListener('DOMContentLoaded', () => {
             navbar.classList.remove('scrolled');
         }
         
-        // Atualiza link ativo baseado na seção visível
-        let current = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (scrollTop >= (sectionTop - 100)) {
-                current = section.getAttribute('id');
-            }
-        });
-        
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) {
-                link.classList.add('active');
-            }
-        });
+        // Atualiza link ativo
+        updateActiveLink();
         
         lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
     });
+    
+    // Chama uma vez no carregamento para definir o link inicial
+    updateActiveLink();
 
     // 5. SMOOTH SCROLL PARA LINKS DE NAVEGAÇÃO
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
