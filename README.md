@@ -11,7 +11,6 @@ O projeto atualmente utiliza as seguintes tecnologias:
 - 📊 **HTML**
 - 💪 **CSS**
 - 🏆 **JavaScript**
-- 💬 **Depoimentos**
 
 ### 🎯 SEO & Performance
 
