@@ -84,9 +84,10 @@ meu_portifolio/
 ```
 
 ## 🚀 Onde posso ver?
-Deploy em:
-   - [Netlify](https://victorkaue.netlify.app/) (atual)  
 
+O deploy desse projeto atualmente está na plataforma da Netlify:
+
+- [Netlify](https://victorkaue.netlify.app/) (atual)
 
 ## 🌐 Conecte-se Comigo:
 
