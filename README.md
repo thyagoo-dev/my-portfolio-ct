@@ -72,9 +72,6 @@ Olá! Prazer, eu me chamo Victor Kauê, mas pode me chamar de KAUÊ 👋
 
 ## 🚀 Projetos em Destaque
 
-### VMEDPharma
-Projeto desenvolvido com React para gestão farmacêutica
-- [Ver no GitHub](https://github.com/Victorkaue333/VMEDPharma)
 
 
 
