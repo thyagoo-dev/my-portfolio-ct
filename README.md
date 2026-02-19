@@ -4,10 +4,11 @@ Apresento a vocês o meu portfólio profissional e interativo com design moderno
 
 > "Faça o teu melhor, na condição que você tem, enquanto você não tem condições melhores para fazer melhor ainda!" - Mario Sergio Cortella
 
-## 🚀Funcionalidades Implementadas
+## 🚀Tecnologias Utilizadas:
 
+O projeto atualmente utiliza as seguintes tecnologias:
 
-- 📊 **Seção de Estatísticas** - Contadores animados mostrando experiência e projetos
+- 📊 **Seção de Estatísticas** - 
 - 💪 **Skills com Níveis** - Barras de progresso categorizadas (Frontend, Backend, DevOps)
 - 🏆 **Certificações** - Seção destacando conquistas e formação
 - 💬 **Depoimentos** - Feedback de colegas e equipes de projetos
