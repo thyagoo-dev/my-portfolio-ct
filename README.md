@@ -1,6 +1,6 @@
 # 💼 Portfólio de Victor Kauê - Desenvolvedor Full Stack
 
-Portfólio profissional e interativo com design moderno, apresentando projetos, habilidades e experiências reais. E que é responsivo e que possui animações suaves.
+Apresento a vocês o meu portfólio profissional e interativo com design moderno, apresentando projetos, habilidades e experiências reais. E que também foi empregado a responsividade e que possui animações suaves.
 
 > "Faça o teu melhor, na condição que você tem, enquanto você não tem condições melhores para fazer melhor ainda!" - Mario Sergio Cortella
 
