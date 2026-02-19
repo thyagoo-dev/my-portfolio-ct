@@ -40,6 +40,7 @@ Olá! Prazer, eu me chamo Victor Kauê, mas pode me chamar de KAUÊ 👋
 - **Espaçamento consistente** para melhor hierarquia visual
 
 ### 🚀 Interatividade
+
 - **Animações suaves** em scroll e hover
 - **Cursor personalizado** com feedback visual
 - **Navbar responsiva** que se esconde ao rolar
