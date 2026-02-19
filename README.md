@@ -85,7 +85,6 @@ meu_portifolio/
 
 ## 🚀 Onde posso ver?
 
-2. Abra `index.html` no navegador
 
 3. Deploy em:
    - [Netlify](https://victorkaue.netlify.app/) (atual)
