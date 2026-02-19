@@ -90,7 +90,7 @@ Aplicação de lista de tarefas atualizada com interface moderna
 - **[23_09_2025_365](https://github.com/Victorkaue333/23_09_2025_365)** - Projeto pessoal especial 
 - **[meu_portifolio](https://github.com/Victorkaue333/meu_portifolio)** - Este portfólio!
 
-[Ver todos os repositórios →](https://github.com/Victorkaue333?tab=repositories)
+
 
 ## 📂 Estrutura do Projeto
 
@@ -120,7 +120,7 @@ git clone https://github.com/Victorkaue333/meu_portifolio.git
    - Vercel
 
 
-## 🌐 Conecte-se Comigo
+## 🌐 Conecte-se Comigo:
 
 - 📧 Email: [kaue.alves.pg@gmail.com](mailto:kaue.alves.pg@gmail.com)
 - 💼 LinkedIn: [Victor Kauê](https://www.linkedin.com/in/victor-kauê-419926364/)
