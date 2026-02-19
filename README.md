@@ -12,7 +12,7 @@ O projeto atualmente utiliza as seguintes tecnologias:
 - 💪 **Skills com Níveis** - 
 - 🏆 **Certificações** - Seção destacando conquistas e formação
 - 💬 **Depoimentos** - 
-- 🎯 **Status de Disponibilidade** - Indicador visual em tempo real
+- 🎯 **Status de Disponibilidade** -  
 - 🔗 **CTAs Estratégicos** - 
 - 🎨 **Hover Effects Avançados** - 
 - 📱 **100% Responsivo** - 
