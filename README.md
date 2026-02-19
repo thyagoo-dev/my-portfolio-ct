@@ -83,7 +83,7 @@ meu_portifolio/
 └── README.md          # Documentação
 ```
 
-## 🚀 Como Usar
+## 🚀 Onde posso ver?
 
 1. Clone o repositório
 ```bash
