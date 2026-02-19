@@ -9,7 +9,7 @@ Apresento a vocês o meu portfólio profissional e interativo com design moderno
 O projeto atualmente utiliza as seguintes tecnologias:
 
 - 📊 **Seção de Estatísticas** - 
-- 💪 **Skills com Níveis** - Barras de progresso categorizadas (Frontend, Backend, DevOps)
+- 💪 **Skills com Níveis** - 
 - 🏆 **Certificações** - Seção destacando conquistas e formação
 - 💬 **Depoimentos** - Feedback de colegas e equipes de projetos
 - 🎯 **Status de Disponibilidade** - Indicador visual em tempo real
