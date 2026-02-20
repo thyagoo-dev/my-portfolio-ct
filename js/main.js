@@ -1,9 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-
-    // Inicializa os ícones do Lucide
+    // Inicializa os icones do Lucide
     lucide.createIcons();
 
-    // Fallback para imagens de projetos que não existem/estão quebradas
+    // Fallback para imagens de projetos quebradas
     document.querySelectorAll('.project-image .project-logo').forEach((logo) => {
         const imageWrapper = logo.closest('.project-image');
         if (!imageWrapper) return;
@@ -20,33 +19,36 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 1. ANIMAÇÃO DE DIGITAÇÃO COM TYPED.JS
-    const typed = new Typed('#typed-text', {
-        strings: [
-            'Python 🐍', 
-            'Django 🎯', 
-            'JavaScript ⚡', 
-            'React ⚛️', 
-            'HTML & CSS 🎨', 
-            'Java ☕', 
-            'Flutter 📱', 
-            'MySQL 🗄️', 
-            'PostgreSQL 🐘',
-            'Docker 🐳',
-            'Git & GitHub 🚀'
-        ],
-        typeSpeed: 60,
-        backSpeed: 40,
-        backDelay: 1500,
-        loop: true,
-        smartBackspace: true,
-        cursorChar: '|'
-    });
+    // 1. Animacao de digitacao com Typed.js (somente se o alvo existir)
+    const typedElement = document.querySelector('#typed-text');
+    if (typedElement && typeof Typed !== 'undefined') {
+        new Typed('#typed-text', {
+            strings: [
+                'Python',
+                'Django',
+                'JavaScript',
+                'React',
+                'HTML & CSS',
+                'Java',
+                'Flutter',
+                'MySQL',
+                'PostgreSQL',
+                'Docker',
+                'Git & GitHub'
+            ],
+            typeSpeed: 60,
+            backSpeed: 40,
+            backDelay: 1500,
+            loop: true,
+            smartBackspace: true,
+            cursorChar: '|'
+        });
+    }
 
-    // 2. LÓGICA PARA ANIMAÇÃO DE SCROLL (FADE-IN)
+    // 2. Logica para animacao de scroll (fade-in)
     const contentSections = document.querySelectorAll('.content-section');
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
                 observer.unobserve(entry.target);
@@ -56,88 +58,80 @@ document.addEventListener('DOMContentLoaded', () => {
         threshold: 0.15,
         rootMargin: '0px 0px -50px 0px'
     });
-    contentSections.forEach(section => observer.observe(section));
+    contentSections.forEach((section) => observer.observe(section));
 
-    // 3. NAVBAR SCROLL EFFECTS E ACTIVE LINK
-    let lastScrollTop = 0;
+    // 3. Navbar scroll effects e link ativo
     const navbar = document.querySelector('.navbar');
-    const navLinks = document.querySelectorAll('.nav-menu a');
-    
-    // Cria um mapa das seções que têm links na navbar
-    const navSections = {};
-    navLinks.forEach(link => {
-        const href = link.getAttribute('href').substring(1); // Remove o "#"
-        const section = document.getElementById(href);
-        if (section) {
-            navSections[href] = section;
-        }
-    });
-    
-    // Função para atualizar link ativo
+    const navLinks = [...document.querySelectorAll('.nav-menu a')];
+    const navSections = navLinks
+        .map((link) => {
+            const href = link.getAttribute('href');
+            if (!href || !href.startsWith('#')) return null;
+
+            const section = document.querySelector(href);
+            if (!section) return null;
+
+            return { id: href.slice(1), section };
+        })
+        .filter(Boolean);
+
     function updateActiveLink() {
-        const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-        let current = 'inicio'; // Valor padrão
-        
-        // Se estiver no topo da página, manter "Início" ativo
-        if (scrollPosition < 100) {
-            current = 'inicio';
-        } else {
-            // Percorre apenas as seções que têm links na navbar em ordem reversa
-            // para pegar sempre a seção mais atual
-            const entries = Object.entries(navSections).reverse();
-            
-            for (const [id, section] of entries) {
-                const sectionTop = section.offsetTop - 200; // Offset para compensar a navbar
-                
-                // Se o scroll passou desta seção
-                if (scrollPosition >= sectionTop) {
-                    current = id;
-                    break; // Para no primeiro match
-                }
+        if (!navSections.length) return;
+
+        const navHeight = navbar ? navbar.offsetHeight : 0;
+        const markerY = navHeight + 24;
+        let current = navSections[0].id;
+        const viewportBottom = window.innerHeight + window.scrollY;
+        const documentHeight = document.documentElement.scrollHeight;
+        const isNearPageBottom = viewportBottom >= documentHeight - 8;
+
+        if (isNearPageBottom) {
+            current = navSections[navSections.length - 1].id;
+        }
+
+        for (const { id, section } of navSections) {
+            const top = section.getBoundingClientRect().top;
+            if (!isNearPageBottom && top <= markerY) {
+                current = id;
             }
         }
-        
-        // Atualiza as classes dos links
-        navLinks.forEach(link => {
+
+        navLinks.forEach((link) => {
             link.classList.remove('active');
-            const href = link.getAttribute('href');
-            if (href === `#${current}`) {
+            if (link.getAttribute('href') === `#${current}`) {
                 link.classList.add('active');
             }
         });
     }
-    
-    // Adiciona classe scrolled à navbar e atualiza link ativo
-    window.addEventListener('scroll', function() {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-        // Adiciona classe scrolled quando rola
-        if (scrollTop > 50) {
+
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (navbar && scrollTop > 50) {
             navbar.classList.add('scrolled');
-        } else {
+        } else if (navbar) {
             navbar.classList.remove('scrolled');
         }
-        
-        // Atualiza link ativo
+
         updateActiveLink();
-        
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
     });
-    
+
     // Chama uma vez no carregamento para definir o link inicial
     updateActiveLink();
 
-    // 5. SMOOTH SCROLL PARA LINKS DE NAVEGAÇÃO
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    // 4. Smooth scroll para links de navegacao
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
+
             if (target) {
                 target.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'
                 });
-                // Fechar menu mobile após clicar
+
+                // Fecha menu mobile apos clicar
                 const menuWrapper = document.querySelector('.nav-menu-wrapper');
                 const menuToggle = document.querySelector('.mobile-menu-toggle');
                 if (menuWrapper && menuToggle) {
@@ -148,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 6. MENU HAMBÚRGUER MOBILE
+    // 5. Menu hamburger mobile
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const navMenuWrapper = document.querySelector('.nav-menu-wrapper');
 
@@ -158,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
             navMenuWrapper.classList.toggle('active');
         });
 
-        // Fechar menu ao clicar fora
+        // Fecha menu ao clicar fora
         document.addEventListener('click', (e) => {
             if (!e.target.closest('.navbar')) {
                 mobileMenuToggle.classList.remove('active');
@@ -167,17 +161,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 7. BOTÃO VOLTAR AO TOPO
+    // 6. Botao voltar ao topo
     const backToTopButton = document.getElementById('back-to-top');
-    
+
     window.addEventListener('scroll', () => {
+        if (!backToTopButton) return;
+
         if (window.pageYOffset > 300) {
             backToTopButton.classList.add('show');
         } else {
             backToTopButton.classList.remove('show');
         }
     });
-    
+
     if (backToTopButton) {
         backToTopButton.addEventListener('click', () => {
             window.scrollTo({
