@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" role="img" aria-label="Imagem base de projeto">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <g fill="none" stroke="#f97316" stroke-width="12" opacity="0.9">
+    <rect x="305" y="145" width="190" height="130" rx="14"/>
+    <path d="M270 320h260"/>
+    <path d="M355 235l30-32 28 28 42-44"/>
+  </g>
+  <text x="400" y="370" text-anchor="middle" fill="#e2e8f0" font-family="Poppins, Arial, sans-serif" font-size="28" font-weight="600">
+    Projeto em desenvolvimento
+  </text>
+</svg>
