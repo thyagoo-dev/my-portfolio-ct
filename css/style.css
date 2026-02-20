@@ -562,6 +562,33 @@ main {
     color: #F8FAFC;
 }
 
+#projetos {
+    background: linear-gradient(180deg, #0F172A 0%, #020617 100%);
+    color: #FFFFFF;
+}
+
+#projetos .section-title {
+    color: #FFFFFF;
+}
+
+#projetos .section-subtitle {
+    color: rgba(255, 255, 255, 0.88);
+}
+
+#projetos .project-card {
+    background: rgba(255, 255, 255, 0.96);
+    border-color: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+#projetos .project-content h3 {
+    color: #0F172A;
+}
+
+#projetos .project-content p {
+    color: #334155;
+}
+
 .content-section.bg-gradient .tech-card {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
