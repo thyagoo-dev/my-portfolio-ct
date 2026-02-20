@@ -1090,6 +1090,53 @@ main {
     color: var(--accent-color);
 }
 
+/* ========== EXPERIENCE (LINKEDIN STYLE) ========== */
+.experience-timeline.linkedin-style {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 960px;
+}
+
+.experience-timeline.linkedin-style .experience-item {
+    gap: 1rem;
+    border-radius: 1rem;
+    padding: 1.25rem;
+}
+
+.experience-timeline.linkedin-style .experience-item:hover {
+    transform: translateY(-2px);
+}
+
+.experience-timeline.linkedin-style .experience-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 0.85rem;
+}
+
+.experience-timeline.linkedin-style .experience-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.15rem;
+}
+
+.experience-company {
+    color: rgba(255, 255, 255, 0.88);
+    font-weight: 600;
+    font-size: 0.92rem;
+    margin-bottom: 0.1rem;
+}
+
+.experience-meta {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.85rem;
+    margin-bottom: 0.6rem;
+}
+
+.experience-timeline.linkedin-style .experience-content > p:last-child {
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 0.95rem;
+    line-height: 1.55;
+}
+
 /* DIFERENCIAIS */
 #diferenciais .about-card {
     text-align: left;
@@ -1945,6 +1992,18 @@ img {
     
     .experience-content ul li {
         text-align: left;
+    }
+
+    .experience-timeline.linkedin-style .experience-item {
+        flex-direction: row;
+        text-align: left;
+        padding: 1rem;
+    }
+
+    .experience-timeline.linkedin-style .experience-icon {
+        margin: 0;
+        width: 46px;
+        height: 46px;
     }
     
     .contact-cards {
