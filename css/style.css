@@ -1,14 +1,14 @@
 /* ========================================
-   PORTFÃ“LIO - VICTOR KAUÃŠ
+   PORTFÃƒâ€œLIO - VICTOR KAUÃƒÅ 
    Desenvolvedor Full Stack
    ======================================== */
 
 /* ========== FONTES ========== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap');
 
-/* ========== VARIÃVEIS GLOBAIS ========== */
+/* ========== VARIÃƒÂVEIS GLOBAIS ========== */
 :root {
-    /* Cores PrimÃ¡rias */
+    /* Cores PrimÃƒÂ¡rias */
     --bg-color: #111827;
     --bg-alt: #1F2937;
     --bg-dark: #0B1220;
@@ -32,12 +32,12 @@
     --font-primary: 'Poppins', sans-serif;
     --font-secondary: 'Space Grotesk', sans-serif;
     
-    /* TransiÃ§Ãµes */
+    /* TransiÃƒÂ§ÃƒÂµes */
     --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     
-    /* EspaÃ§amentos */
+    /* EspaÃƒÂ§amentos */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
     --spacing-md: 1.5rem;
@@ -409,7 +409,7 @@ main {
 }
 
 .hero-list li::before {
-    content: 'â–¹';
+    content: '>';
     position: absolute;
     left: 0;
     color: var(--accent-color);
@@ -434,7 +434,7 @@ main {
     border-color: var(--text-color);
 }
 
-/* ========== BOTÃ•ES ========== */
+/* ========== BOTÃƒâ€¢ES ========== */
 .btn {
     padding: 0.85rem 2rem;
     border-radius: 0.5rem;
@@ -508,7 +508,7 @@ main {
     box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
 }
 
-/* ========== SEÃ‡Ã•ES DE CONTEÃšDO ========== */
+/* ========== SEÃƒâ€¡Ãƒâ€¢ES DE CONTEÃƒÅ¡DO ========== */
 .content-section {
     padding: 6rem 0;
     position: relative;
@@ -516,17 +516,17 @@ main {
     scroll-margin-top: 100px; /* Compensar altura da navbar */
 }
 
-/* SeÃ§Ãµes com fundo branco */
+/* SeÃƒÂ§ÃƒÂµes com fundo branco */
 .content-section.bg-white {
     background: var(--bg-color);
 }
 
-/* SeÃ§Ãµes com fundo alternado claro */
+/* SeÃƒÂ§ÃƒÂµes com fundo alternado claro */
 .content-section.bg-light {
     background: var(--bg-alt);
 }
 
-/* SeÃ§Ãµes com fundo escuro */
+/* SeÃƒÂ§ÃƒÂµes com fundo escuro */
 .content-section.bg-dark {
     background: var(--bg-dark);
     color: #FFFFFF;
@@ -540,7 +540,7 @@ main {
     background: var(--gradient-primary);
 }
 
-/* ========== SEÃ‡Ã•ES COM BACKGROUND GRADIENTE ========== */
+/* ========== SEÃƒâ€¡Ãƒâ€¢ES COM BACKGROUND GRADIENTE ========== */
 .content-section.bg-gradient {
     background: linear-gradient(135deg, #111827 0%, #1F2937 100%);
     color: #FFFFFF;
@@ -660,7 +660,7 @@ main {
     font-weight: 600;
 }
 
-/* BotÃµes em background azul */
+/* BotÃƒÂµes em background azul */
 .content-section.bg-blue .btn-secondary {
     background: rgba(255, 255, 255, 0.2);
     color: #FFFFFF;
@@ -1045,7 +1045,7 @@ main {
 }
 
 .experience-content ul li::before {
-    content: 'â–¸';
+    content: '>';
     position: absolute;
     left: 0;
     color: var(--accent-color);
@@ -1440,7 +1440,7 @@ img {
 }
 
 .paper-box ul li::before {
-    content: 'â–¹';
+    content: '>';
     position: absolute;
     left: 0;
     color: #F59E0B;
@@ -1585,7 +1585,7 @@ img {
     text-decoration: underline;
 }
 
-/* ========== EXPERIÃŠNCIAS ========== */
+/* ========== EXPERIÃƒÅ NCIAS ========== */
 .paper-experience {
     background: var(--bg-color);
     border: 1px solid var(--border-color);
@@ -1631,7 +1631,7 @@ img {
 }
 
 .paper-experience ul li::before {
-    content: 'âœ“';
+    content: '+';
     position: absolute;
     left: 0;
     color: #10B981;
@@ -1648,7 +1648,7 @@ img {
     margin-top: var(--spacing-lg);
 }
 
-/* ========== BOTÃƒO VOLTAR AO TOPO ========== */
+/* ========== BOTÃƒÆ’O VOLTAR AO TOPO ========== */
 .back-to-top {
     position: fixed;
     bottom: 30px;
@@ -1727,7 +1727,7 @@ img {
 
 /* ========== RESPONSIVIDADE ========== */
 
-/* Tablets e telas mÃ©dias */
+/* Tablets e telas mÃƒÂ©dias */
 @media (max-width: 1024px) {
     .navbar {
         width: calc(100% - 2rem);
@@ -2077,7 +2077,7 @@ img {
     }
 }
 
-/* ========== ANIMAÃ‡Ã•ES ========== */
+/* ========== ANIMAÃƒâ€¡Ãƒâ€¢ES ========== */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -2109,7 +2109,7 @@ img {
     }
 }
 
-/* ========== IMPRESSÃƒO ========== */
+/* ========== IMPRESSÃƒÆ’O ========== */
 @media print {
     .navbar,
     .back-to-top {
