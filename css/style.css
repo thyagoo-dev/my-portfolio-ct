@@ -313,6 +313,10 @@ main {
         gap: 2rem;
         text-align: center;
     }
+
+    .hero-actions {
+        justify-content: center;
+    }
 }
 
 .hero-photo {
@@ -1005,6 +1009,8 @@ main {
 
 /* GitHub Stats */
 img {
+    max-width: 100%;
+    height: auto;
     border-radius: 12px;
     box-shadow: var(--shadow-md);
 }
@@ -1603,6 +1609,82 @@ img {
 
 }
 
+/* Navbar para notebooks menores */
+@media (max-width: 900px) {
+    .navbar {
+        width: calc(100% - 1.5rem);
+        top: 0.75rem;
+        border-radius: 0.75rem;
+    }
+
+    .navbar.scrolled {
+        top: 0.5rem;
+    }
+
+    .navbar-container {
+        padding: 0.75rem 1.25rem;
+    }
+
+    .navbar-logo {
+        font-size: 1.3rem;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .nav-menu-wrapper {
+        position: fixed;
+        top: 5.5rem;
+        left: 50%;
+        transform: translateX(-50%) scale(0.95);
+        width: calc(100% - 1.5rem);
+        max-height: 0;
+        background: rgba(30, 41, 59, 0.98);
+        -webkit-backdrop-filter: blur(16px);
+        backdrop-filter: blur(16px);
+        border-radius: 1rem;
+        transition: all var(--transition-normal);
+        overflow: hidden;
+        opacity: 0;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    [data-theme="dark"] .nav-menu-wrapper {
+        background: rgba(17, 24, 39, 0.98);
+    }
+
+    .nav-menu-wrapper.active {
+        max-height: 500px;
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 0.5rem;
+        background: transparent;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        border-bottom: none;
+    }
+
+    .nav-menu a {
+        padding: 1rem 1.2rem;
+        width: 100%;
+        text-align: left;
+        border-radius: 0.5rem;
+    }
+
+    .nav-menu a::after {
+        display: none;
+    }
+}
+
 /* Tablets */
 @media (max-width: 768px) {
     .navbar {
@@ -1702,6 +1784,14 @@ img {
     .projects-grid {
         grid-template-columns: 1fr;
     }
+
+    .project-content {
+        padding: 1.2rem;
+    }
+
+    .project-content h3 {
+        font-size: 1.2rem;
+    }
     
     .experience-item {
         flex-direction: column;
@@ -1781,7 +1871,7 @@ img {
     }
     
     .btn {
-        padding: 0.6rem 1.2rem;
+        padding: 0.6rem 1rem;
         font-size: 0.9rem;
     }
     
@@ -1791,7 +1881,7 @@ img {
     }
     
     .tech-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
     }
     
@@ -1805,6 +1895,15 @@ img {
     
     .tech-card span {
         font-size: 0.75rem;
+    }
+
+    .github-summary-card,
+    .github-visual-card {
+        padding: 1rem;
+    }
+
+    .github-visual-card {
+        min-height: 180px;
     }
 }
 

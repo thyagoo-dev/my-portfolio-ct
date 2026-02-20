@@ -1,79 +1,75 @@
-# 💼 Portfólio de Victor Kauê - Desenvolvedor Full Stack
+# Portfolio - Victor Kaue
 
-Apresento a vocês o meu portfólio profissional e interativo com design moderno, apresentando projetos, habilidades e experiências reais. E que também foi empregado a responsividade e que possui animações suaves.
+Portfolio pessoal com foco em apresentacao profissional, projetos reais e experiencia como desenvolvedor Full Stack.
 
-## 🚀Tecnologias Utilizadas:
+## Visao geral
 
-O projeto atualmente utiliza as seguintes tecnologias:
+Este projeto foi construido para:
 
-- 📊 **HTML**
-- 💪 **CSS**
-- 🏆 **JavaScript**
+- apresentar projetos pessoais e projetos reais;
+- mostrar stack tecnica e ferramentas;
+- destacar experiencia profissional;
+- facilitar contato com recrutadores e clientes.
 
-## 👨‍💻 Sobre:
+## Tecnologias
 
-Olá! Prazer, eu me chamo Victor Kauê, mas pode me chamar de KAUÊ 👋
+- HTML5
+- CSS3
+- JavaScript (vanilla)
+- Lucide Icons
+- Typed.js
+- Devicon
 
-- 🎓 Estudante de Gestão da Tecnologia da Informação (GTI)
-- 💡 Explorando Inteligência Artificial e Cloud Computing
-- 🎮 Gamer nas horas vagas — também conhecido como Ghost
-- 🤝 Sempre buscando evoluir e colaborar em projetos desafiadores
+## Estrutura do projeto
 
-## ✨ Características de UX Aprimoradas
-
-### 🎨 Design Visual:
-
-- **Paleta neutra e elegante** com tons de cinza e acentos suaves
-- **Modo claro/escuro** com transições suaves
-- **Tipografia moderna** usando Poppins e Space Grotesk
-- **Espaçamento consistente** para melhor hierarquia visual
-
-### 🚀 Interatividade:
-
-- **Animações suaves** em scroll e hover
-- **Cursor personalizado** com feedback visual
-- **Navbar responsiva** que se esconde ao rolar
-- **Transições fluidas** entre estados
-- **Scroll suave** para navegação interna
-
-### 📱 Responsividade:
-
-- Design totalmente responsivo
-- Otimizado para mobile, tablet e desktop
-- Grid adaptativo para tecnologias e projetos
-
-
-## 📂 Estrutura do Projeto:
-
-O projeto está dividio em pastas nesse formato aqui abaixo:
-
-```
+```text
 meu_portifolio/
-├── index.html          # Estrutura principal
-├── css/
-│   └── style.css      # Estilos com cores neutras
-├── js/
-│   └── main.js        # Interatividade e animações
-├── images/            # Recursos visuais
-└── README.md          # Documentação
+|-- index.html
+|-- css/
+|   `-- style.css
+|-- js/
+|   `-- main.js
+|-- images/
+`-- README.md
 ```
 
-## 🚀 Onde posso ver?
+## Como executar localmente
 
-O deploy desse projeto atualmente está na plataforma da Netlify:
+Como e um projeto estatico, voce pode abrir direto no navegador:
 
-- [Netlify](https://victorkaue.netlify.app/) (atual)
+1. Clone o repositorio:
+   - `git clone https://github.com/Victorkaue333/meu_portifolio.git`
+2. Entre na pasta:
+   - `cd meu_portifolio`
+3. Abra o arquivo:
+   - `index.html`
 
-## 🌐 Conecte-se Comigo:
+Opcionalmente, rode com extensao de servidor local (ex: Live Server no VS Code).
 
-- 📧 Email: [kaue.alves.pg@gmail.com](mailto:kaue.alves.pg@gmail.com)
-- 💼 LinkedIn: [Victor Kauê](https://www.linkedin.com/in/victor-kauê-419926364/)
-- 🐙 GitHub: [@Victorkaue333](https://github.com/Victorkaue333)
+## Funcionalidades
 
----
+- Navbar com scroll suave e destaque de secao ativa
+- Layout responsivo para desktop, tablet e mobile
+- Secoes de projetos com cards e tags de tecnologias
+- Secao de experiencia profissional
+- Secao de atividade no GitHub
+- Botao de voltar ao topo
 
-Esse projeto foi feito por Victor Kauê
+## Deploy
 
-## Frase motivacional escolhida pelo desenvolvedor:
+Projeto publicado em:
 
-> "Faça o teu melhor, na condição que você tem, enquanto você não tem condições melhores para fazer melhor ainda!" - Mario Sergio Cortella
+- https://victorkaue.netlify.app/
+
+## Contato
+
+- Email: `kaue.alves.pg@gmail.com`
+- LinkedIn: `https://www.linkedin.com/in/victor-kau%C3%AA-419926364/`
+- GitHub: `https://github.com/Victorkaue333`
+
+## Proximas melhorias
+
+- Integrar dados reais do GitHub via API
+- Melhorar acessibilidade (aria e contraste)
+- Adicionar testes visuais basicos
+- Otimizar imagens para ganho de performance
