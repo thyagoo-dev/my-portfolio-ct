@@ -540,7 +540,7 @@ main {
     scroll-margin-top: 100px; /* Compensar altura da navbar */
 }
 
-/* Se com fundo branco */
+/* Seções com fundo branco */
 .content-section.bg-white {
     background: var(--bg-color);
 }
