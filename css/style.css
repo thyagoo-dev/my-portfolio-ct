@@ -532,7 +532,7 @@ main {
     box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
 }
 
-/* ========== SEÃƒâ€¡Ãƒâ€¢ES DE CONTEÃƒÅ¡DO ========== */
+/* ========== SEÇÕES DE CONTATOS ========== */
 .content-section {
     padding: 6rem 0;
     position: relative;
@@ -540,7 +540,7 @@ main {
     scroll-margin-top: 100px; /* Compensar altura da navbar */
 }
 
-/* SeÃƒÂ§ÃƒÂµes com fundo branco */
+/* Se com fundo branco */
 .content-section.bg-white {
     background: var(--bg-color);
 }
