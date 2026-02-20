@@ -469,6 +469,18 @@ main {
     flex-wrap: wrap;
 }
 
+.hero-cta-final {
+    background: rgba(30, 41, 59, 0.08);
+    color: var(--text-color);
+    border: 2px solid var(--border-color);
+}
+
+.hero-cta-final:hover {
+    background: var(--text-color);
+    color: #FFFFFF;
+    border-color: var(--text-color);
+}
+
 /* ========== BOTÕES ========== */
 .btn {
     padding: 0.85rem 2rem;
@@ -1184,9 +1196,25 @@ img {
 
 .github-visual-card {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    min-height: 340px;
+    justify-content: flex-start;
+    min-height: 360px;
+    gap: 0.9rem;
+}
+
+.github-visual-header {
+    width: 100%;
+}
+
+.github-visual-header h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+.github-visual-header p {
+    color: var(--text-muted-color);
+    font-size: 0.9rem;
 }
 
 .github-visual-card img {
@@ -1198,6 +1226,25 @@ img {
     border: 1px solid var(--border-color);
     padding: 0.6rem;
     display: block;
+}
+
+.github-inline-link {
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--accent-color);
+    border: 1px solid rgba(249, 115, 22, 0.4);
+    border-radius: 999px;
+    padding: 0.55rem 0.95rem;
+    transition: all var(--transition-fast);
+}
+
+.github-inline-link:hover {
+    background: rgba(249, 115, 22, 0.12);
+    border-color: rgba(249, 115, 22, 0.8);
 }
 
 
@@ -1686,7 +1733,7 @@ img {
     }
 
     .github-visual-card {
-        min-height: 280px;
+        min-height: 300px;
     }
 
 }
@@ -1999,6 +2046,11 @@ img {
 
     .github-visual-card {
         min-height: 180px;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        text-align: center;
     }
 }
 
