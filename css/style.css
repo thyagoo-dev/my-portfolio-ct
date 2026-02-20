@@ -516,7 +516,7 @@ main {
 
 /* Background azul gradiente */
 .content-section.bg-blue {
-    background: linear-gradient(135deg, #1E3A8A 0%, #1E3A8A 50%, #1E3A8A 100%);
+    background: linear-gradient(180deg, #0F172A 0%, #020617 100%);
     color: #FFFFFF;
 }
 
