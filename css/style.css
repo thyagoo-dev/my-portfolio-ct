@@ -343,8 +343,8 @@ main {
 }
 
 .hero-photo img {
-    width: 380px;
-    height: 380px;
+    width: 420px;
+    height: 420px;
     object-fit: cover;
     border-radius: 50%;
     border: 5px solid #F59E0B;
@@ -643,17 +643,46 @@ main {
 }
 
 #projetos .project-card {
-    background: rgba(255, 255, 255, 0.96);
-    border-color: rgba(255, 255, 255, 0.22);
+    background: rgba(31, 41, 55, 0.92);
+    border-color: rgba(148, 163, 184, 0.25);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    height: 100%;
+}
+
+#projetos .project-content {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 200px);
 }
 
 #projetos .project-content h3 {
-    color: #111827;
+    color: #F8FAFC;
 }
 
 #projetos .project-content p {
-    color: #334155;
+    color: #E2E8F0;
+}
+
+#projetos .project-tags {
+    margin-top: auto;
+}
+
+#projetos .project-details li,
+#projetos-reais .project-details li {
+    color: #D6E0F5;
+}
+
+#projetos .project-details li strong,
+#projetos-reais .project-details li strong {
+    color: #F8FAFC;
+}
+
+#projetos-reais .project-content h3 {
+    color: #F8FAFC;
+}
+
+#projetos-reais .project-content p {
+    color: #E2E8F0;
 }
 
 .content-section.bg-gradient .tech-card {
@@ -685,6 +714,29 @@ main {
 .content-section.bg-blue .tech-card span {
     color: #FFFFFF;
     font-weight: 600;
+}
+
+#ferramentas .tech-card {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+#ferramentas .tech-card:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: #FFFFFF;
+    box-shadow: 0 8px 32px rgba(255, 255, 255, 0.2);
+    transform: translateY(-8px);
+}
+
+#ferramentas .tech-card span {
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+#ferramentas .tech-card i {
+    filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.2));
 }
 
 /* BotÃƒÂµes em background azul */
