@@ -711,29 +711,34 @@ main {
 
 .project-logo {
     position: absolute;
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     z-index: 1;
     transition: all var(--transition-normal);
 }
 
 .project-card:hover .project-logo {
-    opacity: 0.2;
+    opacity: 1;
 }
 
 .project-placeholder {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--text-muted-color);
+    display: none;
 }
 
 .project-placeholder svg {
     width: 48px;
     height: 48px;
     opacity: 0.5;
+}
+
+.project-image.has-fallback .project-logo {
+    display: none;
+}
+
+.project-image.has-fallback .project-placeholder {
+    display: none;
 }
 
 .project-overlay {

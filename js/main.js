@@ -3,6 +3,23 @@ document.addEventListener('DOMContentLoaded', () => {
     // Inicializa os ícones do Lucide
     lucide.createIcons();
 
+    // Fallback para imagens de projetos que não existem/estão quebradas
+    document.querySelectorAll('.project-image .project-logo').forEach((logo) => {
+        const imageWrapper = logo.closest('.project-image');
+        if (!imageWrapper) return;
+
+        const applyFallback = () => {
+            imageWrapper.classList.add('has-fallback');
+            logo.setAttribute('aria-hidden', 'true');
+        };
+
+        logo.addEventListener('error', applyFallback);
+
+        if (logo.complete && logo.naturalWidth === 0) {
+            applyFallback();
+        }
+    });
+
     // 1. ANIMAÇÃO DE DIGITAÇÃO COM TYPED.JS
     const typed = new Typed('#typed-text', {
         strings: [
