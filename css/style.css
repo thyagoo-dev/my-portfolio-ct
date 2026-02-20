@@ -529,6 +529,39 @@ main {
     background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0.5) 100%);
 }
 
+#sobre {
+    background: linear-gradient(180deg, #0F172A 0%, #020617 100%);
+    color: #FFFFFF;
+}
+
+#sobre .section-title {
+    color: #FFFFFF;
+}
+
+#sobre .about-card {
+    background: rgba(255, 255, 255, 0.96);
+    border-color: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+#sobre .about-card h3 {
+    color: #0F172A;
+}
+
+#sobre .about-card p {
+    color: #334155;
+}
+
+#sobre .about-quote {
+    background: rgba(15, 23, 42, 0.45);
+    border: 1px solid rgba(249, 115, 22, 0.45);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+#sobre .about-quote p {
+    color: #F8FAFC;
+}
+
 .content-section.bg-gradient .tech-card {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
