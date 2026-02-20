@@ -248,6 +248,69 @@ main {
     gap: var(--spacing-sm);
 }
 
+.btn-cv {
+    padding: 0.55rem 1rem;
+    font-size: 0.85rem;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    color: #FFFFFF;
+    border-radius: 0.6rem;
+}
+
+.btn-cv:hover {
+    background: rgba(249, 115, 22, 0.2);
+    border-color: rgba(249, 115, 22, 0.8);
+    color: #FFFFFF;
+    transform: translateY(-1px);
+}
+
+.theme-toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.08);
+    color: #FFFFFF;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    transition: all var(--transition-normal);
+}
+
+.theme-toggle:hover {
+    background: rgba(249, 115, 22, 0.2);
+    border-color: rgba(249, 115, 22, 0.8);
+}
+
+.theme-toggle svg {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    transition: all var(--transition-fast);
+}
+
+.theme-toggle .theme-icon-sun {
+    opacity: 0;
+    transform: scale(0.7) rotate(-30deg);
+}
+
+.theme-toggle .theme-icon-moon {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+}
+
+[data-theme="dark"] .theme-toggle .theme-icon-sun {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+}
+
+[data-theme="dark"] .theme-toggle .theme-icon-moon {
+    opacity: 0;
+    transform: scale(0.7) rotate(30deg);
+}
+
 .mobile-menu-toggle {
     display: none;
     flex-direction: column;
@@ -261,7 +324,7 @@ main {
 .mobile-menu-toggle span {
     width: 25px;
     height: 3px;
-    background: var(--text-color);
+    background: #FFFFFF;
     transition: all var(--transition-normal);
     border-radius: 2px;
 }
@@ -1633,6 +1696,10 @@ img {
         display: flex;
     }
 
+    .btn-cv {
+        display: none;
+    }
+
     .nav-menu-wrapper {
         position: fixed;
         top: 5.5rem;
@@ -1852,6 +1919,11 @@ img {
     
     .navbar-logo {
         font-size: 1.25rem;
+    }
+
+    .theme-toggle {
+        width: 36px;
+        height: 36px;
     }
     
     .container {
