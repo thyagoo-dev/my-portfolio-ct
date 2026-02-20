@@ -1,28 +1,28 @@
 /* ========================================
-   PORTFÓLIO - VICTOR KAUÊ
+   PORTFÃ“LIO - VICTOR KAUÃŠ
    Desenvolvedor Full Stack
    ======================================== */
 
 /* ========== FONTES ========== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap');
 
-/* ========== VARIÁVEIS GLOBAIS ========== */
+/* ========== VARIÃVEIS GLOBAIS ========== */
 :root {
-    /* Cores Primárias */
-    --bg-color: #FFFFFF;
-    --bg-alt: #F8FAFC;
-    --bg-dark: #0F172A;
-    --text-color: #1E293B;
-    --text-muted-color: #64748B;
-    --surface-color: #FFFFFF;
-    --surface-hover-color: #F1F5F9;
-    --border-color: #E2E8F0;
-    --accent-color: #F97316;
-    --accent-hover: #EA580C;
-    --secondary-color: #3B82F6;
+    /* Cores PrimÃ¡rias */
+    --bg-color: #111827;
+    --bg-alt: #1F2937;
+    --bg-dark: #0B1220;
+    --text-color: #F3F4F6;
+    --text-muted-color: #D1D5DB;
+    --surface-color: #1F2937;
+    --surface-hover-color: #374151;
+    --border-color: #374151;
+    --accent-color: #F59E0B;
+    --accent-hover: #D97706;
+    --secondary-color: #10B981;
     --success-color: #10B981;
-    --gradient-primary: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
-    --gradient-secondary: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+    --gradient-primary: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+    --gradient-secondary: linear-gradient(135deg, #10B981 0%, #059669 100%);
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
@@ -32,12 +32,12 @@
     --font-primary: 'Poppins', sans-serif;
     --font-secondary: 'Space Grotesk', sans-serif;
     
-    /* Transições */
+    /* TransiÃ§Ãµes */
     --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     
-    /* Espaçamentos */
+    /* EspaÃ§amentos */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
     --spacing-md: 1.5rem;
@@ -53,13 +53,13 @@
 
 /* Tema Escuro */
 [data-theme="dark"] {
-    --bg-color: #0F172A;
-    --bg-alt: #1E293B;
-    --text-color: #F1F5F9;
-    --text-muted-color: #94A3B8;
-    --surface-color: #1E293B;
-    --surface-hover-color: #334155;
-    --border-color: #334155;
+    --bg-color: #0B1220;
+    --bg-alt: #111827;
+    --text-color: #F3F4F6;
+    --text-muted-color: #9CA3AF;
+    --surface-color: #111827;
+    --surface-hover-color: #1F2937;
+    --border-color: #374151;
 }
 
 /* ========== RESET E BASE ========== */
@@ -236,9 +236,9 @@ main {
 
 .nav-menu a.active {
     color: #FFFFFF;
-    background: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
     font-weight: 600;
-    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.5), 0 0 0 1px rgba(249, 115, 22, 0.2);
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.5), 0 0 0 1px rgba(245, 158, 11, 0.2);
     transform: translateY(-1px);
 }
 
@@ -258,8 +258,8 @@ main {
 }
 
 .btn-cv:hover {
-    background: rgba(249, 115, 22, 0.2);
-    border-color: rgba(249, 115, 22, 0.8);
+    background: rgba(245, 158, 11, 0.2);
+    border-color: rgba(245, 158, 11, 0.8);
     color: #FFFFFF;
     transform: translateY(-1px);
 }
@@ -280,8 +280,8 @@ main {
 }
 
 .theme-toggle:hover {
-    background: rgba(249, 115, 22, 0.2);
-    border-color: rgba(249, 115, 22, 0.8);
+    background: rgba(245, 158, 11, 0.2);
+    border-color: rgba(245, 158, 11, 0.8);
 }
 
 .theme-toggle svg {
@@ -394,15 +394,15 @@ main {
     height: 380px;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid #F97316;
-    box-shadow: 0 8px 30px rgba(249, 115, 22, 0.3);
+    border: 5px solid #F59E0B;
+    box-shadow: 0 8px 30px rgba(245, 158, 11, 0.3);
     transition: all var(--transition-normal);
     background: #FFFFFF;
 }
 
 .hero-photo img:hover {
     transform: scale(1.05);
-    box-shadow: 0 12px 40px rgba(249, 115, 22, 0.4);
+    box-shadow: 0 12px 40px rgba(245, 158, 11, 0.4);
 }
 
 .hero-photo img:hover {
@@ -421,7 +421,7 @@ main {
 
 .hero-content h2 {
     font-size: 2.2rem;
-    background: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -456,7 +456,7 @@ main {
 }
 
 .hero-list li::before {
-    content: '▹';
+    content: 'â–¹';
     position: absolute;
     left: 0;
     color: var(--accent-color);
@@ -481,7 +481,7 @@ main {
     border-color: var(--text-color);
 }
 
-/* ========== BOTÕES ========== */
+/* ========== BOTÃ•ES ========== */
 .btn {
     padding: 0.85rem 2rem;
     border-radius: 0.5rem;
@@ -512,27 +512,27 @@ main {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
     color: #FFFFFF;
-    box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
 }
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4);
+    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
 }
 
 .btn-secondary {
     background: transparent;
-    color: #F97316;
-    border-color: #F97316;
+    color: #F59E0B;
+    border-color: #F59E0B;
 }
 
 .btn-secondary:hover {
-    background: #F97316;
+    background: #F59E0B;
     color: #FFFFFF;
     transform: translateY(-3px);
-    box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
 }
 
 [data-theme="dark"] .btn-primary {
@@ -555,7 +555,7 @@ main {
     box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
 }
 
-/* ========== SEÇÕES DE CONTEÚDO ========== */
+/* ========== SEÃ‡Ã•ES DE CONTEÃšDO ========== */
 .content-section {
     padding: 6rem 0;
     position: relative;
@@ -563,17 +563,17 @@ main {
     scroll-margin-top: 100px; /* Compensar altura da navbar */
 }
 
-/* Seções com fundo branco */
+/* SeÃ§Ãµes com fundo branco */
 .content-section.bg-white {
     background: var(--bg-color);
 }
 
-/* Seções com fundo alternado claro */
+/* SeÃ§Ãµes com fundo alternado claro */
 .content-section.bg-light {
     background: var(--bg-alt);
 }
 
-/* Seções com fundo escuro */
+/* SeÃ§Ãµes com fundo escuro */
 .content-section.bg-dark {
     background: var(--bg-dark);
     color: #FFFFFF;
@@ -587,15 +587,15 @@ main {
     background: var(--gradient-primary);
 }
 
-/* ========== SEÇÕES COM BACKGROUND GRADIENTE ========== */
+/* ========== SEÃ‡Ã•ES COM BACKGROUND GRADIENTE ========== */
 .content-section.bg-gradient {
-    background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+    background: linear-gradient(135deg, #111827 0%, #1F2937 100%);
     color: #FFFFFF;
 }
 
 /* Background azul gradiente */
 .content-section.bg-blue {
-    background: linear-gradient(180deg, #0F172A 0%, #020617 100%);
+    background: linear-gradient(180deg, #111827 0%, #020617 100%);
     color: #FFFFFF;
 }
 
@@ -609,7 +609,7 @@ main {
 }
 
 #sobre {
-    background: linear-gradient(180deg, #0F172A 0%, #020617 100%);
+    background: linear-gradient(180deg, #111827 0%, #020617 100%);
     color: #FFFFFF;
 }
 
@@ -618,22 +618,30 @@ main {
 }
 
 #sobre .about-card {
-    background: rgba(255, 255, 255, 0.96);
-    border-color: rgba(255, 255, 255, 0.22);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    background: #1F2937;
+    border-color: #374151;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
 }
 
 #sobre .about-card h3 {
-    color: #0F172A;
+    color: #F59E0B;
 }
 
 #sobre .about-card p {
-    color: #334155;
+    color: #F3F4F6;
+}
+
+#sobre .about-icon {
+    background: rgba(245, 158, 11, 0.15);
+}
+
+#sobre .about-icon svg {
+    color: #F59E0B;
 }
 
 #sobre .about-quote {
     background: rgba(15, 23, 42, 0.45);
-    border: 1px solid rgba(249, 115, 22, 0.45);
+    border: 1px solid rgba(245, 158, 11, 0.45);
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
 }
 
@@ -642,7 +650,7 @@ main {
 }
 
 #projetos {
-    background: linear-gradient(180deg, #0F172A 0%, #020617 100%);
+    background: linear-gradient(180deg, #111827 0%, #020617 100%);
     color: #FFFFFF;
 }
 
@@ -661,7 +669,7 @@ main {
 }
 
 #projetos .project-content h3 {
-    color: #0F172A;
+    color: #111827;
 }
 
 #projetos .project-content p {
@@ -699,7 +707,7 @@ main {
     font-weight: 600;
 }
 
-/* Botões em background azul */
+/* BotÃµes em background azul */
 .content-section.bg-blue .btn-secondary {
     background: rgba(255, 255, 255, 0.2);
     color: #FFFFFF;
@@ -756,7 +764,7 @@ main {
 .about-icon {
     width: 70px;
     height: 70px;
-    background: linear-gradient(135deg, rgba(249, 115, 22, 0.1) 0%, rgba(234, 88, 12, 0.1) 100%);
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(217, 119, 6, 0.1) 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -793,8 +801,8 @@ main {
 }
 
 .about-quote {
-    background: linear-gradient(135deg, rgba(249, 115, 22, 0.05) 0%, rgba(234, 88, 12, 0.05) 100%);
-    border: 1px solid rgba(249, 115, 22, 0.2);
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.05) 0%, rgba(217, 119, 6, 0.05) 100%);
+    border: 1px solid rgba(245, 158, 11, 0.2);
     border-radius: 1rem;
     padding: 2rem;
     text-align: center;
@@ -841,8 +849,8 @@ main {
 .project-image {
     height: 200px;
     background:
-        radial-gradient(circle at 15% 20%, rgba(249, 115, 22, 0.22) 0%, rgba(249, 115, 22, 0) 42%),
-        linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        radial-gradient(circle at 15% 20%, rgba(245, 158, 11, 0.22) 0%, rgba(245, 158, 11, 0) 42%),
+        linear-gradient(135deg, #111827 0%, #1F2937 100%);
     position: relative;
     display: flex;
     align-items: center;
@@ -895,7 +903,7 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(249, 115, 22, 0.9) 0%, rgba(234, 88, 12, 0.9) 100%);
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.9) 0%, rgba(217, 119, 6, 0.9) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -969,7 +977,7 @@ main {
 }
 
 .project-tags span {
-    background: linear-gradient(135deg, rgba(249, 115, 22, 0.1) 0%, rgba(234, 88, 12, 0.1) 100%);
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(217, 119, 6, 0.1) 100%);
     color: var(--accent-color);
     padding: 0.35rem 0.75rem;
     border-radius: 2rem;
@@ -1018,7 +1026,7 @@ main {
     background: rgba(255, 255, 255, 0.08);
     border-color: var(--accent-color);
     transform: translateX(10px);
-    box-shadow: 0 10px 40px rgba(249, 115, 22, 0.15);
+    box-shadow: 0 10px 40px rgba(245, 158, 11, 0.15);
 }
 
 .content-section.bg-blue .experience-item {
@@ -1062,7 +1070,7 @@ main {
 
 .experience-role {
     display: inline-block;
-    background: rgba(249, 115, 22, 0.2);
+    background: rgba(245, 158, 11, 0.2);
     color: var(--accent-color);
     padding: 0.25rem 0.75rem;
     border-radius: 2rem;
@@ -1084,7 +1092,7 @@ main {
 }
 
 .experience-content ul li::before {
-    content: '▸';
+    content: 'â–¸';
     position: absolute;
     left: 0;
     color: var(--accent-color);
@@ -1283,15 +1291,15 @@ img {
     text-decoration: none;
     font-weight: 700;
     color: var(--accent-color);
-    border: 1px solid rgba(249, 115, 22, 0.4);
+    border: 1px solid rgba(245, 158, 11, 0.4);
     border-radius: 999px;
     padding: 0.55rem 0.95rem;
     transition: all var(--transition-fast);
 }
 
 .github-inline-link:hover {
-    background: rgba(249, 115, 22, 0.12);
-    border-color: rgba(249, 115, 22, 0.8);
+    background: rgba(245, 158, 11, 0.12);
+    border-color: rgba(245, 158, 11, 0.8);
 }
 
 
@@ -1339,7 +1347,7 @@ img {
 }
 
 .contact-icon.email {
-    background: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
 }
 
 .contact-icon.linkedin {
@@ -1370,7 +1378,7 @@ img {
 
 /* ========== FOOTER ========== */
 .footer {
-    background: linear-gradient(180deg, #0F172A 0%, #020617 100%);
+    background: linear-gradient(180deg, #111827 0%, #020617 100%);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding: 2.5rem 0;
     text-align: center;
@@ -1479,10 +1487,10 @@ img {
 }
 
 .paper-box ul li::before {
-    content: '▹';
+    content: 'â–¹';
     position: absolute;
     left: 0;
-    color: #F97316;
+    color: #F59E0B;
     font-size: 1.2rem;
     font-weight: bold;
 }
@@ -1490,8 +1498,8 @@ img {
 .paper-quote {
     margin-top: 1.5rem;
     padding: 1.25rem;
-    border-left: 4px solid #F97316;
-    background: rgba(249, 115, 22, 0.05);
+    border-left: 4px solid #F59E0B;
+    background: rgba(245, 158, 11, 0.05);
     border-radius: 0 0.5rem 0.5rem 0;
     font-style: italic;
     color: var(--text-muted-color);
@@ -1507,7 +1515,7 @@ img {
 }
 
 .paper-tags span {
-    background: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
     color: #FFFFFF;
     padding: 0.6rem 1.2rem;
     border-radius: 2rem;
@@ -1515,12 +1523,12 @@ img {
     font-weight: 600;
     transition: all var(--transition-fast);
     position: relative;
-    box-shadow: 0 2px 8px rgba(249, 115, 22, 0.2);
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.2);
 }
 
 .paper-tags span:hover {
     transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
 }
 
 [data-theme="dark"] .paper-tags span {
@@ -1593,7 +1601,7 @@ img {
 
 .paper-card:hover .paper-image {
     border-color: var(--accent-color);
-    background: linear-gradient(135deg, rgba(249, 115, 22, 0.05) 0%, rgba(234, 88, 12, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.05) 0%, rgba(217, 119, 6, 0.05) 100%);
 }
 
 [data-theme="dark"] .paper-image {
@@ -1624,7 +1632,7 @@ img {
     text-decoration: underline;
 }
 
-/* ========== EXPERIÊNCIAS ========== */
+/* ========== EXPERIÃŠNCIAS ========== */
 .paper-experience {
     background: var(--bg-color);
     border: 1px solid var(--border-color);
@@ -1643,7 +1651,7 @@ img {
     top: 0;
     width: 4px;
     height: 100%;
-    background: linear-gradient(180deg, #F97316 0%, #EA580C 100%);
+    background: linear-gradient(180deg, #F59E0B 0%, #D97706 100%);
 }
 
 .paper-experience:hover {
@@ -1653,7 +1661,7 @@ img {
 
 .paper-experience h3 {
     font-size: 1.6rem;
-    color: #F97316;
+    color: #F59E0B;
     margin-bottom: 1rem;
     font-weight: 700;
 }
@@ -1670,7 +1678,7 @@ img {
 }
 
 .paper-experience ul li::before {
-    content: '✓';
+    content: 'âœ“';
     position: absolute;
     left: 0;
     color: #10B981;
@@ -1687,12 +1695,12 @@ img {
     margin-top: var(--spacing-lg);
 }
 
-/* ========== BOTÃO VOLTAR AO TOPO ========== */
+/* ========== BOTÃƒO VOLTAR AO TOPO ========== */
 .back-to-top {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
     color: #FFFFFF;
     border: none;
     border-radius: 50%;
@@ -1706,7 +1714,7 @@ img {
     visibility: hidden;
     transition: all var(--transition-normal);
     z-index: 999;
-    box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
 }
 
 .back-to-top.show {
@@ -1715,9 +1723,9 @@ img {
 }
 
 .back-to-top:hover {
-    background: linear-gradient(135deg, #EA580C 0%, #DC2626 100%);
+    background: linear-gradient(135deg, #D97706 0%, #DC2626 100%);
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(249, 115, 22, 0.4);
+    box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
 }
 
 /* ========== TECH GRID ========== */
@@ -1745,7 +1753,7 @@ img {
 .tech-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-    border-color: #F97316;
+    border-color: #F59E0B;
 }
 
 .tech-card i {
@@ -1766,7 +1774,7 @@ img {
 
 /* ========== RESPONSIVIDADE ========== */
 
-/* Tablets e telas médias */
+/* Tablets e telas mÃ©dias */
 @media (max-width: 1024px) {
     .navbar {
         width: calc(100% - 2rem);
@@ -1945,7 +1953,7 @@ img {
     }
     
     .nav-menu a.active {
-        background: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
+        background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
         border-left: none;
     }
     
@@ -2121,7 +2129,7 @@ img {
     }
 }
 
-/* ========== ANIMAÇÕES ========== */
+/* ========== ANIMAÃ‡Ã•ES ========== */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -2153,7 +2161,7 @@ img {
     }
 }
 
-/* ========== IMPRESSÃO ========== */
+/* ========== IMPRESSÃƒO ========== */
 @media print {
     .navbar,
     .back-to-top {
