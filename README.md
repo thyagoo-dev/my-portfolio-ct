@@ -167,4 +167,4 @@ As seguintes melhorias estão planejadas para futuras atualizações do portfól
 
 ---
 
-**Desenvolvido  por Victor Kauê**
+**Desenvolvido por Victor Kauê**
