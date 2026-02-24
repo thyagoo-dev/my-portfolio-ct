@@ -136,6 +136,7 @@ O projeto está publicado e acessível online em:
 - **Netlify:** https://victorkaue.netlify.app/
 
 ### Passos para Deploy no Netlify:
+
 1. Faça push do código para o GitHub
 2. Conecte seu repositório no [Netlify](https://netlify.com)
 3. Selecione a branch principal (main ou master)
@@ -167,4 +168,4 @@ Este projeto está sob licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais
 
 ---
 
-**Desenvolvido com ❤️ por Victor Kauê**
+**Desenvolvido  por Victor Kauê**
