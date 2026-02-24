@@ -142,7 +142,6 @@ O projeto está publicado e acessível online em:
 
 - **Netlify:** https://victorkaue.netlify.app/
 
-
 ## 📧 Contato
 
 Aberto a oportunidades, parcerias e feedback!
