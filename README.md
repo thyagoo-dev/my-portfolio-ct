@@ -152,6 +152,8 @@ Aberto a oportunidades, parcerias e feedback!
 
 ## 🔄 Próximas Melhorias
 
+As seguintes melhorias estão planejadas para futuras atualizações do portfólio:
+
 - [ ] Integrar dados reais do GitHub via API GraphQL
 - [ ] Melhorar acessibilidade (ARIA labels e contraste)
 - [ ] Adicionar testes visuais e unit tests
