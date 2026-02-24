@@ -163,9 +163,6 @@ As seguintes melhorias estão planejadas para futuras atualizações do portfól
 - [ ] Criar página de blog para artigos técnicos
 - [ ] Adicionar analytics e SEO avançado
 
-## 📝 Licença
-
-Este projeto está sob licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ---
 
