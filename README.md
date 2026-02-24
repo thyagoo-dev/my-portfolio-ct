@@ -125,6 +125,8 @@ npx http-server
 
 ## 📄 Páginas Disponíveis
 
+A seguir estão as páginas principais do portfólio, cada uma com um propósito específico para apresentar diferentes aspectos da minha carreira e projetos:
+
 | Página | Descrição |
 |--------|-----------|
 | **index.html** | Página principal com hero, sobre, stack, projetos e experiência |
