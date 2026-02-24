@@ -109,6 +109,7 @@ cd meu_portifolio
 2. Clique direito em `index.html` → "Open with Live Server"
 
 **Python (qualquer OS):**
+
 ```bash
 # Python 3
 python -m http.server 8000
