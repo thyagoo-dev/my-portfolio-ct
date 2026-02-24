@@ -164,7 +164,6 @@ As seguintes melhorias estão planejadas para futuras atualizações do portfól
 - [ ] Criar página de blog para artigos técnicos
 - [ ] Adicionar analytics e SEO avançado
 
-
 ---
 
 **Desenvolvido por Victor Kauê**
