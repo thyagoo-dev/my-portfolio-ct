@@ -22,7 +22,7 @@ Portfólio pessoal responsivo e moderno com foco em apresentação profissional,
 
 ## 🎯 Visão Geral
 
-Este projeto foi desenvolvido para:
+O presente projeto foi desenvolvido com o intuitode criar um portfólio pessoal que sirva como uma vitrine profissional para apresentar minhas habilidades, projetos e experiência na área de desenvolvimento web. O portfólio é projetado para ser responsivo, moderno e fácil de navegar, proporcionando uma experiência agradável tanto para recrutadores quanto para clientes em potencial, sendo assim este projeto tem como objetivo:
 
 - 📌 Apresentar **projetos pessoais** e **projetos reais** de forma profissional
 - 🛠️ Demonstrar **stack técnica** e ferramentas utilizadas
