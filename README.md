@@ -104,6 +104,7 @@ cd meu_portifolio
 ### Opção 2: Usar Servidor Local (Recomendado)
 
 **VS Code - Live Server:**
+
 1. Instale a extensão [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 2. Clique direito em `index.html` → "Open with Live Server"
 
