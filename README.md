@@ -55,6 +55,8 @@ O presente projeto foi desenvolvido com o intuito de criar um portfólio pessoal
 
 ## 📁 Estrutura do Projeto
 
+O projeto é organizado de forma clara e modular, facilitando a manutenção e escalabilidade. A estrutura de pastas é a seguinte:
+
 ```
 meu_portifolio/
 ├── index.html                           # Homepage principal
