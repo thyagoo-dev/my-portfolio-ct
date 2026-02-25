@@ -145,8 +145,6 @@ As seguintes melhorias estão planejadas para futuras atualizações do portfól
 - [ ] Otimizar imagens (WebP, lazy loading)
 - [ ] Implementar sistema de comentários
 - [ ] Adicionar dark mode toggle manual
-- [ ] Criar página de blog para artigos técnicos
-
 
 ---
 
