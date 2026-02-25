@@ -459,6 +459,7 @@ main {
     display: flex;
     gap: var(--spacing-sm);
     flex-wrap: wrap;
+    margin-top: var(--spacing-md);
 }
 
 .hero-cta-final {
