@@ -123,17 +123,6 @@ O projeto está publicado e acessível online em:
 
 - **Netlify:** https://victorkaue.netlify.app/
 
-## 📧 Contato
-
-Aberto a oportunidades, parcerias e feedback!
-
-- **Email:** [kaue.alves.pg@gmail.com](mailto:kaue.alves.pg@gmail.com)
-- **LinkedIn:** [Victor Kauê](https://www.linkedin.com/in/victor-kau%C3%AA-419926364/)
-- **GitHub:** [@Victorkaue333](https://github.com/Victorkaue333)
-- **Portfólio:** [victorkaue.netlify.app](https://victorkaue.netlify.app/)
-
-
-
 ---
 
 **Desenvolvido por Victor Kauê**
