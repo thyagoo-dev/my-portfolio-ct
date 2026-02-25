@@ -89,19 +89,7 @@ cd meu_portifolio
 1. Instale a extensão [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 2. Clique direito em `index.html` → "Open with Live Server"
 
-**Python (qualquer OS):**
 
-```bash
-# Python 3
-python -m http.server 8000
-
-# Acesse: http://localhost:8000
-```
-
-**Node.js:**
-
-```bash
-npx http-server
 ```
 
 ## 📄 Páginas Disponíveis
