@@ -77,8 +77,6 @@ Como é um projeto estático, você pode abrir direto no navegador:
 # 1. Clone o repositório
 git clone https://github.com/Victorkaue333/meu_portifolio.git
 
-# 2. Entre na pasta
-cd meu_portifolio
 
 ```
 
