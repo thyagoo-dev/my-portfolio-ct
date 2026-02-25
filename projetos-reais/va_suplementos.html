@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detalhes do Projeto - Portfólio de Victor Kauê">
+    <meta name="author" content="Victor Kauê">
+    
+    <title>AgendeAqui</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/logos-pjs/logotipo-vk.png">
+    
+    <!-- CSS (Regra: Exatamente o caminho solicitado) -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Devicon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!--================-->
+    <!--    NAVBAR      -->
+    <!--================-->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="navbar-logo">
+                Victor<span>Kauê</span>
+            </a>
+            
+            <div class="nav-menu-wrapper">
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="../index.html#sobre">Sobre</a></li>
+                    <li><a href="../index.html#tecnologias">Stack</a></li>
+                    <li><a href="../index.html#projetos" class="active">Projetos</a></li>
+                    <li><a href="../index.html#experiencias">Experiências</a></li>
+                    <li><a href="../galeria.html">Galeria</a></li>
+                    <li><a href="../certificados.html">Certificados</a></li>
+                    <li><a href="../index.html#contato">Contato</a></li>
+                </ul>
+            </div>
+            
+            <div class="navbar-actions">
+                <a href="docs/Victor-Kaue-CV.pdf" class="btn btn-cv" download aria-label="Baixar curriculo em PDF">
+                    Baixar CV
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!--================-->
+    <!--  CONTEÚDO      -->
+    <!--================-->
+    <main>
+        <!-- bg-gradient para manter a harmonia dark/gradient do portfólio. padding-top compensa a navbar fixa -->
+        <section class="content-section bg-gradient page-intro">
+            <div class="container">
+                
+                <!-- Títulos com a sua tipografia Space Grotesk e o underline do section-title -->
+                <h1 class="section-title light">AgendeAqui</h1>
+                <p class="section-subtitle light">Sistema de agendamento online para facilitar a marcação de compromissos de forma prática e eficiente.</p>
+
+                <!-- paper-section é a sua classe que cria aquele card lindo com hover e shadow -->
+                <div class="paper-section">
+
+                    <!-- Galeria de fotos do projeto -->
+                    <div class="text-center" style="margin-top: 3rem;">
+                        <h3 style="color: var(--text-color); font-size: 1.25rem; margin-bottom: 1.5rem;">Fotos do Projeto</h3>
+                        <div class="photo-carousel" data-carousel>
+                            <div class="carousel-viewport">
+                                <div class="carousel-track">
+                                    <div class="carousel-slide">
+                                        <img src="../images/logos-pjs/agendeaqui.png" alt="Projeto - foto 1" loading="lazy">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="../images/fotos-projetos-pessoais/agendeaqui/1.jpg" alt="Projeto - foto 2" loading="lazy">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="../images/fotos-projetos-pessoais/agendeaqui/2.jpg" alt="Projeto - foto 3" loading="lazy">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="../images/fotos-projetos-pessoais/agendeaqui/3.jpg" alt="Projeto - foto 4" loading="lazy">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="../images/fotos-projetos-pessoais/agendeaqui/4.jpg" alt="Projeto - foto 5" loading="lazy">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="../images/fotos-projetos-pessoais/agendeaqui/5.jpg" alt="Projeto - foto 6" loading="lazy">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="../images/fotos-projetos-pessoais/agendeaqui/6.jpg" alt="Projeto - foto 7" loading="lazy">
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <img src="../images/fotos-projetos-pessoais/agendeaqui/7.jpg" alt="Projeto - foto 8" loading="lazy">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-button prev" type="button" aria-label="Foto anterior">
+                                <span aria-hidden="true">&#10094;</span>
+                            </button>
+                            <button class="carousel-button next" type="button" aria-label="Próxima foto">
+                                <span aria-hidden="true">&#10095;</span>
+                            </button>
+                            <div class="carousel-dots"></div>
+                        </div>
+                    </div>
+
+                    <!-- paper-box aplica o fundo alternado e estiliza as listas com a setinha amarela (>) -->
+                    <div class="paper-box">
+                        <h3 style="color: var(--accent-color); font-size: 1.5rem; margin-bottom: 1rem;">Descrição</h3>
+                        <p>
+                            AgendeAqui é uma plataforma web desenvolvida em Django que revoluciona a forma como instituições de ensino gerenciam seus espaços físicos. O sistema elimina conflitos de horários, centraliza requisições de reserva e oferece visibilidade total sobre a utilização de recursos. Além disso, o mesmo foi desenvolvido como requisito para conclusão do curso FIC.
+                        </p>
+
+                        <h3 style="color: var(--accent-color); font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem;">Detalhes do Projeto</h3>
+                        <ul>
+                            <li><strong>Desafio:</strong> Gerenciar eficientemente os espaços físicos das instituições de ensino.</li>
+                            <li><strong>Solução:</strong> Desenvolvimento de uma plataforma web que centraliza e organiza as reservas de espaços físicos.</li>
+                            <li><strong>Impacto:</strong> Melhoria na gestão dos recursos e redução de conflitos de horários.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Tecnologias usadas -->
+                    <div class="text-center" style="margin-top: 2.5rem;">
+                        <h3 style="color: var(--text-color); font-size: 1.25rem; margin-bottom: 1.5rem;">Tecnologias Usadas</h3>
+                        <div class="tech-grid">
+                            <div class="tech-card"> <i class="devicon-django-plain-wordmark colored"></i> <span>Django</span> </div>
+                            <div class="tech-card"> <i class="devicon-python-plain-wordmark colored"></i> <span>Python</span> </div>
+                            <div class="tech-card"> <i class="devicon-html5-plain-wordmark colored"></i> <span>HTML5</span> </div>
+                            <div class="tech-card"> <i class="devicon-css3-plain-wordmark colored"></i> <span>CSS3</span> </div>
+                            <div class="tech-card"> <i class="devicon-javascript-plain colored"></i> <span>JavaScript</span> </div>
+                            <div class="tech-card"> <i class="devicon-bootstrap-plain-wordmark colored"></i> <span>Bootstrap</span> </div>
+                        </div>
+                    </div>
+
+                    <!-- view-more organiza os botões centralizados e aplica o espaçamento correto -->
+                    <div class="view-more">
+                        <a href="https://github.com/Victorkaue333/AgendeAqui" class="btn btn-secondary">
+                            <i data-lucide="github" style="display: inline-block; vertical-align: middle; margin-right: 0.5rem; width: 20px; height: 20px;"></i> 
+                            Ver Repositório
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--================-->
+    <!--    FOOTER      -->
+    <!--================-->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 - Todos os direitos reservados a Victor Kauê.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== -->
+    <!-- BOTÃO VOLTAR AO TOPO -->
+    <!-- ==================== -->
+    <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">
+        <i data-lucide="arrow-up"></i>
+    </button>
+
+    <!-- Regra: script no final do body -->
+    <script src="../js/main.js"></script>
+    
+    <!-- Renderizador dos ícones Lucide (importante para exibir a setinha e os ícones dos botões) -->
+    <script>
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+    </script>
+</body>
+</html>
