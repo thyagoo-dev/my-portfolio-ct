@@ -141,7 +141,6 @@ As seguintes melhorias estão planejadas para futuras atualizações do portfól
 
 - [ ] Integrar dados reais do GitHub via API GraphQL
 - [ ] Melhorar acessibilidade (ARIA labels e contraste)
-- [ ] Adicionar testes visuais e unit tests
 - [ ] Otimizar imagens (WebP, lazy loading)
 - [ ] Implementar sistema de comentários
 - [ ] Adicionar dark mode toggle manual
