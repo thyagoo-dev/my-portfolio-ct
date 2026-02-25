@@ -140,7 +140,7 @@ As seguintes melhorias estão planejadas para futuras atualizações do portfól
 - [ ] Melhorar acessibilidade (ARIA labels e contraste)
 - [ ] Otimizar imagens (WebP, lazy loading)
 - [ ] Implementar sistema de comentários
-- [ ] Adicionar dark mode toggle manual
+
 
 ---
 
