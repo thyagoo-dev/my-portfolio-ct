@@ -50,21 +50,31 @@ meu_portifolio/
 │   ├── main.js                          # Script principal
 │   └── carrosel.js                      # Componente de carrosel
 ├── images/
-│   ├── eu/                              # Fotos pessoais
 │   ├── background/                      # Imagens de fundo
-│   ├── logos-pjs/                       # Logos de projetos
+│   ├── eu/                              # Fotos pessoais
+│   ├── fotos-projetos-pessoais/         # Fotos dos projetos pessoais
+│   │   ├── 1-ano-de-namoro/
+│   │   ├── agendeaqui/
+│   │   ├── oliveira-kids/
+│   │   └── rastreador-de-despesas/
+│   ├── Galeria/                         # Imagens da galeria
 │   ├── ideias/                          # Ideias visuais
-│   └── galeria/                         # Imagens da galeria
-├── projetos-pessoais/                   # Subpáginas de projetos
+│   └── logos-pjs/                       # Logos de projetos
+├── projetos-pessoais/                   # Subpáginas de projetos pessoais
 │   ├── agendeaqui.html
 │   ├── Aniversario-de-1-ano-de-Namoro.html
 │   ├── meu-portifolio.html
 │   ├── oliveira-kids.html
 │   ├── rastreador-de-despesas.html
 │   └── Saberes-Interculturais-de-Itaparica.html
+├── projetos-reais/                      # Subpáginas de projetos reais
+│   ├── maratonaTech.html
+│   ├── ntidi.html
+│   ├── queelvra.html
+│   ├── sigref.html
+│   └── va_suplementos.html
 ├── Docs/                                # Documentação e CVs
-├── README.md                            # Este arquivo
-└── .gitignore
+└── README.md                            # Este arquivo
 ```
 
 ## 🚀 Como Executar Localmente
