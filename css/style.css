@@ -555,6 +555,11 @@ main {
     scroll-margin-top: 100px; /* Compensar altura da navbar */
 }
 
+.content-section.page-intro {
+    padding-top: 10rem;
+    min-height: 100vh;
+}
+
 /* Seções com fundo branco */
 .content-section.bg-white {
     background: var(--bg-color);
@@ -2047,6 +2052,10 @@ img {
     .content-section {
         padding: 4rem 0;
     }
+
+    .content-section.page-intro {
+        padding-top: 8.5rem;
+    }
     
     .about-grid {
         grid-template-columns: 1fr;
@@ -2152,6 +2161,10 @@ img {
     
     .section-title {
         font-size: 1.75rem;
+    }
+
+    .content-section.page-intro {
+        padding-top: 8rem;
     }
     
     .hero-content h1 {
