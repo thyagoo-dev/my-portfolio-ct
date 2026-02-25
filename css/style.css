@@ -1052,6 +1052,10 @@ main {
     height: calc(100% - 200px);
 }
 
+#projetos-reais .project-footer {
+    margin-top: auto;
+}
+
 #projetos-reais .project-tags {
     margin-top: auto;
 }
