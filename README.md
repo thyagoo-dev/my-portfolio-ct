@@ -132,11 +132,6 @@ Aberto a oportunidades, parcerias e feedback!
 - **GitHub:** [@Victorkaue333](https://github.com/Victorkaue333)
 - **Portfólio:** [victorkaue.netlify.app](https://victorkaue.netlify.app/)
 
-## 🔄 Próximas Melhorias
-
-As seguintes melhorias estão planejadas para futuras atualizações do portfólio:
-
-
 
 
 ---
