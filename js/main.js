@@ -74,9 +74,45 @@ document.addEventListener('DOMContentLoaded', () => {
             return { id: href.slice(1), section };
         })
         .filter(Boolean);
+    const hasSectionLinks = navSections.length > 0;
+
+    function setActiveLinkByPath() {
+        if (!navLinks.length) return;
+
+        const baseUrl = window.location.href;
+        const getPageName = (url) => {
+            try {
+                const pathname = new URL(url, baseUrl).pathname;
+                const parts = pathname.split('/').filter(Boolean);
+                return parts[parts.length - 1] || 'index.html';
+            } catch (error) {
+                return '';
+            }
+        };
+
+        const currentPage = getPageName(window.location.href);
+        if (!currentPage) return;
+
+        let matched = false;
+        navLinks.forEach((link) => {
+            const href = link.getAttribute('href');
+            if (!href || href.startsWith('#')) return;
+
+            const linkPage = getPageName(href);
+            if (linkPage && linkPage === currentPage) {
+                matched = true;
+                navLinks.forEach((item) => item.classList.remove('active'));
+                link.classList.add('active');
+            }
+        });
+
+        if (!matched) {
+            navLinks.forEach((item) => item.classList.remove('active'));
+        }
+    }
 
     function updateActiveLink() {
-        if (!navSections.length) return;
+        if (!hasSectionLinks) return;
 
         const navHeight = navbar ? navbar.offsetHeight : 0;
         const markerY = navHeight + 24;
@@ -118,6 +154,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Chama uma vez no carregamento para definir o link inicial
     updateActiveLink();
+
+    if (!hasSectionLinks) {
+        setActiveLinkByPath();
+    }
 
     // 4. Smooth scroll para links de navegacao
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
