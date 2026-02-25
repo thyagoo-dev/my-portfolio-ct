@@ -80,9 +80,6 @@ git clone https://github.com/Victorkaue333/meu_portifolio.git
 # 2. Entre na pasta
 cd meu_portifolio
 
-# 3. Abra o arquivo no navegador
-# Windows: duplo clique em index.html
-# Linux/Mac: abra no navegador de sua preferência
 ```
 
 ### Opção 2: Usar Servidor Local (Recomendado)
