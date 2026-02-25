@@ -146,7 +146,7 @@ As seguintes melhorias estão planejadas para futuras atualizações do portfól
 - [ ] Implementar sistema de comentários
 - [ ] Adicionar dark mode toggle manual
 - [ ] Criar página de blog para artigos técnicos
-- [ ] Adicionar analytics e SEO avançado
+
 
 ---
 
