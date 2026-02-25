@@ -469,7 +469,7 @@ main {
 
 .hero-cta-final:hover {
     background: var(--text-color);
-    color: #FFFFFF;
+    color: var(--bg-color);
     border-color: var(--text-color);
 }
 
