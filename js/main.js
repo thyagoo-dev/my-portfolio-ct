@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         if (!matched) {
-            navLinks.forEach((item) => item.classList.remove('active'));
+            return;
         }
     }
 
