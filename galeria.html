@@ -115,10 +115,23 @@
                             </p>
                         </div>
 
-                        <!-- Imagem da Publicação -->
-                        <div style="border-radius: 0.75rem; overflow: hidden; border: 1px solid var(--border-color); margin-bottom: 1rem; background: var(--bg-alt);">
-                            <img src="/images/Galeria/Serra_do_Arapua/1.jpg" alt="Preview do Sistema" style="width: 100%; display: block; object-fit: cover; max-height: 400px;">
-                            
+                        <!-- Imagem da Publicação (Carrossel) -->
+                        <div class="photo-carousel" data-carousel>
+                            <div class="carousel-viewport">
+                                <div class="carousel-track">
+                                    <div class="carousel-slide">
+                                        <img src="/images/Galeria/Serra_do_Arapua/1.jpg" alt="Palestra na EEITAC - foto 1" loading="lazy">
+                                    </div>
+                                    <!-- Adicione mais .carousel-slide aqui quando houver novas fotos -->
+                                </div>
+                            </div>
+                            <button class="carousel-button prev" type="button" aria-label="Foto anterior">
+                                <span aria-hidden="true">&#10094;</span>
+                            </button>
+                            <button class="carousel-button next" type="button" aria-label="Próxima foto">
+                                <span aria-hidden="true">&#10095;</span>
+                            </button>
+                            <div class="carousel-dots"></div>
                         </div>
                     </article>
 

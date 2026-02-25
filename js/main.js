@@ -201,7 +201,88 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 6. Botao voltar ao topo
+    // 6. Carrossel de fotos (galeria)
+    const carousels = document.querySelectorAll('[data-carousel]');
+    carousels.forEach((carousel) => {
+        const track = carousel.querySelector('.carousel-track');
+        const slides = [...carousel.querySelectorAll('.carousel-slide')];
+        const prevButton = carousel.querySelector('.carousel-button.prev');
+        const nextButton = carousel.querySelector('.carousel-button.next');
+        const dotsContainer = carousel.querySelector('.carousel-dots');
+
+        if (!track || slides.length === 0) return;
+
+        let index = 0;
+
+        const updateCarousel = () => {
+            track.style.transform = `translateX(-${index * 100}%)`;
+            slides.forEach((slide, i) => {
+                slide.setAttribute('aria-hidden', i === index ? 'false' : 'true');
+            });
+
+            if (dotsContainer) {
+                dotsContainer.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+                    dot.classList.toggle('active', i === index);
+                });
+            }
+        };
+
+        const buildDots = () => {
+            if (!dotsContainer) return;
+            dotsContainer.innerHTML = '';
+            slides.forEach((_, i) => {
+                const dot = document.createElement('button');
+                dot.type = 'button';
+                dot.className = 'carousel-dot';
+                dot.setAttribute('aria-label', `Ir para foto ${i + 1}`);
+                dot.addEventListener('click', () => {
+                    index = i;
+                    updateCarousel();
+                });
+                dotsContainer.appendChild(dot);
+            });
+        };
+
+        if (slides.length <= 1) {
+            carousel.classList.add('is-single');
+        } else {
+            buildDots();
+        }
+
+        const goPrev = () => {
+            index = (index - 1 + slides.length) % slides.length;
+            updateCarousel();
+        };
+
+        const goNext = () => {
+            index = (index + 1) % slides.length;
+            updateCarousel();
+        };
+
+        if (prevButton) {
+            prevButton.addEventListener('click', goPrev);
+        }
+
+        if (nextButton) {
+            nextButton.addEventListener('click', goNext);
+        }
+
+        carousel.setAttribute('tabindex', '0');
+        carousel.addEventListener('keydown', (event) => {
+            if (event.key === 'ArrowLeft') {
+                event.preventDefault();
+                goPrev();
+            }
+            if (event.key === 'ArrowRight') {
+                event.preventDefault();
+                goNext();
+            }
+        });
+
+        updateCarousel();
+    });
+
+    // 7. Botao voltar ao topo
     const backToTopButton = document.getElementById('back-to-top');
 
     window.addEventListener('scroll', () => {
