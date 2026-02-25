@@ -138,7 +138,7 @@ As seguintes melhorias estão planejadas para futuras atualizações do portfól
 
 - [ ] Integrar dados reais do GitHub via API GraphQL
 - [ ] Melhorar acessibilidade (ARIA labels e contraste)
-- [ ] Otimizar imagens (WebP, lazy loading)
+
 ---
 
 **Desenvolvido por Victor Kauê**
