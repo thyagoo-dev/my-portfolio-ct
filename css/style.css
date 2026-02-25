@@ -673,6 +673,10 @@ main {
     height: calc(100% - 200px);
 }
 
+#projetos .project-footer {
+    margin-top: auto;
+}
+
 #projetos .project-content h3 {
     color: #F8FAFC;
 }
