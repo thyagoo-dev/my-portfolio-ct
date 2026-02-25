@@ -311,7 +311,7 @@ main {
     display: flex;
     align-items: center;
     padding: var(--spacing-xl) 0;
-    padding-top: 120px;
+    padding-top: 10.5rem;
     animation: fadeIn 0.8s ease-in;
     scroll-margin-top: 100px; /* Compensar altura da navbar */
 }
@@ -557,7 +557,7 @@ main {
 }
 
 .content-section.page-intro {
-    padding-top: 10rem;
+    padding-top: 10.5rem;
     min-height: 100vh;
 }
 
@@ -2168,7 +2168,11 @@ img {
     }
 
     .content-section.page-intro {
-        padding-top: 8.5rem;
+        padding-top: 9rem;
+    }
+
+    .hero {
+        padding-top: 9rem;
     }
     
     .about-grid {
@@ -2278,7 +2282,11 @@ img {
     }
 
     .content-section.page-intro {
-        padding-top: 8rem;
+        padding-top: 8.5rem;
+    }
+
+    .hero {
+        padding-top: 8.5rem;
     }
     
     .hero-content h1 {
