@@ -136,7 +136,7 @@ Aberto a oportunidades, parcerias e feedback!
 
 As seguintes melhorias estão planejadas para futuras atualizações do portfólio:
 
-- [ ] Integrar dados reais do GitHub via API GraphQL
+
 
 
 ---
