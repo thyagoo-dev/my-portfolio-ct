@@ -2,18 +2,6 @@
 
 Portfólio pessoal responsivo e moderno com foco em apresentação profissional, projetos reais e experiência como desenvolvedor **Full Stack**.
 
-## 📋 Sumário
-
-- [Visão Geral](#visão-geral)
-- [Funcionalidades](#funcionalidades)
-- [Tecnologias](#tecnologias)
-- [Estrutura do Projeto](#estrutura-do-projeto)
-- [Como Executar Localmente](#como-executar-localmente)
-- [Páginas Disponíveis](#páginas-disponíveis)
-- [Deploy](#deploy)
-- [Contato](#contato)
-- [Próximas Melhorias](#próximas-melhorias)
-
 ## 🎯 Visão Geral
 
 O presente projeto foi desenvolvido com o intuito de criar um portfólio pessoal que sirva como uma vitrine profissional para apresentar minhas habilidades, projetos e experiência na área de desenvolvimento web. O portfólio é projetado para ser responsivo, moderno e fácil de navegar, proporcionando uma experiência agradável tanto para recrutadores quanto para clientes em potencial, sendo assim este projeto tem como objetivo:
