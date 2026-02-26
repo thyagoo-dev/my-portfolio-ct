@@ -1112,6 +1112,55 @@ main {
     height: 20px;
 }
 
+/* ========== SERVICES SECTION ========== */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.service-card {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: all var(--transition-normal);
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent-color);
+    box-shadow: var(--shadow-lg);
+}
+
+.service-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.service-card p {
+    color: var(--text-muted-color);
+    margin-bottom: 0.9rem;
+}
+
+.service-card ul {
+    list-style: none;
+}
+
+.service-card li {
+    position: relative;
+    padding-left: 1rem;
+    color: var(--text-muted-color);
+    margin-bottom: 0.4rem;
+}
+
+.service-card li::before {
+    content: '>';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+}
+
 /* ========== EXPERIENCE TIMELINE ========== */
 .experience-timeline {
     display: grid;
@@ -1707,6 +1756,32 @@ img {
     color: #F59E0B;
     font-size: 1.2rem;
     font-weight: bold;
+}
+
+.project-architecture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1rem 0 1.75rem;
+}
+
+.project-architecture .arch-node {
+    min-width: 150px;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    border: 1px solid var(--border-color);
+    background: rgba(245, 158, 11, 0.12);
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.project-architecture .arch-arrow {
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: 1.1rem;
 }
 
 .paper-quote {
