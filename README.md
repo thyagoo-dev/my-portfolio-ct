@@ -14,6 +14,8 @@ O presente projeto foi desenvolvido com o intuito de criar um portfólio pessoal
 
 ## ✨ Funcionalidades
 
+A seguir estão as principais funcionalidades implementadas no portfólio:
+
 - **Navbar Interativa** - Navegação com scroll suave e destaque de seção ativa
 - **Design Responsivo** - Otimizado para desktop, tablet e mobile
 - **Cards de Projetos** - Apresentação visual com tags de tecnologias
