@@ -110,6 +110,8 @@ A seguir estão as páginas principais do portfólio, cada uma com um propósito
 | **galeria.html** | Galeria fotográfica e visual dos trabalhos |
 | **certificados.html** | Certificações e credenciais profissionais |
 | **projetos-pessoais/** | Detalhamento de cada projeto pessoal |
+| **projetos-reais/** | Detalhamento de cada projeto real |
+
 | **Docs/** | Documentação técnica e currículos |
 
 
