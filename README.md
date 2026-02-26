@@ -1,4 +1,4 @@
-# 👨‍💻 Portfólio - Victor Kauê
+# 👨‍💻 Portfólio Pessoal - Victor Kauê
 
 Portfólio pessoal responsivo e moderno com foco em apresentação profissional, projetos reais e experiência como desenvolvedor **Full Stack**.
 
