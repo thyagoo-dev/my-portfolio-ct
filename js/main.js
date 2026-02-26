@@ -209,8 +209,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="modal-icon warning">
                             <i data-lucide="alert-triangle"></i>
                         </div>
-                        <h3 id="cv-modal-title">CV em atualizacao</h3>
-                        <p>Estou atualizando o material com os projetos mais recentes. Posso enviar a versao atual pelos canais abaixo.</p>
+                        <h3 id="cv-modal-title">CV em atualização</h3>
+                        <p>Estou atualizando o material com os projetos mais recentes. Em breve, estará disponível para download.</p>
                         <div class="modal-actions">
                             <a class="btn btn-primary" href="mailto:kaue.alves.pg@gmail.com">Solicitar por e-mail</a>
                             <a class="btn btn-secondary" href="https://www.linkedin.com/in/victor-kau%C3%AA-419926364/" target="_blank" rel="noopener noreferrer">Falar no LinkedIn</a>
