@@ -1,1 +1,86 @@
-/* Arquivo reservado para estilos especificos. */
+/* Estilos especificos da pagina de galeria */
+.page-galeria .gallery-subtitle {
+    margin-bottom: 4rem;
+}
+
+.page-galeria .gallery-feed {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.page-galeria .gallery-post {
+    padding: 1.5rem 1.5rem 0.5rem;
+}
+
+.page-galeria .gallery-post-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.page-galeria .gallery-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent-color);
+}
+
+.page-galeria .gallery-author-block {
+    flex: 1;
+}
+
+.page-galeria .gallery-author-name {
+    margin: 0;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-family: var(--font-primary);
+}
+
+.page-galeria .gallery-author-role {
+    margin: 0;
+    color: var(--text-muted-color);
+    font-size: 0.85rem;
+}
+
+.page-galeria .gallery-author-date {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.page-galeria .gallery-author-date i {
+    width: 12px;
+    height: 12px;
+}
+
+.page-galeria .gallery-post-content {
+    color: var(--text-color);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.page-galeria .gallery-post-content p {
+    margin-bottom: 0.8rem;
+}
+
+.page-galeria .gallery-post-content p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .page-galeria .gallery-post {
+        padding: 1rem 1rem 0.5rem;
+    }
+
+    .page-galeria .gallery-post-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
