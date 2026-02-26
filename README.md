@@ -79,7 +79,7 @@ meu_portifolio/
 └── README.md                            # Este arquivo
 ```
 
-## 🚀 Como Executar Localmente
+## 🚀 Como Executar Localmente:
 
 Como é um projeto estático, você pode abrir direto no navegador:
 
@@ -116,7 +116,7 @@ A seguir estão as páginas principais do portfólio, cada uma com um propósito
 | **Docs/** | Documentação técnica e currículos |
 
 
-## 🌐 Deploy
+### 🌐 Deploy
 
 O projeto está publicado e acessível online em:
 
