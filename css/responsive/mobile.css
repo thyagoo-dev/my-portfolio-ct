@@ -1,0 +1,91 @@
+@media (max-width: 480px) {
+    .navbar {
+        width: calc(100% - 1rem);
+        top: 0.5rem;
+    }
+    
+    .navbar.scrolled {
+        top: 0.25rem;
+    }
+    
+    .navbar-container {
+        padding: 0.65rem 1rem;
+    }
+    
+    .navbar-logo {
+        font-size: 1.25rem;
+    }
+
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .content-section.page-intro {
+        padding-top: 8.5rem;
+    }
+
+    .hero {
+        padding-top: 8.5rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.75rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.25rem;
+    }
+    
+    .btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .hero-photo img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .photo-carousel img {
+        max-height: 240px;
+    }
+
+    .photo-carousel .carousel-dots {
+        bottom: 0.5rem;
+    }
+    
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .tech-card {
+        padding: 1rem 0.5rem;
+    }
+    
+    .tech-card i {
+        font-size: 2rem;
+    }
+    
+    .tech-card span {
+        font-size: 0.75rem;
+    }
+
+    .github-summary-card,
+    .github-visual-card {
+        padding: 1rem;
+    }
+
+    .github-visual-card {
+        min-height: 180px;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        text-align: center;
+    }
+}

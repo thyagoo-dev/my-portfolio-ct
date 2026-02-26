@@ -1,0 +1,21 @@
+/* ========== RESET E BASE ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-primary);
+    line-height: 1.7;
+    overflow-x: hidden;
+    transition: background var(--transition-normal), color var(--transition-normal);
+    position: relative;
+}
+
