@@ -182,6 +182,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // 4.1 Marquee infinito dos projetos (duplica itens para loop suave)
+    const marqueeSections = document.querySelectorAll('[data-marquee]');
+    marqueeSections.forEach((marquee) => {
+        const track = marquee.querySelector('.marquee-track');
+        if (!track || track.dataset.marqueeApplied === 'true') return;
+        track.dataset.marqueeApplied = 'true';
+        track.innerHTML += track.innerHTML;
+    });
+
     // 5. Menu hamburger mobile
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const navMenuWrapper = document.querySelector('.nav-menu-wrapper');
