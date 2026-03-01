@@ -71,6 +71,12 @@
     transition: all var(--transition-normal);
 }
 
+.project-logo.project-logo-cover {
+    object-fit: cover;
+    object-position: center 58%;
+    padding: 0;
+}
+
 .project-card:hover .project-logo {
     opacity: 1;
 }
