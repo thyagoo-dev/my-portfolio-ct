@@ -113,6 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3. Navbar scroll effects e link ativo
     const navbar = document.querySelector('.navbar');
+    const scrollDownButton = document.querySelector('.scroll-down');
     const navLinks = [...document.querySelectorAll('.nav-menu a')];
     const navSections = navLinks
         .map((link) => {
@@ -191,6 +192,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    function updateScrollDownVisibility(scrollTop) {
+        if (!scrollDownButton) return;
+        scrollDownButton.classList.toggle('is-hidden', scrollTop > 10);
+    }
+
+    function getNextSectionAfterHero() {
+        const heroSection = document.querySelector('#inicio');
+        if (!heroSection) return document.querySelector('#sobre');
+
+        let nextElement = heroSection.nextElementSibling;
+        while (nextElement && nextElement.tagName !== 'SECTION') {
+            nextElement = nextElement.nextElementSibling;
+        }
+
+        return nextElement || document.querySelector('#sobre');
+    }
+
     window.addEventListener('scroll', () => {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
@@ -201,10 +219,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         updateActiveLink();
+        updateScrollDownVisibility(scrollTop);
     });
 
     // Chama uma vez no carregamento para definir o link inicial
     updateActiveLink();
+    updateScrollDownVisibility(window.pageYOffset || document.documentElement.scrollTop);
+
+    if (scrollDownButton) {
+        scrollDownButton.addEventListener('click', (event) => {
+            event.preventDefault();
+
+            const nextSection = getNextSectionAfterHero();
+            if (!nextSection) return;
+
+            nextSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+    }
 
     if (!hasSectionLinks) {
         setActiveLinkByPath();
