@@ -45,20 +45,71 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. Logica para animacao de scroll (fade-in)
-    const contentSections = document.querySelectorAll('.content-section');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
-            }
+    // 2. Interacoes de scroll para todas as secoes e blocos principais
+    function initScrollReveal() {
+        const supportsObserver = 'IntersectionObserver' in window;
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!supportsObserver || prefersReducedMotion) return;
+
+        const revealTargets = new Set();
+        const addTargets = (selector) => {
+            document.querySelectorAll(selector).forEach((element) => revealTargets.add(element));
+        };
+
+        addTargets('main section');
+        addTargets('.hero-photo, .hero-content');
+        addTargets('.section-title, .section-subtitle');
+        addTargets('.about-card, .service-card, .tech-card, .project-card, .experience-item, .contact-card');
+        addTargets('.github-summary-card, .github-visual-card, .gallery-post, .certificate-card, .paper-section, .paper-box, .category-section');
+
+        const nodes = [...revealTargets];
+        if (!nodes.length) return;
+
+        document.documentElement.classList.add('has-scroll-reveal');
+        nodes.forEach((node) => node.classList.add('reveal-on-scroll'));
+
+        const staggerGroups = [
+            '.about-grid',
+            '.services-grid',
+            '.tech-grid',
+            '.projects-marquee .marquee-track',
+            '.experience-timeline',
+            '.contact-cards',
+            '.certificate-grid',
+            '.github-metrics'
+        ];
+
+        staggerGroups.forEach((groupSelector) => {
+            document.querySelectorAll(groupSelector).forEach((group) => {
+                const groupChildren = [...group.children].filter((child) => child.classList.contains('reveal-on-scroll'));
+                groupChildren.forEach((child, index) => {
+                    child.style.setProperty('--reveal-delay', `${Math.min(index, 8) * 70}ms`);
+                });
+            });
         });
-    }, {
-        threshold: 0.15,
-        rootMargin: '0px 0px -50px 0px'
-    });
-    contentSections.forEach((section) => observer.observe(section));
+
+        const revealObserver = new IntersectionObserver((entries, observerInstance) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('is-visible');
+                observerInstance.unobserve(entry.target);
+            });
+        }, {
+            threshold: 0.16,
+            rootMargin: '0px 0px -8% 0px'
+        });
+
+        const viewportRevealOffset = window.innerHeight * 0.88;
+        nodes.forEach((node) => {
+            const rect = node.getBoundingClientRect();
+            if (rect.top <= viewportRevealOffset) {
+                node.classList.add('is-visible');
+                return;
+            }
+
+            revealObserver.observe(node);
+        });
+    }
 
     // 3. Navbar scroll effects e link ativo
     const navbar = document.querySelector('.navbar');
@@ -162,22 +213,28 @@ document.addEventListener('DOMContentLoaded', () => {
     // 4. Smooth scroll para links de navegacao
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (!href || href === '#') {
+                e.preventDefault();
+                return;
+            }
+
+            const target = document.querySelector(href);
+            if (!target) return;
+
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
 
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
 
-                // Fecha menu mobile apos clicar
-                const menuWrapper = document.querySelector('.nav-menu-wrapper');
-                const menuToggle = document.querySelector('.mobile-menu-toggle');
-                if (menuWrapper && menuToggle) {
-                    menuWrapper.classList.remove('active');
-                    menuToggle.classList.remove('active');
-                }
+            // Fecha menu mobile apos clicar
+            const menuWrapper = document.querySelector('.nav-menu-wrapper');
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            if (menuWrapper && menuToggle) {
+                menuWrapper.classList.remove('active');
+                menuToggle.classList.remove('active');
             }
         });
     });
@@ -190,6 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
         track.dataset.marqueeApplied = 'true';
         track.innerHTML += track.innerHTML;
     });
+    initScrollReveal();
     // 4.2 Modal do CV (abre em qualquer tela com botao .btn-cv)
     const cvButtons = [...document.querySelectorAll('.btn-cv')];
     let lastCvTrigger = null;
@@ -377,11 +435,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     if (backToTopButton) {
-        backToTopButton.addEventListener('click', () => {
+        backToTopButton.setAttribute('type', 'button');
+        backToTopButton.addEventListener('click', (event) => {
+            event.preventDefault();
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             });
+
+            if (window.location.hash) {
+                history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
+            }
         });
     }
 });
