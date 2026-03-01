@@ -7,6 +7,7 @@
 
 .projects-marquee .marquee-track {
     display: flex;
+    align-items: stretch;
     gap: 1.75rem;
     width: max-content;
     animation: marquee-slide var(--marquee-duration, 38s) linear infinite;
@@ -15,6 +16,9 @@
 
 .projects-marquee .project-card {
     flex: 0 0 330px;
+    min-height: 560px;
+    display: flex;
+    flex-direction: column;
 }
 
 .projects-marquee:hover .marquee-track,
@@ -44,6 +48,7 @@
 
 .project-image {
     height: 200px;
+    flex: 0 0 200px;
     background:
         radial-gradient(circle at 15% 20%, rgba(245, 158, 11, 0.22) 0%, rgba(245, 158, 11, 0) 42%),
         linear-gradient(135deg, #111827 0%, #1F2937 100%);
@@ -54,6 +59,7 @@
     overflow: hidden;
 }
 
+.project-image > img,
 .project-logo {
     position: absolute;
     inset: 0;
@@ -149,6 +155,9 @@
 
 .project-content {
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .project-content h3 {
@@ -162,8 +171,28 @@
     color: var(--text-muted-color);
     font-size: 0.95rem;
     line-height: 1.6;
-    margin-bottom: 1rem;
-    min-height: 76px;
+    margin-bottom: 0;
+    min-height: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.project-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+#projetos .project-content,
+#projetos-reais .project-content {
+    height: auto;
+}
+
+.project-footer {
+    margin-top: auto;
+    padding-top: 1rem;
 }
 
 .project-details {
@@ -191,7 +220,8 @@
 #projetos-reais .project-content {
     display: flex;
     flex-direction: column;
-    height: calc(100% - 200px);
+    height: auto;
+    flex: 1;
 }
 
 #projetos-reais .project-footer {
