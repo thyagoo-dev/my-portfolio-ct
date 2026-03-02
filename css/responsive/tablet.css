@@ -215,9 +215,12 @@
         padding: 4rem 0;
     }
 
-    .photo-carousel img {
-        aspect-ratio: 4 / 3;
-        max-height: 320px;
+    .photo-carousel {
+        --carousel-height: clamp(210px, 52vw, 320px);
+    }
+
+    .photo-carousel .carousel-slide {
+        padding: 0.5rem;
     }
 
     .photo-carousel .carousel-button {

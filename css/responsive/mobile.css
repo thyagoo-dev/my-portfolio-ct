@@ -50,8 +50,8 @@
         height: 200px;
     }
 
-    .photo-carousel img {
-        max-height: 240px;
+    .photo-carousel {
+        --carousel-height: clamp(170px, 58vw, 240px);
     }
 
     .photo-carousel .carousel-dots {
