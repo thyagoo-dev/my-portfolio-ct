@@ -281,6 +281,78 @@ document.addEventListener('DOMContentLoaded', () => {
         track.dataset.marqueeApplied = 'true';
         track.innerHTML += track.innerHTML;
     });
+
+    // 4.1.1 Controles manuais das setas (complementa o auto-scroll)
+    marqueeSections.forEach((marquee) => {
+        const track = marquee.querySelector('.marquee-track');
+        const prevButton = marquee.querySelector('.marquee-control-prev');
+        const nextButton = marquee.querySelector('.marquee-control-next');
+
+        if (!track || !prevButton || !nextButton) return;
+
+        const parseDurationToMs = (value) => {
+            const raw = (value || '').toString().trim();
+            if (!raw) return 0;
+            if (raw.endsWith('ms')) return parseFloat(raw);
+            if (raw.endsWith('s')) return parseFloat(raw) * 1000;
+            return parseFloat(raw);
+        };
+
+        const getAnimationDurationMs = () => {
+            const style = window.getComputedStyle(track);
+            const durations = (style.animationDuration || '')
+                .split(',')
+                .map((entry) => parseDurationToMs(entry))
+                .filter((entry) => Number.isFinite(entry) && entry > 0);
+
+            return durations[0] || 0;
+        };
+
+        const getScrollStep = () => {
+            const firstCard = marquee.querySelector('.project-card');
+            if (!firstCard) return Math.max(marquee.clientWidth * 0.8, 280);
+
+            const trackStyles = window.getComputedStyle(track);
+            const gap = parseFloat(trackStyles.columnGap || trackStyles.gap || '0') || 0;
+            return firstCard.getBoundingClientRect().width + gap;
+        };
+
+        const scrollByDirection = (direction) => {
+            const animations = typeof track.getAnimations === 'function' ? track.getAnimations() : [];
+            const marqueeAnimation = animations.find((animation) => {
+                const timing = animation.effect?.getComputedTiming?.();
+                return timing && Number.isFinite(timing.duration) && timing.duration > 0;
+            });
+
+            const stepDistance = getScrollStep();
+            const cycleDistance = track.scrollWidth / 2;
+            const cycleDuration = marqueeAnimation?.effect?.getComputedTiming?.().duration || getAnimationDurationMs();
+
+            if (marqueeAnimation && cycleDistance > 0 && cycleDuration > 0) {
+                const stepTime = (stepDistance / cycleDistance) * cycleDuration;
+                const currentTime = Number.isFinite(marqueeAnimation.currentTime) ? marqueeAnimation.currentTime : 0;
+                const nextTime = currentTime + (stepTime * direction);
+                const normalizedTime = ((nextTime % cycleDuration) + cycleDuration) % cycleDuration;
+                marqueeAnimation.currentTime = normalizedTime;
+                return;
+            }
+
+            // Fallback suave caso a animação não esteja disponível no browser
+            marquee.scrollBy({
+                left: stepDistance * direction,
+                behavior: 'smooth'
+            });
+        };
+
+        prevButton.addEventListener('click', () => {
+            scrollByDirection(-1);
+        });
+
+        nextButton.addEventListener('click', () => {
+            scrollByDirection(1);
+        });
+    });
+
     initScrollReveal();
     // 4.2 Download do CV: link direto no .btn-cv
     // 5. Menu hamburger mobile
