@@ -104,7 +104,7 @@
     border: 1px solid rgba(245, 158, 11, 0.4);
 }
 
-.navbar-logo span {
+.navbar-logo span:not(.logo-icon) {
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
