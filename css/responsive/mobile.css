@@ -1,19 +1,32 @@
 @media (max-width: 480px) {
     .navbar {
-        width: calc(100% - 1rem);
-        top: 0.5rem;
+        width: calc(100% - 0.75rem);
+        top: 0.45rem;
     }
     
     .navbar.scrolled {
-        top: 0.25rem;
+        top: 0.2rem;
     }
     
     .navbar-container {
-        padding: 0.65rem 1rem;
+        padding: 0.6rem 0.82rem;
     }
     
     .navbar-logo {
-        font-size: 1.25rem;
+        font-size: 1.15rem;
+    }
+
+    .nav-menu-wrapper {
+        width: calc(100% - 0.75rem);
+        top: 4.3rem;
+    }
+
+    .nav-menu {
+        padding: 0.65rem;
+    }
+
+    .nav-menu a {
+        font-size: 0.92rem;
     }
 
     .container {
