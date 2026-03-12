@@ -19,3 +19,8 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
+.tech-card .tech-icon-whisper {
+    color: var(--accent-color);
+    stroke-width: 1.9;
+}
+
