@@ -2,6 +2,7 @@
 .projects-marquee {
     position: relative;
     overflow: hidden;
+    padding: 1.5rem 0;
 }
 
 .projects-marquee::before {
@@ -9,13 +10,19 @@
     position: absolute;
     inset: 0;
     pointer-events: none;
-    background: linear-gradient(90deg, rgba(11,18,32,1) 0%, transparent 8%, transparent 92%, rgba(11,18,32,1) 100%);
+    background: linear-gradient(90deg, 
+        rgba(11,18,32,1) 0%, 
+        rgba(11,18,32,0.8) 3%, 
+        transparent 12%, 
+        transparent 88%, 
+        rgba(11,18,32,0.8) 97%, 
+        rgba(11,18,32,1) 100%);
     z-index: 3;
 }
 
 .projects-marquee .marquee-control {
     position: absolute;
-    top: 36%;
+    top: 50%;
     width: 44px;
     height: 44px;
     border-radius: 50%;
@@ -109,9 +116,10 @@
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
     box-shadow: var(--shadow-xl);
     border-color: var(--accent-color);
+    z-index: 10;
 }
 
 .project-image {
