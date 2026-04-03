@@ -19,6 +19,44 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Injeta tags de tecnologias em cards de projetos para aumentar clareza tecnica
+    const projectTechMap = {
+        'Meu Portfólio': ['HTML', 'CSS', 'JavaScript'],
+        'AgendeAqui': ['Django', 'PostgreSQL', 'Bootstrap'],
+        'Oliveira Kids': ['Python', 'Django', 'MySQL'],
+        'Transcritor de Entrevistas': ['Python', 'IA', 'Automacao'],
+        'Saberes Interculturais de Itaparica': ['Django', 'SQLite', 'Responsivo'],
+        'SIGREF': ['Django', 'MySQL', 'SaaS'],
+        'NTIDI': ['Django', 'Bootstrap', 'SEO'],
+        'MaratonaTech': ['Python', 'Django', 'Eventos'],
+        'VA Suplementos': ['Python', 'Sistema Web', 'Controle de Estoque'],
+        'Queelvra': ['Landing Page', 'Front-end', 'Conversao'],
+        'VK Software': ['Web App', 'Design System', 'Escalabilidade']
+    };
+
+    document.querySelectorAll('.project-card, .project-card-gildacio').forEach((card) => {
+        const title = card.querySelector('h3, .project-title')?.textContent?.trim();
+        if (!title || card.querySelector('.project-tech-tags')) return;
+
+        const technologies = projectTechMap[title];
+        if (!technologies || !technologies.length) return;
+
+        const tagsContainer = document.createElement('div');
+        tagsContainer.className = 'project-tech-tags';
+
+        technologies.forEach((tech) => {
+            const tag = document.createElement('span');
+            tag.className = 'project-tech-tag';
+            tag.textContent = tech;
+            tagsContainer.appendChild(tag);
+        });
+
+        const contentTarget = card.querySelector('.project-body') || card.querySelector('.project-description')?.parentElement;
+        if (contentTarget) {
+            contentTarget.appendChild(tagsContainer);
+        }
+    });
+
     // 1. Animacao de digitacao com Typed.js (somente se o alvo existir)
     const typedElement = document.querySelector('#typed-text');
     if (typedElement && typeof Typed !== 'undefined') {
@@ -455,6 +493,42 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCarousel();
     });
 
+    // Lightbox simples para imagens da galeria
+    const galleryImages = document.querySelectorAll('.page-galeria .carousel-slide img');
+    if (galleryImages.length) {
+        const lightbox = document.createElement('div');
+        lightbox.className = 'gallery-lightbox';
+        lightbox.innerHTML = '<button type="button" class="gallery-lightbox-close" aria-label="Fechar imagem">x</button><img alt="Imagem ampliada da galeria">';
+        document.body.appendChild(lightbox);
+
+        const lightboxImage = lightbox.querySelector('img');
+        const closeLightbox = () => {
+            lightbox.classList.remove('active');
+            document.body.classList.remove('modal-open');
+        };
+
+        galleryImages.forEach((image) => {
+            image.addEventListener('click', () => {
+                lightboxImage.src = image.src;
+                lightboxImage.alt = image.alt || 'Imagem da galeria';
+                lightbox.classList.add('active');
+                document.body.classList.add('modal-open');
+            });
+        });
+
+        lightbox.addEventListener('click', (event) => {
+            if (event.target === lightbox || event.target.closest('.gallery-lightbox-close')) {
+                closeLightbox();
+            }
+        });
+
+        window.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && lightbox.classList.contains('active')) {
+                closeLightbox();
+            }
+        });
+    }
+
     // 7. Botao voltar ao topo
     const backToTopButton = document.getElementById('back-to-top');
 
@@ -586,8 +660,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const btnLoading = submitBtn.querySelector('.btn-loading');
             
             if (btnText && btnLoading) {
-                btnText.style.display = 'none';
-                btnLoading.style.display = 'flex';
+                btnText.classList.add('is-hidden');
+                btnLoading.classList.remove('is-hidden');
                 submitBtn.disabled = true;
             }
 
@@ -605,8 +679,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (formSuccess) {
         const urlParams = new URLSearchParams(window.location.search);
         if (urlParams.get('status') === 'success') {
-            formSuccess.style.display = 'flex';
-            if (contactForm) contactForm.style.display = 'none';
+            formSuccess.classList.remove('is-hidden');
+            if (contactForm) contactForm.classList.add('is-hidden');
             
             // Re-initialize Lucide icons for success icon
             if (typeof lucide !== 'undefined') {

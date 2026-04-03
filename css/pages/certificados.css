@@ -70,20 +70,21 @@
 
 /* ============ CARD DE CERTIFICADO ============ */
 .certificate-card {
-    background: var(--surface-color);
-    border: 1px solid var(--border-color);
-    border-radius: 0.75rem;
+    background: linear-gradient(145deg, rgba(15, 23, 42, 0.95) 0%, rgba(31, 41, 55, 0.88) 100%);
+    border: 1px solid rgba(148, 163, 184, 0.28);
+    border-radius: 1rem;
     padding: 2rem;
     transition: var(--transition-normal);
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    box-shadow: 0 12px 28px rgba(2, 6, 23, 0.24);
 }
 
 .certificate-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
-    border-color: var(--accent-color);
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 26px 44px rgba(2, 6, 23, 0.42);
+    border-color: rgba(245, 158, 11, 0.75);
 }
 
 /* Ícone */
@@ -96,6 +97,11 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 0.5rem;
+    transition: transform var(--transition-normal);
+}
+
+.certificate-card:hover .certificate-icon {
+    transform: scale(1.08);
 }
 
 .certificate-icon i {

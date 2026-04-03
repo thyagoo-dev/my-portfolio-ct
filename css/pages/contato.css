@@ -4,7 +4,9 @@
 
 .contact-page {
     padding: 8rem 0 4rem;
-    background: var(--bg-color);
+    background:
+        radial-gradient(circle at 15% 20%, rgba(59, 130, 246, 0.14) 0%, rgba(59, 130, 246, 0) 35%),
+        var(--bg-color);
     position: relative;
 }
 
@@ -37,14 +39,19 @@
     margin-bottom: 1rem;
     color: var(--text-color);
     position: relative;
-    display: inline-block;
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 .page-title::after {
     content: '';
     position: absolute;
     bottom: -0.5rem;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 60%;
     height: 4px;
     background: var(--gradient-primary);
@@ -62,6 +69,9 @@
     color: var(--text-muted-color);
     margin-bottom: 3rem;
     line-height: 1.6;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 .section-subtitle {
@@ -119,7 +129,18 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     margin-top: 2.5rem;
-}\n\n@keyframes fadeInUp {\n    from {\n        opacity: 0;\n        transform: translateY(20px);\n    }\n    to {\n        opacity: 1;\n        transform: translateY(0);\n    }\n}
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 .contact-info-item {
     display: flex;
@@ -134,7 +155,11 @@
     position: relative;
     overflow: hidden;
     animation: fadeInUp 0.6s ease-out backwards;
-}\n\n.contact-info-item:nth-child(1) { animation-delay: 0.1s; }\n.contact-info-item:nth-child(2) { animation-delay: 0.2s; }\n.contact-info-item:nth-child(3) { animation-delay: 0.3s; }
+}
+
+.contact-info-item:nth-child(1) { animation-delay: 0.1s; }
+.contact-info-item:nth-child(2) { animation-delay: 0.2s; }
+.contact-info-item:nth-child(3) { animation-delay: 0.3s; }
 
 .contact-info-item::before {
     content: '';
@@ -249,7 +274,11 @@ a.contact-info-item:hover .contact-info-value {
     position: relative;
     overflow: hidden;
     animation: fadeInUp 0.5s ease-out backwards;
-}\n\n.social-link-card:nth-child(1) { animation-delay: 0.2s; }\n.social-link-card:nth-child(2) { animation-delay: 0.3s; }\n.social-link-card:nth-child(3) { animation-delay: 0.4s; }
+}
+
+.social-link-card:nth-child(1) { animation-delay: 0.2s; }
+.social-link-card:nth-child(2) { animation-delay: 0.3s; }
+.social-link-card:nth-child(3) { animation-delay: 0.4s; }
 
 .social-link-card::before {
     content: '';
@@ -367,7 +396,16 @@ a.contact-info-item:hover .contact-info-value {
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-    color: var(--text-muted-color);\n    opacity: 0.5;\n    font-style: italic;\n    transition: opacity 0.3s ease;\n}\n\n.contact-form input:focus::placeholder,\n.contact-form textarea:focus::placeholder {\n    opacity: 0.3;\n}
+    color: var(--text-muted-color);
+    opacity: 0.5;
+    font-style: italic;
+    transition: opacity 0.3s ease;
+}
+
+.contact-form input:focus::placeholder,
+.contact-form textarea:focus::placeholder {
+    opacity: 0.3;
+}
 
 .contact-form input:focus,
 .contact-form select:focus,
@@ -381,9 +419,9 @@ a.contact-info-item:hover .contact-info-value {
 
 .contact-form select {
     cursor: pointer;
-    appearance: none;
-    -webkit-appearance: none;
     -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
     background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23F59E0B' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 1rem center;
@@ -541,6 +579,10 @@ a.contact-info-item:hover .contact-info-value {
 .form-message p {
     margin: 0;
     line-height: 1.5;
+}
+
+.is-hidden {
+    display: none !important;
 }
 
 .form-success {
