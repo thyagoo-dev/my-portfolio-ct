@@ -282,6 +282,56 @@ document.addEventListener('DOMContentLoaded', () => {
         setActiveLinkByPath();
     }
 
+    // 3.0 Animacoes da hero e do footer com GSAP
+    const heroContent = document.querySelector('.hero-content');
+    const heroTechGrid = document.querySelector('.hero-tech-grid');
+    const footerGrid = document.querySelector('.footer-grid');
+    const footerBottom = document.querySelector('.footer-bottom');
+
+    if (typeof gsap !== 'undefined') {
+        if (heroContent) {
+            gsap.fromTo(heroContent,
+                { autoAlpha: 0, x: -42 },
+                { autoAlpha: 1, x: 0, duration: 0.9, ease: 'power3.out' }
+            );
+
+            if (heroTechGrid) {
+                gsap.fromTo(heroTechGrid.children,
+                    { autoAlpha: 0, y: 18 },
+                    { autoAlpha: 1, y: 0, duration: 0.5, stagger: 0.06, delay: 0.25, ease: 'power2.out' }
+                );
+            }
+        }
+
+        if (footerGrid) {
+            const triggerFooterAnimation = () => {
+                gsap.fromTo(footerGrid.children,
+                    { autoAlpha: 0, y: 32 },
+                    { autoAlpha: 1, y: 0, duration: 0.65, stagger: 0.12, ease: 'power2.out' }
+                );
+
+                if (footerBottom) {
+                    gsap.fromTo(footerBottom,
+                        { autoAlpha: 0, y: 24 },
+                        { autoAlpha: 1, y: 0, duration: 0.6, delay: 0.2, ease: 'power2.out' }
+                    );
+                }
+            };
+
+            const footerObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) return;
+                    triggerFooterAnimation();
+                    observer.unobserve(entry.target);
+                });
+            }, {
+                threshold: 0.2
+            });
+
+            footerObserver.observe(footerGrid);
+        }
+    }
+
     // 3.1 Animacao da CTA da home com GSAP ao entrar na viewport
     const ctaContent = document.querySelector('.cta-content');
     const ctaCards = document.querySelector('#contato .contact-cards');
