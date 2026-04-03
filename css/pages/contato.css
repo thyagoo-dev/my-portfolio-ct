@@ -57,7 +57,7 @@
     to { width: 60%; opacity: 1; }
 }
 
-.page-description {
+.page-subtitle {
     font-size: 1.1rem;
     color: var(--text-muted-color);
     margin-bottom: 3rem;
@@ -718,7 +718,7 @@ button[type="submit"]:disabled {
         font-size: 2rem;
     }
 
-    .page-description {
+    .page-subtitle {
         font-size: 1rem;
         margin-bottom: 2rem;
     }

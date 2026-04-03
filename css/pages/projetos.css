@@ -27,6 +27,14 @@
     border-radius: 2px;
 }
 
+.page-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted-color);
+    margin-bottom: 3rem;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
 /* ============ SEÇÕES DE PROJETOS ============ */
 .projects-section {
     margin-bottom: 4rem;

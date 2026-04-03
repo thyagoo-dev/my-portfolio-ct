@@ -1,4 +1,19 @@
 /* Estilos especificos da pagina de galeria */
+.page-galeria .page-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+}
+
+.page-galeria .page-subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 4rem;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
 .page-galeria .gallery-subtitle {
     margin-bottom: 4rem;
 }

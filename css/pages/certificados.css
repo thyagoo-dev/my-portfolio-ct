@@ -28,7 +28,7 @@
     border-radius: 2px;
 }
 
-.page-description {
+.page-subtitle {
     font-size: 1.1rem;
     color: var(--text-muted-color);
     margin-bottom: 4rem;
@@ -223,7 +223,7 @@
         margin-bottom: 0.75rem;
     }
 
-    .page-description {
+    .page-subtitle {
         font-size: 1rem;
         margin-bottom: 3rem;
     }
