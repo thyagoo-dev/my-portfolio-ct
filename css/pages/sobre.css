@@ -316,6 +316,10 @@
     margin-bottom: 2rem;
 }
 
+.about-main-area .section-title::after {
+    display: none;
+}
+
 .content-section .section-title i {
     width: 28px;
     height: 28px;
