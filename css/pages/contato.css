@@ -129,6 +129,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     margin-top: 2.5rem;
+    align-items: stretch;
 }
 
 @keyframes fadeInUp {
@@ -155,6 +156,7 @@
     position: relative;
     overflow: hidden;
     animation: fadeInUp 0.6s ease-out backwards;
+    min-height: 114px;
 }
 
 .contact-info-item:nth-child(1) { animation-delay: 0.1s; }
@@ -242,7 +244,7 @@ a.contact-info-item:hover {
     font-size: 1rem;
     font-weight: 600;
     color: var(--text-color);
-    word-break: break-word;
+    overflow-wrap: anywhere;
     transition: color 0.3s ease;
 }
 
@@ -255,7 +257,14 @@ a.contact-info-item:hover .contact-info-value {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
+}
+
+.social-section .section-description,
+.form-section .section-description {
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .social-link-card {

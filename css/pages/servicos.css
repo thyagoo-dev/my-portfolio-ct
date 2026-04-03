@@ -1,0 +1,78 @@
+/* ========================================
+   PAGINA DE SERVICOS
+   ======================================== */
+
+#servicos {
+    padding-top: 7.5rem;
+}
+
+#servicos .page-title {
+    margin-bottom: 0.9rem;
+}
+
+#servicos .page-subtitle {
+    max-width: 680px;
+    margin: 0 auto 2.6rem;
+    text-align: center;
+}
+
+#servicos .services-grid {
+    max-width: 980px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.2rem;
+    align-items: stretch;
+}
+
+#servicos .service-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    min-height: 290px;
+    padding: 1.55rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 28px rgba(2, 6, 23, 0.25);
+}
+
+#servicos .service-icon {
+    margin-bottom: 1rem;
+}
+
+#servicos .service-card h3 {
+    margin-bottom: 0.45rem;
+    font-size: 1.15rem;
+}
+
+#servicos .service-card p {
+    margin-bottom: 0.8rem;
+    color: #cbd5e1;
+    font-size: 0.94rem;
+    line-height: 1.55;
+}
+
+#servicos .service-card ul {
+    width: 100%;
+    margin-top: auto;
+    padding-top: 0.8rem;
+}
+
+#servicos .service-card li {
+    margin-bottom: 0.38rem;
+    color: #e2e8f0;
+}
+
+#servicos .text-center.mt-3 {
+    margin-top: 2rem;
+}
+
+@media (max-width: 992px) {
+    #servicos .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #servicos .service-card {
+        min-height: 0;
+    }
+}
