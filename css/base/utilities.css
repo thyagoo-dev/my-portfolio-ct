@@ -8,7 +8,139 @@
         transition-duration: 0.01ms !important;
     }
 }
+/* ========== UTILITÁRIOS DE ESPAÇAMENTO ========== */
+.mt-3 {
+    margin-top: 3rem;
+}
 
+.mt-2-5 {
+    margin-top: 2.5rem;
+}
+
+.mb-1-5 {
+    margin-bottom: 1.5rem;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+/* ========== UTILITÁRIOS DE TEXTO ========== */
+.text-center {
+    text-align: center;
+}
+
+/* ========== ESTILOS DE PROJETO DETALHES ========== */
+.project-detail-section-title {
+    color: var(--text-color);
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-detail-subtitle {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-detail-subtitle-spaced {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.project-detail-icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+    width: 20px;
+    height: 20px;
+}
+/* ========== UTILITÁRIOS DE DISPLAY ========== */
+.d-none {
+    display: none !important;
+}
+
+.d-block {
+    display: block !important;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.d-inline-flex {
+    display: inline-flex !important;
+}
+
+.d-grid {
+    display: grid !important;
+}
+
+/* ========== UTILITÁRIOS DE FLEXBOX ========== */
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.gap-1 {
+    gap: 1rem;
+}
+
+.gap-2 {
+    gap: 2rem;
+}
+
+/* ========== UTILITÁRIOS DE VISIBILIDADE ========== */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* ========== UTILITÁRIOS DE LARGURA ========== */
+.w-100 {
+    width: 100%;
+}
+
+.max-w-container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ========== UTILITÁRIOS DE IMAGEM ========== */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 /* ========== IMPRESSÃƒÆ’O ========== */
 @media print {
     .navbar,

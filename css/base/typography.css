@@ -1,1 +1,166 @@
-/* Arquivo reservado para estilos especificos. */
+/* ========================================
+   TIPOGRAFIA - Hierarquia e Legibilidade
+   ======================================== */
+
+/* Configuração base do documento */
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+/* ========== HIERARQUIA DE TÍTULOS ========== */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    letter-spacing: -0.01em;
+}
+
+h3 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+h4 {
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+}
+
+h5 {
+    font-size: clamp(1.1rem, 2vw, 1.25rem);
+}
+
+h6 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* ========== PARÁGRAFOS E TEXTO ========== */
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    max-width: 70ch; /* Largura ideal para leitura */
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--text-muted-color);
+}
+
+.text-muted {
+    color: var(--text-muted-color);
+}
+
+.text-small {
+    font-size: 0.875rem;
+}
+
+.text-large {
+    font-size: 1.125rem;
+}
+
+/* ========== LINKS ========== */
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color var(--transition-normal);
+}
+
+a:hover {
+    color: var(--accent-hover);
+}
+
+a:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* ========== LISTAS ========== */
+ul, ol {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+/* ========== CÓDIGO ========== */
+code {
+    font-family: 'Courier New', monospace;
+    font-size: 0.875em;
+    color: var(--accent-color);
+    background: rgba(245, 158, 11, 0.1);
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+}
+
+pre {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 1rem;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+}
+
+pre code {
+    background: none;
+    padding: 0;
+}
+
+/* ========== BLOCKQUOTES ========== */
+blockquote {
+    margin: 0 0 1rem;
+    padding: 1rem 1.5rem;
+    border-left: 4px solid var(--accent-color);
+    background: var(--surface-color);
+    font-style: italic;
+    color: var(--text-muted-color);
+}
+
+blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+/* ========== RESPONSIVIDADE TIPOGRÁFICA ========== */
+@media (max-width: 768px) {
+    html {
+        font-size: 15px;
+    }
+
+    p {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+}

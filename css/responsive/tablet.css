@@ -49,6 +49,7 @@
 
     .projects-marquee {
         overflow-x: auto;
+        -webkit-mask-image: none;
         mask-image: none;
         scroll-snap-type: x mandatory;
         padding-bottom: 1rem;
@@ -260,7 +261,7 @@
     }
 
     .project-content p {
-        min-height: auto;
+        min-height: 0;
     }
     
     .experience-item {
