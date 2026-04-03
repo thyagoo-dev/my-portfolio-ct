@@ -74,7 +74,8 @@
     text-align: center;
 }
 
-.section-subtitle {
+.social-section .section-subtitle,
+.form-section .section-subtitle {
     font-size: 2rem;
     font-weight: 600;
     color: var(--text-color);
@@ -86,7 +87,8 @@
     line-height: 1.6;
 }
 
-.section-subtitle::before {
+.social-section .section-subtitle::before,
+.form-section .section-subtitle::before {
     content: '—';
     position: absolute;
     left: 0;
@@ -95,24 +97,28 @@
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.section-subtitle:hover::before {
+.social-section .section-subtitle:hover::before,
+.form-section .section-subtitle:hover::before {
     transform: translateX(5px);
 }
 
 /* Ajuste quando subtitle vem após title */
-.section-title + .section-subtitle {
+.social-section .section-title + .section-subtitle,
+.form-section .section-title + .section-subtitle {
     margin-top: 1rem;
 }
 
 /* Centralizado */
-.text-center .section-subtitle {
+.social-section .text-center .section-subtitle,
+.form-section .text-center .section-subtitle {
     margin-left: auto;
     margin-right: auto;
     padding-left: 0;
     max-width: 600px;
 }
 
-.text-center .section-subtitle::before {
+.social-section .text-center .section-subtitle::before,
+.form-section .text-center .section-subtitle::before {
     display: none;
 }
 
@@ -515,7 +521,11 @@ a.contact-info-item:hover .contact-info-value {
     width: 18px;
     height: 18px;
     transition: transform 0.3s ease;
-}\n\n.contact-form button[type="submit"]:hover svg {\n    transform: translateX(3px);\n}
+}
+
+.contact-form button[type="submit"]:hover svg {
+    transform: translateX(3px);
+}
 
 /* Campo honeypot anti-spam */
 .hidden-field {
