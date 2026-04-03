@@ -72,6 +72,8 @@
     position: relative;
     padding-left: 2.5rem;
     transition: color 0.3s ease;
+    max-width: 700px;
+    line-height: 1.6;
 }
 
 .section-subtitle::before {
@@ -90,6 +92,18 @@
 /* Ajuste quando subtitle vem após title */
 .section-title + .section-subtitle {
     margin-top: 1rem;
+}
+
+/* Centralizado */
+.text-center .section-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    max-width: 600px;
+}
+
+.text-center .section-subtitle::before {
+    display: none;
 }
 
 .section-description {

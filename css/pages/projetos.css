@@ -43,6 +43,8 @@
     margin-bottom: 2rem;
     position: relative;
     padding-left: 2.5rem;
+    max-width: 700px;
+    line-height: 1.6;
 }
 
 .section-subtitle::before {
@@ -56,6 +58,18 @@
 /* Ajuste quando subtitle vem após title */
 .section-title + .section-subtitle {
     margin-top: 1rem;
+}
+
+/* Centralizado */
+.text-center .section-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    max-width: 600px;
+}
+
+.text-center .section-subtitle::before {
+    display: none;
 }
 
 /* ============ GRID DE PROJETOS ============ */
