@@ -514,4 +514,139 @@ document.addEventListener('DOMContentLoaded', () => {
             updateAboutActiveLink();
         }
     }
+
+    // =============================================
+    // CONTACT FORM UX ENHANCEMENTS
+    // =============================================
+    const contactForm = document.getElementById('contactForm');
+    const msgTextarea = document.getElementById('mensagem');
+    const charCounter = document.getElementById('charCounter');
+    const formProgressBar = document.getElementById('formProgressBar');
+    const submitBtn = document.getElementById('submitBtn');
+    const formSuccess = document.getElementById('formSuccess');
+    const formError = document.getElementById('formError');
+
+    // Character counter for textarea
+    if (msgTextarea && charCounter) {
+        const updateCharCounter = () => {
+            const currentLength = msgTextarea.value.length;
+            const maxLength = msgTextarea.getAttribute('maxlength') || 1000;
+            charCounter.textContent = `${currentLength} / ${maxLength}`;
+
+            // Color coding
+            charCounter.classList.remove('warning', 'danger');
+            const percentage = (currentLength / maxLength) * 100;
+            
+            if (percentage >= 90) {
+                charCounter.classList.add('danger');
+            } else if (percentage >= 75) {
+                charCounter.classList.add('warning');
+            }
+        };
+
+        msgTextarea.addEventListener('input', updateCharCounter);
+        updateCharCounter(); // Initial call
+    }
+
+    // Form progress bar
+    if (contactForm && formProgressBar) {
+        const updateFormProgress = () => {
+            const requiredFields = contactForm.querySelectorAll('[required]');
+            let filledFields = 0;
+
+            requiredFields.forEach(field => {
+                if (field.type === 'checkbox' || field.type === 'radio') {
+                    if (field.checked) filledFields++;
+                } else if (field.tagName === 'SELECT') {
+                    if (field.selectedIndex > 0) filledFields++;
+                } else {
+                    if (field.value.trim().length > 0) filledFields++;
+                }
+            });
+
+            const progress = (filledFields / requiredFields.length) * 100;
+            formProgressBar.style.width = `${progress}%`;
+        };
+
+        // Add listeners to all form inputs
+        const formInputs = contactForm.querySelectorAll('input, select, textarea');
+        formInputs.forEach(input => {
+            input.addEventListener('input', updateFormProgress);
+            input.addEventListener('change', updateFormProgress);
+        });
+
+        updateFormProgress(); // Initial call
+    }
+
+    // Form submission handling
+    if (contactForm && submitBtn) {
+        contactForm.addEventListener('submit', function(e) {
+            // Show loading state
+            const btnText = submitBtn.querySelector('.btn-text');
+            const btnLoading = submitBtn.querySelector('.btn-loading');
+            
+            if (btnText && btnLoading) {
+                btnText.style.display = 'none';
+                btnLoading.style.display = 'flex';
+                submitBtn.disabled = true;
+            }
+
+            // Re-initialize Lucide icons for the loading spinner
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+
+            // Note: The form will actually submit after this
+            // The loading state will show until page redirects
+        });
+    }
+
+    // Check for success message in URL
+    if (formSuccess) {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('status') === 'success') {
+            formSuccess.style.display = 'flex';
+            if (contactForm) contactForm.style.display = 'none';
+            
+            // Re-initialize Lucide icons for success icon
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+
+            // Scroll to message
+            setTimeout(() => {
+                formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 300);
+
+            // Remove status parameter from URL after displaying message
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
+    }
+
+    // Real-time validation feedback
+    if (contactForm) {
+        const inputs = contactForm.querySelectorAll('input[required], select[required], textarea[required]');
+        
+        inputs.forEach(input => {
+            input.addEventListener('blur', function() {
+                // Only validate if user has started typing
+                if (this.value.length > 0) {
+                    if (this.validity.valid) {
+                        this.classList.remove('invalid');
+                        this.classList.add('valid');
+                    } else {
+                        this.classList.remove('valid');
+                        this.classList.add('invalid');
+                    }
+                }
+            });
+
+            input.addEventListener('input', function() {
+                // Clear invalid state as soon as user starts correcting
+                if (this.classList.contains('invalid')) {
+                    this.classList.remove('invalid');
+                }
+            });
+        });
+    }
 });

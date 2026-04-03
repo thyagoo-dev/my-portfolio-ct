@@ -69,7 +69,7 @@
             <div class="container">
                 <h1 class="page-title">Entre em Contato</h1>
                 <p class="page-description">
-                    Vamos conversar sobre projetos, oportunidades ou trocar ideiasprofissionais.
+                    Vamos conversar sobre projetos, oportunidades ou trocar ideias profissionais.
                 </p>
 
                 <!-- Cards de Contato -->
@@ -140,48 +140,127 @@
         <section class="form-section">
             <div class="container">
                 <h2 class="section-subtitle">Envie uma Mensagem</h2>
-                <p class="section-description">Preencha o formulário abaixo e entrarei em contato o mais rápido possível.</p>
+                <p class="section-description">
+                    Preencha o formulário abaixo e entrarei em contato o mais rápido possível.
+                    <span class="response-time">⏱️ Respondo em até 24 horas</span>
+                </p>
 
                 <div class="contact-form-wrapper">
-                    <form class="contact-form" action="https://formsubmit.co/kaue.alves.pg@gmail.com" method="POST">
+                    <!-- Progress Bar -->
+                    <div class="form-progress">
+                        <div class="form-progress-bar" id="formProgressBar"></div>
+                    </div>
+
+                    <!-- Success Message -->
+                    <div class="form-message form-success" id="formSuccess" style="display: none;">
+                        <i data-lucide="check-circle"></i>
+                        <p><strong>Mensagem enviada com sucesso!</strong><br>Obrigado pelo contato, responderei em breve.</p>
+                    </div>
+
+                    <!-- Error Message -->
+                    <div class="form-message form-error" id="formError" style="display: none;">
+                        <i data-lucide="alert-circle"></i>
+                        <p><strong>Erro ao enviar mensagem.</strong><br>Por favor, tente novamente ou entre em contato via email.</p>
+                    </div>
+
+                    <form class="contact-form" id="contactForm" action="https://formsubmit.co/kaue.alves.pg@gmail.com" method="POST">
                         <input type="hidden" name="_subject" value="Contato via Portfólio">
                         <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_next" value="https://victorkaue.vercel.app/contato.html">
+                        <input type="hidden" name="_next" value="https://victorkaue.vercel.app/contato.html?status=success">
                         <input type="text" name="_honey" class="hidden-field" aria-label="Leave this field blank" tabindex="-1" autocomplete="off">
 
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="nome">Nome completo</label>
-                                <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                                <label for="nome">
+                                    Nome completo
+                                    <span class="required-badge">Obrigatório</span>
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="nome" 
+                                    name="nome" 
+                                    placeholder="Ex: João Silva" 
+                                    autocomplete="name"
+                                    required
+                                    minlength="3"
+                                    maxlength="100"
+                                    aria-required="true"
+                                >
+                                <span class="field-hint">Mínimo 3 caracteres</span>
                             </div>
 
                             <div class="form-group">
-                                <label for="email">E-mail</label>
-                                <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                                <label for="email">
+                                    E-mail
+                                    <span class="required-badge">Obrigatório</span>
+                                </label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    placeholder="seu@email.com" 
+                                    autocomplete="email"
+                                    required
+                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                    aria-required="true"
+                                >
+                                <span class="field-hint">Digite um email válido</span>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="assunto">Assunto</label>
-                            <select id="assunto" name="assunto" required>
-                                <option value="" selected disabled>Selecione o assunto</option>
-                                <option value="Orçamento de Projeto">Orçamento de Projeto</option>
-                                <option value="Freelance">Freelance</option>
-                                <option value="Oportunidade de Trabalho">Oportunidade de Trabalho</option>
-                                <option value="Consultoria">Consultoria</option>
-                                <option value="Outro">Outro</option>
+                            <label for="assunto">
+                                Assunto
+                                <span class="required-badge">Obrigatório</span>
+                            </label>
+                            <select id="assunto" name="assunto" required aria-required="true">
+                                <option value="" selected disabled>Selecione o tipo de contato</option>
+                                <option value="Orçamento de Projeto">💼 Orçamento de Projeto</option>
+                                <option value="Freelance">🚀 Freelance</option>
+                                <option value="Oportunidade de Trabalho">💻 Oportunidade de Trabalho</option>
+                                <option value="Consultoria">📊 Consultoria</option>
+                                <option value="Parceria">🤝 Parceria</option>
+                                <option value="Outro">💬 Outro</option>
                             </select>
+                            <span class="field-hint">Escolha a opção que melhor descreve seu contato</span>
                         </div>
 
                         <div class="form-group">
-                            <label for="mensagem">Mensagem</label>
-                            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva seu texto aqui..." required></textarea>
+                            <label for="mensagem">
+                                Mensagem
+                                <span class="required-badge">Obrigatório</span>
+                            </label>
+                            <textarea 
+                                id="mensagem" 
+                                name="mensagem" 
+                                rows="5" 
+                                placeholder="Descreva seu projeto, necessidade ou ideia. Quanto mais detalhes, melhor poderei ajudar!"
+                                required
+                                minlength="20"
+                                maxlength="1000"
+                                aria-required="true"
+                            ></textarea>
+                            <div class="field-footer">
+                                <span class="field-hint">Mínimo 20 caracteres</span>
+                                <span class="char-counter" id="charCounter">0 / 1000</span>
+                            </div>
                         </div>
 
-                        <button type="submit" class="btn btn-primary">
-                            <i data-lucide="send"></i>
-                            Enviar Mensagem
+                        <button type="submit" class="btn btn-primary" id="submitBtn">
+                            <span class="btn-text">
+                                <i data-lucide="send"></i>
+                                Enviar Mensagem
+                            </span>
+                            <span class="btn-loading" style="display: none;">
+                                <i data-lucide="loader" class="spinning"></i>
+                                Enviando...
+                            </span>
                         </button>
+
+                        <p class="form-privacy">
+                            <i data-lucide="shield-check"></i>
+                            Seus dados estão protegidos e não serão compartilhados com terceiros.
+                        </p>
                     </form>
                 </div>
             </div>
@@ -194,7 +273,14 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">&lt;/&gt;</span>
+                    <span>Victor</span><span>Kauê</span>
+                </div>
                 <p>&copy; 2026 - Todos os direitos reservados a Victor Kauê.</p>
+                <p style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.5);">
+                    Desenvolvido com <span class="heart">❤</span> e muito café ☕
+                </p>
             </div>
         </div>
     </footer>

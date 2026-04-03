@@ -42,7 +42,7 @@
     color: var(--text-color);
     margin-bottom: 2rem;
     position: relative;
-    padding-left: 1.5rem;
+    padding-left: 2.5rem;
 }
 
 .section-subtitle::before {
@@ -51,6 +51,11 @@
     left: 0;
     color: var(--accent-color);
     font-weight: 700;
+}
+
+/* Ajuste quando subtitle vem após title */
+.section-title + .section-subtitle {
+    margin-top: 1rem;
 }
 
 /* ============ GRID DE PROJETOS ============ */

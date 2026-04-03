@@ -108,16 +108,31 @@
     }
 
     .contact-card {
-        padding: 1.25rem 1rem;
+        padding: 1.5rem 1rem;
     }
 
     .contact-icon {
-        width: 48px;
-        height: 48px;
+        width: 56px;
+        height: 56px;
     }
 
     .contact-icon svg {
-        width: 22px;
+        width: 24px;
+        height: 24px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 3rem 0 2rem;
+    }
+
+    .footer-brand {
+        font-size: 0.9rem;
+    }
+
+    .footer-content p {
+        font-size: 0.85rem;
+    }
         height: 22px;
     }
 

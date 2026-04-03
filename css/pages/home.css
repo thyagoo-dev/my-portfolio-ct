@@ -736,19 +736,21 @@ img {
 }
 
 .contact-icon {
-    width: 64px;
-    height: 64px;
-    border-radius: 1rem;
+    width: 72px;
+    height: 72px;
+    border-radius: 1.25rem;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all var(--transition-normal);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .contact-icon svg {
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
     color: #FFFFFF;
+    stroke-width: 2;
 }
 
 .contact-icon.email {
@@ -772,8 +774,9 @@ img {
 }
 
 .contact-card:hover .contact-icon {
-    transform: scale(1.1);
+    transform: scale(1.15) rotate(-5deg);
     border-radius: 50%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 
 .contact-card span {
