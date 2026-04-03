@@ -826,6 +826,12 @@ img {
     stroke-width: 2;
 }
 
+.contact-icon .bi {
+    font-size: 1.9rem;
+    color: #FFFFFF;
+    line-height: 1;
+}
+
 .contact-icon.email {
     background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
 }
