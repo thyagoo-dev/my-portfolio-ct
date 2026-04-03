@@ -120,7 +120,7 @@ A seguir estão as páginas principais do portfólio, cada uma com um propósito
 
 O projeto está publicado e acessível online em:
 
-- **Netlify:** https://victorkaue.netlify.app/
+- **Vercel:** https://victor-kaue.vercel.app/
 
 ---
 
