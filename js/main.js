@@ -282,6 +282,37 @@ document.addEventListener('DOMContentLoaded', () => {
         setActiveLinkByPath();
     }
 
+    // 3.1 Animacao da CTA da home com GSAP ao entrar na viewport
+    const ctaContent = document.querySelector('.cta-content');
+    const ctaCards = document.querySelector('#contato .contact-cards');
+    if (ctaContent && typeof gsap !== 'undefined') {
+        const triggerCtaAnimation = () => {
+            gsap.fromTo(ctaContent,
+                { autoAlpha: 0, y: 44 },
+                { autoAlpha: 1, y: 0, duration: 0.9, ease: 'power3.out' }
+            );
+
+            if (ctaCards) {
+                gsap.fromTo(ctaCards,
+                    { autoAlpha: 0, y: 26 },
+                    { autoAlpha: 1, y: 0, duration: 0.85, delay: 0.15, ease: 'power2.out' }
+                );
+            }
+        };
+
+        const ctaObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                triggerCtaAnimation();
+                observer.unobserve(entry.target);
+            });
+        }, {
+            threshold: 0.28
+        });
+
+        ctaObserver.observe(ctaContent);
+    }
+
     // 4. Smooth scroll para links de navegacao
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener('click', function (e) {

@@ -864,6 +864,87 @@ img {
     color: var(--text-color);
 }
 
+#projetos-destaque .section-title,
+#contato .section-title {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.2;
+}
+
+#projetos-destaque .section-title::after,
+#contato .section-title::after {
+    content: '';
+    display: block;
+    width: 72px;
+    height: 4px;
+    border-radius: 999px;
+    background: var(--gradient-primary);
+    margin: 0.8rem auto 0;
+}
+
+#projetos-destaque .section-subtitle,
+#contato .section-subtitle {
+    max-width: 760px;
+    margin: 0.95rem auto 2rem;
+    text-align: center;
+    line-height: 1.7;
+}
+
+.cta-section {
+    position: relative;
+    min-height: 460px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.cta-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(2, 6, 23, 0.78), rgba(2, 6, 23, 0.7));
+    pointer-events: none;
+}
+
+.cta-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.cta-content {
+    max-width: 700px;
+    margin: 0 auto 2.2rem;
+    padding: 1rem 1rem 0;
+}
+
+.cta-content .section-subtitle {
+    font-size: clamp(1.1rem, 2.1vw, 1.35rem);
+    color: rgba(241, 245, 249, 0.95);
+}
+
+.cta-button-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.2rem;
+}
+
+@media (max-width: 768px) {
+    .cta-section {
+        min-height: 400px;
+    }
+
+    .cta-content {
+        padding: 0;
+    }
+
+    .cta-content .section-subtitle {
+        font-size: 1.02rem;
+    }
+}
+
 
 /* ========== EXPERIÃƒÅ NCIAS ========== */
 .paper-experience {
