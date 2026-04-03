@@ -1,127 +1,122 @@
-# 👨‍💻 Portfólio Pessoal - Victor Kauê
+# Portfólio Pessoal - Victor Kauê
 
-Portfólio pessoal responsivo e moderno com foco em apresentação profissional, projetos reais e experiência como desenvolvedor **Full Stack**.
+Portfólio profissional desenvolvido para apresentar projetos, experiência, serviços e formas de contato de maneira moderna, responsiva e objetiva.
 
-## 🎯 Visão Geral:
+## Demo
 
-O presente projeto foi desenvolvido com o intuito de criar um portfólio pessoal que sirva como uma vitrine profissional para apresentar minhas habilidades, projetos e experiência na área de desenvolvimento web. O portfólio é projetado para ser responsivo, moderno e fácil de navegar, proporcionando uma experiência agradável tanto para recrutadores quanto para clientes em potencial, sendo assim este projeto tem como objetivo:
+- Producao: [https://victor-kaue.vercel.app/](https://victor-kaue.vercel.app/)
 
-- 📌 Apresentar **projetos pessoais** e **projetos reais** de forma profissional
-- 🛠️ Demonstrar **stack técnica** e ferramentas utilizadas
-- 📊 Destacar **experiência profissional** e habilidades
-- 💼 Facilitar contato com **recrutadores** e **clientes**
-- 🎨 Showcase de trabalhos visuais e criatividade
+## Visão Geral
 
-## ✨ Funcionalidades:
+Este projeto foi construído para funcionar como vitrine profissional, com foco em:
 
-A seguir estão as principais funcionalidades implementadas no portfólio:
+- apresentação de projetos pessoais e reais
+- fortalecimento de posicionamento profissional
+- navegação clara para recrutadores e clientes
+- experiência visual consistente em desktop, tablet e mobile
 
-- **Navbar Interativa** - Navegação com scroll suave e destaque de seção ativa
-- **Design Responsivo** - Otimizado para desktop, tablet e mobile
-- **Cards de Projetos** - Apresentação visual com tags de tecnologias
-- **Seção de Experiência** - Histórico profissional detalhado
-- **Galeria de Imagens** - Portfolio visual com projetos fotográficos
-- **Página de Certificados** - Credenciais e certificações profissionais
-- **Botão Voltar ao Topo** - Navegação rápida
-- **Efeito de Digitação** - Animação dinâmica no título principal
-- **Dark Mode Ready** - Compatível com preferências de tema do sistema
+## Funcionalidades
 
-## 🛠️ Tecnologias:
+- Hero com CTA principal e destaque de stack
+- Navbar com menu responsivo
+- Seções institucionais (Sobre e Serviços)
+- Catálogo de projetos com cards e detalhes
+- Galeria de imagens com modal/lightbox
+- Página de certificados
+- Formulário de contato com feedback visual
+- Botão de voltar ao topo
+- Animações e transições suaves (quando aplicável)
 
-| Tecnologia | Descrição |
-|------------|-----------|
-| **HTML5** | Estrutura semântica e acessível |
-| **CSS3** | Responsive design e animações modernas |
-| **JavaScript (Vanilla)** | Interatividade sem dependências |
-| **Typed.js** | Efeito de digitação no hero |
-| **Lucide Icons** | Ícones escaláveis e limpos |
-| **Devicon** | Ícones de tecnologias |
+## Tecnologias
 
-## 📁 Estrutura do Projeto:
+### Icones das tecnologias usadas
 
-O projeto é organizado de forma clara e modular, facilitando a manutenção e escalabilidade. A estrutura de pastas é a seguinte:
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=111)
+![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
+![Typed.js](https://img.shields.io/badge/Typed.js-222222?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+![Lucide](https://img.shields.io/badge/Lucide-111111?style=for-the-badge&logo=lucide&logoColor=white)
+![Devicon](https://img.shields.io/badge/Devicon-1F2937?style=for-the-badge&logo=devbox&logoColor=white)
+![Bootstrap Icons](https://img.shields.io/badge/Bootstrap%20Icons-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
 
-```
+| Tecnologia | Uso no projeto |
+| --- | --- |
+| HTML5 | Estrutura semântica das páginas |
+| CSS3 | Estilização modular e responsividade |
+| JavaScript (Vanilla) | Interações e comportamento da interface |
+| GSAP | Animações de entrada e destaque de seções |
+| Typed.js | Efeito de digitação (quando o alvo está presente) |
+| Lucide Icons | Ícones da interface |
+| Devicon | Ícones de stack tecnológica |
+| Bootstrap Icons | Ícones adicionais em seções de contato e apoio |
+
+## Estrutura do Projeto
+
+```text
 meu_portifolio/
-├── index.html                           # Homepage principal
-├── galeria.html                         # Galeria de fotos e projetos visuais
-├── certificados.html                    # Página de certificados
+├── index.html
+├── sobre.html
+├── servicos.html
+├── projetos.html
+├── certificados.html
+├── galeria.html
+├── contato.html
 ├── css/
-│   └── style.css                        # Estilos globais
+│   ├── main.css
+│   ├── custom.css
+│   ├── base/
+│   ├── components/
+│   ├── layouts/
+│   ├── pages/
+│   └── responsive/
 ├── js/
-│   ├── main.js                          # Script principal
-│   └── carrosel.js                      # Componente de carrosel
+│   ├── app.js
+│   ├── main.js
+│   └── carrosel.js
 ├── images/
-│   ├── background/                      # Imagens de fundo
-│   ├── eu/                              # Fotos pessoais
-│   ├── fotos-projetos-pessoais/         # Fotos dos projetos pessoais
-│   │   ├── 1-ano-de-namoro/
-│   │   ├── agendeaqui/
-│   │   ├── oliveira-kids/
-│   │   └── rastreador-de-despesas/
-│   ├── Galeria/                         # Imagens da galeria
-│   ├── ideias/                          # Ideias visuais
-│   └── logos-pjs/                       # Logos de projetos
-├── projetos-pessoais/                   # Subpáginas de projetos pessoais
-│   ├── agendeaqui.html
-│   ├── Aniversario-de-1-ano-de-Namoro.html
-│   ├── meu-portifolio.html
-│   ├── oliveira-kids.html
-│   ├── rastreador-de-despesas.html
-│   └── Saberes-Interculturais-de-Itaparica.html
-├── projetos-reais/                      # Subpáginas de projetos reais
-│   ├── maratonaTech.html
-│   ├── ntidi.html
-│   ├── queelvra.html
-│   ├── sigref.html
-│   └── va_suplementos.html
-├── Docs/                                # Documentação e CVs
-└── README.md                            # Este arquivo
+├── projetos-pessoais/
+├── projetos-reais/
+├── docs/
+└── README.md
 ```
 
-## 🚀 Como Executar Localmente:
+## Como Executar Localmente
 
-Como é um projeto estático, você pode abrir direto no navegador:
+Como se trata de um projeto estático, voce pode executar de duas formas:
 
-### Opção 1: Abrir no Navegador (Simples)
+1. Abrindo o arquivo `index.html` diretamente no navegador.
+2. Usando um servidor local (recomendado), por exemplo com a extensao Live Server no VS Code.
+
+### Clonando o repositorio
 
 ```bash
-# 1. Clone o repositório
-git clone https://github.com/Victorkaue333/meu_portifolio.git
-
-
+git clone https://github.com/Victorkaue333/Portifolio-VictorKaue.git
+cd Portifolio-VictorKaue
 ```
 
-### Opção 2: Usar Servidor Local (Recomendado)
+### Rodando com Live Server (VS Code)
 
-**VS Code - Live Server:**
+1. Instale a extensao Live Server.
+2. Clique com o botao direito em `index.html`.
+3. Selecione a opcao Open with Live Server.
 
-1. Instale a extensão [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
-2. Clique direito em `index.html` → "Open with Live Server"
+## Páginas Principais
 
+| Página | Finalidade |
+| --- | --- |
+| index.html | Página inicial com apresentação principal |
+| sobre.html | Resumo profissional, trajetória e diferenciais |
+| servicos.html | Serviços oferecidos e propostas de atuação |
+| projetos.html | Lista de projetos em destaque |
+| certificados.html | Certificações e formações |
+| galeria.html | Galeria visual de trabalhos e registros |
+| contato.html | Canais de contato e formulário |
 
-```
+## Deploy
 
-## 📄 Páginas Disponíveis
-
-A seguir estão as páginas principais do portfólio, cada uma com um propósito específico para apresentar diferentes aspectos da minha carreira e projetos:
-
-| Página | Descrição |
-|--------|-----------|
-| **index.html** | Página principal com hero, sobre, stack, projetos e experiência |
-| **galeria.html** | Galeria fotográfica e visual dos trabalhos |
-| **certificados.html** | Certificações e credenciais profissionais |
-| **projetos-pessoais/** | Detalhamento de cada projeto pessoal |
-| **projetos-reais/** | Detalhamento de cada projeto real |
-| **Docs/** | Documentação técnica e currículos |
-
-
-### 🌐 Deploy
-
-O projeto está publicado e acessível online em:
-
-- **Vercel:** https://victor-kaue.vercel.app/
+- Vercel: [https://victor-kaue.vercel.app/](https://victor-kaue.vercel.app/)
 
 ---
 
-**Desenvolvido por Victor Kauê**
+Desenvolvido por Victor Kauê.
