@@ -101,4 +101,27 @@
         width: 100%;
         text-align: center;
     }
+
+    .contact-cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .contact-card {
+        padding: 1.25rem 1rem;
+    }
+
+    .contact-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .contact-icon svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
 }

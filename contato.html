@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com Victor Kauê — Desenvolvedor Full-Stack disponível para projetos, freelance e oportunidades.">
+    <meta name="author" content="Victor Kauê">
+    <title>Contato | Victor Kauê</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/fotos-projetos-pessoais/vk-portifolio/logotipo-vk.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Devicon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!--================-->
+    <!--     NAVBAR     -->
+    <!--================-->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <span class="logo-icon">&lt;/&gt;</span>
+                Victor<span>Kauê</span>
+            </a>
+
+            <div class="nav-menu-wrapper">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="certificados.html">Certificados</a></li>
+                    <li><a href="contato.html" class="active">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="navbar-actions">
+                <a
+                    href="docs/Curriculo/VictorKauê_Curriculo.pdf"
+                    class="btn btn-cv"
+                    download
+                    aria-label="Baixar currículo em PDF"
+                >
+                    Baixar CV
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!--========================-->
+        <!-- PÁGINA DE CONTATO        -->
+        <!--========================-->
+        <section class="contact-page">
+            <div class="container">
+                <h1 class="page-title">Entre em Contato</h1>
+                <p class="page-description">
+                    Vamos conversar sobre projetos, oportunidades ou trocar ideiasprofissionais.
+                </p>
+
+                <!-- Cards de Contato -->
+                <div class="contact-info-row">
+                    <a href="mailto:kaue.alves.pg@gmail.com" class="contact-info-item">
+                        <div class="contact-info-icon email">
+                            <i data-lucide="mail"></i>
+                        </div>
+                        <div class="contact-info-text">
+                            <span class="contact-info-label">Email</span>
+                            <span class="contact-info-value">kaue.alves.pg@gmail.com</span>
+                        </div>
+                    </a>
+
+                    <a href="https://wa.me/5587981677005" target="_blank" rel="noopener noreferrer" class="contact-info-item">
+                        <div class="contact-info-icon whatsapp">
+                            <i data-lucide="phone"></i>
+                        </div>
+                        <div class="contact-info-text">
+                            <span class="contact-info-label">WhatsApp</span>
+                            <span class="contact-info-value">+55 (87) 98167-7005</span>
+                        </div>
+                    </a>
+
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon location">
+                            <i data-lucide="map-pin"></i>
+                        </div>
+                        <div class="contact-info-text">
+                            <span class="contact-info-label">Localização</span>
+                            <span class="contact-info-value">Floresta, PE - Brasil</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--========================-->
+        <!--   REDES SOCIAIS        -->
+        <!--========================-->
+        <section class="social-section">
+            <div class="container">
+                <h2 class="section-subtitle">Minhas Redes</h2>
+                <p class="section-description">Me encontre também nestas plataformas</p>
+
+                <div class="social-row">
+                    <a href="https://github.com/Victorkaue333" target="_blank" rel="noopener noreferrer" class="social-link-card">
+                        <i data-lucide="github"></i>
+                        <span>GitHub</span>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/victor-kau%C3%AA-419926364/" target="_blank" rel="noopener noreferrer" class="social-link-card">
+                        <i data-lucide="linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+
+                    <a href="https://wa.me/5587981677005" target="_blank" rel="noopener noreferrer" class="social-link-card">
+                        <i data-lucide="message-circle"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!--==========================-->
+        <!--  FORMULÁRIO DE CONTATO   -->
+        <!--==========================-->
+        <section class="form-section">
+            <div class="container">
+                <h2 class="section-subtitle">Envie uma Mensagem</h2>
+                <p class="section-description">Preencha o formulário abaixo e entrarei em contato o mais rápido possível.</p>
+
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" action="https://formsubmit.co/kaue.alves.pg@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="Contato via Portfólio">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://victorkaue.vercel.app/contato.html">
+                        <input type="text" name="_honey" class="hidden-field" aria-label="Leave this field blank" tabindex="-1" autocomplete="off">
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nome">Nome completo</label>
+                                <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="assunto">Assunto</label>
+                            <select id="assunto" name="assunto" required>
+                                <option value="" selected disabled>Selecione o assunto</option>
+                                <option value="Orçamento de Projeto">Orçamento de Projeto</option>
+                                <option value="Freelance">Freelance</option>
+                                <option value="Oportunidade de Trabalho">Oportunidade de Trabalho</option>
+                                <option value="Consultoria">Consultoria</option>
+                                <option value="Outro">Outro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva seu texto aqui..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            <i data-lucide="send"></i>
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--================-->
+    <!--     FOOTER     -->
+    <!--================-->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 - Todos os direitos reservados a Victor Kauê.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== -->
+    <!-- BOTÃO VOLTAR AO TOPO -->
+    <!-- ==================== -->
+    <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">
+        <i data-lucide="arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

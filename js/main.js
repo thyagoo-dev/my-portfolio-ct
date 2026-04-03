@@ -482,4 +482,36 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // 8. Scroll-spy para sidebar da página Sobre
+    const aboutNav = document.querySelector('.sidebar-nav');
+    if (aboutNav) {
+        const aboutLinks = [...aboutNav.querySelectorAll('a[href^="#"]')];
+        const aboutSections = aboutLinks
+            .map((link) => {
+                const target = document.querySelector(link.getAttribute('href'));
+                return target ? { link, section: target } : null;
+            })
+            .filter(Boolean);
+
+        if (aboutSections.length) {
+            const updateAboutActiveLink = () => {
+                const scrollY = window.scrollY;
+                const offset = 120;
+                let current = aboutSections[0];
+
+                for (const item of aboutSections) {
+                    if (item.section.offsetTop - offset <= scrollY) {
+                        current = item;
+                    }
+                }
+
+                aboutLinks.forEach((l) => l.classList.remove('active'));
+                current.link.classList.add('active');
+            };
+
+            window.addEventListener('scroll', updateAboutActiveLink, { passive: true });
+            updateAboutActiveLink();
+        }
+    }
 });

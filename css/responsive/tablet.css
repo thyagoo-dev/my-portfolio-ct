@@ -293,13 +293,11 @@
     }
     
     .contact-cards {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
     }
     
     .contact-card {
         width: 100%;
-        max-width: 300px;
     }
 
     .github-actions {
