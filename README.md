@@ -27,15 +27,15 @@
 
 ## Funcionalidades
 
-- ✨ Hero com CTA principal e destaque de stack
-- 🧭 Navbar com menu responsivo
-- 🧠 Seções institucionais (Sobre e Serviços)
-- 🗂️ Catálogo de projetos com cards e detalhes
-- 🖼️ Galeria de imagens com modal/lightbox
-- 🏆 Página de certificados
-- 📩 Formulário de contato com feedback visual
-- ⬆️ Botão de voltar ao topo
-- 🎬 Animações e transições suaves (quando aplicável)
+- ✨ Hero com CTA principal e destaque de stack;
+- 🧭 Navbar com menu responsivo;
+- 🧠 Seções institucionais (Sobre e Serviços);
+- 🗂️ Catálogo de projetos com cards e detalhes;
+- 🖼️ Galeria de imagens com modal/lightbox;
+- 🏆 Página de certificados;
+- 📩 Formulário de contato com feedback visual;
+- ⬆️ Botão de voltar ao topo;
+- 🎬 Animações e transições suaves (quando aplicável);
 
 ## Tecnologias
 
