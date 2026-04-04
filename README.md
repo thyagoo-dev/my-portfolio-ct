@@ -72,7 +72,9 @@
 | Devicon | Ícones de stack tecnológica |
 | Bootstrap Icons | Ícones adicionais em seções de contato e apoio |
 
-## Estrutura do Projeto
+## Estrutura do Projeto:
+
+Aqui está a estrutura de arquivos e pastas do projeto, organizada para facilitar a manutenção e escalabilidade:
 
 ```text
 meu_portifolio/
