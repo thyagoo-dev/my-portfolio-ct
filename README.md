@@ -1,33 +1,54 @@
 # Portfólio Pessoal - Victor Kauê
 
-Portfólio profissional desenvolvido para apresentar projetos, experiência, serviços e formas de contato de maneira moderna, responsiva e objetiva.
+💼 Portfólio profissional desenvolvido para apresentar projetos, experiência, serviços e formas de contato de maneira moderna, responsiva e objetiva.
 
-## Demo
+## Preview
 
-- Producao: [https://victor-kaue.vercel.app/](https://victor-kaue.vercel.app/)
+### Home do Portfólio
+
+![Home do portfolio](images/fotos-projetos-pessoais/vk-portifolio/victor_kaue.png)
+
+### Projeto Pessoal - AgendeAqui
+
+![Projeto AgendeAqui](images/fotos-projetos-pessoais/agendeaqui/agendeaqui.png)
+
+### Projeto Real - MaratonaTech
+
+![Projeto MaratonaTech](images/fotos-projetos-reais/maratonatech/MaratonaTech.png)
 
 ## Visão Geral
 
-Este projeto foi construído para funcionar como vitrine profissional, com foco em:
+📌 Este projeto foi construído para funcionar como vitrine profissional, com foco em:
 
-- apresentação de projetos pessoais e reais
-- fortalecimento de posicionamento profissional
-- navegação clara para recrutadores e clientes
-- experiência visual consistente em desktop, tablet e mobile
+- 🚀 apresentação de projetos pessoais e reais;
+- 🎯 fortalecimento de posicionamento profissional;
+- 🤝 navegação clara para recrutadores e clientes;
+- 📱 experiência visual consistente em desktop, tablet e mobile;
 
 ## Funcionalidades
 
-- Hero com CTA principal e destaque de stack
-- Navbar com menu responsivo
-- Seções institucionais (Sobre e Serviços)
-- Catálogo de projetos com cards e detalhes
-- Galeria de imagens com modal/lightbox
-- Página de certificados
-- Formulário de contato com feedback visual
-- Botão de voltar ao topo
-- Animações e transições suaves (quando aplicável)
+- ✨ Hero com CTA principal e destaque de stack;
+- 🧭 Navbar com menu responsivo;
+- 🧠 Seções institucionais (Sobre e Serviços);
+- 🗂️ Catálogo de projetos com cards e detalhes;
+- 🖼️ Galeria de imagens com modal/lightbox;
+- 🏆 Página de certificados;
+- 📩 Formulário de contato com feedback visual;
+- ⬆️ Botão de voltar ao topo;
+- 🎬 Animações e transições suaves (quando aplicável);
 
 ## Tecnologias
+
+### Icones (SVG)
+
+![HTML5](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg)
+![CSS3](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg)
+![JavaScript](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg)
+![Bootstrap](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg)
+![Python](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg)
+![Django](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg)
+![PostgreSQL](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg)
+![Docker](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg)
 
 ### Icones das tecnologias usadas
 
@@ -51,7 +72,9 @@ Este projeto foi construído para funcionar como vitrine profissional, com foco 
 | Devicon | Ícones de stack tecnológica |
 | Bootstrap Icons | Ícones adicionais em seções de contato e apoio |
 
-## Estrutura do Projeto
+## Estrutura do Projeto:
+
+Aqui está a estrutura de arquivos e pastas do projeto, organizada para facilitar a manutenção e escalabilidade:
 
 ```text
 meu_portifolio/
@@ -83,10 +106,10 @@ meu_portifolio/
 
 ## Como Executar Localmente
 
-Como se trata de um projeto estático, voce pode executar de duas formas:
+⚙️ Como se trata de um projeto estático, voce pode executar de duas formas:
 
-1. Abrindo o arquivo `index.html` diretamente no navegador.
-2. Usando um servidor local (recomendado), por exemplo com a extensao Live Server no VS Code.
+1. 🌐 Abrindo o arquivo `index.html` diretamente no navegador.
+2. 🛠️ Usando um servidor local (recomendado), por exemplo com a extensao Live Server no VS Code.
 
 ### Clonando o repositorio
 
@@ -119,4 +142,4 @@ cd Portifolio-VictorKaue
 
 ---
 
-Desenvolvido por Victor Kauê.
+👨‍💻 Desenvolvido por Victor Kauê.
