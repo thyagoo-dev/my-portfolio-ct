@@ -1,6 +1,6 @@
 # Portfólio Pessoal - Victor Kauê
 
-Portfólio profissional desenvolvido para apresentar projetos, experiência, serviços e formas de contato de maneira moderna, responsiva e objetiva.
+💼 Portfólio profissional desenvolvido para apresentar projetos, experiência, serviços e formas de contato de maneira moderna, responsiva e objetiva.
 
 ## Preview
 
@@ -18,24 +18,24 @@ Portfólio profissional desenvolvido para apresentar projetos, experiência, ser
 
 ## Visão Geral
 
-Este projeto foi construído para funcionar como vitrine profissional, com foco em:
+📌 Este projeto foi construído para funcionar como vitrine profissional, com foco em:
 
-- apresentação de projetos pessoais e reais
-- fortalecimento de posicionamento profissional
-- navegação clara para recrutadores e clientes
-- experiência visual consistente em desktop, tablet e mobile
+- 🚀 apresentação de projetos pessoais e reais
+- 🎯 fortalecimento de posicionamento profissional
+- 🤝 navegação clara para recrutadores e clientes
+- 📱 experiência visual consistente em desktop, tablet e mobile
 
 ## Funcionalidades
 
-- Hero com CTA principal e destaque de stack
-- Navbar com menu responsivo
-- Seções institucionais (Sobre e Serviços)
-- Catálogo de projetos com cards e detalhes
-- Galeria de imagens com modal/lightbox
-- Página de certificados
-- Formulário de contato com feedback visual
-- Botão de voltar ao topo
-- Animações e transições suaves (quando aplicável)
+- ✨ Hero com CTA principal e destaque de stack
+- 🧭 Navbar com menu responsivo
+- 🧠 Seções institucionais (Sobre e Serviços)
+- 🗂️ Catálogo de projetos com cards e detalhes
+- 🖼️ Galeria de imagens com modal/lightbox
+- 🏆 Página de certificados
+- 📩 Formulário de contato com feedback visual
+- ⬆️ Botão de voltar ao topo
+- 🎬 Animações e transições suaves (quando aplicável)
 
 ## Tecnologias
 
@@ -104,10 +104,10 @@ meu_portifolio/
 
 ## Como Executar Localmente
 
-Como se trata de um projeto estático, voce pode executar de duas formas:
+⚙️ Como se trata de um projeto estático, voce pode executar de duas formas:
 
-1. Abrindo o arquivo `index.html` diretamente no navegador.
-2. Usando um servidor local (recomendado), por exemplo com a extensao Live Server no VS Code.
+1. 🌐 Abrindo o arquivo `index.html` diretamente no navegador.
+2. 🛠️ Usando um servidor local (recomendado), por exemplo com a extensao Live Server no VS Code.
 
 ### Clonando o repositorio
 
@@ -140,4 +140,4 @@ cd Portifolio-VictorKaue
 
 ---
 
-Desenvolvido por Victor Kauê.
+👨‍💻 Desenvolvido por Victor Kauê.
