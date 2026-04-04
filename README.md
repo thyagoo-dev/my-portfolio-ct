@@ -20,10 +20,10 @@
 
 📌 Este projeto foi construído para funcionar como vitrine profissional, com foco em:
 
-- 🚀 apresentação de projetos pessoais e reais
-- 🎯 fortalecimento de posicionamento profissional
-- 🤝 navegação clara para recrutadores e clientes
-- 📱 experiência visual consistente em desktop, tablet e mobile
+- 🚀 apresentação de projetos pessoais e reais;
+- 🎯 fortalecimento de posicionamento profissional;
+- 🤝 navegação clara para recrutadores e clientes;
+- 📱 experiência visual consistente em desktop, tablet e mobile;
 
 ## Funcionalidades
 
