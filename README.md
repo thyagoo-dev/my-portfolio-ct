@@ -2,6 +2,20 @@
 
 Portfólio profissional desenvolvido para apresentar projetos, experiência, serviços e formas de contato de maneira moderna, responsiva e objetiva.
 
+## Preview
+
+### Home do Portfólio
+
+![Home do portfolio](images/fotos-projetos-pessoais/vk-portifolio/victor_kaue.png)
+
+### Projeto Pessoal - AgendeAqui
+
+![Projeto AgendeAqui](images/fotos-projetos-pessoais/agendeaqui/agendeaqui.png)
+
+### Projeto Real - MaratonaTech
+
+![Projeto MaratonaTech](images/fotos-projetos-reais/maratonatech/MaratonaTech.png)
+
 ## Visão Geral
 
 Este projeto foi construído para funcionar como vitrine profissional, com foco em:
