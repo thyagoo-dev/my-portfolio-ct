@@ -1,4 +1,65 @@
+let preloaderNode = null;
+const PRELOADER_MIN_MS = 2000;
+const preloaderStartedAt = Date.now();
+let preloaderHideScheduled = false;
+
+function createGlobalPreloader() {
+    if (document.querySelector('.site-preloader')) return;
+
+    preloaderNode = document.createElement('div');
+    preloaderNode.className = 'site-preloader';
+    preloaderNode.setAttribute('aria-hidden', 'true');
+    preloaderNode.innerHTML = `
+        <div class="site-preloader-content" role="status" aria-label="Carregando pagina">
+            <img class="site-preloader-logo" src="images/fotos-projetos-pessoais/vk-portifolio/logotipo-vk.png" alt="Logo Victor Kaue" loading="eager" decoding="async">
+            <p class="site-preloader-brand">Victor Kauê</p>
+            <p class="site-preloader-subbrand">PORTFOLIO</p>
+            <span class="site-preloader-progress" aria-hidden="true"></span>
+            <p class="site-preloader-text">Carregando o portfólio...</p>
+        </div>
+    `;
+
+    document.body.appendChild(preloaderNode);
+}
+
+function hideGlobalPreloader() {
+    const target = preloaderNode || document.querySelector('.site-preloader');
+    if (!target) return;
+
+    target.classList.add('hidden');
+    document.documentElement.classList.remove('is-page-loading');
+    document.body.classList.remove('is-page-loading');
+
+    window.setTimeout(() => {
+        target.remove();
+        if (preloaderNode === target) preloaderNode = null;
+    }, 380);
+}
+
+function scheduleHideGlobalPreloader() {
+    if (preloaderHideScheduled) return;
+    preloaderHideScheduled = true;
+
+    const elapsed = Date.now() - preloaderStartedAt;
+    const remaining = Math.max(0, PRELOADER_MIN_MS - elapsed);
+    window.setTimeout(hideGlobalPreloader, remaining);
+}
+
+if (document.readyState === 'loading') {
+    document.documentElement.classList.add('is-page-loading');
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('is-page-loading');
+    createGlobalPreloader();
+
+    if (document.readyState === 'complete') {
+        scheduleHideGlobalPreloader();
+    } else {
+        window.addEventListener('load', scheduleHideGlobalPreloader, { once: true });
+        window.setTimeout(scheduleHideGlobalPreloader, PRELOADER_MIN_MS + 1200);
+    }
+
     // Inicializa os icones do Lucide
     lucide.createIcons();
 
