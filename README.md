@@ -2,10 +2,6 @@
 
 Portfólio profissional desenvolvido para apresentar projetos, experiência, serviços e formas de contato de maneira moderna, responsiva e objetiva.
 
-## Demo
-
-- Producao: [https://victor-kaue.vercel.app/](https://victor-kaue.vercel.app/)
-
 ## Visão Geral
 
 Este projeto foi construído para funcionar como vitrine profissional, com foco em:
