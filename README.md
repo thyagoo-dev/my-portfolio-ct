@@ -22,16 +22,30 @@ Este portfólio é um site estático, construído do zero utilizando **HTML5**, 
 
 ## 🚀 Tecnologias Utilizadas
 
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=111)
+![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
+![Typed.js](https://img.shields.io/badge/Typed.js-222222?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+![Lucide](https://img.shields.io/badge/Lucide-111111?style=for-the-badge&logo=lucide&logoColor=white)
+![Devicon](https://img.shields.io/badge/Devicon-1F2937?style=for-the-badge&logo=devbox&logoColor=white)
+![Bootstrap Icons](https://img.shields.io/badge/Bootstrap%20Icons-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+
 - **HTML5:** Estruturação semântica do conteúdo.
-- **CSS3:** Estilização, responsividade e animações simples.
-- **JavaScript:** Funcionalidades interativas básicas e melhoria da experiência do usuário.
+- **CSS3:** Estilização modular, responsividade e animações.
+- **JavaScript:** Funcionalidades interativas e comportamento da interface.
+- **GSAP:** Animações de entrada e transições visuais.
+- **Typed.js:** Efeito de digitação em elementos específicos.
+- **Lucide e Bootstrap Icons:** Ícones visuais da interface.
 
 ---
 
 ## 📦 Como Executar
 
 1. Clone o repositório:
-   ```
+
+   ```bash
    git clone https://github.com/Victorkaue333/meu_portifolio.git
    ```
 
@@ -39,7 +53,7 @@ Este portfólio é um site estático, construído do zero utilizando **HTML5**, 
 
 ## 📫 Contato
 
-Fique à vontade para entrar em contato pelo e-mail: kaue.alves.pg@gmail.com
+Fique à vontade para entrar em contato pelo e-mail: [kaue.alves.pg@gmail.com](mailto:kaue.alves.pg@gmail.com)
 
 ---
 
