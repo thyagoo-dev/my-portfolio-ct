@@ -6,7 +6,7 @@
 /* ============ LAYOUT PRINCIPAL ============ */
 .about-page-wrapper {
     min-height: 100vh;
-    padding-top: 5rem;
+    padding-top: 7rem;
 }
 
 .container-fluid {
@@ -26,7 +26,7 @@
 /* ============ SIDEBAR ESQUERDA ============ */
 .about-sidebar-left {
     position: sticky;
-    top: 5rem;
+    top: 6.8rem;
     padding-top: 2rem;
 }
 
@@ -588,6 +588,10 @@
 
 /* Tablet */
 @media (max-width: 1024px) {
+    .about-page-wrapper {
+        padding-top: 6.3rem;
+    }
+
     .container-fluid {
         padding: 0 1.5rem;
     }
@@ -614,7 +618,7 @@
 /* Mobile */
 @media (max-width: 768px) {
     .about-page-wrapper {
-        padding-top: 4rem;
+        padding-top: 5.8rem;
     }
 
     .container-fluid {
@@ -653,23 +657,28 @@
     }
 
     .sidebar-languages {
-        justify-content: center;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    /* Navegação horizontal no mobile */
+    /* Navegação legível no mobile sem sobreposição */
     .sidebar-nav {
-        overflow-x: auto;
+        overflow: visible;
     }
 
     .sidebar-nav ul {
-        flex-direction: row;
-        gap: 0;
-        white-space: nowrap;
-        padding-bottom: 0.5rem;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.4rem;
+        white-space: normal;
+        padding-bottom: 0;
     }
 
     .sidebar-nav a {
-        padding: 0.5rem 0.75rem;
+        justify-content: center;
+        text-align: center;
+        padding: 0.55rem 0.6rem;
         font-size: 0.85rem;
     }
 
@@ -694,12 +703,22 @@
     }
 
     .hero-contact-links {
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.5rem;
     }
 
     .contact-link {
-        font-size: 0.85rem;
-        padding: 0.5rem 1rem;
+        justify-content: center;
+        font-size: 0.8rem;
+        padding: 0.55rem 0.45rem;
+        min-width: 0;
+    }
+
+    .contact-link span {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     .hero-bio {
@@ -760,6 +779,16 @@
     }
 
     .diferenciais-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 520px) {
+    .sidebar-nav ul {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-contact-links {
         grid-template-columns: 1fr;
     }
 }
