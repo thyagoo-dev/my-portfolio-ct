@@ -18,6 +18,7 @@
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 </head>
 <body>
 
@@ -62,90 +63,89 @@
     </nav>
 
     <main>
-        <!--========================-->
-        <!-- PÁGINA DE CONTATO        -->
-        <!--========================-->
         <section class="contact-page">
-            <div class="container text-center">
-                <h1 class="page-title">Entre em Contato</h1>
-                <p class="page-subtitle">
-                    Vamos conversar sobre projetos, oportunidades ou trocar ideias profissionais.
-                </p>
+            <div class="container">
+                <header class="page-hero text-center">
+                    <nav class="page-breadcrumb" aria-label="Breadcrumb">
+                        <a href="index.html">Início</a>
+                        <span aria-hidden="true">/</span>
+                        <span>Contato</span>
+                    </nav>
+                    <h1 class="page-title">Vamos conversar sobre seu projeto</h1>
+                    <p class="page-subtitle">Estou disponível para projetos, freelas e oportunidades com foco em backend e sistemas web.</p>
+                </header>
 
-                <!-- Cards de Contato -->
-                <div class="contact-info-row">
-                    <a href="mailto:kaue.alves.pg@gmail.com" class="contact-info-item">
-                        <div class="contact-info-icon email">
-                            <i data-lucide="mail"></i>
+                <div class="contact-layout">
+                    <aside class="contact-sidebar">
+                        <h2 class="section-subtitle">Informações de contato</h2>
+                        <div class="contact-info-row">
+                            <a href="mailto:kaue.alves.pg@gmail.com" class="contact-info-item">
+                                <div class="contact-info-icon email">
+                                    <i data-lucide="mail"></i>
+                                </div>
+                                <div class="contact-info-text">
+                                    <span class="contact-info-label">Email</span>
+                                    <span class="contact-info-value">kaue.alves.pg@gmail.com</span>
+                                </div>
+                            </a>
+
+                            <a href="https://wa.me/5587981677005" target="_blank" rel="noopener noreferrer" class="contact-info-item">
+                                <div class="contact-info-icon whatsapp">
+                                    <i data-lucide="phone"></i>
+                                </div>
+                                <div class="contact-info-text">
+                                    <span class="contact-info-label">WhatsApp</span>
+                                    <span class="contact-info-value">+55 (87) 98167-7005</span>
+                                </div>
+                            </a>
+
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon location">
+                                    <i data-lucide="map-pin"></i>
+                                </div>
+                                <div class="contact-info-text">
+                                    <span class="contact-info-label">Localização</span>
+                                    <span class="contact-info-value">Itacuruba, PE - Brasil</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="contact-info-text">
-                            <span class="contact-info-label">Email</span>
-                            <span class="contact-info-value">kaue.alves.pg@gmail.com</span>
+
+                        <section class="availability-box">
+                            <h3>Disponível para</h3>
+                            <ul>
+                                <li>Freelance</li>
+                                <li>CLT</li>
+                                <li>Projetos</li>
+                                <li>Consultoria</li>
+                            </ul>
+                        </section>
+
+                        <section class="contact-cta-box">
+                            <h3>Vamos conversar sobre seu projeto</h3>
+                            <p>Prefere uma conversa rápida? Podemos alinhar escopo e próximos passos.</p>
+                            <a href="https://cal.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Agendar reunião</a>
+                        </section>
+
+                        <div class="social-row">
+                            <a href="https://github.com/Victorkaue333" target="_blank" rel="noopener noreferrer" class="social-link-card">
+                                <i data-lucide="github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/victor-kau%C3%AA-419926364/" target="_blank" rel="noopener noreferrer" class="social-link-card">
+                                <i data-lucide="linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
                         </div>
-                    </a>
+                    </aside>
 
-                    <a href="https://wa.me/5587981677005" target="_blank" rel="noopener noreferrer" class="contact-info-item">
-                        <div class="contact-info-icon whatsapp">
-                            <i data-lucide="phone"></i>
-                        </div>
-                        <div class="contact-info-text">
-                            <span class="contact-info-label">WhatsApp</span>
-                            <span class="contact-info-value">+55 (87) 98167-7005</span>
-                        </div>
-                    </a>
+                    <section class="form-section">
+                        <h2 class="section-subtitle">Envie uma mensagem</h2>
+                        <p class="section-description">
+                            Preencha o formulário abaixo e entrarei em contato o mais rápido possível.
+                            <span class="response-time">Respondo em até 24 horas</span>
+                        </p>
 
-                    <div class="contact-info-item">
-                        <div class="contact-info-icon location">
-                            <i data-lucide="map-pin"></i>
-                        </div>
-                        <div class="contact-info-text">
-                            <span class="contact-info-label">Localização</span>
-                            <span class="contact-info-value">Itacuruba, PE - Brasil</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!--========================-->
-        <!--   REDES SOCIAIS        -->
-        <!--========================-->
-        <section class="social-section">
-            <div class="container text-center">
-                <h2 class="section-subtitle">Minhas Redes</h2>
-                <p class="section-description">Me encontre também nestas plataformas</p>
-
-                <div class="social-row">
-                    <a href="https://github.com/Victorkaue333" target="_blank" rel="noopener noreferrer" class="social-link-card">
-                        <i data-lucide="github"></i>
-                        <span>GitHub</span>
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/victor-kau%C3%AA-419926364/" target="_blank" rel="noopener noreferrer" class="social-link-card">
-                        <i data-lucide="linkedin"></i>
-                        <span>LinkedIn</span>
-                    </a>
-
-                    <a href="https://wa.me/5587981677005" target="_blank" rel="noopener noreferrer" class="social-link-card">
-                        <i data-lucide="message-circle"></i>
-                        <span>WhatsApp</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!--==========================-->
-        <!--  FORMULÁRIO DE CONTATO   -->
-        <!--==========================-->
-        <section class="form-section">
-            <div class="container text-center">
-                <h2 class="section-subtitle">Envie uma Mensagem</h2>
-                <p class="section-description">
-                    Preencha o formulário abaixo e entrarei em contato o mais rápido possível.
-                    <span class="response-time">Respondo em até 24 horas</span>
-                </p>
-
-                <div class="contact-form-wrapper">
+                        <div class="contact-form-wrapper">
                     <!-- Progress Bar -->
                     <div class="form-progress">
                         <div class="form-progress-bar" id="formProgressBar"></div>
@@ -262,6 +262,8 @@
                             Seus dados estão protegidos e não serão compartilhados com terceiros.
                         </p>
                     </form>
+                        </div>
+                    </section>
                 </div>
             </div>
         </section>
