@@ -78,7 +78,7 @@ meu_portifolio/
 └── README.md
 ```
 
-## Como Executar Localmente
+## Como Executar Localmente:
 
 ⚙️ Como se trata de um projeto estático, voce pode executar de duas formas:
 
