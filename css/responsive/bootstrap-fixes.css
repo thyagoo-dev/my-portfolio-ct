@@ -1,0 +1,125 @@
+/* ========================================
+   BOOTSTRAP + RESPONSIVE FIXES
+   ======================================== */
+
+img,
+svg,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+.container,
+.container-fluid {
+    width: 100%;
+}
+
+@media (max-width: 992px) {
+    .about-page-wrapper {
+        padding-top: 4.5rem;
+    }
+
+    .about-grid-layout {
+        grid-template-columns: 1fr;
+        gap: 1.4rem;
+    }
+
+    .about-sidebar-left {
+        position: static;
+        top: auto;
+    }
+
+    .hero-contact-links {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.55rem;
+    }
+
+    .contact-link {
+        justify-content: center;
+        padding-inline: 0.5rem;
+    }
+
+    .contact-link span {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: clamp(1.6rem, 7vw, 2rem);
+    }
+
+    .page-subtitle,
+    .page-description {
+        font-size: 0.95rem;
+    }
+
+    .certificate-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .certificate-card {
+        padding: 0.8rem;
+    }
+
+    .certificate-paper {
+        min-height: 160px;
+    }
+
+    .cert-filter-btn {
+        font-size: 0.78rem;
+        padding: 0.45rem 0.75rem;
+    }
+
+    .services-grid,
+    .process-grid,
+    .case-grid-two {
+        grid-template-columns: 1fr;
+    }
+
+    .case-hero-actions .btn,
+    .cta-button-row .btn {
+        width: 100%;
+    }
+
+    .photo-carousel {
+        --carousel-height: clamp(200px, 58vw, 300px);
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        width: calc(100% - 0.5rem);
+    }
+
+    .container,
+    .container-fluid {
+        padding-left: 0.85rem;
+        padding-right: 0.85rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    .social-row {
+        flex-direction: column;
+    }
+
+    .social-link-card {
+        width: 100%;
+        justify-content: center;
+    }
+}
