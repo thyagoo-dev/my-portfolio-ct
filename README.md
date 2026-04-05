@@ -3,7 +3,7 @@
 💼 Portfólio profissional desenvolvido para apresentar projetos, experiência, serviços e formas de contato de maneira moderna, responsiva e objetiva.
 
 
-## Visão Geral
+## Visão Geral:
 
 📌 Este projeto foi construído para funcionar como vitrine profissional, com foco em:
 
