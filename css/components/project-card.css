@@ -302,6 +302,25 @@
     margin-top: 0.9rem;
 }
 
+.project-summary-list {
+    list-style: none;
+    margin: 0.8rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: 0.3rem;
+}
+
+.project-summary-list li {
+    font-size: 0.8rem;
+    line-height: 1.45;
+    color: #CBD5E1;
+}
+
+.project-summary-list strong {
+    color: #F8FAFC;
+    font-weight: 700;
+}
+
 .project-tech-tag {
     padding: 0.34rem 0.62rem;
     border-radius: 999px;

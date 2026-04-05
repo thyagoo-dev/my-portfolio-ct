@@ -177,27 +177,53 @@ document.addEventListener('DOMContentLoaded', () => {
         'VK Software': ['Web App', 'Design System', 'Escalabilidade']
     };
 
+    const projectSummaryMap = {
+        'Meu Portfólio': { problema: 'Posicionamento técnico pouco claro', solucao: 'Arquitetura de vitrine com seções objetivas', stack: 'HTML, CSS e JavaScript' },
+        'AgendeAqui': { problema: 'Agendamentos descentralizados', solucao: 'Fluxo único com autenticação e gestão de slots', stack: 'Django + PostgreSQL' },
+        'Oliveira Kids': { problema: 'Controle manual de tempo de uso', solucao: 'Painel visual para operação diária', stack: 'Python, Django e MySQL' },
+        'Transcritor de Entrevistas': { problema: 'Análise lenta de entrevistas', solucao: 'Transcrição automática para acelerar pesquisa', stack: 'Python + IA' },
+        'Saberes Interculturais de Itaparica': { problema: 'Baixa visibilidade do projeto', solucao: 'Portal de divulgação com navegação acessível', stack: 'Django e frontend responsivo' }
+    };
+
     document.querySelectorAll('.project-card, .project-card-gildacio').forEach((card) => {
         const title = card.querySelector('h3, .project-title')?.textContent?.trim();
-        if (!title || card.querySelector('.project-tech-tags')) return;
+        if (!title) return;
 
         const technologies = projectTechMap[title];
-        if (!technologies || !technologies.length) return;
-
-        const tagsContainer = document.createElement('div');
-        tagsContainer.className = 'project-tech-tags';
-
-        technologies.forEach((tech) => {
-            const tag = document.createElement('span');
-            tag.className = 'project-tech-tag';
-            tag.textContent = tech;
-            tagsContainer.appendChild(tag);
-        });
-
         const contentTarget = card.querySelector('.project-body') || card.querySelector('.project-description')?.parentElement;
-        if (contentTarget) {
+        if (!contentTarget) return;
+
+        if (technologies && technologies.length && !card.querySelector('.project-tech-tags')) {
+            const tagsContainer = document.createElement('div');
+            tagsContainer.className = 'project-tech-tags';
+
+            technologies.forEach((tech) => {
+                const tag = document.createElement('span');
+                tag.className = 'project-tech-tag';
+                tag.textContent = tech;
+                tagsContainer.appendChild(tag);
+            });
+
             contentTarget.appendChild(tagsContainer);
         }
+
+        const summary = projectSummaryMap[title];
+        if (!summary || card.querySelector('.project-summary-list')) return;
+
+        const summaryList = document.createElement('ul');
+        summaryList.className = 'project-summary-list';
+
+        [
+            ['Problema', summary.problema],
+            ['Solução', summary.solucao],
+            ['Stack', summary.stack]
+        ].forEach(([label, value]) => {
+            const item = document.createElement('li');
+            item.innerHTML = `<strong>${label}:</strong> ${value}`;
+            summaryList.appendChild(item);
+        });
+
+        contentTarget.appendChild(summaryList);
     });
 
     // 1. Animacao de digitacao com Typed.js (somente se o alvo existir)
