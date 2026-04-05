@@ -239,9 +239,10 @@
     border-radius: 0.62rem;
     color: var(--text-color);
     text-decoration: none;
-    font-size: 0.875rem;
+    font-size: 0.84rem;
     font-weight: 600;
     transition: var(--transition-normal);
+    white-space: nowrap;
 }
 
 .project-link-btn:hover {
@@ -253,6 +254,12 @@
 .project-link-btn i {
     width: 16px;
     height: 16px;
+    flex-shrink: 0;
+}
+
+.project-link-btn span {
+    white-space: nowrap;
+    line-height: 1.1;
 }
 
 /* ============ RESPONSIVO ============ */

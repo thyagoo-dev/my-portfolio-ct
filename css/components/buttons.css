@@ -15,6 +15,7 @@
     font-size: 0.96rem;
     line-height: 1.1;
     text-align: center;
+    white-space: nowrap;
     position: relative;
     overflow: hidden;
 }
