@@ -92,13 +92,13 @@ git clone https://github.com/Victorkaue333/Portifolio-VictorKaue.git
 cd Portifolio-VictorKaue
 ```
 
-### Rodando com Live Server (VS Code)
+### Rodando com Live Server (VS Code):
 
 1. Instale a extensao Live Server.
 2. Clique com o botao direito em `index.html`.
 3. Selecione a opcao Open with Live Server.
 
-## Páginas Principais
+## Páginas Principais:
 
 | Página | Finalidade |
 | --- | --- |
@@ -110,7 +110,7 @@ cd Portifolio-VictorKaue
 | galeria.html | Galeria visual de trabalhos e registros |
 | contato.html | Canais de contato e formulário |
 
-## Deploy
+## Deploy:
 
 - Vercel: [https://victor-kaue.vercel.app/](https://victor-kaue.vercel.app/)
 
