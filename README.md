@@ -12,7 +12,7 @@
 - 🤝 navegação clara para recrutadores e clientes;
 - 📱 experiência visual consistente em desktop, tablet e mobile;
 
-## Funcionalidades
+## Funcionalidades:
 
 - ✨ Hero com CTA principal e destaque de stack;
 - 🧭 Navbar com menu responsivo;
