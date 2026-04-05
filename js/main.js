@@ -63,6 +63,88 @@ document.addEventListener('DOMContentLoaded', () => {
     // Inicializa os icones do Lucide
     lucide.createIcons();
 
+    function initAboutLanguageToggle() {
+        const langButtons = [...document.querySelectorAll('.sidebar-languages .lang-btn[data-lang]')];
+        if (!langButtons.length) return;
+
+        const storageKey = 'vk_about_lang';
+        const copyByLang = {
+            pt: {
+                location: 'Itacuruba, PE - Brasil',
+                sidebarNav: ['Introdução', 'Função Atual', 'Experiência', 'Formações', 'Certificações', 'Expertise Técnica', 'GitHub'],
+                heroCta: 'Agendar uma chamada',
+                heroSubtitle: 'Desenvolvedor Full Stack',
+                heroBio: 'Sou desenvolvedor com foco em backend e sistemas web, formado em Desenvolvimento de Sistemas e atualmente graduando em Gestão da Tecnologia da Informação. Atuo no desenvolvimento de APIs, regras de negócio, modelagem de dados, interface web e deploy, sempre com foco em arquitetura limpa, segurança e valor de negócio. Atualmente trabalho na NTIDI criando soluções para sistemas web da empresa, utilizando Django e MySQL, com uma abordagem orientada a resultados.',
+                emailLabel: 'Email'
+            },
+            en: {
+                location: 'Itacuruba, PE - Brazil',
+                sidebarNav: ['Introduction', 'Current Role', 'Experience', 'Education', 'Certifications', 'Technical Expertise', 'GitHub'],
+                heroCta: 'Schedule a call',
+                heroSubtitle: 'Full Stack Developer',
+                heroBio: 'I am a developer focused on backend and web systems, with a Systems Development background and currently pursuing a degree in Information Technology Management. I work on API development, business rules, data modeling, web interfaces, and deployment, always prioritizing clean architecture, security, and business value. I currently work at NTIDI, building web solutions with Django and MySQL using a results-driven approach.',
+                emailLabel: 'Email'
+            }
+        };
+
+        const setText = (selector, value) => {
+            const node = document.querySelector(selector);
+            if (node && typeof value === 'string') node.textContent = value;
+        };
+
+        const applyLanguage = (lang) => {
+            const targetLang = copyByLang[lang] ? lang : 'pt';
+            const copy = copyByLang[targetLang];
+
+            setText('.sidebar-location span', copy.location);
+
+            const sidebarLinks = [...document.querySelectorAll('.sidebar-nav a')];
+            sidebarLinks.forEach((link, index) => {
+                const nextLabel = copy.sidebarNav[index];
+                if (nextLabel) link.textContent = nextLabel;
+            });
+
+            setText('.about-hero-section .hero-cta span', copy.heroCta);
+            setText('.about-hero-section .hero-subtitle', copy.heroSubtitle);
+            setText('.about-hero-section .hero-bio', copy.heroBio);
+            setText('.about-hero-section .hero-contact-links .contact-link:nth-child(3) span', copy.emailLabel);
+
+            langButtons.forEach((button) => {
+                const isActive = button.dataset.lang === targetLang;
+                button.classList.toggle('active', isActive);
+                button.setAttribute('aria-pressed', String(isActive));
+            });
+
+            document.documentElement.lang = targetLang === 'en' ? 'en' : 'pt-BR';
+
+            try {
+                localStorage.setItem(storageKey, targetLang);
+            } catch (_) {
+                // Sem persistencia em contextos bloqueados.
+            }
+        };
+
+        let savedLang = 'pt';
+        try {
+            savedLang = localStorage.getItem(storageKey) || 'pt';
+        } catch (_) {
+            savedLang = 'pt';
+        }
+
+        const defaultLang = copyByLang[savedLang] ? savedLang : (langButtons.find((button) => button.classList.contains('active'))?.dataset.lang || 'pt');
+        applyLanguage(defaultLang);
+
+        langButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                const { lang } = button.dataset;
+                if (!lang) return;
+                applyLanguage(lang);
+            });
+        });
+    }
+
+    initAboutLanguageToggle();
+
     // Fallback para imagens de projetos quebradas
     document.querySelectorAll('.project-image .project-logo').forEach((logo) => {
         const imageWrapper = logo.closest('.project-image');
