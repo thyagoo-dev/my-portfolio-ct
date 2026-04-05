@@ -1,4 +1,11 @@
 /* Estilos especificos da pagina de galeria */
+.page-galeria .content-section.page-intro {
+    background:
+        radial-gradient(circle at 18% 22%, rgba(30, 64, 175, 0.2) 0%, rgba(30, 64, 175, 0) 42%),
+        radial-gradient(circle at 82% 14%, rgba(245, 158, 11, 0.16) 0%, rgba(245, 158, 11, 0) 40%),
+        linear-gradient(165deg, #0b1220 0%, #111827 55%, #1f2937 100%);
+}
+
 .page-galeria .page-title {
     font-size: 3rem;
     font-weight: 700;
