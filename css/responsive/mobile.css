@@ -102,13 +102,30 @@
         text-align: center;
     }
 
+    .hero-actions {
+        width: 100%;
+        flex-direction: column;
+        gap: 0.7rem;
+    }
+
+    .results-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    .projects-marquee .project-card {
+        flex-basis: 86vw;
+        max-width: 86vw;
+        min-height: auto;
+    }
+
     .contact-cards {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         gap: 1rem;
     }
 
     .contact-card {
-        padding: 1.5rem 1rem;
+        padding: 1.1rem 1rem;
     }
 
     .contact-icon {
