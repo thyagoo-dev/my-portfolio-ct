@@ -1,5 +1,7 @@
 /* ========== NAVBAR PREMIUM ========== */
 .navbar {
+    display: block;
+    flex-wrap: nowrap;
     position: fixed;
     top: 1rem;
     left: 50%;
@@ -60,6 +62,7 @@
 
 .navbar-container {
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
     gap: 1.1rem;
@@ -186,6 +189,7 @@
 
 .navbar-actions {
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
     gap: 0.85rem;
     margin-left: 1.1rem;
