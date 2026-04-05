@@ -225,6 +225,11 @@ a.contact-info-item:hover {
     height: 18px;
 }
 
+.social-link-card i {
+    font-size: 1.02rem;
+    line-height: 1;
+}
+
 .form-section {
     border: 1px solid rgba(148, 163, 184, 0.25);
     border-radius: 1rem;
