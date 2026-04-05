@@ -185,6 +185,66 @@ document.addEventListener('DOMContentLoaded', () => {
         'Saberes Interculturais de Itaparica': { problema: 'Baixa visibilidade do projeto', solucao: 'Portal de divulgação com navegação acessível', stack: 'Django e frontend responsivo' }
     };
 
+    const techIconMap = {
+        html: { type: 'devicon', className: 'devicon-html5-plain colored' },
+        css: { type: 'devicon', className: 'devicon-css3-plain colored' },
+        javascript: { type: 'devicon', className: 'devicon-javascript-plain colored' },
+        django: { type: 'devicon', className: 'devicon-django-plain colored' },
+        python: { type: 'devicon', className: 'devicon-python-plain colored' },
+        mysql: { type: 'devicon', className: 'devicon-mysql-plain colored' },
+        postgresql: { type: 'devicon', className: 'devicon-postgresql-plain colored' },
+        bootstrap: { type: 'devicon', className: 'devicon-bootstrap-plain colored' },
+        sqlite: { type: 'devicon', className: 'devicon-sqlite-plain colored' },
+        seo: { type: 'lucide', name: 'search' },
+        ia: { type: 'lucide', name: 'brain-circuit' },
+        automacao: { type: 'lucide', name: 'bot' },
+        responsivo: { type: 'lucide', name: 'smartphone' },
+        saas: { type: 'lucide', name: 'layers' },
+        eventos: { type: 'lucide', name: 'calendar-days' },
+        'sistema web': { type: 'lucide', name: 'layout-template' },
+        'controle de estoque': { type: 'lucide', name: 'package' },
+        'landing page': { type: 'lucide', name: 'panel-top' },
+        'front-end': { type: 'devicon', className: 'devicon-html5-plain colored' },
+        conversao: { type: 'lucide', name: 'trending-up' },
+        'web app': { type: 'lucide', name: 'app-window' },
+        'design system': { type: 'lucide', name: 'palette' },
+        escalabilidade: { type: 'lucide', name: 'waypoints' }
+    };
+
+    const normalizeTechLabel = (value) => {
+        if (!value) return '';
+        return value
+            .toString()
+            .trim()
+            .toLowerCase()
+            .normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, '');
+    };
+
+    const createTechIcon = (tech) => {
+        const iconConfig = techIconMap[normalizeTechLabel(tech)];
+        if (!iconConfig) return null;
+
+        if (iconConfig.type === 'devicon') {
+            const icon = document.createElement('i');
+            icon.className = `project-tech-icon ${iconConfig.className}`;
+            icon.setAttribute('aria-hidden', 'true');
+            return icon;
+        }
+
+        if (iconConfig.type === 'lucide') {
+            const icon = document.createElement('i');
+            icon.className = 'project-tech-icon';
+            icon.setAttribute('data-lucide', iconConfig.name);
+            icon.setAttribute('aria-hidden', 'true');
+            return icon;
+        }
+
+        return null;
+    };
+
+    let hasDynamicLucideTechIcons = false;
+
     document.querySelectorAll('.project-card, .project-card-gildacio').forEach((card) => {
         const title = card.querySelector('h3, .project-title')?.textContent?.trim();
         if (!title) return;
@@ -200,7 +260,18 @@ document.addEventListener('DOMContentLoaded', () => {
             technologies.forEach((tech) => {
                 const tag = document.createElement('span');
                 tag.className = 'project-tech-tag';
-                tag.textContent = tech;
+                const icon = createTechIcon(tech);
+                if (icon) {
+                    tag.appendChild(icon);
+                    if (icon.hasAttribute('data-lucide')) {
+                        hasDynamicLucideTechIcons = true;
+                    }
+                }
+
+                const label = document.createElement('span');
+                label.className = 'project-tech-label';
+                label.textContent = tech;
+                tag.appendChild(label);
                 tagsContainer.appendChild(tag);
             });
 
@@ -225,6 +296,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         contentTarget.appendChild(summaryList);
     });
+
+    if (hasDynamicLucideTechIcons && typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
 
     function initCertificateFilters() {
         const filterButtons = [...document.querySelectorAll('.cert-filter-btn[data-filter]')];

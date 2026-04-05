@@ -191,6 +191,9 @@
 }
 
 .project-tech-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
     padding: 0.32rem 0.62rem;
     border-radius: 999px;
     border: 1px solid rgba(148, 163, 184, 0.35);
@@ -199,6 +202,19 @@
     font-size: 0.72rem;
     font-weight: 600;
     letter-spacing: 0.2px;
+}
+
+.project-tech-icon {
+    width: 0.9rem;
+    height: 0.9rem;
+    font-size: 0.9rem;
+    line-height: 1;
+    flex: 0 0 auto;
+}
+
+.project-tech-tag .project-tech-icon[data-lucide] {
+    stroke-width: 2;
+    color: #F8FAFC;
 }
 
 /* Links de ação */
