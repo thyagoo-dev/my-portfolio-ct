@@ -24,17 +24,17 @@
 
 /* Seções com fundo branco */
 .content-section.bg-white {
-    background: var(--bg-color);
+    background: var(--bg-color) !important;
 }
 
 /* SeÃƒÂ§ÃƒÂµes com fundo alternado claro */
 .content-section.bg-light {
-    background: var(--bg-alt);
+    background: var(--bg-alt) !important;
 }
 
 /* SeÃƒÂ§ÃƒÂµes com fundo escuro */
 .content-section.bg-dark {
-    background: var(--bg-dark);
+    background: var(--bg-dark) !important;
     color: #FFFFFF;
 }
 
