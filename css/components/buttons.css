@@ -34,6 +34,14 @@
     box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
 }
 
+.btn-primary:link,
+.btn-primary:visited,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    color: #FFFFFF;
+}
+
 .btn-primary:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
