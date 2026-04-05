@@ -1,14 +1,20 @@
 /* ========== BOTÕES FÁCEIS ========== */
 .btn {
-    padding: 0.85rem 2rem;
-    border-radius: 0.5rem;
+    min-height: 46px;
+    padding: 0.78rem 1.5rem;
+    border-radius: 0.65rem;
     text-decoration: none;
     font-weight: 600;
     transition: all var(--transition-normal);
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
     cursor: pointer;
     border: 2px solid transparent;
-    font-size: 1rem;
+    font-size: 0.96rem;
+    line-height: 1.1;
+    text-align: center;
     position: relative;
     overflow: hidden;
 }
@@ -26,6 +32,11 @@
 
 .btn:hover::before {
     left: 100%;
+}
+
+.btn:focus-visible {
+    outline: 2px solid rgba(245, 158, 11, 0.6);
+    outline-offset: 2px;
 }
 
 .btn-primary {
