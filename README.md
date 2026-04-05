@@ -85,7 +85,7 @@ meu_portifolio/
 1. 🌐 Abrindo o arquivo `index.html` diretamente no navegador.
 2. 🛠️ Usando um servidor local (recomendado), por exemplo com a extensao Live Server no VS Code.
 
-### Clonando o repositorio
+### Clonando o repositorio:
 
 ```bash
 git clone https://github.com/Victorkaue333/Portifolio-VictorKaue.git
