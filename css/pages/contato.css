@@ -57,8 +57,8 @@
 
 .contact-layout {
     display: grid;
-    grid-template-columns: 0.92fr 1.08fr;
-    gap: 1.4rem;
+    grid-template-columns: minmax(320px, 0.95fr) minmax(0, 1.05fr);
+    gap: 1.6rem;
     align-items: start;
 }
 
@@ -94,6 +94,7 @@
 
 .contact-info-row {
     display: grid;
+    grid-template-columns: 1fr;
     gap: 0.85rem;
 }
 
@@ -149,6 +150,7 @@ a.contact-info-item:hover {
     color: #f8fafc;
     font-size: 0.95rem;
     font-weight: 600;
+    overflow-wrap: anywhere;
 }
 
 .availability-box,
@@ -422,5 +424,64 @@ button[type="submit"]:disabled {
     .field-footer {
         flex-direction: column;
         align-items: flex-start;
+    }
+}
+
+/* ========================================
+   CONTATO — OVERRIDES ESCOPADOS
+   Evita conflito com estilos globais da home/projetos
+   ======================================== */
+.contact-page .contact-layout > * {
+    min-width: 0;
+}
+
+.contact-page .contact-info-row {
+    grid-template-columns: 1fr;
+    margin-top: 0;
+}
+
+.contact-page .contact-info-item {
+    width: 100%;
+    min-width: 0;
+}
+
+.contact-page .contact-info-text {
+    min-width: 0;
+}
+
+.contact-page .contact-info-value {
+    word-break: normal;
+}
+
+.contact-page .availability-box ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 0.75rem;
+}
+
+.contact-page .social-row {
+    flex-wrap: wrap;
+}
+
+.contact-page .social-link-card {
+    min-height: 46px;
+}
+
+@media (max-width: 1200px) {
+    .contact-page .contact-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-page .availability-box ul {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-page .form-section {
+        padding: 1rem;
+    }
+
+    .contact-page .contact-form-wrapper {
+        padding: 1rem;
     }
 }
