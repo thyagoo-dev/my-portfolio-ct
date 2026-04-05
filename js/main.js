@@ -340,6 +340,91 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initCertificateFilters();
 
+    function initCertificateModal() {
+        const certificateCards = [...document.querySelectorAll('.certificate-card')];
+        if (!certificateCards.length) return;
+
+        const modal = document.createElement('div');
+        modal.className = 'certificate-lightbox';
+        modal.setAttribute('aria-hidden', 'true');
+        modal.innerHTML = `
+            <div class="certificate-lightbox-backdrop"></div>
+            <div class="certificate-lightbox-dialog" role="dialog" aria-modal="true" aria-label="Visualização de certificado">
+                <button type="button" class="certificate-lightbox-close" aria-label="Fechar certificado">x</button>
+                <div class="certificate-lightbox-paper"></div>
+                <div class="certificate-lightbox-meta">
+                    <h3 class="certificate-lightbox-title"></h3>
+                    <p class="certificate-lightbox-issuer"></p>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(modal);
+
+        const modalPaper = modal.querySelector('.certificate-lightbox-paper');
+        const modalTitle = modal.querySelector('.certificate-lightbox-title');
+        const modalIssuer = modal.querySelector('.certificate-lightbox-issuer');
+        const closeButton = modal.querySelector('.certificate-lightbox-close');
+
+        const closeModal = () => {
+            modal.classList.remove('active');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('modal-open');
+            modalPaper.innerHTML = '';
+        };
+
+        const openModalFromCard = (card) => {
+            const paper = card.querySelector('.certificate-paper');
+            if (!paper) return;
+
+            const clonedPaper = paper.cloneNode(true);
+            modalPaper.innerHTML = '';
+            modalPaper.appendChild(clonedPaper);
+            modalTitle.textContent = card.querySelector('.certificate-title')?.textContent?.trim() || 'Certificado';
+            modalIssuer.textContent = card.querySelector('.certificate-issuer')?.textContent?.trim() || '';
+
+            modal.classList.add('active');
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('modal-open');
+        };
+
+        certificateCards.forEach((card) => {
+            card.setAttribute('role', 'button');
+            card.setAttribute('tabindex', '0');
+            card.setAttribute('aria-label', 'Abrir certificado em modal');
+
+            card.addEventListener('click', () => {
+                openModalFromCard(card);
+            });
+
+            card.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    openModalFromCard(card);
+                }
+            });
+        });
+
+        modal.addEventListener('click', (event) => {
+            if (
+                event.target === modal ||
+                event.target.closest('.certificate-lightbox-backdrop') ||
+                event.target.closest('.certificate-lightbox-close')
+            ) {
+                closeModal();
+            }
+        });
+
+        window.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+
+        closeButton?.addEventListener('click', closeModal);
+    }
+
+    initCertificateModal();
+
     // 1. Animacao de digitacao com Typed.js (somente se o alvo existir)
     const typedElement = document.querySelector('#typed-text');
     if (typedElement && typeof Typed !== 'undefined') {
