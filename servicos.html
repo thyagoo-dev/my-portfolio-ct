@@ -20,6 +20,7 @@
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 </head>
 <body>
 
@@ -64,70 +65,105 @@
     </nav>
 
     <main>
-        <!--================-->
-        <!-- SERVIÇOS       -->
-        <!--================-->
-        <section id="servicos" class="content-section bg-white">
-            <div class="container text-center">
-                <h1 class="page-title">Serviços</h1>
-                <p class="page-subtitle">Entregas orientadas a produto, do planejamento ao deploy</p>
+        <section class="content-section bg-white services-page">
+            <div class="container">
+                <header class="page-hero">
+                    <nav class="page-breadcrumb" aria-label="Breadcrumb">
+                        <a href="index.html">Início</a>
+                        <span aria-hidden="true">/</span>
+                        <span>Serviços</span>
+                    </nav>
+                    <h1 class="page-title">Serviços</h1>
+                    <p class="page-subtitle">Soluções completas para desenvolvimento de sistemas e aplicações web modernas, com foco em resultado de negócio.</p>
+                    <p class="page-description">Do discovery ao deploy, cada entrega é planejada para ser escalável, segura e simples de evoluir.</p>
+                </header>
 
-                <div class="services-grid">
-                    <article class="service-card">
-                        <div class="service-icon">
-                            <i data-lucide="layout"></i>
-                        </div>
-                        <h3>Landing Pages</h3>
-                        <p>Páginas focadas em conversão, performance e clareza da proposta.</p>
-                        <ul>
-                            <li>Seções estratégicas para oferta</li>
-                            <li>SEO técnico e velocidade</li>
-                        </ul>
-                    </article>
+                <section id="servicos" class="services-block">
+                    <div class="services-grid">
+                        <article class="service-card">
+                            <div class="service-icon"><i data-lucide="layout-template"></i></div>
+                            <h3>Landing Pages</h3>
+                            <p>Páginas focadas em conversão e performance.</p>
+                            <ul>
+                                <li>Alta performance</li>
+                                <li>SEO otimizado</li>
+                                <li>Layout responsivo</li>
+                            </ul>
+                            <a href="contato.html" class="btn btn-secondary">Ver detalhes</a>
+                        </article>
 
-                    <article class="service-card">
-                        <div class="service-icon">
-                            <i data-lucide="monitor"></i>
-                        </div>
-                        <h3>Sistemas web completos</h3>
-                        <p>Aplicações com autenticação, permissões e painel administrativo.</p>
-                        <ul>
-                            <li>Modelagem e regras de negócio</li>
-                            <li>Front-end integrado ao back-end</li>
-                        </ul>
-                    </article>
+                        <article class="service-card">
+                            <div class="service-icon"><i data-lucide="monitor-smartphone"></i></div>
+                            <h3>Sistemas Web</h3>
+                            <p>Aplicações completas com regras de negócio e painel administrativo.</p>
+                            <ul>
+                                <li>Arquitetura escalável</li>
+                                <li>Autenticação e permissões</li>
+                                <li>UX orientada a operação</li>
+                            </ul>
+                            <a href="contato.html" class="btn btn-secondary">Ver detalhes</a>
+                        </article>
 
-                    <article class="service-card">
-                        <div class="service-icon">
-                            <i data-lucide="plug"></i>
-                        </div>
-                        <h3>APIs REST</h3>
-                        <p>Back-end para integrações, apps e sistemas internos.</p>
-                        <ul>
-                            <li>Endpoints documentados</li>
-                            <li>Validação, segurança e testes</li>
-                        </ul>
-                    </article>
+                        <article class="service-card">
+                            <div class="service-icon"><i data-lucide="workflow"></i></div>
+                            <h3>APIs REST</h3>
+                            <p>Back-end robusto para integrações, apps e produtos digitais.</p>
+                            <ul>
+                                <li>Endpoints documentados</li>
+                                <li>Segurança e validações</li>
+                                <li>Foco em manutenção</li>
+                            </ul>
+                            <a href="contato.html" class="btn btn-secondary">Ver detalhes</a>
+                        </article>
 
-                    <article class="service-card">
-                        <div class="service-icon">
-                            <i data-lucide="container"></i>
-                        </div>
-                        <h3>Deploy com Docker e Nginx</h3>
-                        <p>Publicação com ambiente estável, versionado e preparado para produção.</p>
-                        <ul>
-                            <li>Containerização com Docker</li>
-                            <li>Proxy reverso e HTTPS com Nginx</li>
-                        </ul>
-                    </article>
-                </div>
+                        <article class="service-card">
+                            <div class="service-icon"><i data-lucide="server-cog"></i></div>
+                            <h3>Deploy e Infra</h3>
+                            <p>Publicação profissional com ambiente estável para produção.</p>
+                            <ul>
+                                <li>Docker e versionamento</li>
+                                <li>Nginx e SSL</li>
+                                <li>Monitoramento inicial</li>
+                            </ul>
+                            <a href="contato.html" class="btn btn-secondary">Ver detalhes</a>
+                        </article>
+                    </div>
+                </section>
 
-                <div class="text-center mt-3">
+                <section class="work-process">
+                    <h2 class="section-title">Meu processo de desenvolvimento</h2>
+                    <div class="process-grid">
+                        <article class="process-card">
+                            <span class="process-step">01</span>
+                            <h3>Planejamento</h3>
+                            <p>Levantamento de requisitos, escopo e prioridades para reduzir retrabalho.</p>
+                        </article>
+                        <article class="process-card">
+                            <span class="process-step">02</span>
+                            <h3>Design</h3>
+                            <p>Estrutura de interface e jornada com foco em clareza e conversão.</p>
+                        </article>
+                        <article class="process-card">
+                            <span class="process-step">03</span>
+                            <h3>Desenvolvimento</h3>
+                            <p>Implementação incremental com padrões de código e testes funcionais.</p>
+                        </article>
+                        <article class="process-card">
+                            <span class="process-step">04</span>
+                            <h3>Deploy</h3>
+                            <p>Entrega em produção com segurança, performance e checklist técnico.</p>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="service-cta">
+                    <h2>Vamos desenvolver seu projeto?</h2>
+                    <p>Conte sua necessidade e eu retorno com uma proposta técnica objetiva.</p>
                     <a href="contato.html" class="btn btn-primary">
                         <i data-lucide="message-circle"></i>
-                        Solicitar Orçamento
+                        Entrar em contato
                     </a>
-                </div>
+                </section>
             </div>
         </section>
     </main>
