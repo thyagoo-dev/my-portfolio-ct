@@ -344,6 +344,23 @@ document.addEventListener('DOMContentLoaded', () => {
         const certificateCards = [...document.querySelectorAll('.certificate-card')];
         if (!certificateCards.length) return;
 
+        // Se houver data-cert-image no card, usa a foto real do certificado no preview.
+        certificateCards.forEach((card) => {
+            const imageUrl = card.dataset.certImage || card.dataset.certificateImage;
+            const preview = card.querySelector('.certificate-preview');
+            if (!imageUrl || !preview || preview.querySelector('.certificate-photo')) return;
+
+            const image = document.createElement('img');
+            image.className = 'certificate-photo';
+            image.src = imageUrl;
+            image.alt = `Certificado: ${card.querySelector('.certificate-title')?.textContent?.trim() || 'Certificado'}`;
+            image.loading = 'lazy';
+            image.decoding = 'async';
+
+            preview.appendChild(image);
+            card.classList.add('has-certificate-photo');
+        });
+
         const modal = document.createElement('div');
         modal.className = 'certificate-lightbox';
         modal.setAttribute('aria-hidden', 'true');
@@ -373,12 +390,26 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         const openModalFromCard = (card) => {
-            const paper = card.querySelector('.certificate-paper');
-            if (!paper) return;
-
-            const clonedPaper = paper.cloneNode(true);
             modalPaper.innerHTML = '';
-            modalPaper.appendChild(clonedPaper);
+
+            const photo = card.querySelector('.certificate-photo');
+            const paper = card.querySelector('.certificate-paper');
+
+            if (photo?.src) {
+                const modalImage = document.createElement('img');
+                modalImage.className = 'certificate-lightbox-image';
+                modalImage.src = photo.src;
+                modalImage.alt = photo.alt || 'Imagem do certificado';
+                modalPaper.appendChild(modalImage);
+                modal.classList.add('has-photo');
+            } else if (paper) {
+                const clonedPaper = paper.cloneNode(true);
+                modalPaper.appendChild(clonedPaper);
+                modal.classList.remove('has-photo');
+            } else {
+                return;
+            }
+
             modalTitle.textContent = card.querySelector('.certificate-title')?.textContent?.trim() || 'Certificado';
             modalIssuer.textContent = card.querySelector('.certificate-issuer')?.textContent?.trim() || '';
 
