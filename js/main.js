@@ -226,6 +226,45 @@ document.addEventListener('DOMContentLoaded', () => {
         contentTarget.appendChild(summaryList);
     });
 
+    function initCertificateFilters() {
+        const filterButtons = [...document.querySelectorAll('.cert-filter-btn[data-filter]')];
+        const certificateCards = [...document.querySelectorAll('.certificate-card[data-category]')];
+        if (!filterButtons.length || !certificateCards.length) return;
+
+        const applyFilter = (filter) => {
+            const selectedFilter = filter || 'all';
+
+            filterButtons.forEach((button) => {
+                const isActive = button.dataset.filter === selectedFilter;
+                button.classList.toggle('active', isActive);
+                button.setAttribute('aria-pressed', String(isActive));
+            });
+
+            certificateCards.forEach((card) => {
+                if (selectedFilter === 'all') {
+                    card.classList.remove('is-hidden');
+                    return;
+                }
+
+                const categories = (card.dataset.category || '').split(/\s+/);
+                const shouldShow = categories.includes(selectedFilter);
+                card.classList.toggle('is-hidden', !shouldShow);
+            });
+        };
+
+        const defaultFilter = filterButtons.find((button) => button.classList.contains('active'))?.dataset.filter || 'all';
+        applyFilter(defaultFilter);
+
+        filterButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                const targetFilter = button.dataset.filter || 'all';
+                applyFilter(targetFilter);
+            });
+        });
+    }
+
+    initCertificateFilters();
+
     // 1. Animacao de digitacao com Typed.js (somente se o alvo existir)
     const typedElement = document.querySelector('#typed-text');
     if (typedElement && typeof Typed !== 'undefined') {

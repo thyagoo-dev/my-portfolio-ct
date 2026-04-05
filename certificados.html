@@ -19,6 +19,7 @@
     
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 </head>
 <body class="page-certificados">
 
@@ -62,52 +63,100 @@
     <!--================-->
     <main>
         <section class="certificates-page">
-            <div class="container text-center">
-                
-                <!-- Títulos da Página -->
-                <h1 class="page-title">Certificados e Credenciais</h1>
-                <p class="page-subtitle">Certificações e cursos que obtive ao longo da minha jornada profissional e acadêmica.</p>
+            <div class="container">
+                <header class="page-hero text-center">
+                    <nav class="page-breadcrumb" aria-label="Breadcrumb">
+                        <a href="index.html">Início</a>
+                        <span aria-hidden="true">/</span>
+                        <span>Certificados</span>
+                    </nav>
+                    <h1 class="page-title">Certificados e Credenciais</h1>
+                    <p class="page-subtitle">Evolução técnica contínua em backend, frontend e infraestrutura para projetos web de produção.</p>
+                    <p class="page-description">Selecione uma categoria para filtrar as certificações e visualizar a trilha de aprendizado.</p>
+                </header>
 
-                <!-- ===================================== -->
-                <!-- SEÇÃO: DESENVOLVIMENTO WEB & BACKEND -->
-                <!-- ===================================== -->
-                <div class="category-section">
-                    <h2 class="category-title">Desenvolvimento Web & Backend</h2>
-                    
-                    <div class="certificate-grid">
-                        <!-- Certificate 1 - Django -->
-                        <div class="certificate-card">
-                            <div class="certificate-icon">
-                                <i data-lucide="award"></i>
-                            </div>
-                            <h3 class="certificate-title">Introdução ao Desenvolvimento Web com Django</h3>
-                            <p class="certificate-issuer">Instituto Federal do Sertão Pernambucano</p>
-                            <p class="certificate-description">
-                                Curso completo em Django com foco em desenvolvimento de aplicações, incluindo models, views, templates e autenticação.
-                            </p>
-                            <div class="certificate-tags">
-                                <span class="cert-tag">Django</span>
-                                <span class="cert-tag">Python</span>
-                                <span class="cert-tag">Backend</span>
-                            </div>
-                            <div class="certificate-footer">
-                                <span class="certificate-date">
-                                    <i data-lucide="calendar"></i>
-                                    2025
-                                </span>
-                            </div>
-                        </div>
+                <section class="certificate-filters" aria-label="Filtros de certificados">
+                    <button class="cert-filter-btn active" type="button" data-filter="all">Todos</button>
+                    <button class="cert-filter-btn" type="button" data-filter="backend">Backend</button>
+                    <button class="cert-filter-btn" type="button" data-filter="frontend">Frontend</button>
+                    <button class="cert-filter-btn" type="button" data-filter="devops">DevOps</button>
+                    <button class="cert-filter-btn" type="button" data-filter="python">Python</button>
+                    <button class="cert-filter-btn" type="button" data-filter="django">Django</button>
+                </section>
 
-                    
+                <section class="certificate-grid" id="certificateGrid">
+                    <article class="certificate-card" data-category="backend python django">
+                        <div class="certificate-icon"><i data-lucide="award"></i></div>
+                        <h3 class="certificate-title">Introdução ao Desenvolvimento Web com Django</h3>
+                        <p class="certificate-issuer">IF Sertão Pernambucano</p>
+                        <p class="certificate-description">Fundamentos de Django, autenticação, templates, ORM e estruturação de sistemas web.</p>
+                        <div class="certificate-tags"><span class="cert-tag">Django</span><span class="cert-tag">Python</span><span class="cert-tag">Backend</span></div>
+                        <div class="certificate-footer"><span class="certificate-date"><i data-lucide="calendar"></i>2025</span></div>
+                    </article>
 
-        
+                    <article class="certificate-card" data-category="backend python">
+                        <div class="certificate-icon"><i data-lucide="cpu"></i></div>
+                        <h3 class="certificate-title">Python para Aplicações Profissionais</h3>
+                        <p class="certificate-issuer">Curso Livre</p>
+                        <p class="certificate-description">Boas práticas, modularização, automação de tarefas e organização de código para manutenção.</p>
+                        <div class="certificate-tags"><span class="cert-tag">Python</span><span class="cert-tag">Backend</span></div>
+                        <div class="certificate-footer"><span class="certificate-date"><i data-lucide="calendar"></i>2024</span></div>
+                    </article>
+
+                    <article class="certificate-card" data-category="frontend">
+                        <div class="certificate-icon"><i data-lucide="palette"></i></div>
+                        <h3 class="certificate-title">Front-End Responsivo</h3>
+                        <p class="certificate-issuer">Formação Web</p>
+                        <p class="certificate-description">Construção de interfaces adaptáveis, acessíveis e com foco em experiência do usuário.</p>
+                        <div class="certificate-tags"><span class="cert-tag">HTML</span><span class="cert-tag">CSS</span><span class="cert-tag">Frontend</span></div>
+                        <div class="certificate-footer"><span class="certificate-date"><i data-lucide="calendar"></i>2024</span></div>
+                    </article>
+
+                    <article class="certificate-card" data-category="devops backend">
+                        <div class="certificate-icon"><i data-lucide="container"></i></div>
+                        <h3 class="certificate-title">Docker para Deploy de Sistemas</h3>
+                        <p class="certificate-issuer">Treinamento Prático</p>
+                        <p class="certificate-description">Containerização de aplicações e padronização de ambiente para homologação e produção.</p>
+                        <div class="certificate-tags"><span class="cert-tag">Docker</span><span class="cert-tag">DevOps</span><span class="cert-tag">Deploy</span></div>
+                        <div class="certificate-footer"><span class="certificate-date"><i data-lucide="calendar"></i>2025</span></div>
+                    </article>
+
+                    <article class="certificate-card" data-category="backend django">
+                        <div class="certificate-icon"><i data-lucide="database"></i></div>
+                        <h3 class="certificate-title">Modelagem de Dados com Django ORM</h3>
+                        <p class="certificate-issuer">Curso Especializado</p>
+                        <p class="certificate-description">Relacionamentos, otimização de queries e modelagem voltada a sistemas de negócio.</p>
+                        <div class="certificate-tags"><span class="cert-tag">Django</span><span class="cert-tag">Banco de Dados</span><span class="cert-tag">Backend</span></div>
+                        <div class="certificate-footer"><span class="certificate-date"><i data-lucide="calendar"></i>2025</span></div>
+                    </article>
+
+                    <article class="certificate-card" data-category="frontend">
+                        <div class="certificate-icon"><i data-lucide="code-2"></i></div>
+                        <h3 class="certificate-title">JavaScript para Web Apps</h3>
+                        <p class="certificate-issuer">Trilha JavaScript</p>
+                        <p class="certificate-description">Manipulação de DOM, consumo de APIs e interações para aplicações web modernas.</p>
+                        <div class="certificate-tags"><span class="cert-tag">JavaScript</span><span class="cert-tag">Frontend</span></div>
+                        <div class="certificate-footer"><span class="certificate-date"><i data-lucide="calendar"></i>2023</span></div>
+                    </article>
+                </section>
+
+                <section class="learning-journey">
+                    <h2 class="section-title">Minha Jornada de Aprendizado</h2>
+                    <div class="journey-timeline">
+                        <article class="journey-item">
+                            <span class="journey-year">2023</span>
+                            <p>Fundamentos sólidos de desenvolvimento web e início da trilha em JavaScript e UX.</p>
+                        </article>
+                        <article class="journey-item">
+                            <span class="journey-year">2024</span>
+                            <p>Consolidação em Python, backend e boas práticas de arquitetura para sistemas reais.</p>
+                        </article>
+                        <article class="journey-item">
+                            <span class="journey-year">2025</span>
+                            <p>Especialização em Django, deploy com Docker e foco em entregas de maior impacto.</p>
+                        </article>
                     </div>
-                </div>
-
-
-                        
-                    </div>
-                </div>
+                </section>
             </div>
         </section>
     </main>
