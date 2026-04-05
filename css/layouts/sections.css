@@ -1,6 +1,6 @@
 /* ========== SEÇÕES DE CONTATOS ========== */
 .content-section {
-    padding: 7.5rem 0;
+    padding: 8.5rem 0;
     position: relative;
     transition: all var(--transition-slow);
     scroll-margin-top: 100px; /* Compensar altura da navbar */
@@ -9,6 +9,17 @@
 .content-section.page-intro {
     padding-top: 10.5rem;
     min-height: 100vh;
+}
+
+.content-section .section-title {
+    margin-bottom: 0.95rem;
+}
+
+.content-section .section-subtitle {
+    margin-bottom: 2.1rem;
+    max-width: 64ch;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Seções com fundo branco */
