@@ -571,6 +571,47 @@ document.addEventListener('DOMContentLoaded', () => {
         ctaObserver.observe(ctaContent);
     }
 
+    if (typeof gsap !== 'undefined') {
+        const pageHero = document.querySelector('.page-hero, .case-hero');
+        if (pageHero) {
+            gsap.fromTo(pageHero,
+                { autoAlpha: 0, y: 24 },
+                { autoAlpha: 1, y: 0, duration: 0.8, ease: 'power2.out' }
+            );
+        }
+
+        const cardGroups = [
+            '.services-grid .service-card',
+            '.process-grid .process-card',
+            '.certificate-grid .certificate-card',
+            '.journey-timeline .journey-item',
+            '.contact-info-row .contact-info-item',
+            '.case-section'
+        ];
+
+        cardGroups.forEach((selector) => {
+            const items = [...document.querySelectorAll(selector)];
+            if (!items.length) return;
+
+            const reveal = () => {
+                gsap.fromTo(items,
+                    { autoAlpha: 0, y: 18 },
+                    { autoAlpha: 1, y: 0, duration: 0.55, stagger: 0.08, ease: 'power2.out' }
+                );
+            };
+
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) return;
+                    reveal();
+                    obs.disconnect();
+                });
+            }, { threshold: 0.2 });
+
+            observer.observe(items[0]);
+        });
+    }
+
     // 4. Smooth scroll para links de navegacao
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener('click', function (e) {

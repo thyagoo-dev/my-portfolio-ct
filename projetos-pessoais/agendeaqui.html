@@ -22,8 +22,9 @@
     
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 </head>
-<body>
+<body class="case-study-page">
 
     <!--================-->
     <!--    NAVBAR      -->
@@ -65,112 +66,109 @@
     <!--  CONTEÚDO      -->
     <!--================-->
     <main>
-        <!-- bg-gradient para manter a harmonia dark/gradient do portfólio. padding-top compensa a navbar fixa -->
-        <section class="content-section bg-gradient page-intro">
+        <section id="agendeaqui-case" class="content-section bg-gradient page-intro">
             <div class="container">
-                
-                <!-- Títulos com a sua tipografia Space Grotesk e o underline do section-title -->
-                <h1 class="section-title light">AgendeAqui</h1>
-                <p class="section-subtitle light">Sistema de agendamento online para facilitar a marcação de compromissos de forma prática e eficiente, focado no âmbito institucional.</p>
 
-                <!-- paper-section é a sua classe que cria aquele card lindo com hover e shadow -->
-                <div class="paper-section">
-
-                    <!-- Galeria de fotos do projeto -->
-                    <div class="text-center mt-3">
-                        <h3 class="project-detail-section-title">Fotos do Projeto</h3>
-                        <div class="photo-carousel" data-carousel>
-                            <div class="carousel-viewport">
-                                <div class="carousel-track">
-                                    <div class="carousel-slide">
-                                        <img src="../images/fotos-projetos-pessoais/agendeaqui/agendeaqui.png" alt="Projeto - foto 1" loading="lazy">
-                                    </div>
-                                    <div class="carousel-slide">
-                                        <img src="../images/fotos-projetos-pessoais/agendeaqui/1.jpg" alt="Projeto - foto 2" loading="lazy">
-                                    </div>
-                                    <div class="carousel-slide">
-                                        <img src="../images/fotos-projetos-pessoais/agendeaqui/2.jpg" alt="Projeto - foto 3" loading="lazy">
-                                    </div>
-                                    <div class="carousel-slide">
-                                        <img src="../images/fotos-projetos-pessoais/agendeaqui/3.jpg" alt="Projeto - foto 4" loading="lazy">
-                                    </div>
-                                    <div class="carousel-slide">
-                                        <img src="../images/fotos-projetos-pessoais/agendeaqui/4.jpg" alt="Projeto - foto 5" loading="lazy">
-                                    </div>
-                                    <div class="carousel-slide">
-                                        <img src="../images/fotos-projetos-pessoais/agendeaqui/5.jpg" alt="Projeto - foto 6" loading="lazy">
-                                    </div>
-                                    <div class="carousel-slide">
-                                        <img src="../images/fotos-projetos-pessoais/agendeaqui/6.jpg" alt="Projeto - foto 7" loading="lazy">
-                                    </div>
-                                    <div class="carousel-slide">
-                                        <img src="../images/fotos-projetos-pessoais/agendeaqui/7.jpg" alt="Projeto - foto 8" loading="lazy">
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="carousel-button prev" type="button" aria-label="Foto anterior">
-                                <span aria-hidden="true">&#10094;</span>
-                            </button>
-                            <button class="carousel-button next" type="button" aria-label="Próxima foto">
-                                <span aria-hidden="true">&#10095;</span>
-                            </button>
-                            <div class="carousel-dots"></div>
-                        </div>
+                <header class="case-hero">
+                    <nav class="page-breadcrumb" aria-label="Breadcrumb">
+                        <a href="../index.html">Início</a>
+                        <span aria-hidden="true">/</span>
+                        <a href="../projetos.html">Projetos</a>
+                        <span aria-hidden="true">/</span>
+                        <span>AgendeAqui</span>
+                    </nav>
+                    <h1 class="section-title light">AgendeAqui</h1>
+                    <p class="section-subtitle light">Case study de um sistema de agendamento institucional com foco em organização operacional e redução de conflitos.</p>
+                    <div class="case-badges">
+                        <span>Django</span>
+                        <span>Python</span>
+                        <span>Bootstrap</span>
+                        <span>JavaScript</span>
                     </div>
-
-                    <!-- paper-box aplica o fundo alternado e estiliza as listas com a setinha amarela (>) -->
-                    <div class="paper-box">
-                        <h3 class="project-detail-subtitle">Descrição</h3>
-                        <p>
-                            AgendeAqui é uma plataforma web desenvolvida em Django que revoluciona a forma como instituições de ensino gerenciam seus espaços físicos. O sistema elimina conflitos de horários, centraliza requisições de reserva e oferece visibilidade total sobre a utilização de recursos. Além disso, o mesmo foi desenvolvido como requisito para conclusão do curso FIC.
-                        </p>
-
-                        <h3 class="project-detail-subtitle-spaced">Detalhes do Projeto</h3>
-                        <ul>
-                            <li><strong>Desafio:</strong> Gerenciar eficientemente os espaços físicos das instituições de ensino.</li>
-                            <li><strong>Solução:</strong> Desenvolvimento de uma plataforma web que centraliza e organiza as reservas de espaços físicos.</li>
-                            <li><strong>Impacto:</strong> Melhoria na gestão dos recursos e redução de conflitos de horários.</li>
-                        </ul>
-
-                        <h3 class="project-detail-subtitle-spaced">Arquitetura</h3>
-                        <div class="project-architecture" aria-label="Fluxo de arquitetura do projeto">
-                            <span class="arch-node">Frontend</span>
-                            <span class="arch-arrow">-&gt;</span>
-                            <span class="arch-node">API</span>
-                            <span class="arch-arrow">-&gt;</span>
-                            <span class="arch-node">Banco de Dados</span>
-                        </div>
-
-                        <h3 class="project-detail-subtitle-spaced">Stack e decisões</h3>
-                        <ul>
-                            <li><strong>Autenticação:</strong> sessão ou JWT conforme escopo e perfil de acesso.</li>
-                            <li><strong>Back-end:</strong> regras de negócio isoladas em serviços para facilitar manutenção.</li>
-                            <li><strong>Deploy:</strong> Docker para padronizar ambiente e Nginx como proxy reverso.</li>
-                            <li><strong>Banco:</strong> modelagem relacional focada em integridade e performance.</li>
-                        </ul>
-                    </div>
-
-                    <!-- Tecnologias usadas -->
-                    <div class="text-center mt-2-5">
-                        <h3 class="project-detail-section-title">Tecnologias Usadas</h3>
-                        <div class="tech-grid">
-                            <div class="tech-card"> <i class="devicon-django-plain-wordmark colored"></i> <span>Django</span> </div>
-                            <div class="tech-card"> <i class="devicon-python-plain-wordmark colored"></i> <span>Python</span> </div>
-                            <div class="tech-card"> <i class="devicon-html5-plain-wordmark colored"></i> <span>HTML5</span> </div>
-                            <div class="tech-card"> <i class="devicon-css3-plain-wordmark colored"></i> <span>CSS3</span> </div>
-                            <div class="tech-card"> <i class="devicon-javascript-plain colored"></i> <span>JavaScript</span> </div>
-                            <div class="tech-card"> <i class="devicon-bootstrap-plain-wordmark colored"></i> <span>Bootstrap</span> </div>
-                        </div>
-                    </div>
-
-                    <!-- view-more organiza os botões centralizados e aplica o espaçamento correto -->
-                    <div class="view-more">
-                        <a href="https://github.com/Victorkaue333/AgendeAqui" class="btn btn-secondary">
-                            <i data-lucide="github" class="project-detail-icon"></i> 
-                            Ver Repositório
+                    <div class="case-hero-actions">
+                        <a href="#screenshots" class="btn btn-primary">Ver projeto</a>
+                        <a href="https://github.com/Victorkaue333/AgendeAqui" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="github" class="project-detail-icon"></i>
+                            GitHub
                         </a>
                     </div>
-                    
+                </header>
+
+                <div class="paper-section case-section">
+                    <h2>Sobre o Projeto</h2>
+                    <p>AgendeAqui é uma plataforma web desenvolvida em Django para organizar a reserva de espaços institucionais. O sistema centraliza solicitações, evita conflitos de horário e melhora a visibilidade da ocupação dos ambientes.</p>
+                </div>
+
+                <div class="case-grid-two">
+                    <article class="paper-box case-section">
+                        <h3>Problema</h3>
+                        <p>Processos manuais de reserva causavam sobreposição de horários, pouca rastreabilidade e retrabalho administrativo.</p>
+                    </article>
+                    <article class="paper-box case-section">
+                        <h3>Solução</h3>
+                        <p>Criação de um fluxo digital com autenticação, regras de disponibilidade e painel para gestão eficiente de agendamentos.</p>
+                    </article>
+                </div>
+
+                <div class="paper-section case-section">
+                    <h3>Funcionalidades</h3>
+                    <ul class="case-feature-list">
+                        <li>Login e autenticação de usuários</li>
+                        <li>Agenda com controle de disponibilidade</li>
+                        <li>Painel administrativo para gestão</li>
+                        <li>CRUD completo de espaços e reservas</li>
+                    </ul>
+                </div>
+
+                <div class="paper-section case-section">
+                    <h3>Tecnologias</h3>
+                    <div class="tech-grid">
+                        <div class="tech-card"><i class="devicon-django-plain-wordmark colored"></i><span>Django</span></div>
+                        <div class="tech-card"><i class="devicon-python-plain-wordmark colored"></i><span>Python</span></div>
+                        <div class="tech-card"><i class="devicon-bootstrap-plain-wordmark colored"></i><span>Bootstrap</span></div>
+                        <div class="tech-card"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+                    </div>
+                </div>
+
+                <div id="screenshots" class="paper-section case-section">
+                    <h3 class="project-detail-section-title">Screenshots</h3>
+                    <div class="photo-carousel" data-carousel>
+                        <div class="carousel-viewport">
+                            <div class="carousel-track">
+                                <div class="carousel-slide"><img src="../images/fotos-projetos-pessoais/agendeaqui/agendeaqui.png" alt="Projeto - foto 1" loading="lazy"></div>
+                                <div class="carousel-slide"><img src="../images/fotos-projetos-pessoais/agendeaqui/1.jpg" alt="Projeto - foto 2" loading="lazy"></div>
+                                <div class="carousel-slide"><img src="../images/fotos-projetos-pessoais/agendeaqui/2.jpg" alt="Projeto - foto 3" loading="lazy"></div>
+                                <div class="carousel-slide"><img src="../images/fotos-projetos-pessoais/agendeaqui/3.jpg" alt="Projeto - foto 4" loading="lazy"></div>
+                                <div class="carousel-slide"><img src="../images/fotos-projetos-pessoais/agendeaqui/4.jpg" alt="Projeto - foto 5" loading="lazy"></div>
+                                <div class="carousel-slide"><img src="../images/fotos-projetos-pessoais/agendeaqui/5.jpg" alt="Projeto - foto 6" loading="lazy"></div>
+                                <div class="carousel-slide"><img src="../images/fotos-projetos-pessoais/agendeaqui/6.jpg" alt="Projeto - foto 7" loading="lazy"></div>
+                                <div class="carousel-slide"><img src="../images/fotos-projetos-pessoais/agendeaqui/7.jpg" alt="Projeto - foto 8" loading="lazy"></div>
+                            </div>
+                        </div>
+                        <button class="carousel-button prev" type="button" aria-label="Foto anterior"><span aria-hidden="true">&#10094;</span></button>
+                        <button class="carousel-button next" type="button" aria-label="Próxima foto"><span aria-hidden="true">&#10095;</span></button>
+                        <div class="carousel-dots"></div>
+                    </div>
+                </div>
+
+                <div class="case-grid-two">
+                    <article class="paper-box case-section">
+                        <h3>Desafios</h3>
+                        <p>Estruturar regras de reserva sem conflito e modelar permissões para diferentes perfis de usuário.</p>
+                    </article>
+                    <article class="paper-box case-section">
+                        <h3>Resultados</h3>
+                        <p>Fluxo mais claro para usuários, redução de erros de agendamento e melhor controle de uso dos espaços.</p>
+                    </article>
+                </div>
+
+                <div class="paper-section case-section">
+                    <h3>Próximos Passos</h3>
+                    <ul class="case-feature-list">
+                        <li>Notificações automáticas por e-mail</li>
+                        <li>Dashboard com métricas de ocupação</li>
+                        <li>Calendário com visualização semanal/mensal</li>
+                    </ul>
                 </div>
             </div>
         </section>
