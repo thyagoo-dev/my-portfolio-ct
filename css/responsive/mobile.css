@@ -152,6 +152,8 @@
     }
         height: 22px;
     }
+        height: 22px;
+    }
 
     .services-grid {
         grid-template-columns: 1fr;

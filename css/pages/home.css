@@ -124,7 +124,10 @@
 
     .hero-photo {
         order: 1;
+        display: flex;
+        width: 100%;
         justify-content: center;
+        align-items: center;
     }
 
     .hero-content {
@@ -159,6 +162,8 @@
 .hero-photo img {
     width: min(420px, 100%);
     height: auto;
+    display: block;
+    margin: 0 auto;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 50%;

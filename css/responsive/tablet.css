@@ -214,14 +214,6 @@
         font-size: 2rem;
     }
     
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-    
-    .hero-content h2 {
-        font-size: 1.5rem;
-    }
-    
     .content-section {
         padding: 4rem 0;
     }
@@ -243,8 +235,13 @@
         padding-top: 9rem;
     }
 
-    .hero {
-        padding-top: 9rem;
+    .hero.hero-paper {
+        padding-top: 6.9rem;
+        padding-bottom: 3.2rem;
+    }
+
+    .hero-grid {
+        min-height: calc(100dvh - 10.1rem);
     }
     
     .about-grid {
