@@ -4,9 +4,7 @@ import {
   Github, 
   Linkedin, 
   Mail, 
-  Code2, 
-  Terminal, 
-  Workflow, 
+  Mail, 
   Database, 
   Cpu, 
   ChevronRight,
@@ -20,7 +18,7 @@ import { featuredProjects } from '../data/projects';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { Button } from '../components/ui/Button';
 import { Reveal } from '../components/ui/Reveal';
-import { FloatingLines } from '../components/ui/FloatingLines';
+import { ColorBends } from '../components/ui/ColorBends';
 import './Home.css';
 
 export default function Home() {
@@ -47,7 +45,7 @@ export default function Home() {
       
       {/* ========== HERO SECTION (PRO MAX) ========== */}
       <section id="inicio" className="hero">
-        <FloatingLines />
+        <ColorBends />
         <div className="container hero-container">
           <div className="hero-content">
             <Reveal delay={0.1}>
@@ -97,28 +95,6 @@ export default function Home() {
               <div className="photo-ring inner" />
               <img src="/images/eu/victor.webp" alt="Victor Kauê" className="hero-image" />
               
-              {/* INTERACTIVE TECH BADGES */}
-              <motion.div 
-                className="floating-badge b1"
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              >
-                <Code2 size={16} /> Python
-              </motion.div>
-              <motion.div 
-                className="floating-badge b2"
-                animate={{ y: [0, 10, 0] }}
-                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              >
-                <Terminal size={16} /> Django
-              </motion.div>
-              <motion.div 
-                className="floating-badge b3"
-                animate={{ x: [0, 10, 0] }}
-                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              >
-                <Workflow size={16} /> Docker
-              </motion.div>
             </div>
           </div>
         </div>
