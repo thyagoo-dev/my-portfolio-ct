@@ -22,7 +22,6 @@ export function Navbar() {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`} id="main-navbar">
       <div className="navbar-container">
         <Link to="/" className="navbar-logo" aria-label="Victor Kauê — Página inicial">
-          <span className="logo-icon">VK</span>
           <span>Victor Kauê</span>
         </Link>
 
