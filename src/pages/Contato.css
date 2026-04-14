@@ -127,10 +127,21 @@
     cursor: pointer;
 }
 
+/* Brand Specific Hover States */
+.contact-card.linkedin:hover { border-color: rgba(0, 119, 181, 0.4); box-shadow: 0 0 20px rgba(0, 119, 181, 0.15); }
+.contact-card.linkedin:hover i { background: #0077b5; color: #fff; }
+
+.contact-card.github:hover { border-color: rgba(255, 255, 255, 0.3); box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); }
+.contact-card.github:hover i { background: #333; color: #fff; }
+
+.contact-card.whatsapp:hover { border-color: rgba(37, 211, 102, 0.4); box-shadow: 0 0 20px rgba(37, 211, 102, 0.15); }
+.contact-card.whatsapp:hover i { background: #25D366; color: #fff; }
+
+.contact-card.email:hover { border-color: rgba(234, 67, 53, 0.4); box-shadow: 0 0 20px rgba(234, 67, 53, 0.15); }
+.contact-card.email:hover i { background: #EA4335; color: #fff; }
+
 .contact-card:hover {
-    border-color: rgba(245, 158, 11, 0.3);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-md), var(--shadow-glow);
 }
 
 .contact-card i {

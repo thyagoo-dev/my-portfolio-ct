@@ -130,7 +130,7 @@ export default function Contato() {
               <h3>Outras formas de contato</h3>
               <div className="contact-cards">
                 {socialLinks.map((s) => (
-                  <a key={s.name} href={s.url} className="contact-card" target="_blank" rel="noopener noreferrer">
+                  <a key={s.name} href={s.url} className={`contact-card ${s.name.toLowerCase()}`} target="_blank" rel="noopener noreferrer">
                     <i className={s.iconType === 'bootstrap' ? s.icon : `bi bi-${s.icon}`} />
                     <div>
                       <strong>{s.name}</strong>
