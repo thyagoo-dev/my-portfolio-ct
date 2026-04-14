@@ -15,6 +15,12 @@
                 radial-gradient(circle at 80% 80%, rgba(245, 158, 11, 0.03) 0%, transparent 40%);
 }
 
+@media (max-width: 1024px) {
+    .hero {
+        padding: 6rem 0 3rem; /* Reduced from 10rem */
+    }
+}
+
 .hero-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -462,10 +468,14 @@
     .hero-actions {
         flex-direction: column;
         gap: 1.5rem;
+        align-items: center; /* Center buttons */
+        margin-top: 2rem;
     }
 
     .hero-socials {
         justify-content: center;
+        width: 100%;
+        margin-top: 1rem;
     }
 }
 

@@ -23,6 +23,7 @@ import './Sobre.css';
 
 export default function Sobre() {
   const [activeSection, setActiveSection] = useState('intro');
+  const [githubStatsError, setGithubStatsError] = useState(false);
   useScrollReveal();
 
   useEffect(() => {
@@ -231,22 +232,34 @@ export default function Sobre() {
                 <Github size={24} />
                 GitHub Stats
               </h2>
-              <div className="github-stats-container">
-                <a href="https://github.com/Victorkaue333" target="_blank" rel="noopener noreferrer" className="github-card-link">
-                  <img
-                    src="https://github-readme-stats.vercel.app/api?username=Victorkaue333&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0B1220&title_color=F59E0B&icon_color=F59E0B&text_color=F3F4F6"
-                    alt="GitHub Stats"
-                    className="github-img"
-                  />
-                </a>
-                <a href="https://github.com/Victorkaue333" target="_blank" rel="noopener noreferrer" className="github-card-link">
-                  <img
-                    src="https://github-readme-stats.vercel.app/api/top-langs/?username=Victorkaue333&layout=compact&theme=tokyonight&hide_border=true&bg_color=0B1220&title_color=F59E0B&text_color=F3F4F6"
-                    alt="Top Languages"
-                    className="github-img"
-                  />
-                </a>
-              </div>
+              {!githubStatsError ? (
+                <div className="github-stats-container">
+                  <a href="https://github.com/Victorkaue333" target="_blank" rel="noopener noreferrer" className="github-card-link">
+                    <img
+                      src="https://github-readme-stats.vercel.app/api?username=Victorkaue333&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0B1220&title_color=F59E0B&icon_color=F59E0B&text_color=F3F4F6"
+                      alt="GitHub Stats"
+                      className="github-img"
+                      onError={() => setGithubStatsError(true)}
+                    />
+                  </a>
+                  <a href="https://github.com/Victorkaue333" target="_blank" rel="noopener noreferrer" className="github-card-link">
+                    <img
+                      src="https://github-readme-stats.vercel.app/api/top-langs/?username=Victorkaue333&layout=compact&theme=tokyonight&hide_border=true&bg_color=0B1220&title_color=F59E0B&text_color=F3F4F6"
+                      alt="Top Languages"
+                      className="github-img"
+                      onError={() => setGithubStatsError(true)}
+                    />
+                  </a>
+                </div>
+              ) : (
+                <div className="github-fallback-card">
+                  <p>Confira minhas atividades diretamente no meu perfil:</p>
+                  <Button href="https://github.com/Victorkaue333" variant="outline" external>
+                    <Github size={18} />
+                    Ver GitHub
+                  </Button>
+                </div>
+              )}
             </section>
 
             <div className="view-more-action">
