@@ -7,7 +7,6 @@ import {
   Target, 
   Lightbulb, 
   CheckCircle2, 
-  Layers, 
   Database, 
   Cpu, 
   Layout,
