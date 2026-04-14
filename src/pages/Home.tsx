@@ -59,15 +59,14 @@ export default function Home() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              Arquitetura voltada <br />
-              <span className="accent-text">para resultados reais.</span>
+              Desenvolvedor Python <br />
+              <span className="accent-text">APIs e sistemas web com Django.</span>
             </motion.h1>
 
             <Reveal delay={0.3}>
               <p className="hero-description">
-                Especialista em desenvolvimento de ecossistemas web robustos, 
-                escaláveis e seguros. Minha missão é transformar complexidade 
-                em soluções lineares e eficientes.
+                Foco em performance e manutenção. Entrego software confiável 
+                para processos críticos, da regra de negócio ao deploy em produção.
               </p>
             </Reveal>
 
