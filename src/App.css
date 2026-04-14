@@ -1,0 +1,11 @@
+/* App-level styles — minimal, layout only */
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#root > main,
+#root > section:first-of-type {
+    flex: 1;
+}

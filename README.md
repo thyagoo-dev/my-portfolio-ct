@@ -1,119 +1,98 @@
-# Portfólio Pessoal - Victor Kauê
+# 🚀 Victor Kauê — Portfolio Pro Max
 
-💼 Portfólio profissional desenvolvido para apresentar projetos, experiência, serviços e formas de contato de maneira moderna, responsiva e objetiva.
+> Portfólio de alta performance com estética **Cyber-Editorial**, desenvolvido para destacar competências em engenharia de software e design de interfaces premium.
 
-
-## Visão Geral:
-
-📌 Este projeto foi construído para funcionar como vitrine profissional, com foco em:
-
-- 🚀 apresentação de projetos pessoais e reais;
-- 🎯 fortalecimento de posicionamento profissional;
-- 🤝 navegação clara para recrutadores e clientes;
-- 📱 experiência visual consistente em desktop, tablet e mobile;
-
-## Funcionalidades:
-
-- ✨ Hero com CTA principal e destaque de stack;
-- 🧭 Navbar com menu responsivo;
-- 🧠 Seções institucionais (Sobre e Serviços);
-- 🗂️ Catálogo de projetos com cards e detalhes;
-- 🖼️ Galeria de imagens com modal/lightbox;
-- 🏆 Página de certificados;
-- 📩 Formulário de contato com feedback visual;
-- ⬆️ Botão de voltar ao topo;
-- 🎬 Animações e transições suaves (quando aplicável);
-
-### Tecnologias usadas:
-
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=111)
-![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
-![Typed.js](https://img.shields.io/badge/Typed.js-222222?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
-![Lucide](https://img.shields.io/badge/Lucide-111111?style=for-the-badge&logo=lucide&logoColor=white)
-![Devicon](https://img.shields.io/badge/Devicon-1F2937?style=for-the-badge&logo=devbox&logoColor=white)
-![Bootstrap Icons](https://img.shields.io/badge/Bootstrap%20Icons-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
-
-| Tecnologia | Uso no projeto |
-| --- | --- |
-| HTML5 | Estrutura semântica das páginas |
-| CSS3 | Estilização modular e responsividade |
-| JavaScript (Vanilla) | Interações e comportamento da interface |
-| GSAP | Animações de entrada e destaque de seções |
-| Typed.js | Efeito de digitação (quando o alvo está presente) |
-| Lucide Icons | Ícones da interface |
-| Devicon | Ícones de stack tecnológica |
-| Bootstrap Icons | Ícones adicionais em seções de contato e apoio |
-
-## Estrutura do Projeto:
-
-Aqui está a estrutura de arquivos e pastas do projeto, organizada para facilitar a manutenção e escalabilidade:
-
-```text
-meu_portifolio/
-├── index.html
-├── sobre.html
-├── servicos.html
-├── projetos.html
-├── certificados.html
-├── galeria.html
-├── contato.html
-├── css/
-│   ├── main.css
-│   ├── custom.css
-│   ├── base/
-│   ├── components/
-│   ├── layouts/
-│   ├── pages/
-│   └── responsive/
-├── js/
-│   ├── app.js
-│   ├── main.js
-│   └── carrosel.js
-├── images/
-├── projetos-pessoais/
-├── projetos-reais/
-├── docs/
-└── README.md
-```
-
-## Como Executar Localmente:
-
-⚙️ Como se trata de um projeto estático, voce pode executar de duas formas:
-
-1. 🌐 Abrindo o arquivo `index.html` diretamente no navegador.
-2. 🛠️ Usando um servidor local (recomendado), por exemplo com a extensao Live Server no VS Code.
-
-### Clonando o repositorio:
-
-```bash
-git clone https://github.com/Victorkaue333/Portifolio-VictorKaue.git
-cd Portifolio-VictorKaue
-```
-
-### Rodando com Live Server (VS Code):
-
-1. Instale a extensao Live Server.
-2. Clique com o botao direito em `index.html`.
-3. Selecione a opcao Open with Live Server.
-
-## Páginas Principais:
-
-| Página | Finalidade |
-| --- | --- |
-| index.html | Página inicial com apresentação principal |
-| sobre.html | Resumo profissional, trajetória e diferenciais |
-| servicos.html | Serviços oferecidos e propostas de atuação |
-| projetos.html | Lista de projetos em destaque |
-| certificados.html | Certificações e formações |
-| galeria.html | Galeria visual de trabalhos e registros |
-| contato.html | Canais de contato e formulário |
-
-## Deploy:
-
-- Vercel: [https://victor-kaue.vercel.app/](https://victor-kaue.vercel.app/)
+![React 19](https://img.shields.io/badge/React_19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Tailwind CSS v4](https://img.shields.io/badge/Tailwind_v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 
 ---
 
-👨‍💻 Desenvolvido por Victor Kauê.
+## 💎 Visão Geral (The Pro Max Experience)
+
+Este projeto não é apenas um site pessoal, mas uma demonstração técnica de arquitetura moderna. Migrado de uma estrutura estática para um ecossistema **React 19 + TypeScript**, o portfólio foca em:
+
+- **Performance Extrema**: Build ultrarrapido via Vite.
+- **Estética Editorial**: Tipografia pesada (`Syne`), grid brutalista e glassmorphism refinado.
+- **Experiência Fluida**: Micro-interações baseadas em scroll e transições de estado inteligentes.
+
+---
+
+## ✨ Funcionalidades Core
+
+### 1. Morphing Navbar
+Uma navegação inteligente que transiciona de largura total (intro) para um formato de **Pílula Flutuante** ao rolar a página, utilizando curvas de transição `cubic-bezier` para um feedback orgânico.
+
+### 2. ColorBends Dynamic Background
+Um sistema de fundo de baixa latência que utiliza **fractal noise SVG** e gradientes radiais animados, criando profundidade visual sem o overhead de bibliotecas 3D pesadas.
+
+### 3. Responsive Snap Carousel
+O catálogo de projetos utiliza um sistema de **Snap Alignment** nativo para mobile, garantindo que a navegação por gestos seja fluida e que os cards estejam sempre perfeitamente centrados.
+
+---
+
+## 🛠️ Stack Tecnológica
+
+| Camada | Tecnologia | Benefício |
+| --- | --- | --- |
+| **Núcleo** | React 19 | Hooks modernos e renderização otimizada. |
+| **Tipagem** | TypeScript | Robustez, Intellisense e segurança no código. |
+| **Estilização** | Tailwind CSS v4 | CSS-first config, utilitários rápidos e variáveis de tema nativas. |
+| **Animações** | Framer Motion | Revelações on-scroll e orquestração de micro-animações. |
+| **Ícones** | Lucide / Bootstrap | Iconografia consistente e semântica. |
+
+---
+
+## 🏗️ Estrutura do Projeto
+
+```text
+meu_portifolio/
+├── src/
+│   ├── components/
+│   │   ├── layout/      # Navbar, Footer, Preloader
+│   │   └── ui/          # Elementos reutilizáveis (Botões, Cards)
+│   ├── data/            # JSONs de conteúdo (Projetos, Formação)
+│   ├── hooks/           # Lógica de Scroll e Interação
+│   ├── pages/           # Home, Sobre, Projetos, etc.
+│   └── styles/          # Tokens, Variáveis e CSS Global
+├── public/              # Assets estáticos (Imagens, PDFs)
+├── vite.config.ts       # Configuração do Pipeline
+└── tailwind.config.js   # (Integrado via @tailwindcss/vite)
+```
+
+---
+
+## 🚀 Como Rodar Localmente
+
+Certifique-se de ter o [Node.js](https://nodejs.org/) instalado.
+
+```bash
+# 1. Clone o repositório
+git clone https://github.com/Victorkaue333/Portifolio-VictorKaue.git
+
+# 2. Entre na pasta
+cd Portifolio-VictorKaue
+
+# 3. Instale as dependências
+npm install
+
+# 4. Inicie o servidor de desenvolvimento
+npm run dev
+```
+
+O projeto estará disponível em `http://localhost:3000`.
+
+---
+
+## 🎨 Identidade Visual
+
+- **Primary**: Midnight Indigo (`#0B1220`)
+- **Accent**: Electric Amber (`#F59E0B`)
+- **Surface**: Glassmorphism (Blur 24px)
+- **Typo Primary**: Syne (Bold/ExtraBold)
+- **Typo Secondary**: DM Sans (Regular/Medium)
+
+---
+
+👨‍💻 Desenvolvido com foco em excelência técnica por **Victor Kauê**.

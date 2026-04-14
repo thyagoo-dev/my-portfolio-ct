@@ -1,0 +1,16 @@
+import{c as o,u as i,r as n,j as e,L as l}from"./index-BJj2YNDi.js";import{p as d}from"./projects-Dd9Q2gCP.js";import{B as a}from"./Button-DpeHKbNF.js";/**
+ * @license lucide-react v0.468.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const t=o("ArrowLeft",[["path",{d:"m12 19-7-7 7-7",key:"1l729n"}],["path",{d:"M19 12H5",key:"x3x0zl"}]]);/**
+ * @license lucide-react v0.468.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const h=o("ExternalLink",[["path",{d:"M15 3h6v6",key:"1q9fwt"}],["path",{d:"M10 14 21 3",key:"gplh6r"}],["path",{d:"M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6",key:"a6xqqp"}]]);/**
+ * @license lucide-react v0.468.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const m=o("Github",[["path",{d:"M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4",key:"tonef"}],["path",{d:"M9 18c-4.51 2-5-2-7-2",key:"9comsn"}]]);function u(){const{id:c}=i(),s=d.find(r=>r.id===c);return n.useEffect(()=>{document.title=s?`${s.title} — Victor Kauê`:"Projeto não encontrado",window.scrollTo(0,0)},[s]),s?e.jsx("main",{className:"page-projeto-detalhe",children:e.jsx("section",{className:"projeto-hero",children:e.jsxs("div",{className:"container",children:[e.jsxs(l,{to:"/projetos",className:"back-link",children:[e.jsx(t,{size:18}),"Voltar aos projetos"]}),e.jsxs("div",{className:"projeto-header",children:[e.jsxs("div",{className:"projeto-header-text",children:[e.jsx("h1",{children:s.title}),e.jsx("p",{className:"projeto-desc",children:s.description}),e.jsx("div",{className:"project-tags",style:{marginTop:"1rem"},children:s.technologies.map(r=>e.jsx("span",{className:"project-tag",children:r},r))}),e.jsxs("div",{className:"projeto-actions",children:[s.github&&e.jsxs(a,{href:s.github,target:"_blank",rel:"noopener noreferrer",variant:"secondary",children:[e.jsx(m,{size:18}),"Ver código"]}),e.jsxs(a,{href:"#",variant:"ghost",children:[e.jsx(h,{size:18}),"Ver online"]})]})]}),e.jsx("div",{className:"projeto-header-image",children:e.jsx("img",{src:s.image,alt:s.title})})]}),s.summary&&e.jsxs("div",{className:"projeto-summary-grid",children:[e.jsxs("div",{className:"summary-card",children:[e.jsx("h3",{children:"🔍 Problema"}),e.jsx("p",{children:s.summary.problema})]}),e.jsxs("div",{className:"summary-card",children:[e.jsx("h3",{children:"💡 Solução"}),e.jsx("p",{children:s.summary.solucao})]}),e.jsxs("div",{className:"summary-card",children:[e.jsx("h3",{children:"⚙️ Stack"}),e.jsx("p",{children:s.summary.stack})]})]})]})})}):e.jsx("main",{style:{paddingTop:"10rem",textAlign:"center"},children:e.jsxs("div",{className:"container",children:[e.jsx("h1",{children:"Projeto não encontrado"}),e.jsx("p",{style:{margin:"1rem 0 2rem",color:"var(--text-muted-color)"},children:"O projeto que você procura não existe."}),e.jsxs(a,{href:"/projetos",variant:"secondary",children:[e.jsx(t,{size:18}),"Voltar aos projetos"]})]})})}export{u as default};

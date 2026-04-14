@@ -1,0 +1,1 @@
+import{j as o}from"./index-BJj2YNDi.js";function c({variant:r="primary",href:t,onClick:a,children:s,className:m="",target:u,rel:i,type:x="button"}){const n=`btn btn-${r} ${m}`.trim();return t?o.jsx("a",{href:t,className:n,target:u,rel:i,children:s}):o.jsx("button",{className:n,onClick:a,type:x,children:s})}export{c as B};

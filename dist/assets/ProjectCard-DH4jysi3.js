@@ -1,0 +1,6 @@
+import{c,j as e,L as l}from"./index-BJj2YNDi.js";/**
+ * @license lucide-react v0.468.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const r=c("FolderGit2",[["path",{d:"M9 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v5",key:"1w6njk"}],["circle",{cx:"13",cy:"12",r:"2",key:"1j92g6"}],["path",{d:"M18 19c-2.8 0-5-2.2-5-5v8",key:"pkpw2h"}],["circle",{cx:"20",cy:"19",r:"2",key:"1obnsp"}]]);function t({project:a}){return e.jsxs(l,{to:a.detailPath,className:"project-card reveal-on-scroll",id:`project-${a.id}`,children:[e.jsxs("div",{className:"project-image",children:[e.jsx("img",{src:a.image,alt:a.title,loading:"lazy"}),e.jsx("div",{className:"project-overlay",children:e.jsx("span",{className:"project-overlay-text",children:"Ver detalhes →"})})]}),e.jsxs("div",{className:"project-info",children:[e.jsx("h3",{className:"project-title",children:a.title}),e.jsx("p",{className:"project-desc",children:a.description}),e.jsx("div",{className:"project-tags",children:a.technologies.map(s=>e.jsx("span",{className:"project-tag",children:s},s))})]})]})}export{r as F,t as P};

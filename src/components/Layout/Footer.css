@@ -1,0 +1,175 @@
+/* ========== FOOTER — Premium ========== */
+.footer {
+    padding: 56px 0 20px;
+    background:
+        radial-gradient(circle at top right, rgba(245, 158, 11, 0.05), transparent 34%),
+        linear-gradient(180deg, var(--bg-color) 0%, var(--bg-dark) 100%);
+    border-top: 1px solid var(--border-subtle);
+    position: relative;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.9fr) minmax(0, 0.95fr);
+    gap: 40px;
+    align-items: start;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-brand .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-weight: 800;
+    font-size: 1.55rem;
+    font-family: var(--font-secondary);
+    color: var(--text-color);
+    line-height: 1.15;
+    text-decoration: none;
+}
+
+.footer-brand .logo-icon {
+    color: var(--accent-color);
+    font-size: 0.95rem;
+}
+
+.footer-brand .logo span:last-child {
+    color: var(--accent-color);
+}
+
+.footer-brand p {
+    margin: 0;
+    color: var(--text-muted-color);
+    line-height: 1.7;
+    max-width: 380px;
+    font-size: 1rem;
+}
+
+.footer-label {
+    margin: 0 0 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-dim-color);
+    font-weight: 700;
+    font-size: 0.75rem;
+}
+
+.footer-nav ul,
+.footer-tech-badges,
+.footer-contact-icons {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-nav ul {
+    display: grid;
+    gap: 0.7rem;
+}
+
+.footer-nav a {
+    color: var(--text-muted-color);
+    text-decoration: none;
+    transition: color var(--transition-fast), transform var(--transition-fast);
+    display: inline-flex;
+    font-size: 0.98rem;
+    cursor: pointer;
+}
+
+.footer-nav a:hover {
+    color: var(--text-color);
+    transform: translateX(3px);
+}
+
+.footer-contact-icons {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-top: 0.5rem;
+}
+
+.footer-contact-icons a {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--border-subtle);
+    background: rgba(17, 24, 39, 0.6);
+    color: var(--text-dim-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), background-color var(--transition-fast);
+    cursor: pointer;
+}
+
+.footer-contact-icons a.github { color: #f0f0f0; border-color: rgba(255, 255, 255, 0.2); }
+.footer-contact-icons a.linkedin { color: #0077b5; border-color: rgba(0, 119, 181, 0.2); }
+.footer-contact-icons a.whatsapp { color: #25D366; border-color: rgba(37, 211, 102, 0.2); }
+.footer-contact-icons a.email { color: #EA4335; border-color: rgba(234, 67, 53, 0.2); }
+
+.footer-contact-icons a:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: currentColor;
+}
+
+.footer-contact-icons i {
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.footer-tech-badges {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+    justify-items: start;
+}
+
+.footer-tech-badges li {
+    color: var(--text-muted-color);
+    padding: 0.15rem 0;
+    font-size: 0.94rem;
+    font-weight: 600;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-tech-badges li i {
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.footer-bottom {
+    margin-top: 34px;
+    border-top: 1px solid var(--border-subtle);
+    padding-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-dim-color);
+    font-size: 0.92rem;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: inherit;
+}
+
+@media (max-width: 900px) {
+    .footer { padding: 44px 0 18px; }
+    .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+    .footer-brand, .footer-nav, .footer-tech { text-align: center; }
+    .footer-brand { align-items: center; }
+    .footer-brand p { max-width: 100%; }
+    .footer-nav a { justify-content: center; }
+    .footer-contact-icons { justify-content: center; }
+    .footer-tech-badges { justify-items: center; }
+}
