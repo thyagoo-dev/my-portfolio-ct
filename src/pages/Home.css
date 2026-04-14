@@ -221,7 +221,7 @@
     background: var(--gradient-surface);
     border: 1px solid var(--border-subtle);
     padding: 3rem;
-    border-radius: var(--radius-2xl);
+    border-radius: 2.5rem; /* Matched with projects carousel */
     transition: all var(--transition-normal);
     position: relative;
     overflow: hidden;
