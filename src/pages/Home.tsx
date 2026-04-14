@@ -178,27 +178,29 @@ export default function Home() {
             <p className="section-subtitle">Uma amostra do que eu construo com foco em escalabilidade.</p>
           </div>
 
-          <div className="projects-pro-list">
-            {featuredProjects.map((project, i) => (
-              <Reveal key={project.id} delay={i * 0.15}>
-                <div className="project-pro-card">
-                  <div className="p-image-box">
-                    <img src={project.image} alt={project.title} />
-                  </div>
-                  <div className="p-content-box">
-                    <span className="p-category">{project.category === 'pessoal' ? 'Portfólio' : 'Case Real'}</span>
-                    <h3>{project.title}</h3>
-                    <p>{project.description}</p>
-                    <div className="p-tags">
-                      {project.technologies.slice(0, 3).map(t => <span key={t} className="p-tag">{t}</span>)}
+          <div className="projects-carousel-container">
+            <div className="projects-pro-list">
+              {featuredProjects.map((project, i) => (
+                <Reveal key={project.id} delay={i * 0.15}>
+                  <div className="project-pro-card">
+                    <div className="p-image-box">
+                      <img src={project.image} alt={project.title} />
                     </div>
-                    <Button href={project.detailPath} variant="ghost" className="p-link">
-                      Explorar Arquitetura <ChevronRight size={16} />
-                    </Button>
+                    <div className="p-content-box">
+                      <span className="p-category">{project.category === 'pessoal' ? 'Portfólio' : 'Case Real'}</span>
+                      <h3>{project.title}</h3>
+                      <p>{project.description}</p>
+                      <div className="p-tags">
+                        {project.technologies.slice(0, 3).map(t => <span key={t} className="p-tag">{t}</span>)}
+                      </div>
+                      <Button href={project.detailPath} variant="ghost" className="p-link">
+                        Explorar Arquitetura <ChevronRight size={16} />
+                      </Button>
+                    </div>
                   </div>
-                </div>
-              </Reveal>
-            ))}
+                </Reveal>
+              ))}
+            </div>
           </div>
         </div>
       </section>

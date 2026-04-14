@@ -276,26 +276,55 @@
     align-items: flex-end;
 }
 
+.projects-carousel-container {
+    position: relative;
+    margin-top: 3rem;
+    width: calc(100% + 4rem);
+    margin-left: -2rem;
+    padding: 0 2rem;
+}
+
 .projects-pro-list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    overflow-x: auto;
     gap: 2rem;
+    padding: 2rem 0;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+}
+
+.projects-pro-list::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+/* Edge Fade Effect */
+.projects-carousel-container::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    width: 100px;
+    background: linear-gradient(to left, var(--bg-dark), transparent);
+    pointer-events: none;
+    z-index: 5;
 }
 
 .project-pro-card {
+    flex: 0 0 400px; /* Fixed width for carousel */
     display: flex;
     flex-direction: column;
     background: var(--gradient-surface);
     border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-2xl);
+    border-radius: 2.5rem; /* Ultra rounded as requested */
     overflow: hidden;
     height: 100%;
     transition: all var(--transition-normal);
+    scroll-snap-align: start;
 }
 
 .project-pro-card:hover {
     border-color: rgba(245, 158, 11, 0.4);
-    transform: translateY(-8px);
+    transform: translateY(-8px) scale(1.02);
     box-shadow: var(--shadow-glow);
 }
 
@@ -366,12 +395,22 @@
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 1400px) {
-    .projects-pro-list {
-        grid-template-columns: repeat(3, 1fr);
+    .project-pro-card {
+        flex: 0 0 350px;
     }
 }
 
 @media (max-width: 1024px) {
+    .project-pro-card {
+        flex: 0 0 320px;
+        border-radius: 2rem;
+    }
+    
+    .projects-carousel-container {
+        width: calc(100% + 2rem);
+        margin-left: -1rem;
+        padding: 0 1rem;
+    }
     .hero-container {
         grid-template-columns: 1fr;
         text-align: center;
@@ -410,7 +449,7 @@
     }
     
     .projects-pro-list {
-        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 }
 
