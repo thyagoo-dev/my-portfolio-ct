@@ -264,7 +264,9 @@
     .nav-menu a {
         font-size: 1.15rem;
         padding: 1rem 2rem;
-        text-align: center;
+    }
+}
+
 @media (max-width: 480px) {
     .navbar-logo {
         font-size: 1rem;
