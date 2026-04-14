@@ -91,7 +91,7 @@ export default function Home() {
             <div className="photo-container reveal-on-scroll">
               <div className="photo-ring" />
               <div className="photo-ring inner" />
-              <img src="/images/eu/victor.webp" alt="Victor Kauê" className="hero-image" />
+              <img src="/images/eu/victorkaue.png" alt="Victor Kauê" className="hero-image" />
               
             </div>
           </div>
