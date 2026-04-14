@@ -107,14 +107,15 @@
     cursor: pointer;
 }
 
-.footer-contact-icons a.github:hover { color: #f0f0f0; border-color: rgba(255, 255, 255, 0.4); }
-.footer-contact-icons a.linkedin:hover { color: #0077b5; border-color: rgba(0, 119, 181, 0.4); }
-.footer-contact-icons a.whatsapp:hover { color: #25D366; border-color: rgba(37, 211, 102, 0.4); }
-.footer-contact-icons a.email:hover { color: #EA4335; border-color: rgba(234, 67, 53, 0.4); }
+.footer-contact-icons a.github { color: #f0f0f0; border-color: rgba(255, 255, 255, 0.2); }
+.footer-contact-icons a.linkedin { color: #0077b5; border-color: rgba(0, 119, 181, 0.2); }
+.footer-contact-icons a.whatsapp { color: #25D366; border-color: rgba(37, 211, 102, 0.2); }
+.footer-contact-icons a.email { color: #EA4335; border-color: rgba(234, 67, 53, 0.2); }
 
 .footer-contact-icons a:hover {
     transform: translateY(-2px);
-    background: rgba(17, 24, 39, 0.8);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: currentColor;
 }
 
 .footer-contact-icons i {

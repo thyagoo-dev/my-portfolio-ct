@@ -127,17 +127,25 @@
     cursor: pointer;
 }
 
-/* Brand Specific Hover States */
-.contact-card.linkedin:hover { border-color: rgba(0, 119, 181, 0.4); box-shadow: 0 0 20px rgba(0, 119, 181, 0.15); }
+/* Brand Specific Default States */
+.contact-card.linkedin { border-color: rgba(0, 119, 181, 0.2); }
+.contact-card.linkedin i { background: rgba(0, 119, 181, 0.1); color: #0077b5; }
+.contact-card.linkedin:hover { border-color: #0077b5; box-shadow: 0 0 20px rgba(0, 119, 181, 0.2); }
 .contact-card.linkedin:hover i { background: #0077b5; color: #fff; }
 
-.contact-card.github:hover { border-color: rgba(255, 255, 255, 0.3); box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); }
+.contact-card.github { border-color: rgba(255, 255, 255, 0.2); }
+.contact-card.github i { background: rgba(255, 255, 255, 0.05); color: #f0f0f0; }
+.contact-card.github:hover { border-color: #fff; box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); }
 .contact-card.github:hover i { background: #333; color: #fff; }
 
-.contact-card.whatsapp:hover { border-color: rgba(37, 211, 102, 0.4); box-shadow: 0 0 20px rgba(37, 211, 102, 0.15); }
+.contact-card.whatsapp { border-color: rgba(37, 211, 102, 0.2); }
+.contact-card.whatsapp i { background: rgba(37, 211, 102, 0.1); color: #25D366; }
+.contact-card.whatsapp:hover { border-color: #25D366; box-shadow: 0 0 20px rgba(37, 211, 102, 0.2); }
 .contact-card.whatsapp:hover i { background: #25D366; color: #fff; }
 
-.contact-card.email:hover { border-color: rgba(234, 67, 53, 0.4); box-shadow: 0 0 20px rgba(234, 67, 53, 0.15); }
+.contact-card.email { border-color: rgba(234, 67, 53, 0.2); }
+.contact-card.email i { background: rgba(234, 67, 53, 0.1); color: #EA4335; }
+.contact-card.email:hover { border-color: #EA4335; box-shadow: 0 0 20px rgba(234, 67, 53, 0.2); }
 .contact-card.email:hover i { background: #EA4335; color: #fff; }
 
 .contact-card:hover {
