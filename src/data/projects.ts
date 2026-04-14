@@ -156,4 +156,4 @@ export const projects: Project[] = [
   },
 ];
 
-export const featuredProjects = projects.filter(p => p.category === 'pessoal').slice(0, 5);
+export const featuredProjects = projects.filter(p => p.category === 'pessoal').slice(0, 4);
