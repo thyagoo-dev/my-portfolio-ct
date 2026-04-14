@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 
 interface Props {
-  children: JSX.Element;
+  children: React.ReactElement;
   width?: "fit-content" | "100%";
   delay?: number;
   yOffset?: number;
