@@ -1,0 +1,157 @@
+@media (max-width: 480px) {
+    .navbar {
+        width: calc(100% - 0.75rem);
+        top: 0.45rem;
+    }
+    
+    .navbar.scrolled {
+        top: 0.2rem;
+    }
+    
+    .navbar-container {
+        padding: 0.6rem 0.82rem;
+    }
+    
+    .navbar-logo {
+        font-size: 1.15rem;
+    }
+
+    .nav-menu-wrapper {
+        width: calc(100% - 0.75rem);
+        top: 4.3rem;
+    }
+
+    .nav-menu {
+        padding: 0.65rem;
+    }
+
+    .nav-menu a {
+        font-size: 0.92rem;
+    }
+
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .content-section.page-intro {
+        padding-top: 8.5rem;
+    }
+
+    .hero {
+        padding-top: 8.5rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.75rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.25rem;
+    }
+    
+    .btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .hero-photo img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .photo-carousel {
+        --carousel-height: clamp(170px, 58vw, 240px);
+    }
+
+    .photo-carousel .carousel-dots {
+        bottom: 0.5rem;
+    }
+    
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .tech-card {
+        padding: 1rem 0.5rem;
+    }
+    
+    .tech-card i {
+        font-size: 2rem;
+    }
+    
+    .tech-card span {
+        font-size: 0.75rem;
+    }
+
+    .github-summary-card,
+    .github-visual-card {
+        padding: 1rem;
+    }
+
+    .github-visual-card {
+        min-height: 180px;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-actions {
+        width: 100%;
+        flex-direction: column;
+        gap: 0.7rem;
+    }
+
+    .results-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    .projects-marquee .project-card {
+        flex-basis: 86vw;
+        max-width: 86vw;
+        min-height: auto;
+    }
+
+    .contact-cards {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .contact-card {
+        padding: 1.1rem 1rem;
+    }
+
+    .contact-icon {
+        width: 56px;
+        height: 56px;
+    }
+
+    .contact-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 3rem 0 2rem;
+    }
+
+    .footer-brand {
+        font-size: 0.9rem;
+    }
+
+    .footer-content p {
+        font-size: 0.85rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}

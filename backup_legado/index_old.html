@@ -1,0 +1,435 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Victor Kauê, desenvolvedor backend/full-stack com foco em Python, Django, APIs e sistemas web.">
+    <meta name="keywords" content="python, django, backend, full-stack, APIs, docker, sistemas web">
+    <meta name="author" content="Victor Kauê">
+
+    <title>Victor Kauê</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/fotos-projetos-pessoais/vk-portifolio/logotipo-vk.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Devicon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+</head>
+<body>
+
+    <!--================-->
+    <!--     NAVBAR     -->
+    <!--================-->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <span class="logo-icon">&lt;/&gt;</span>
+                Victor<span>Kauê</span>
+            </a>
+
+            <div class="nav-menu-wrapper">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="certificados.html">Certificados</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="navbar-actions">
+                <a
+                    href="docs/Curriculo/VictorKauê_Curriculo.pdf"
+                    class="btn btn-cv"
+                    download
+                    aria-label="Baixar currículo em PDF">
+                    Baixar CV
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!--================-->
+        <!-- HERO / INÍCIO -->
+        <!--================-->
+        <section id="inicio" class="hero hero-paper">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <h1>Desenvolvedor <span class="hero-title-inline">Python</span></h1>
+
+                    <h2 class="hero-subtitle">
+                    APIs e sistemas web com Django, foco em performance e manutenção
+                    </h2>
+
+                    <p class="hero-impact">
+                        Entrego software confiável para processos críticos, da regra de negócio ao deploy em produção.
+                    </p>
+
+                    <ul class="hero-tech-grid" aria-label="Stack principal">
+                        <li class="hero-tech-item" aria-label="Python" title="Python">
+                            <i class="devicon-python-plain colored" aria-hidden="true"></i>
+                        </li>
+                        <li class="hero-tech-item" aria-label="Django" title="Django">
+                            <i class="devicon-django-plain colored" aria-hidden="true"></i>
+                        </li>
+                        <li class="hero-tech-item" aria-label="JavaScript" title="JavaScript">
+                            <i class="devicon-javascript-plain colored" aria-hidden="true"></i>
+                        </li>
+                        <li class="hero-tech-item" aria-label="Bootstrap" title="Bootstrap">
+                            <i class="devicon-bootstrap-plain colored" aria-hidden="true"></i>
+                        </li>
+                        <li class="hero-tech-item" aria-label="PostgreSQL" title="PostgreSQL">
+                            <i class="devicon-postgresql-plain colored" aria-hidden="true"></i>
+                        </li>
+                        <li class="hero-tech-item" aria-label="Docker" title="Docker">
+                            <i class="devicon-docker-plain colored" aria-hidden="true"></i>
+                        </li>
+                    </ul>
+
+                    <div class="hero-actions">
+                        <a href="projetos.html" class="btn btn-secondary">Ver Projetos</a>
+                        <a href="contato.html" class="btn btn-primary">Entrar em Contato</a>
+                    </div>
+                </div>
+
+                <div class="hero-photo">
+                    <img src="images/eu/victorkaue.png" alt="Foto de Victor Kauê">
+                </div>
+            </div>
+
+            <button type="button" class="scroll-down" aria-label="Descer para a próxima seção">
+                <span aria-hidden="true">&#8595;</span>
+            </button>
+        </section>
+
+        <section class="hero-kpis-section">
+            <div class="container">
+                <div class="hero-kpis-grid">
+                    <article class="hero-kpi-card">
+                        <span class="hero-kpi-value">+20</span>
+                        <p class="hero-kpi-label">Projetos Desenvolvidos</p>
+                    </article>
+                    <article class="hero-kpi-card">
+                        <span class="hero-kpi-value">+6</span>
+                        <p class="hero-kpi-label">Sistemas Reais</p>
+                    </article>
+                    <article class="hero-kpi-card">
+                        <span class="hero-kpi-value">+1 ano</span>
+                        <p class="hero-kpi-label">Experiencia Profissional</p>
+                    </article>
+                    <article class="hero-kpi-card hero-kpi-stack">
+                        <span class="hero-kpi-label">Stack Principal</span>
+                        <p>Python, Django, PostgreSQL, Docker e APIs REST</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="results-strip" aria-label="Resultados entregues">
+            <div class="container">
+                <div class="results-grid">
+                    <article class="result-item">
+                        <span class="result-value">-40%</span>
+                        <p class="result-label">tempo médio de tarefas operacionais em projetos com automação</p>
+                    </article>
+                    <article class="result-item">
+                        <span class="result-value">+99%</span>
+                        <p class="result-label">disponibilidade percebida em sistemas publicados com stack estável</p>
+                    </article>
+                    <article class="result-item">
+                        <span class="result-value">24h</span>
+                        <p class="result-label">tempo de resposta para ajustes críticos em projetos ativos</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!--========================-->
+        <!-- PROJETOS EM DESTAQUE   -->
+        <!--========================-->
+        <section id="projetos-destaque" class="content-section bg-white">
+            <div class="container text-center">
+                <h2 class="section-title">Projetos em Destaque</h2>
+                <p class="section-subtitle">Projetos autorais que representam minha forma de construir software</p>
+
+                <div class="projects-marquee" data-marquee>
+                    <button type="button" class="marquee-control marquee-control-prev" aria-label="Ver projeto anterior">
+                        <span class="marquee-control-icon" aria-hidden="true">&larr;</span>
+                    </button>
+                    <div class="marquee-track">
+                        <!-- Meu Portfólio -->
+                        <article class="project-card">
+                            <div class="project-image">
+                                <div class="project-overlay">
+                                    <a href="#" target="_blank" rel="noopener noreferrer" class="project-link" title="Ver projeto Meu Portfólio no GitHub" aria-label="Ver projeto Meu Portfólio no GitHub">
+                                        <i data-lucide="external-link"></i>
+                                    </a>
+                                </div>
+                                <img class="project-logo" src="images/fotos-projetos-pessoais/vk-portifolio/victor_kaue.png" alt="Logo Meu Portfólio" loading="lazy" width="640" height="360">
+                                <span class="project-placeholder">
+                                    <i data-lucide="folder-code"></i>
+                                </span>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-body">
+                                    <h3>Meu Portfólio</h3>
+                                    <p>Projeto desenvolvido para apresentar meu trabalho, projetos e posicionamento profissional como desenvolvedor backend/full-stack.</p>
+                                </div>
+                                <div class="project-footer">
+                                    <a href="projetos-pessoais/meu-portifolio.html" class="btn btn-primary">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- AgendeAqui -->
+                        <article class="project-card">
+                            <div class="project-image">
+                                <div class="project-overlay">
+                                    <a href="https://github.com/Victorkaue333/AgendeAqui" target="_blank" rel="noopener noreferrer" class="project-link" title="Ver projeto AgendeAqui no GitHub" aria-label="Ver projeto AgendeAqui no GitHub">
+                                        <i data-lucide="external-link"></i>
+                                    </a>
+                                </div>
+                                <img class="project-logo" src="images/fotos-projetos-pessoais/agendeaqui/agendeaqui.png" alt="Logo AgendeAqui" loading="lazy" width="640" height="360">
+                                <span class="project-placeholder">
+                                    <i data-lucide="folder-code"></i>
+                                </span>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-body">
+                                    <h3>AgendeAqui</h3>
+                                    <p>Plataforma web desenvolvida em Django para gestão de agendamentos, autenticação de usuários e organização de horários e espaços.</p>
+                                </div>
+                                <div class="project-footer">
+                                    <a href="projetos-pessoais/agendeaqui.html" class="btn btn-primary">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Oliveira Kids -->
+                        <article class="project-card">
+                            <div class="project-image">
+                                <div class="project-overlay">
+                                    <a href="https://github.com/Victorkaue333/OliveiraKids" target="_blank" rel="noopener noreferrer" class="project-link" title="Ver projeto Oliveira Kids no GitHub" aria-label="Ver projeto Oliveira Kids no GitHub">
+                                        <i data-lucide="external-link"></i>
+                                    </a>
+                                </div>
+                                <img class="project-logo" src="images/fotos-projetos-pessoais/oliveira-kids/oliveira-kids.png" alt="Logo Oliveira Kids" loading="lazy" width="640" height="360">
+                                <span class="project-placeholder">
+                                    <i data-lucide="folder-code"></i>
+                                </span>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-body">
+                                    <h3>Oliveira Kids</h3>
+                                    <p>Sistema desenvolvido para controlar de forma simples, rápida e visual o tempo de uso de carrinhos elétricos e a operação do atendimento.</p>
+                                </div>
+                                <div class="project-footer">
+                                    <a href="projetos-pessoais/oliveira-kids.html" class="btn btn-primary">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Transcritor de Entrevistas -->
+                        <article class="project-card">
+                            <div class="project-image">
+                                <div class="project-overlay">
+                                    <a href="https://github.com/Victorkaue333/transcritor-de-entrevistas" target="_blank" rel="noopener noreferrer" class="project-link" title="Ver projeto Transcritor de Entrevistas no GitHub" aria-label="Ver projeto Transcritor de Entrevistas no GitHub">
+                                        <i data-lucide="external-link"></i>
+                                    </a>
+                                </div>
+                                <img class="project-logo" src="images/fotos-projetos-pessoais/transcritor-de-entrevistas/Transcritor_de_Entrevistas.png" alt="Logo Transcritor de Entrevistas" loading="lazy" width="640" height="360">
+                                <span class="project-placeholder">
+                                    <i data-lucide="folder-code"></i>
+                                </span>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-body">
+                                    <h3>Transcritor de Entrevistas</h3>
+                                    <p>Aplicativo desenvolvido para transcrever entrevistas de forma automática, facilitando a análise e organização dos dados coletados.</p>
+                                </div>
+                                <div class="project-footer">
+                                    <a href="projetos-pessoais/transcritor-de-entrevistas.html" class="btn btn-primary">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Saberes Interculturais -->
+                        <article class="project-card">
+                            <div class="project-image">
+                                <div class="project-overlay">
+                                    <a href="https://github.com/Victorkaue333/saberes-interculturais-itaparica" target="_blank" rel="noopener noreferrer" class="project-link" title="Ver projeto Saberes Interculturais no GitHub" aria-label="Ver projeto Saberes Interculturais no GitHub">
+                                        <i data-lucide="external-link"></i>
+                                    </a>
+                                </div>
+                                <img class="project-logo" src="images/fotos-projetos-pessoais/saberes-interculturais/saberes-interculturais.png" alt="Logo Saberes Interculturais" loading="lazy" width="640" height="360">
+                                <span class="project-placeholder">
+                                    <i data-lucide="folder-code"></i>
+                                </span>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-body">
+                                    <h3>Saberes Interculturais de Itaparica</h3>
+                                    <p>Site de divulgação de projeto de extensão voltado aos saberes interculturais, práticas corporais e valorização cultural dos povos indígenas de Itaparica.</p>
+                                </div>
+                                <div class="project-footer">
+                                    <a href="projetos-pessoais/Saberes-Interculturais-de-Itaparica.html" class="btn btn-primary">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <button type="button" class="marquee-control marquee-control-next" aria-label="Ver próximo projeto">
+                        <span class="marquee-control-icon" aria-hidden="true">&rarr;</span>
+                    </button>
+                </div>
+
+                <div class="view-more">
+                    <a href="projetos.html" class="btn btn-secondary">
+                        <i data-lucide="folder-open"></i>
+                        Ver todos os projetos
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!--================-->
+        <!-- CONTATO CTA    -->
+        <!--================-->
+        <section id="contato" class="content-section bg-white cta-section">
+            <div class="cta-overlay"></div>
+            <div class="container text-center">
+                <div class="cta-content">
+                    <h2 class="section-title">Pronto para tirar seu projeto do papel?</h2>
+                    <p class="section-subtitle">Se você precisa de um backend sólido, integração confiável e entrega organizada, podemos começar por uma conversa de 20 minutos.</p>
+                    <div class="cta-button-row">
+                        <a href="contato.html" class="btn btn-primary">Abrir formulário completo</a>
+                        <a href="https://wa.me/5587981677005" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Falar no WhatsApp</a>
+                        <a href="mailto:kaue.alves.pg@gmail.com" class="btn btn-ghost">Enviar e-mail direto</a>
+                    </div>
+                    <p class="cta-meta">Resposta média em até 24 horas úteis.</p>
+                </div>
+
+                <div class="contact-cards">
+                    <a href="mailto:kaue.alves.pg@gmail.com" class="contact-card">
+                        <div class="contact-icon email">
+                            <i data-lucide="mail"></i>
+                        </div>
+                        <span>Email</span>
+                        <small class="contact-detail">kaue.alves.pg@gmail.com</small>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/victor-kau%C3%AA-419926364/" target="_blank" rel="noopener noreferrer" class="contact-card">
+                        <div class="contact-icon linkedin">
+                            <i class="bi bi-linkedin" aria-hidden="true"></i>
+                        </div>
+                        <span>LinkedIn</span>
+                        <small class="contact-detail">Victor Kauê</small>
+                    </a>
+
+                    <a href="https://github.com/Victorkaue333" target="_blank" rel="noopener noreferrer" class="contact-card">
+                        <div class="contact-icon github">
+                            <i class="bi bi-github" aria-hidden="true"></i>
+                        </div>
+                        <span>GitHub</span>
+                        <small class="contact-detail">Victorkaue333</small>
+                    </a>
+
+                    <a href="https://wa.me/5587981677005" target="_blank" rel="noopener noreferrer" class="contact-card">
+                        <div class="contact-icon whatsapp">
+                            <i data-lucide="message-circle"></i>
+                        </div>
+                        <span>WhatsApp</span>
+                        <small class="contact-detail">(87) 98167-7005</small>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--================-->
+<!--     FOOTER     -->
+<!--================-->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-icon">&lt;/&gt;</span>
+                    <span>Victor</span><span>Kauê</span>
+                </div>
+                <p>
+                    Desenvolvedor Full-Stack especializado em Python e Django,
+                    criando soluções web modernas e escaláveis.
+                </p>
+                <ul class="footer-contact-icons">
+                    <li><a href="https://github.com/Victorkaue333" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="bi bi-github" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/victor-kau%C3%AA-419926364/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a></li>
+                    <li><a href="mailto:kaue.alves.pg@gmail.com" aria-label="Email"><i class="bi bi-envelope-fill" aria-hidden="true"></i></a></li>
+                    <li><a href="https://wa.me/5587981677005" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="footer-nav">
+                <p class="footer-label">NAVEGAÇÃO</p>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-tech">
+                <p class="footer-label">TECNOLOGIAS</p>
+                <ul class="footer-tech-badges">
+    <li><i class="devicon-python-plain colored" aria-hidden="true"></i><span>Python</span></li>
+    <li><i class="devicon-django-plain colored" aria-hidden="true"></i><span>Django</span></li>
+    <li><i class="devicon-javascript-plain colored" aria-hidden="true"></i><span>JavaScript</span></li>
+    <li><i class="bi bi-diagram-3" aria-hidden="true"></i><span>REST API</span></li>
+    <li><i class="devicon-postgresql-plain colored" aria-hidden="true"></i><span>PostgreSQL</span></li>
+    <li><i class="devicon-docker-plain colored" aria-hidden="true"></i><span>Docker</span></li>
+</ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Victor Kauê — Todos os direitos reservados</p>
+</div>
+    </div>
+</footer>
+
+    <!-- ==================== -->
+    <!-- BOTÃO VOLTAR AO TOPO -->
+    <!-- ==================== -->
+    <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">
+        <i data-lucide="arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+
+

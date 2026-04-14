@@ -1,0 +1,37 @@
+.preloader {
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-preloader);
+    background: var(--bg-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: preloaderFadeOut 0.5s ease 1s forwards;
+}
+
+.preloader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.preloader-logo {
+    font-family: var(--font-secondary);
+    font-size: 2.8rem;
+    font-weight: 800;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.03em;
+}
+
+.preloader-spinner {
+    width: 36px;
+    height: 36px;
+    border: 3px solid rgba(245, 158, 11, 0.15);
+    border-top-color: var(--accent-color);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
