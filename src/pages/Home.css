@@ -17,7 +17,7 @@
 
 .hero-container {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
     position: relative;
@@ -48,10 +48,10 @@
 }
 
 .hero-content h1 {
-    font-size: clamp(3rem, 7vw, 5rem);
+    font-size: clamp(2.5rem, 5.5vw, 3.8rem);
     margin-bottom: 1.5rem;
     letter-spacing: -0.04em;
-    line-height: 1.05;
+    line-height: 1.1;
 }
 
 .accent-text {
@@ -104,7 +104,7 @@
 
 .photo-container {
     position: relative;
-    width: min(400px, 90vw);
+    width: min(500px, 90vw);
     aspect-ratio: 1;
 }
 
