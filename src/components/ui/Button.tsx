@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import './Button.css';
 
 interface ButtonProps {
-  variant?: 'primary' | 'secondary' | 'ghost';
+  variant?: 'primary' | 'secondary' | 'ghost' | 'outline';
   href?: string;
   onClick?: () => void;
   children: ReactNode;

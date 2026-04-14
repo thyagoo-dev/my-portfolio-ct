@@ -10,8 +10,7 @@ import {
   Mail, 
   Calendar,
   ChevronRight,
-  Sparkles,
-  ExternalLink
+  Sparkles
 } from 'lucide-react';
 import { experiences } from '../data/experiences';
 import { education } from '../data/education';
