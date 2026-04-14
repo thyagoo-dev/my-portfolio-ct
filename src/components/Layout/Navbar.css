@@ -265,5 +265,11 @@
         font-size: 1.15rem;
         padding: 1rem 2rem;
         text-align: center;
+@media (max-width: 480px) {
+    .navbar-logo {
+        font-size: 1rem;
+    }
+    .btn-cv {
+        padding: 0.65rem 0.8rem;
     }
 }
