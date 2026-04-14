@@ -2,8 +2,10 @@
     display: block;
     position: fixed;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
+    max-width: 100%;
     background: rgba(7, 13, 26, 0.4);
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
@@ -16,7 +18,7 @@
         border-radius 0.4s cubic-bezier(0.4, 0, 0.2, 1),
         border-color 0.3s ease,
         box-shadow 0.3s ease,
-        transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        transform 0s; /* Horizontal transform stays fixed */
     box-shadow: none;
     border-radius: 0;
     border: none;
@@ -27,8 +29,6 @@
 
 .navbar.scrolled {
     top: 1.25rem;
-    left: 50%;
-    transform: translateX(-50%);
     width: min(1000px, calc(100% - 2rem));
     background: rgba(7, 13, 26, 0.85);
     -webkit-backdrop-filter: blur(24px) saturate(160%);
