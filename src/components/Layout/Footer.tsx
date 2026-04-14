@@ -11,7 +11,6 @@ export function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <Link to="/" className="logo">
-              <span className="logo-icon">VK</span>
               <span>Victor</span>
               <span>Kauê</span>
             </Link>
