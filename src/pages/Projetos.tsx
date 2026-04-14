@@ -3,6 +3,7 @@ import { FolderGit2 } from 'lucide-react';
 import { ProjectCard } from '../components/ui/ProjectCard';
 import { projects } from '../data/projects';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import './Projetos.css';
 
 export default function Projetos() {
   const [filter, setFilter] = useState<'todos' | 'pessoal' | 'real'>('todos');
