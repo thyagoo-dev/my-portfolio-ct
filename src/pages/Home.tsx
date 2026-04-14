@@ -83,9 +83,9 @@ export default function Home() {
               </Reveal>
               <Reveal delay={0.6}>
                 <div className="hero-socials">
-                  <a href="https://github.com/Victorkaue333" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="GitHub"><Github size={20} /></a>
-                  <a href="https://linkedin.com/in/victorkaue" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="LinkedIn"><Linkedin size={20} /></a>
-                  <a href="mailto:kaue.alves.pg@gmail.com" className="social-icon" aria-label="Email"><Mail size={20} /></a>
+                  <a href="https://github.com/Victorkaue333" target="_blank" rel="noopener noreferrer" className="social-icon github" aria-label="GitHub"><Github size={20} /></a>
+                  <a href="https://linkedin.com/in/victorkaue" target="_blank" rel="noopener noreferrer" className="social-icon linkedin" aria-label="LinkedIn"><Linkedin size={20} /></a>
+                  <a href="mailto:kaue.alves.pg@gmail.com" className="social-icon email" aria-label="Email"><Mail size={20} /></a>
                 </div>
               </Reveal>
             </div>

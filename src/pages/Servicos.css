@@ -193,7 +193,7 @@
     position: absolute;
     inset: 0;
     pointer-events: none;
-    background: radial-gradient(circle at 100% 100%, rgba(99, 102, 241, 0.08) 0%, transparent 60%);
+    background: radial-gradient(circle at 100% 100%, rgba(245, 158, 11, 0.08) 0%, transparent 60%);
 }
 
 .cta-content h2 {

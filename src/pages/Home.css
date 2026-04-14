@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     position: relative;
-    background: radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.05) 0%, transparent 40%),
+    background: radial-gradient(circle at 20% 20%, rgba(245, 158, 11, 0.05) 0%, transparent 40%),
                 radial-gradient(circle at 80% 80%, rgba(245, 158, 11, 0.03) 0%, transparent 40%);
 }
 
@@ -86,8 +86,11 @@
     transition: all var(--transition-fast);
 }
 
+.social-icon.github:hover { color: #f0f0f0; }
+.social-icon.linkedin:hover { color: #0077b5; }
+.social-icon.email:hover { color: #EA4335; }
+
 .social-icon:hover {
-    color: var(--accent-color);
     transform: translateY(-3px);
 }
 
@@ -126,7 +129,7 @@
 
 .photo-ring.inner {
     inset: -30px;
-    border: 1px dashed rgba(99, 102, 241, 0.2);
+    border: 1px dashed rgba(245, 158, 11, 0.15);
     animation: rotate 30s linear reverse infinite;
 }
 
@@ -263,7 +266,7 @@
 /* ========== PROJECTS (PRO MAX) ========== */
 .home-projects {
     padding: 8rem 0;
-    background: radial-gradient(circle at bottom right, rgba(99, 102, 241, 0.03) 0%, transparent 50%);
+    background: radial-gradient(circle at bottom right, rgba(245, 158, 11, 0.03) 0%, transparent 50%);
 }
 
 .header-top {

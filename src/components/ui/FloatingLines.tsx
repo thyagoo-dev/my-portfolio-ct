@@ -19,7 +19,7 @@ export const FloatingLines = () => {
         />
         <motion.path
           d="M-50 700C300 500 700 900 1500 300"
-          stroke="rgba(99, 102, 241, 0.08)"
+          stroke="rgba(245, 158, 11, 0.08)"
           strokeWidth="1.5"
           initial={{ pathLength: 0, opacity: 0 }}
           animate={{ pathLength: 1, opacity: 1 }}
@@ -27,7 +27,7 @@ export const FloatingLines = () => {
         />
         <motion.path
           d="M0 850C400 650 800 950 1440 450"
-          stroke="rgba(245, 158, 11, 0.05)"
+          stroke="rgba(217, 119, 6, 0.05)"
           strokeWidth="3"
           initial={{ pathLength: 0, opacity: 0 }}
           animate={{ pathLength: 1, opacity: 1 }}
@@ -35,7 +35,7 @@ export const FloatingLines = () => {
         />
         <motion.path
           d="M-200 400C100 200 500 600 1200 -100"
-          stroke="rgba(99, 102, 241, 0.05)"
+          stroke="rgba(245, 158, 11, 0.05)"
           strokeWidth="1"
           initial={{ pathLength: 0, opacity: 0 }}
           animate={{ pathLength: 1, opacity: 1 }}

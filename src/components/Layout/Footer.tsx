@@ -21,7 +21,14 @@ export function Footer() {
             </p>
             <div className="footer-contact-icons">
               {socialLinks.map((s) => (
-                <a key={s.name} href={s.url} target="_blank" rel="noopener noreferrer" aria-label={s.name}>
+                <a 
+                  key={s.name} 
+                  href={s.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  aria-label={s.name}
+                  className={s.name.toLowerCase()}
+                >
                   <i className={s.iconType === 'bootstrap' ? s.icon : `bi bi-${s.icon}`} />
                 </a>
               ))}
