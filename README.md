@@ -10,9 +10,10 @@ Portfólio profissional construído para demonstrar capacidade tecnica em **dese
 
 ---
 
-## 👀 Resumo para Recrutadores
-- Projeto autoral com arquitetura front-end moderna e componentes reutilizaveis.
-- Interface premium responsiva (mobile, tablet e desktop) com foco em legibilidade e conversao.
+## 👀 Resumo para Recrutadores:
+
+- Projeto autoral com arquitetura front-end moderna e componentes reutilizáveis.
+- Interface premium responsiva (mobile, tablet e desktop) com foco em legibilidade e conversão.
 - Sistema de idiomas funcional (`PT/EN`) com persistencia local.
 - Navegacao com React Router, scroll management e UX refinada em paginas de projetos e certificados.
 - Codigo em TypeScript com organizacao por camadas (`components`, `pages`, `hooks`, `data`, `styles`).
