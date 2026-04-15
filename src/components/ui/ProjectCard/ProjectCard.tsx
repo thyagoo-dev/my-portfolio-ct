@@ -17,6 +17,7 @@ import {
   Palette, 
   BarChart3 
 } from 'lucide-react';
+import './ProjectCard.css';
 
 // ... interface unchanged ...
 
