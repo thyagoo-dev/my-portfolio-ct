@@ -5,6 +5,7 @@ import { Footer } from './components/Layout/Footer/Footer';
 import { BackToTop } from './components/Layout/BackToTop/BackToTop';
 import { Preloader } from './components/Layout/Preloader/Preloader';
 import ScrollToTop from './components/Layout/ScrollToTop/ScrollToTop';
+import { MobileNavbar } from './components/Layout/Navbar/MobileNavbar';
 import './App.css';
 
 const Home = lazy(() => import('./pages/Home/Home'));
@@ -55,6 +56,7 @@ export default function App() {
         </Routes>
       </Suspense>
       <Footer />
+      <MobileNavbar />
       <BackToTop />
     </BrowserRouter>
   );

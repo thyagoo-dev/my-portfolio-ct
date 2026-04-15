@@ -1,17 +1,18 @@
 import { useEffect } from 'react';
 import { 
-  ArrowRight, 
-  Github, 
-  Linkedin, 
-  Mail, 
-  Database, 
-  Cpu, 
-  ChevronRight,
-  TrendingUp,
-  Cpu as Chip,
-  Flame,
-  Layout
-} from 'lucide-react';
+  FiArrowRight, 
+  FiGithub, 
+  FiLinkedin, 
+  FiMail, 
+  FiDatabase, 
+  FiCpu, 
+  FiChevronRight,
+  FiTrendingUp,
+  FiActivity,
+  FiZap,
+  FiLayout
+} from 'react-icons/fi';
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { featuredProjects } from '../../data/projects';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
@@ -22,6 +23,7 @@ import { ProjectCard } from '../../components/ui/ProjectCard/ProjectCard';
 import './Home.css';
 
 export default function Home() {
+  const { t } = useTranslation();
   useScrollReveal();
 
   useEffect(() => {
@@ -35,9 +37,9 @@ export default function Home() {
   ];
 
   const services = [
-    { id: 'backend', icon: <Database size={24} />, title: 'Arquitetura Backend', desc: 'Sistemas robustos com Python/Django e modelagem otimizada.' },
-    { id: 'api', icon: <Cpu size={24} />, title: 'Engenharia de APIs', desc: 'Integrações escaláveis seguindo o padrão REST e Clean Architecture.' },
-    { id: 'fullstack', icon: <Layout size={24} />, title: 'Sistemas Fullstack', desc: 'Soluções ponta a ponta com foco total na regra de negócio.' }
+    { id: 'backend', icon: <FiDatabase size={24} />, title: t('about.highlights.backend'), desc: t('about.highlights.backendDesc') },
+    { id: 'api', icon: <FiCpu size={24} />, title: t('about.highlights.api'), desc: t('about.highlights.apiDesc') },
+    { id: 'fullstack', icon: <FiLayout size={24} />, title: t('about.highlights.enterprise'), desc: t('about.highlights.enterpriseDesc') }
   ];
 
   return (
@@ -54,30 +56,29 @@ export default function Home() {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="hero-title-main"
             >
-              <span className="title-white">Desenvolvedor</span>
-              <span className="title-gray">Python</span>
-              <span className="title-orange">APIs & Django</span>
+              <span className="title-white">{t('hero.role')}</span>
+              <span className="title-gray">{t('hero.tech')}</span>
+              <span className="title-orange">{t('hero.subtech')}</span>
             </motion.h1>
 
             <Reveal delay={0.3}>
               <p className="hero-description">
-                Foco em performance e manutenção. Entrego software confiável 
-                para processos críticos, da regra de negócio ao deploy em produção.
+                {t('hero.description')}
               </p>
             </Reveal>
 
             <div className="hero-actions">
               <Reveal delay={0.5}>
                 <Button href="/sobre" variant="primary">
-                  Conheça minha jornada
-                  <ArrowRight size={18} />
+                  {t('hero.cta')}
+                  <FiArrowRight size={18} />
                 </Button>
               </Reveal>
               <Reveal delay={0.6}>
                 <div className="hero-socials">
-                  <a href="https://github.com/Victorkaue333" target="_blank" rel="noopener noreferrer" className="social-icon github" aria-label="GitHub"><Github size={20} /></a>
-                  <a href="https://linkedin.com/in/victorkaue" target="_blank" rel="noopener noreferrer" className="social-icon linkedin" aria-label="LinkedIn"><Linkedin size={20} /></a>
-                  <a href="mailto:kaue.alves.pg@gmail.com" className="social-icon email" aria-label="Email"><Mail size={20} /></a>
+                  <a href="https://github.com/Victorkaue333" target="_blank" rel="noopener noreferrer" className="social-icon github" aria-label="GitHub"><FiGithub size={20} /></a>
+                  <a href="https://linkedin.com/in/victorkaue" target="_blank" rel="noopener noreferrer" className="social-icon linkedin" aria-label="LinkedIn"><FiLinkedin size={20} /></a>
+                  <a href="mailto:kaue.alves.pg@gmail.com" className="social-icon email" aria-label="Email"><FiMail size={20} /></a>
                 </div>
               </Reveal>
             </div>
@@ -99,7 +100,7 @@ export default function Home() {
         <div className="container">
           <div className="results-inner">
             <div className="results-badge">
-              <TrendingUp size={16} /> Impacto Real
+              <FiTrendingUp size={16} /> Impacto Real
             </div>
             <div className="results-grid">
               {results.map((res, i) => (
@@ -119,7 +120,7 @@ export default function Home() {
       <section id="servicos" className="home-services">
         <div className="container">
           <div className="section-header reveal-on-scroll">
-            <h2 className="section-title"><Chip /> Especialidades</h2>
+            <h2 className="section-title"><FiActivity /> {t('about.highlights.title')}</h2>
             <p className="section-subtitle">Onde a lógica encontra a performance para criar valor.</p>
           </div>
 
@@ -142,8 +143,8 @@ export default function Home() {
         <div className="container">
           <div className="section-header reveal-on-scroll">
             <div className="header-top">
-              <h2 className="section-title"><Flame /> Projetos em Destaque</h2>
-              <Button href="/projetos" variant="ghost">Ver todos <ArrowRight size={18} /></Button>
+              <h2 className="section-title"><FiZap /> Projetos em Destaque</h2>
+              <Button href="/projetos" variant="ghost">{t('common.viewAll')} <FiArrowRight size={18} /></Button>
             </div>
             <p className="section-subtitle">Uma amostra do que eu construo com foco em escalabilidade.</p>
           </div>

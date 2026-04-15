@@ -1,96 +1,107 @@
 import { useEffect } from 'react';
-import { Database, Cpu, Layout, CheckCircle2, ArrowRight } from 'lucide-react';
+import { FiDatabase, FiCpu, FiLayout, FiCheckCircle, FiArrowRight } from 'react-icons/fi';
 import { services } from '../../data/services';
 import { Button } from '../../components/ui/Button/Button';
 import { Reveal } from '../../components/ui/Reveal/Reveal';
-import { FloatingLines } from '../../components/ui/FloatingLines/FloatingLines';
 import './Servicos.css';
 
 export default function Servicos() {
-  useEffect(() => { 
-    document.title = 'Serviços — Victor Kauê'; 
-    window.scrollTo(0, 0);
+  useEffect(() => {
+    document.title = 'Serviços — Victor Kauê';
   }, []);
 
-  const getIcon = (iconName: string) => {
-    switch (iconName) {
-      case 'server': return <Database size={32} />;
-      case 'layers': return <Cpu size={32} />;
-      default: return <Layout size={32} />;
-    }
-  };
-
   return (
-    <main className="servicos-page">
-      <FloatingLines />
-      
-      <section className="servicos-hero">
+    <main className="page-servicos">
+      <section className="services-hero content-section">
+        <div className="container text-center reveal-on-scroll">
+          <h1 className="section-title" style={{ justifyContent: 'center' }}>
+            <FiDatabase size={28} />
+            Nossos Serviços
+          </h1>
+          <p className="section-subtitle">Soluções completas para seu negócio decolar.</p>
+        </div>
+
         <div className="container">
-          <Reveal>
-            <div className="page-badge">Expertise Técnica</div>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <h1 className="page-title">Soluções que escalam <br/><span className="accent-text">com o seu negócio.</span></h1>
-          </Reveal>
-          <Reveal delay={0.2}>
-            <p className="page-subtitle">
-              Transformo requisitos complexos em arquiteturas limpas, 
-              utilizando as melhores práticas de desenvolvimento backend e full-stack.
-            </p>
-          </Reveal>
+          <div className="services-grid">
+            <Reveal delay={0.1}>
+              <div className="service-card featured">
+                <div className="service-icon">
+                  <FiLayout />
+                </div>
+                <h3>Desenvolvimento Web</h3>
+                <p>Criação de sites modernos, responsivos e otimizados para SEO e performance.</p>
+                <ul>
+                  <li><FiCheckCircle /> Landing Pages</li>
+                  <li><FiCheckCircle /> Portfólios</li>
+                  <li><FiCheckCircle /> E-commerces</li>
+                </ul>
+                <Button href="/contato" variant="primary">
+                  Saber mais <FiArrowRight />
+                </Button>
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.2}>
+              <div className="service-card">
+                <div className="service-icon">
+                  <FiDatabase />
+                </div>
+                <h3>Sistemas Customizados</h3>
+                <p>Desenvolvimento de Dashboards e painéis administrativos para gestão de dados.</p>
+                <ul>
+                  <li><FiCheckCircle /> Automação de Processos</li>
+                  <li><FiCheckCircle /> Integração de APIs</li>
+                  <li><FiCheckCircle /> Gestão de Inventário</li>
+                </ul>
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.3}>
+              <div className="service-card">
+                <div className="service-icon">
+                  <FiCpu />
+                </div>
+                <h3>Consultoria Tech</h3>
+                <p>Orientação especializada para escolher a melhor stack para seu projeto.</p>
+                <ul>
+                  <li><FiCheckCircle /> Code Review</li>
+                  <li><FiCheckCircle /> Otimização de Performance</li>
+                  <li><FiCheckCircle /> Estratégia Digital</li>
+                </ul>
+              </div>
+            </Reveal>
+          </div>
         </div>
       </section>
 
-      <section className="services-showcase">
+      {/* ADDITIONAL INFO */}
+      <section className="services-approach content-section">
         <div className="container">
-          <div className="services-detailed-grid">
-            {services.map((s, i) => (
-              <Reveal key={s.id} delay={0.1 * i} yOffset={40}>
-                <div className="service-premium-card">
-                  <div className="s-card-glow"></div>
-                  <div className="s-card-header">
-                    <div className="s-icon-wrapper">
-                      {getIcon(s.icon)}
-                    </div>
-                    <span className="s-number">0{i + 1}</span>
-                  </div>
-                  
-                  <h2 className="s-title">{s.title}</h2>
-                  <p className="s-description">{s.description}</p>
-                  
-                  <div className="s-divider"></div>
-                  
-                  <ul className="s-features-list">
-                    {s.features.map((feature, idx) => (
-                      <li key={idx} className="s-feature-item">
-                        <CheckCircle2 size={16} className="s-check-icon" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-
-                  <div className="s-card-footer">
-                    <Button href="/contato" variant="ghost" className="s-cta">
-                      Saber mais <ArrowRight size={16} />
-                    </Button>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-
-          <Reveal delay={0.5} width="100%">
-            <div className="servicos-cta-box">
-              <div className="cta-content">
-                <h2>Pronto para tirar sua ideia do papel?</h2>
-                <p>Vamos conversar sobre como eu posso ajudar tecnicamente no seu próximo grande projeto.</p>
+          <div className="approach-content">
+            <h2 className="section-title">Como eu trabalho</h2>
+            <div className="steps-v2">
+              <div className="step-v2">
+                <span className="step-num">01</span>
+                <h4>Planejamento</h4>
+                <p>Entendimento total do seu negócio e objetivos do projeto.</p>
               </div>
-              <Button href="/contato" variant="primary">
-                Agendar Consultoria Técnica
-                <ArrowRight size={18} />
-              </Button>
+              <div className="step-v2">
+                <span className="step-num">02</span>
+                <h4>Design & UX</h4>
+                <p>Criação de interfaces intuitivas e visualmente impactantes.</p>
+              </div>
+              <div className="step-v2">
+                <span className="step-num">03</span>
+                <h4>Desenvolvimento</h4>
+                <p>Transformação do design em código limpo, rápido e escalável.</p>
+              </div>
+              <div className="step-v2">
+                <span className="step-num">04</span>
+                <h4>Lançamento</h4>
+                <p>Deploy e acompanhamento inicial para garantir o sucesso.</p>
+              </div>
             </div>
-          </Reveal>
+          </div>
         </div>
       </section>
     </main>

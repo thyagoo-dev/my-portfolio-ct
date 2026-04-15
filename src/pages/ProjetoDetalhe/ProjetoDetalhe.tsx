@@ -1,17 +1,17 @@
 import { useParams, Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { 
-  ArrowLeft, 
-  ExternalLink, 
-  Github, 
-  Target, 
-  Lightbulb, 
-  CheckCircle2, 
-  Database, 
-  Cpu, 
-  Layout,
-  ArrowRight
-} from 'lucide-react';
+  FiArrowLeft, 
+  FiExternalLink, 
+  FiGithub, 
+  FiTarget, 
+  FiZap, 
+  FiCheckCircle, 
+  FiDatabase, 
+  FiCpu, 
+  FiLayout,
+  FiArrowRight
+} from 'react-icons/fi';
 import { projects } from '../../data/projects';
 import { Button } from '../../components/ui/Button/Button';
 import './ProjetoDetalhe.css';
@@ -32,7 +32,7 @@ export default function ProjetoDetalhe() {
           <h1>Projeto não encontrado</h1>
           <p style={{ margin: '1rem 0 2rem', color: 'var(--text-muted-color)' }}>O projeto que você procura não existe.</p>
           <Button href="/projetos" variant="secondary">
-            <ArrowLeft size={18} />
+            <FiArrowLeft size={18} />
             Voltar aos projetos
           </Button>
         </div>
@@ -47,7 +47,7 @@ export default function ProjetoDetalhe() {
       <section className="projeto-hero">
         <div className="container">
           <Link to="/projetos" className="back-link">
-            <ArrowLeft size={18} />
+            <FiArrowLeft size={18} />
             Voltar aos projetos
           </Link>
 
@@ -66,13 +66,13 @@ export default function ProjetoDetalhe() {
               <div className="projeto-actions">
                 {project.github && (
                   <Button href={project.github} target="_blank" rel="noopener noreferrer" variant="secondary">
-                    <Github size={18} />
+                    <FiGithub size={18} />
                     Ver código
                   </Button>
                 )}
                 {project.online && (
                   <Button href={project.online} target="_blank" rel="noopener noreferrer" variant="primary">
-                    <ExternalLink size={18} />
+                    <FiExternalLink size={18} />
                     Ver online
                   </Button>
                 )}
@@ -96,21 +96,21 @@ export default function ProjetoDetalhe() {
                 <h2 className="detail-section-title">Detalhes do Projeto</h2>
                 <div className="details-grid-custom">
                   <div className="detail-card-item">
-                    <div className="card-icon"><Target size={20} /></div>
+                    <div className="card-icon"><FiTarget size={20} /></div>
                     <div className="card-text">
                       <h4 className="card-title-main">Desafio</h4>
                       <p>{detailed.desafio}</p>
                     </div>
                   </div>
                   <div className="detail-card-item">
-                    <div className="card-icon"><Lightbulb size={20} /></div>
+                    <div className="card-icon"><FiZap size={20} /></div>
                     <div className="card-text">
                       <h4 className="card-title-main">Solução</h4>
                       <p>{detailed.solucao}</p>
                     </div>
                   </div>
                   <div className="detail-card-item">
-                    <div className="card-icon"><CheckCircle2 size={20} /></div>
+                    <div className="card-icon"><FiCheckCircle size={20} /></div>
                     <div className="card-text">
                       <h4 className="card-title-main">Impacto</h4>
                       <p>{detailed.impacto}</p>
@@ -124,19 +124,19 @@ export default function ProjetoDetalhe() {
                 <h2 className="detail-section-title">Arquitetura</h2>
                 <div className="architecture-flow">
                   <div className="arch-node">
-                    <div className="node-icon"><Layout size={24} /></div>
+                    <div className="node-icon"><FiLayout size={24} /></div>
                     <span>Frontend</span>
                     <small>{detailed.arquitetura.frontend}</small>
                   </div>
-                  <div className="arch-arrow"><ArrowRight size={24} /></div>
+                  <div className="arch-arrow"><FiArrowRight size={24} /></div>
                   <div className="arch-node">
-                    <div className="node-icon"><Cpu size={24} /></div>
+                    <div className="node-icon"><FiCpu size={24} /></div>
                     <span>API / Backend</span>
                     <small>{detailed.arquitetura.api}</small>
                   </div>
-                  <div className="arch-arrow"><ArrowRight size={24} /></div>
+                  <div className="arch-arrow"><FiArrowRight size={24} /></div>
                   <div className="arch-node">
-                    <div className="node-icon"><Database size={24} /></div>
+                    <div className="node-icon"><FiDatabase size={24} /></div>
                     <span>Banco de Dados</span>
                     <small>{detailed.arquitetura.banco}</small>
                   </div>
@@ -181,12 +181,12 @@ export default function ProjetoDetalhe() {
             {project.online ? (
               <Button href={project.online} target="_blank" rel="noopener noreferrer" variant="primary">
                 Acessar Projeto Completo
-                <ExternalLink size={20} />
+                <FiExternalLink size={20} />
               </Button>
             ) : (
               <Button href="/contato" variant="primary">
                 Fale comigo sobre este projeto
-                <CheckCircle2 size={20} />
+                <FiCheckCircle size={20} />
               </Button>
             )}
           </div>

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Award, Filter } from 'lucide-react';
+import { FiAward, FiFilter } from 'react-icons/fi';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { certificates, certificateCategories } from '../../data/certificates';
 import { Reveal } from '../../components/ui/Reveal/Reveal';
@@ -23,7 +23,7 @@ export default function Certificados() {
         <div className="container">
           <div className="section-header reveal-on-scroll">
             <h1 className="section-title">
-              <Award size={28} />
+              <FiAward size={28} />
               Certificados
             </h1>
             <p className="section-subtitle">Minhas conquistas e especializações técnicas.</p>
@@ -31,7 +31,7 @@ export default function Certificados() {
 
           {/* FILTERS */}
           <div className="cert-filters reveal-on-scroll">
-            <div className="filter-icon"><Filter size={18} /></div>
+            <div className="filter-icon"><FiFilter size={18} /></div>
             <div className="filter-options">
               {certificateCategories.map((cat) => (
                 <button

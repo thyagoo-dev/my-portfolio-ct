@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Send, User, Mail, FileText, MessageSquare } from 'lucide-react';
+import { FiSend, FiUser, FiMail, FiFileText, FiMessageSquare } from 'react-icons/fi';
 import { Button } from '../../components/ui/Button/Button';
 import { socialLinks } from '../../data/social';
 import type { ContactFormData } from '../../types';
@@ -49,7 +49,7 @@ export default function Contato() {
       <section className="contact-hero content-section">
         <div className="container">
           <h1 className="section-title" style={{ justifyContent: 'center' }}>
-            <Send size={28} />
+            <FiSend size={28} />
             Entre em Contato
           </h1>
           <p className="section-subtitle text-center">
@@ -64,7 +64,7 @@ export default function Contato() {
               </div>
 
               <div className="form-group">
-                <label htmlFor="nome"><User size={16} /> Nome</label>
+                <label htmlFor="nome"><FiUser size={16} /> Nome</label>
                 <input
                   id="nome"
                   type="text"
@@ -76,7 +76,7 @@ export default function Contato() {
               </div>
 
               <div className="form-group">
-                <label htmlFor="email"><Mail size={16} /> Email</label>
+                <label htmlFor="email"><FiMail size={16} /> Email</label>
                 <input
                   id="email"
                   type="email"
@@ -88,7 +88,7 @@ export default function Contato() {
               </div>
 
               <div className="form-group">
-                <label htmlFor="assunto"><FileText size={16} /> Assunto</label>
+                <label htmlFor="assunto"><FiFileText size={16} /> Assunto</label>
                 <input
                   id="assunto"
                   type="text"
@@ -100,7 +100,7 @@ export default function Contato() {
               </div>
 
               <div className="form-group">
-                <label htmlFor="mensagem"><MessageSquare size={16} /> Mensagem</label>
+                <label htmlFor="mensagem"><FiMessageSquare size={16} /> Mensagem</label>
                 <textarea
                   id="mensagem"
                   value={form.mensagem}
@@ -114,7 +114,7 @@ export default function Contato() {
               </div>
 
               <Button type="submit" variant="primary" className="submit-btn">
-                <Send size={18} />
+                <FiSend size={18} />
                 Enviar via WhatsApp
               </Button>
 

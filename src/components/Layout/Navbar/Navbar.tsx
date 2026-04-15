@@ -2,12 +2,19 @@ import { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { useScrollPosition } from '../../../hooks/useScrollPosition';
 import { navLinks } from '../../../data/social';
-import { Download } from 'lucide-react';
+import { FiDownload } from 'react-icons/fi';
+import { useTranslation } from 'react-i18next';
 import './Navbar.css';
 
 export function Navbar() {
+  const { t, i18n } = useTranslation();
   const { scrolled } = useScrollPosition(60);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleLanguage = () => {
+    const newLang = i18n.language === 'pt' ? 'en' : 'pt';
+    i18n.changeLanguage(newLang);
+  };
 
   useEffect(() => {
     if (menuOpen) {
@@ -36,7 +43,7 @@ export function Navbar() {
                   className={({ isActive }) => isActive ? 'active' : ''}
                   onClick={() => setMenuOpen(false)}
                 >
-                  {link.label}
+                  {t(`nav.${link.path === '/' ? 'home' : link.path.substring(1)}`)}
                 </NavLink>
               </li>
             ))}
@@ -44,15 +51,23 @@ export function Navbar() {
         </div>
 
         <div className="navbar-actions">
+          <button 
+            className="btn-lang" 
+            onClick={toggleLanguage}
+            aria-label="Trocar idioma / Change language"
+          >
+            {i18n.language === 'pt' ? 'EN' : 'PT'}
+          </button>
+
           <a
             href="/docs/Curriculo/Curriculo_Victor_Kaue.pdf"
             className="btn-cv"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Baixar currículo"
+            aria-label={t('nav.downloadCV')}
           >
-            <Download size={14} />
-            Baixar CV
+            <FiDownload size={14} />
+            {t('nav.downloadCV')}
           </a>
 
           <button

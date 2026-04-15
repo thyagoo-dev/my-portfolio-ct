@@ -1,25 +1,28 @@
 import { Link } from 'react-router-dom';
 import { 
-  Github, 
-  ExternalLink, 
-  ChevronRight, 
-  Brain, 
-  Zap, 
-  Smartphone, 
-  Cloud, 
-  Search, 
-  Calendar, 
-  Package, 
-  Layout, 
-  Code2, 
-  TrendingUp, 
-  Globe, 
-  Palette, 
-  BarChart3 
-} from 'lucide-react';
+  FiGithub, 
+  FiExternalLink, 
+  FiChevronRight, 
+  FiCpu, 
+  FiZap, 
+  FiSmartphone, 
+  FiCloud, 
+  FiSearch, 
+  FiCalendar, 
+  FiPackage, 
+  FiLayout, 
+  FiCode, 
+  FiTrendingUp, 
+  FiGlobe, 
+  FiLayers, 
+  FiBarChart2 
+} from 'react-icons/fi';
 import './ProjectCard.css';
 
-// ... interface unchanged ...
+interface ProjectCardProps {
+  project: any;
+  withReveal?: boolean;
+}
 
 const techIconMap: Record<string, any> = {
   // DevIcons (CSS classes)
@@ -36,34 +39,33 @@ const techIconMap: Record<string, any> = {
   'HTML5': 'devicon-html5-plain colored',
   'JavaScript': 'devicon-javascript-plain colored',
   
-  // Lucide Icons (React Components)
-  'IA': Brain,
-  'Automação': Zap,
-  'Responsivo': Smartphone,
-  'SaaS': Cloud,
-  'SEO': Search,
-  'Eventos': Calendar,
-  'Controle de Estoque': Package,
-  'Landing Page': Layout,
-  'Front-end': Code2,
-  'Conversão': TrendingUp,
-  'Web App': Globe,
-  'Sistema Web': Globe,
-  'Design System': Palette,
-  'Escalabilidade': BarChart3,
+  // React Icons (Feather)
+  'IA': FiCpu,
+  'Automação': FiZap,
+  'Responsivo': FiSmartphone,
+  'SaaS': FiCloud,
+  'SEO': FiSearch,
+  'Eventos': FiCalendar,
+  'Controle de Estoque': FiPackage,
+  'Landing Page': FiLayout,
+  'Front-end': FiCode,
+  'Conversão': FiTrendingUp,
+  'Web App': FiGlobe,
+  'Sistema Web': FiGlobe,
+  'Design System': FiLayers,
+  'Escalabilidade': FiBarChart2,
 };
 
 function TechIcon({ name }: { name: string }) {
-  const icon = techIconMap[name];
+  const IconComponent = techIconMap[name];
   
-  if (!icon) return <span className="project-tag-text">{name}</span>;
+  if (!IconComponent) return <span className="project-tag-text">{name}</span>;
   
-  if (typeof icon === 'string') {
-    return <i className={`${icon} tech-icon-dev`} title={name} />;
+  if (typeof IconComponent === 'string') {
+    return <i className={`${IconComponent} tech-icon-dev`} title={name} />;
   }
   
-  const LucideIcon = icon;
-  return <LucideIcon size={20} className="tech-icon-lucide" title={name} />;
+  return <IconComponent size={20} className="tech-icon-lucide" title={name} />;
 }
 
 export function ProjectCard({ project, withReveal = true }: ProjectCardProps) {
@@ -73,7 +75,7 @@ export function ProjectCard({ project, withReveal = true }: ProjectCardProps) {
         <div className="project-image">
           <img src={project.image} alt={project.title} loading="lazy" />
           <div className="project-overlay">
-            <span className="project-overlay-text">Ver detalhes <ChevronRight size={16} /></span>
+            <span className="project-overlay-text">Ver detalhes <FiChevronRight size={16} /></span>
           </div>
         </div>
         
@@ -81,7 +83,7 @@ export function ProjectCard({ project, withReveal = true }: ProjectCardProps) {
           <h3 className="project-title">{project.title}</h3>
           
           <div className="project-tags">
-            {project.technologies.slice(0, 5).map((tech) => (
+            {project.technologies.slice(0, 5).map((tech: string) => (
               <div key={tech} className="project-tag-icon-wrapper" title={tech}>
                 <TechIcon name={tech} />
               </div>
@@ -103,12 +105,12 @@ export function ProjectCard({ project, withReveal = true }: ProjectCardProps) {
       <div className="project-footer">
         {project.online && (
           <a href={project.online} target="_blank" rel="noopener noreferrer" className="footer-action-link">
-            Ver projeto <ExternalLink size={14} />
+            Ver projeto <FiExternalLink size={14} />
           </a>
         )}
         {project.github && (
           <a href={project.github} target="_blank" rel="noopener noreferrer" className="footer-icon-link" aria-label="GitHub Repository">
-            <Github size={18} />
+            <FiGithub size={18} />
           </a>
         )}
       </div>

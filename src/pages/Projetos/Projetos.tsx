@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
-import { FolderGit2 } from 'lucide-react';
+import { FiFolder, FiFilter, FiAlertCircle } from 'react-icons/fi';
+import { useTranslation } from 'react-i18next';
 import { ProjectCard } from '../../components/ui/ProjectCard/ProjectCard';
 import { projects } from '../../data/projects';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import './Projetos.css';
 
 export default function Projetos() {
+  const { t } = useTranslation();
   const [filter, setFilter] = useState<'todos' | 'pessoal' | 'real'>('todos');
   useScrollReveal();
 
@@ -16,34 +18,23 @@ export default function Projetos() {
   const filtered = filter === 'todos' ? projects : projects.filter((p) => p.category === filter);
 
   return (
-    <main style={{ paddingTop: '8rem' }}>
+    <main className="page-projetos">
       <section className="content-section">
         <div className="container">
           <h1 className="section-title">
-            <FolderGit2 size={28} />
-            Meus Projetos
+            <FiFolder size={28} />
+            {t('projects.title')}
           </h1>
-          <p className="section-subtitle">Projetos pessoais e profissionais desenvolvidos do zero ao deploy.</p>
+          <p className="section-subtitle">{t('projects.subtitle')}</p>
 
-          <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
+          <div className="projects-filter-container">
             {(['todos', 'pessoal', 'real'] as const).map((f) => (
               <button
                 key={f}
                 onClick={() => setFilter(f)}
-                style={{
-                  padding: '0.55rem 1.2rem',
-                  borderRadius: '999px',
-                  border: '1px solid',
-                  borderColor: filter === f ? 'rgba(245,158,11,0.8)' : 'rgba(255,255,255,0.15)',
-                  background: filter === f ? 'linear-gradient(135deg, rgba(245,158,11,0.97), rgba(217,119,6,0.93))' : 'rgba(255,255,255,0.05)',
-                  color: '#FFF',
-                  fontWeight: 600,
-                  fontSize: '0.88rem',
-                  cursor: 'pointer',
-                  transition: 'all 0.3s ease',
-                }}
+                className={`filter-btn ${filter === f ? 'active' : ''}`}
               >
-                {f === 'todos' ? 'Todos' : f === 'pessoal' ? 'Pessoais' : 'Profissionais'}
+                {t(`projects.categories.${f === 'todos' ? 'all' : f === 'pessoal' ? 'personal' : 'real'}`)}
               </button>
             ))}
           </div>
@@ -55,9 +46,10 @@ export default function Projetos() {
           </div>
 
           {filtered.length === 0 && (
-            <p className="text-center" style={{ color: 'var(--text-muted-color)', marginTop: '3rem' }}>
-              Nenhum projeto encontrado nessa categoria.
-            </p>
+            <div className="no-projects-found">
+              <FiAlertCircle size={32} />
+              <p>{t('projects.noFound')}</p>
+            </div>
           )}
         </div>
       </section>

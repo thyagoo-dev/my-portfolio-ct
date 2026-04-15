@@ -1,17 +1,18 @@
 import { useEffect, useState } from 'react';
 import { 
-  Briefcase, 
-  GraduationCap, 
-  Code2, 
-  Award, 
-  MapPin, 
-  Github, 
-  Linkedin, 
-  Mail, 
-  Calendar,
-  ChevronRight,
-  Sparkles
-} from 'lucide-react';
+  FiBriefcase, 
+  FiBookOpen, 
+  FiCode, 
+  FiAward, 
+  FiMapPin, 
+  FiGithub, 
+  FiLinkedin, 
+  FiMail, 
+  FiCalendar,
+  FiChevronRight,
+  FiTarget
+} from 'react-icons/fi';
+import { useTranslation } from 'react-i18next';
 import { experiences } from '../../data/experiences';
 import { education } from '../../data/education';
 import { expertise } from '../../data/expertise';
@@ -21,22 +22,26 @@ import { Button } from '../../components/ui/Button/Button';
 import './Sobre.css';
 
 export default function Sobre() {
+  const { t, i18n } = useTranslation();
   const [activeSection, setActiveSection] = useState('intro');
   const [githubStatsError, setGithubStatsError] = useState(false);
   useScrollReveal();
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+  };
 
   useEffect(() => {
     document.title = 'Sobre — Victor Kauê';
   }, []);
 
-  const menuItems = [
-    { id: 'intro', label: 'Introdução', icon: <Sparkles size={16} /> },
-    { id: 'role', label: 'Função Atual', icon: <Briefcase size={16} /> },
-    { id: 'experience', label: 'Experiência', icon: <Briefcase size={16} /> },
-    { id: 'education', label: 'Formação', icon: <GraduationCap size={16} /> },
-    { id: 'certs', label: 'Certificações', icon: <Award size={16} /> },
-    { id: 'expertise', label: 'Expertise Técnica', icon: <Code2 size={16} /> },
-    { id: 'github', label: 'GitHub', icon: <Github size={16} /> },
+    { id: 'intro', label: t('about.title'), icon: <FiTarget size={16} /> },
+    { id: 'role', label: t('about.highlights.title'), icon: <FiBriefcase size={16} /> },
+    { id: 'experience', label: 'Experiência', icon: <FiBriefcase size={16} /> },
+    { id: 'education', label: 'Formação', icon: <FiBookOpen size={16} /> },
+    { id: 'certs', label: 'Certificações', icon: <FiAward size={16} /> },
+    { id: 'expertise', label: 'Expertise Técnica', icon: <FiCode size={16} /> },
+    { id: 'github', label: 'GitHub', icon: <FiGithub size={16} /> },
   ];
 
   const scrollToSection = (id: string) => {
@@ -72,14 +77,24 @@ export default function Sobre() {
 
                 <div className="sidebar-pills">
                   <div className="sidebar-pill">
-                    <MapPin size={14} />
+                    <FiMapPin size={14} />
                     <span>Itacuruba, PE — Brasil</span>
                   </div>
                 </div>
 
                 <div className="lang-toggle-container">
-                  <button className="lang-btn">English</button>
-                  <button className="lang-btn active">Português</button>
+                  <button 
+                    className={`lang-btn ${i18n.language === 'en' ? 'active' : ''}`}
+                    onClick={() => changeLanguage('en')}
+                  >
+                    English
+                  </button>
+                  <button 
+                    className={`lang-btn ${i18n.language === 'pt' ? 'active' : ''}`}
+                    onClick={() => changeLanguage('pt')}
+                  >
+                    Português
+                  </button>
                 </div>
 
                 <nav className="sidebar-nav">
@@ -104,9 +119,9 @@ export default function Sobre() {
             {/* CALL TO ACTION HEADER */}
             <div className="content-header reveal-on-scroll">
               <a href="https://wa.me/5587981677005" target="_blank" rel="noopener noreferrer" className="header-cta">
-                <Calendar size={16} />
+                <FiCalendar size={16} />
                 Agendar uma chamada
-                <ChevronRight size={16} />
+                <FiChevronRight size={16} />
               </a>
               <h2 className="main-title">Victor Kauê</h2>
               <h3 className="main-subtitle">Desenvolvedor Full Stack</h3>
@@ -114,9 +129,9 @@ export default function Sobre() {
               <div className="social-quick-links">
                 {socialLinks.filter(s => ['GitHub', 'LinkedIn', 'Email'].includes(s.name)).map(link => (
                   <a key={link.name} href={link.url} target="_blank" rel="noopener noreferrer" className="social-btn">
-                    {link.name === 'GitHub' && <Github size={16} />}
-                    {link.name === 'LinkedIn' && <Linkedin size={16} />}
-                    {link.name === 'Email' && <Mail size={16} />}
+                    {link.name === 'GitHub' && <FiGithub size={16} />}
+                    {link.name === 'LinkedIn' && <FiLinkedin size={16} />}
+                    {link.name === 'Email' && <FiMail size={16} />}
                     {link.name}
                   </a>
                 ))}
@@ -125,34 +140,27 @@ export default function Sobre() {
 
             {/* INTRODUÇÃO */}
             <section id="intro" className="about-content-section reveal-on-scroll">
-              <p className="intro-text">
-                Sou desenvolvedor com foco em backend e sistemas web, formado em Desenvolvimento de
-                Sistemas e atualmente graduando em Gestão da Tecnologia da Informação. Atuo no
-                desenvolvimento de APIs, regras de negócio, modelagem de dados, interface web e deploy, sempre
-                com foco em arquitetura limpa, segurança e valor de negócio. Atualmente trabalho na NTIDI
-                criando soluções para sistemas web da empresa, utilizando Django e MySQL, com uma abordagem
-                orientada a resultados.
-              </p>
+              <p className="intro-text">{t('about.intro')}</p>
             </section>
 
             {/* DIFERENCIAIS */}
             <section id="role" className="about-content-section reveal-on-scroll">
               <h2 className="section-title">
-                <Sparkles size={24} />
-                Diferenciais
+                <FiTarget size={24} />
+                {t('about.highlights.title')}
               </h2>
               <div className="diferenciais-grid">
                 <div className="diferencial-card">
-                  <h3>Backend Especializado</h3>
-                  <p>Construção de regras de negócio consistentes, autenticação segura e modelagem de dados orientada a escala.</p>
+                  <h3>{t('about.highlights.backend')}</h3>
+                  <p>{t('about.highlights.backendDesc')}</p>
                 </div>
                 <div className="diferencial-card">
-                  <h3>APIs Escaláveis</h3>
-                  <p>Desenvolvimento de APIs REST com foco em performance, integração entre sistemas e manutenção de longo prazo.</p>
+                  <h3>{t('about.highlights.api')}</h3>
+                  <p>{t('about.highlights.apiDesc')}</p>
                 </div>
                 <div className="diferencial-card">
-                  <h3>Sistemas Empresariais</h3>
-                  <p>Experiência em projetos reais com entrega ponta a ponta, do planejamento ao deploy em ambiente de produção.</p>
+                  <h3>{t('about.highlights.enterprise')}</h3>
+                  <p>{t('about.highlights.enterpriseDesc')}</p>
                 </div>
               </div>
             </section>
@@ -160,7 +168,7 @@ export default function Sobre() {
             {/* EXPERIÊNCIA */}
             <section id="experience" className="about-content-section reveal-on-scroll">
               <h2 className="section-title">
-                <Briefcase size={24} />
+                <FiBriefcase size={24} />
                 Experiência Profissional
               </h2>
               <div className="experience-timeline">
@@ -186,13 +194,13 @@ export default function Sobre() {
             {/* FORMAÇÕES */}
             <section id="education" className="about-content-section reveal-on-scroll">
               <h2 className="section-title">
-                <GraduationCap size={24} />
+                <FiBookOpen size={24} />
                 Formações
               </h2>
               <div className="education-list">
                 {education.map((edu) => (
                   <div className="education-item-row" key={edu.id}>
-                    <div className="edu-icon"><GraduationCap size={20} /></div>
+                    <div className="edu-icon"><FiBookOpen size={20} /></div>
                     <div className="edu-info">
                       <h3>{edu.course}</h3>
                       <p>{edu.institution} — {edu.period}</p>
@@ -205,7 +213,7 @@ export default function Sobre() {
             {/* EXPERTISE TÉCNICA */}
             <section id="expertise" className="about-content-section reveal-on-scroll">
               <h2 className="section-title">
-                <Code2 size={24} />
+                <FiCode size={24} />
                 Expertise Técnica
               </h2>
               <div className="expertise-grid">
@@ -228,7 +236,7 @@ export default function Sobre() {
             {/* GITHUB */}
             <section id="github" className="about-content-section reveal-on-scroll">
               <h2 className="section-title">
-                <Github size={24} />
+                <FiGithub size={24} />
                 GitHub Stats
               </h2>
               {!githubStatsError ? (
@@ -254,7 +262,7 @@ export default function Sobre() {
                 <div className="github-fallback-card">
                   <p>Confira minhas atividades diretamente no meu perfil:</p>
                   <Button href="https://github.com/Victorkaue333" variant="outline" external>
-                    <Github size={18} />
+                    <FiGithub size={18} />
                     Ver GitHub
                   </Button>
                 </div>
@@ -264,7 +272,7 @@ export default function Sobre() {
             <div className="view-more-action">
               <Button href="/projetos" variant="primary">
                 Ver meus projetos
-                <ChevronRight size={18} />
+                <FiChevronRight size={18} />
               </Button>
             </div>
 

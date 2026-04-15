@@ -35,13 +35,33 @@ const resources = {
           enterpriseDesc: "Experience in real projects with end-to-end delivery, from planning to deployment in a production environment."
         }
       },
+      projects: {
+        title: "My Projects",
+        subtitle: "Personal and professional projects developed from scratch to deployment.",
+        categories: {
+          all: "All",
+          personal: "Personal",
+          real: "Professional"
+        },
+        noFound: "No projects found in this category."
+      },
+      certs: {
+        title: "Certifications",
+        subtitle: "Technical development and continuous improvement."
+      },
+      expertise: {
+        title: "Technical Expertise",
+        subtitle: "My technical stack and competencies."
+      },
       common: {
         viewProjects: "View my projects",
         viewAll: "View all",
         send: "Send",
         email: "Email",
-        location: "Location"
+        location: "Location",
+        at: "at"
       }
+
     }
   },
   pt: {
@@ -76,13 +96,33 @@ const resources = {
           enterpriseDesc: "Experiência em projetos reais com entrega ponta a ponta, do planejamento ao deploy em ambiente de produção."
         }
       },
+      projects: {
+        title: "Meus Projetos",
+        subtitle: "Projetos pessoais e profissionais desenvolvidos do zero ao deploy.",
+        categories: {
+          all: "Todos",
+          personal: "Pessoais",
+          real: "Profissionais"
+        },
+        noFound: "Nenhum projeto encontrado nessa categoria."
+      },
+      certs: {
+        title: "Certificações",
+        subtitle: "Aprimoramento técnico e aprendizado contínuo."
+      },
+      expertise: {
+        title: "Expertise Técnica",
+        subtitle: "Minha stack técnica e competências."
+      },
       common: {
         viewProjects: "Ver meus projetos",
         viewAll: "Ver todos",
         send: "Enviar",
         email: "E-mail",
-        location: "Localização"
+        location: "Localização",
+        at: "em"
       }
+
     }
   }
 };

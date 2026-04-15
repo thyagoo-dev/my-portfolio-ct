@@ -1,4 +1,4 @@
-import { ChevronUp } from 'lucide-react';
+import { FiChevronUp } from 'react-icons/fi';
 import { useScrollPosition } from '../../../hooks/useScrollPosition';
 
 export function BackToTop() {
@@ -36,7 +36,7 @@ export function BackToTop() {
         pointerEvents: visible ? 'auto' : 'none',
       }}
     >
-      <ChevronUp size={22} />
+      <FiChevronUp size={22} />
     </button>
   );
 }
