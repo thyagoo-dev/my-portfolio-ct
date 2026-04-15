@@ -408,13 +408,19 @@
     font-size: 0.88rem;
 }
 
-/* Expertise */
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
 .expertise-box {
-    margin-bottom: 1.5rem;
     background: rgba(255, 255, 255, 0.02);
     padding: 1.5rem;
     border-radius: var(--radius-lg);
     border: 1px solid var(--border-subtle);
+    height: 100%;
 }
 
 .expertise-title {

@@ -129,7 +129,7 @@ export default function Home() {
 
           <div className="services-grid">
             {services.map((service, i) => (
-              <Reveal key={service.id} delay={i * 0.2}>
+              <Reveal key={service.id} delay={i * 0.2} width="100%" height="100%">
                 <div className="service-pro-card">
                   <div className="service-icon-box">{service.icon}</div>
                   <h3 className="service-title">{service.title}</h3>
