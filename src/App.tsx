@@ -4,6 +4,7 @@ import { Navbar } from './components/Layout/Navbar/Navbar';
 import { Footer } from './components/Layout/Footer/Footer';
 import { BackToTop } from './components/Layout/BackToTop/BackToTop';
 import { Preloader } from './components/Layout/Preloader/Preloader';
+import ScrollToTop from './components/Layout/ScrollToTop/ScrollToTop';
 import './App.css';
 
 const Home = lazy(() => import('./pages/Home/Home'));
@@ -38,6 +39,7 @@ function PageLoader() {
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Preloader />
       <Navbar />
       <Suspense fallback={<PageLoader />}>
