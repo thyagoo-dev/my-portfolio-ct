@@ -56,10 +56,10 @@ O projeto está hospedado no Vercel, garantindo alta performance e disponibilida
 
 ### UI/UX e Experiência:
 
-- React Icons
-- Framer Motion
-- i18next (PT/EN)
-- Design tokens customizados (tema dark premium)
+- React Icons;
+- Framer Motion;
+- i18next (PT/EN);
+- Design tokens customizados (tema dark premium);
 
 ---
 
