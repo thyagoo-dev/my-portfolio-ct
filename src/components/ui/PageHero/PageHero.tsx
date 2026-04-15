@@ -10,7 +10,7 @@ interface PageHeroProps {
 
 export function PageHero({ titleMain, titleAccent, subtitle, icon }: PageHeroProps) {
   return (
-    <header className="page-hero-header reveal-on-scroll">
+    <header className="page-hero-header">
       <div className="page-hero-title-wrap">
         {icon ? <span className="page-hero-icon">{icon}</span> : null}
         <h1 className="page-hero-title">

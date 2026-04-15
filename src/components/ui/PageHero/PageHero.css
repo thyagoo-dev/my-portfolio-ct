@@ -30,6 +30,7 @@
     line-height: 1.05;
     gap: 0.25rem;
     margin: 0;
+    max-width: 100%;
 }
 
 .page-hero-main {
@@ -37,6 +38,8 @@
     font-size: clamp(2rem, 4.8vw, 3.6rem);
     font-weight: 800;
     letter-spacing: -0.03em;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .page-hero-accent {
@@ -45,6 +48,8 @@
     font-weight: 800;
     letter-spacing: -0.03em;
     text-shadow: 0 0 26px rgba(255, 122, 0, 0.24);
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .page-hero-subtitle {
@@ -63,5 +68,32 @@
     .page-hero-icon {
         width: 42px;
         height: 42px;
+    }
+
+    .page-hero-title {
+        width: min(100%, 12ch);
+        margin-inline: auto;
+        line-height: 1.08;
+    }
+
+    .page-hero-main,
+    .page-hero-accent {
+        font-size: clamp(1.75rem, 9.2vw, 2.45rem);
+    }
+
+    .page-hero-subtitle {
+        max-width: 30ch;
+        line-height: 1.55;
+    }
+}
+
+@media (max-width: 390px) {
+    .page-hero-title {
+        width: min(100%, 11ch);
+    }
+
+    .page-hero-main,
+    .page-hero-accent {
+        font-size: clamp(1.6rem, 8.8vw, 2.2rem);
     }
 }
