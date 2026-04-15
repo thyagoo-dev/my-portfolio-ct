@@ -31,7 +31,7 @@ Portfólio profissional construído para demonstrar capacidade tecnica em **dese
 
 ## 🎯 Deploy:
 O projeto está hospedado no Vercel, garantindo alta performance e disponibilidade global. Acesse o portfólio completo em:
-[https://portifolio-victorkaue.vercel.app/](https://portifolio-victorkaue.vercel.app/)
+(https://portifolio-victorkaue.vercel.app/)
 
 ---
 
