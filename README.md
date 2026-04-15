@@ -54,7 +54,8 @@ O projeto está hospedado no Vercel, garantindo alta performance e disponibilida
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="28" alt="Git" />
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="28" alt="GitHub" />
 
-### UI/UX e Experiencia
+### UI/UX e Experiencia:
+
 - React Icons
 - Framer Motion
 - i18next (PT/EN)
