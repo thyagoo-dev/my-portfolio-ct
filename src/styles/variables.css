@@ -38,10 +38,15 @@
     --success-color: var(--color-success-500);
 
     /* ─── Gradientes ─── */
-    --gradient-primary: linear-gradient(135deg, var(--color-primary-500) 0%, var(--color-primary-600) 100%);
+    --gradient-primary: linear-gradient(135deg, #ff7a00 0%, #ff9a3c 100%);
+    --gradient-orange-soft: rgba(255, 122, 0, 0.08);
     --gradient-secondary: linear-gradient(135deg, var(--color-neutral-600) 0%, #666666 100%);
     --gradient-surface: linear-gradient(145deg, #0f0f0f, #050505);
     --gradient-glow: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 122, 0, 0.08), transparent 40%);
+    --glass-bg: rgba(10, 10, 10, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-blur: blur(12px);
+
 
     /* ─── Sombras ─── */
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
