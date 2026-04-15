@@ -1,25 +1,25 @@
 ﻿import { useEffect, useState } from 'react';
-import {
-  FiBriefcase,
-  FiBookOpen,
-  FiCode,
-  FiMapPin,
-  FiGithub,
-  FiLinkedin,
-  FiMail,
-  FiCalendar,
-  FiChevronRight,
-  FiTarget,
-  FiTool
-} from 'react-icons/fi';
 import { useTranslation } from 'react-i18next';
-import { experiences } from '../../data/experiences';
+import {
+    FiBookOpen,
+    FiBriefcase,
+    FiCalendar,
+    FiChevronRight,
+    FiCode,
+    FiGithub,
+    FiLinkedin,
+    FiMail,
+    FiMapPin,
+    FiTarget,
+    FiTool
+} from 'react-icons/fi';
+import { Button } from '../../components/ui/Button/Button';
 import { education } from '../../data/education';
+import { experiences } from '../../data/experiences';
 import { expertise } from '../../data/expertise';
 import { socialLinks } from '../../data/social';
-import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { useLanguage } from '../../hooks/useLanguage';
-import { Button } from '../../components/ui/Button/Button';
+import { useScrollReveal } from '../../hooks/useScrollReveal';
 import './Sobre.css';
 
 export default function Sobre() {
@@ -30,7 +30,7 @@ export default function Sobre() {
   useScrollReveal();
 
   useEffect(() => {
-    document.title = 'Sobre - Victor Kaue';
+    document.title = 'Sobre - Victor Kauê';
   }, []);
 
   const menuItems = [
@@ -65,10 +65,10 @@ export default function Sobre() {
               <div className="profile-card reveal-on-scroll">
                 <div className="profile-image-container">
                   <div className="profile-glow" aria-hidden="true" />
-                  <img src="/images/eu/victor.webp" alt="Victor Kaue" className="profile-photo" />
+                  <img src="/images/eu/victor.webp" alt="Victor Kauê" className="profile-photo" />
                 </div>
 
-                <h1 className="sidebar-name">Victor Kaue</h1>
+                <h1 className="sidebar-name">Victor Kauê</h1>
                 <h2 className="sidebar-role">Desenvolvedor Full Stack</h2>
 
                 <div className="sidebar-pills">
@@ -118,7 +118,7 @@ export default function Sobre() {
                 Agendar uma chamada
                 <FiChevronRight size={16} />
               </a>
-              <h2 className="main-title">Victor Kaue</h2>
+              <h2 className="main-title">Victor Kauê</h2>
               <h3 className="main-subtitle">Desenvolvedor Full Stack</h3>
 
               <div className="socials-list">

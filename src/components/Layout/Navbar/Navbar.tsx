@@ -1,18 +1,18 @@
-import { NavLink, Link } from 'react-router-dom';
-import {
-  FiDownload,
-  FiGlobe,
-  FiHome,
-  FiUser,
-  FiBriefcase,
-  FiLayers,
-  FiAward,
-  FiMail,
-} from 'react-icons/fi';
 import { useTranslation } from 'react-i18next';
-import { useScrollPosition } from '../../../hooks/useScrollPosition';
+import {
+    FiAward,
+    FiBriefcase,
+    FiDownload,
+    FiGlobe,
+    FiHome,
+    FiLayers,
+    FiMail,
+    FiUser,
+} from 'react-icons/fi';
+import { Link, NavLink } from 'react-router-dom';
 import { navLinks } from '../../../data/social';
 import { useLanguage } from '../../../hooks/useLanguage';
+import { useScrollPosition } from '../../../hooks/useScrollPosition';
 import './Navbar.css';
 
 const navIconByPath = {
@@ -41,9 +41,9 @@ export function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`} id="main-navbar" aria-label="Navegação principal">
       <div className="navbar-container">
-        <Link to="/" className="navbar-logo" aria-label="Victor Kaue - Página inicial">
+        <Link to="/" className="navbar-logo" aria-label="Victor Kauê - Página inicial">
           <span className="logo-white">Victor</span>
-          <span className="logo-orange"> Kaue</span>
+          <span className="logo-orange"> Kauê</span>
         </Link>
 
         <div className="nav-menu-wrapper">

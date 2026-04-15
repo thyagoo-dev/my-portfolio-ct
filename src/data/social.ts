@@ -12,7 +12,7 @@ export const socialLinks: SocialLink[] = [
     name: 'LinkedIn',
     url: 'https://www.linkedin.com/in/victor-kaue-419926364/',
     icon: 'linkedin',
-    detail: 'Victor Kaue',
+    detail: 'Victor Kauê',
     iconType: 'react',
   },
   {

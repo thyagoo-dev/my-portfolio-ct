@@ -1,9 +1,9 @@
-﻿import { useState, useEffect } from 'react';
-import { FiAward, FiFilter, FiExternalLink, FiRotateCcw } from 'react-icons/fi';
-import { useScrollReveal } from '../../hooks/useScrollReveal';
-import { certificates, certificateCategories } from '../../data/certificates';
+﻿import { useEffect, useState } from 'react';
+import { FiAward, FiExternalLink, FiFilter, FiRotateCcw } from 'react-icons/fi';
 import { PageHero } from '../../components/ui/PageHero/PageHero';
 import { Reveal } from '../../components/ui/Reveal/Reveal';
+import { certificateCategories, certificates } from '../../data/certificates';
+import { useScrollReveal } from '../../hooks/useScrollReveal';
 import './Certificados.css';
 
 export default function Certificados() {
@@ -11,7 +11,7 @@ export default function Certificados() {
   useScrollReveal();
 
   useEffect(() => {
-    document.title = 'Certificados - Victor Kaue';
+    document.title = 'Certificados - Victor Kauê';
   }, []);
 
   const filtered = activeCategory === 'todos'

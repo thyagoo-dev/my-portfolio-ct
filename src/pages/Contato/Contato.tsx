@@ -1,6 +1,6 @@
-﻿import { useState, useEffect } from 'react';
-import { FiSend, FiUser, FiMail, FiFileText, FiMessageSquare, FiLinkedin, FiGithub } from 'react-icons/fi';
+﻿import { useEffect, useState } from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
+import { FiFileText, FiGithub, FiLinkedin, FiMail, FiMessageSquare, FiSend, FiUser } from 'react-icons/fi';
 import { Button } from '../../components/ui/Button/Button';
 import { PageHero } from '../../components/ui/PageHero/PageHero';
 import { socialLinks } from '../../data/social';
@@ -25,7 +25,7 @@ export default function Contato() {
   const [sent, setSent] = useState(false);
 
   useEffect(() => {
-    document.title = 'Contato - Victor Kaue';
+    document.title = 'Contato - Victor Kauê';
   }, []);
 
   const filledFields = [form.nome, form.email, form.assunto, form.mensagem].filter(Boolean).length;

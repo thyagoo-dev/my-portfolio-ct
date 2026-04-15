@@ -1,8 +1,8 @@
-﻿import { Link } from 'react-router-dom';
-import { FiMail, FiLinkedin, FiGithub } from 'react-icons/fi';
+﻿import { useTranslation } from 'react-i18next';
 import { FaWhatsapp } from 'react-icons/fa';
-import { useTranslation } from 'react-i18next';
-import { navLinks, socialLinks, footerTech } from '../../../data/social';
+import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
+import { footerTech, navLinks, socialLinks } from '../../../data/social';
 import './Footer.css';
 
 export function Footer() {
@@ -32,7 +32,7 @@ export function Footer() {
           <div className="footer-brand">
             <Link to="/" className="logo">
               <span>Victor</span>
-              <span>Kaue</span>
+              <span>Kauê</span>
             </Link>
             <p>
               Desenvolvedor backend/full-stack com foco em sistemas web escalaveis, Python e Django.
@@ -82,7 +82,7 @@ export function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>© {year} Victor Kaue - Todos os direitos reservados.</p>
+          <p>© {year} Victor Kauê - Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

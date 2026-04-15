@@ -1,19 +1,19 @@
-﻿import { useParams, Link } from 'react-router-dom';
-import { useEffect } from 'react';
+﻿import { useEffect } from 'react';
 import {
-  FiArrowLeft,
-  FiExternalLink,
-  FiGithub,
-  FiTarget,
-  FiZap,
-  FiCheckCircle,
-  FiDatabase,
-  FiCpu,
-  FiLayout,
-  FiArrowRight,
+    FiArrowLeft,
+    FiArrowRight,
+    FiCheckCircle,
+    FiCpu,
+    FiDatabase,
+    FiExternalLink,
+    FiGithub,
+    FiLayout,
+    FiTarget,
+    FiZap,
 } from 'react-icons/fi';
-import { projects } from '../../data/projects';
+import { Link, useParams } from 'react-router-dom';
 import { Button } from '../../components/ui/Button/Button';
+import { projects } from '../../data/projects';
 import './ProjetoDetalhe.css';
 
 export default function ProjetoDetalhe() {
@@ -21,7 +21,7 @@ export default function ProjetoDetalhe() {
   const project = projects.find((p) => p.id === id || p.slug === id);
 
   useEffect(() => {
-    document.title = project ? `${project.title} - Victor Kaue` : 'Projeto nao encontrado';
+    document.title = project ? `${project.title} - Victor Kauê` : 'Projeto nao encontrado';
     window.scrollTo(0, 0);
   }, [project]);
 

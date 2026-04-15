@@ -1,5 +1,5 @@
 ﻿import { useEffect } from 'react';
-import { FiDatabase, FiCpu, FiLayout, FiCheckCircle, FiArrowRight } from 'react-icons/fi';
+import { FiArrowRight, FiCheckCircle, FiCpu, FiDatabase, FiLayout } from 'react-icons/fi';
 import { Button } from '../../components/ui/Button/Button';
 import { PageHero } from '../../components/ui/PageHero/PageHero';
 import { Reveal } from '../../components/ui/Reveal/Reveal';
@@ -7,7 +7,7 @@ import './Servicos.css';
 
 export default function Servicos() {
   useEffect(() => {
-    document.title = 'Servicos - Victor Kaue';
+    document.title = 'Servicos - Victor Kauê';
   }, []);
 
   return (

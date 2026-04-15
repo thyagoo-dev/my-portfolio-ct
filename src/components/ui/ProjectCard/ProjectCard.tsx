@@ -1,22 +1,22 @@
-﻿import { Link } from 'react-router-dom';
-import {
-  FiGithub,
-  FiExternalLink,
-  FiChevronRight,
-  FiCpu,
-  FiZap,
-  FiSmartphone,
-  FiCloud,
-  FiSearch,
-  FiCalendar,
-  FiPackage,
-  FiLayout,
-  FiCode,
-  FiTrendingUp,
-  FiGlobe,
-  FiLayers,
-  FiBarChart2,
+﻿import {
+    FiBarChart2,
+    FiCalendar,
+    FiChevronRight,
+    FiCloud,
+    FiCode,
+    FiCpu,
+    FiExternalLink,
+    FiGithub,
+    FiGlobe,
+    FiLayers,
+    FiLayout,
+    FiPackage,
+    FiSearch,
+    FiSmartphone,
+    FiTrendingUp,
+    FiZap,
 } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 import type { Project } from '../../../types';
 import './ProjectCard.css';
 
@@ -120,8 +120,8 @@ export function ProjectCard({ project, withReveal = true }: ProjectCardProps) {
           </div>
 
           <div className="project-author">
-            <img src="/images/eu/victor.webp" alt="Victor Kaue" className="author-avatar" />
-            <span className="author-name">Victor Kaue</span>
+            <img src="/images/eu/victor.webp" alt="Victor Kauê" className="author-avatar" />
+            <span className="author-name">Victor Kauê</span>
           </div>
 
           <p className="project-desc">{projectDescription}</p>
