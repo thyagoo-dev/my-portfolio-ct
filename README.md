@@ -74,9 +74,7 @@ O projeto está hospedado no Vercel, garantindo alta performance e disponibilida
 
 ---
 
-## 🖼️ Galeria (adicione suas fotos aqui)
-
-> Crie a pasta `public/images/readme/` e adicione os arquivos com estes nomes para aparecer automaticamente no README.
+## 🖼️ Galeria:
 
 ### 1) Home
 ![Home - Hero](./public/images/readme/home-hero.png)
