@@ -1,98 +1,134 @@
-# 🚀 Victor Kauê — Portfolio Pro Max
+﻿# Victor Kaue | Portfolio Full Stack
 
-> Portfólio de alta performance com estética **Cyber-Editorial**, desenvolvido para destacar competências em engenharia de software e design de interfaces premium.
+Portfolio profissional construído para demonstrar capacidade tecnica em **desenvolvimento web full stack**, com foco em **backend (Python/Django)**, UX/UI premium dark e experiencia de navegacao fluida.
 
-![React 19](https://img.shields.io/badge/React_19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![Tailwind CSS v4](https://img.shields.io/badge/Tailwind_v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-
----
-
-## 💎 Visão Geral (The Pro Max Experience)
-
-Este projeto não é apenas um site pessoal, mas uma demonstração técnica de arquitetura moderna. Migrado de uma estrutura estática para um ecossistema **React 19 + TypeScript**, o portfólio foca em:
-
-- **Performance Extrema**: Build ultrarrapido via Vite.
-- **Estética Editorial**: Tipografia pesada (`Syne`), grid brutalista e glassmorphism refinado.
-- **Experiência Fluida**: Micro-interações baseadas em scroll e transições de estado inteligentes.
+[![React](https://img.shields.io/badge/React-19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-6.x-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-Animations-black?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
+[![i18next](https://img.shields.io/badge/i18next-Localization-26A69A?style=for-the-badge)](https://www.i18next.com/)
 
 ---
 
-## ✨ Funcionalidades Core
-
-### 1. Morphing Navbar
-Uma navegação inteligente que transiciona de largura total (intro) para um formato de **Pílula Flutuante** ao rolar a página, utilizando curvas de transição `cubic-bezier` para um feedback orgânico.
-
-### 2. ColorBends Dynamic Background
-Um sistema de fundo de baixa latência que utiliza **fractal noise SVG** e gradientes radiais animados, criando profundidade visual sem o overhead de bibliotecas 3D pesadas.
-
-### 3. Responsive Snap Carousel
-O catálogo de projetos utiliza um sistema de **Snap Alignment** nativo para mobile, garantindo que a navegação por gestos seja fluida e que os cards estejam sempre perfeitamente centrados.
+## Resumo para Recrutadores
+- Projeto autoral com arquitetura front-end moderna e componentes reutilizaveis.
+- Interface premium responsiva (mobile, tablet e desktop) com foco em legibilidade e conversao.
+- Sistema de idiomas funcional (`PT/EN`) com persistencia local.
+- Navegacao com React Router, scroll management e UX refinada em paginas de projetos e certificados.
+- Codigo em TypeScript com organizacao por camadas (`components`, `pages`, `hooks`, `data`, `styles`).
 
 ---
 
-## 🛠️ Stack Tecnológica
+## Demo e Contato
+- **Repositorio**: `https://github.com/Victorkaue333/Portifolio-VictorKaue`
+- **LinkedIn**: `https://www.linkedin.com/in/victor-kaue-419926364/`
+- **Email**: `kaue.alves.pg@gmail.com`
+- **WhatsApp**: `+55 87 98167-7005`
 
-| Camada | Tecnologia | Benefício |
-| --- | --- | --- |
-| **Núcleo** | React 19 | Hooks modernos e renderização otimizada. |
-| **Tipagem** | TypeScript | Robustez, Intellisense e segurança no código. |
-| **Estilização** | Tailwind CSS v4 | CSS-first config, utilitários rápidos e variáveis de tema nativas. |
-| **Animações** | Framer Motion | Revelações on-scroll e orquestração de micro-animações. |
-| **Ícones** | Lucide / Bootstrap | Iconografia consistente e semântica. |
+> Se quiser, posso adicionar aqui tambem o link do deploy (Vercel/Netlify).
 
 ---
 
-## 🏗️ Estrutura do Projeto
+## Stack Tecnologica (com icones)
 
-```text
-meu_portifolio/
-├── src/
-│   ├── components/
-│   │   ├── layout/      # Navbar, Footer, Preloader
-│   │   └── ui/          # Elementos reutilizáveis (Botões, Cards)
-│   ├── data/            # JSONs de conteúdo (Projetos, Formação)
-│   ├── hooks/           # Lógica de Scroll e Interação
-│   ├── pages/           # Home, Sobre, Projetos, etc.
-│   └── styles/          # Tokens, Variáveis e CSS Global
-├── public/              # Assets estáticos (Imagens, PDFs)
-├── vite.config.ts       # Configuração do Pipeline
-└── tailwind.config.js   # (Integrado via @tailwindcss/vite)
+### Core
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="28" alt="React" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="28" alt="TypeScript" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" width="28" alt="Vite" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="28" alt="JavaScript" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="28" alt="CSS" />
+
+### Backend e Dados (competencias exibidas no portfolio)
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="28" alt="Python" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" width="28" alt="Django" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="28" alt="PostgreSQL" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="28" alt="MySQL" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="28" alt="Docker" />
+
+### UI/UX e Experiencia
+- React Icons
+- Framer Motion
+- i18next (PT/EN)
+- Design tokens customizados (tema dark premium)
+
+---
+
+## Funcionalidades em Destaque
+- Navbar premium desktop + bottom navigation mobile (glassmorphism).
+- Paginas com hero visual por nicho (Projetos, Servicos, Certificados, Contato).
+- Filtros interativos em projetos e certificados.
+- Cards com hover states, foco por teclado e microinteracoes.
+- Botao de voltar ao topo e controle de scroll por rota.
+- Estrutura preparada para crescer com novas secoes e cases.
+
+---
+
+## Galeria (adicione suas fotos aqui)
+
+> Crie a pasta `public/images/readme/` e adicione os arquivos com estes nomes para aparecer automaticamente no README.
+
+### 1) Home
+![Home - Hero](./public/images/readme/home-hero.png)
+
+### 2) Sobre
+![Sobre - Perfil e Timeline](./public/images/readme/sobre-perfil.png)
+
+### 3) Projetos
+![Projetos - Grid e filtros](./public/images/readme/projetos-grid.png)
+
+### 4) Servicos
+![Servicos - Cards e especialidades](./public/images/readme/servicos-cards.png)
+
+### 5) Certificados
+![Certificados - Filtros e cards](./public/images/readme/certificados-grid.png)
+
+### 6) Contato
+![Contato - Formulario e canais](./public/images/readme/contato-form.png)
+
+### 7) Mobile
+![Mobile - Bottom navbar](./public/images/readme/mobile-nav.png)
+
+---
+
+## Estrutura do Projeto
+```txt
+src/
+  components/
+    Layout/        # Navbar, Footer, ScrollToTop, BackToTop
+    ui/            # Button, ProjectCard, PageHero, Reveal
+  data/            # Projetos, certificados, social, expertise
+  hooks/           # Idioma, scroll, reveal
+  pages/           # Home, Sobre, Projetos, Servicos, Certificados, Contato
+  styles/          # Variables, reset, global, animations
 ```
 
 ---
 
-## 🚀 Como Rodar Localmente
-
-Certifique-se de ter o [Node.js](https://nodejs.org/) instalado.
-
+## Como Rodar Localmente
 ```bash
-# 1. Clone o repositório
 git clone https://github.com/Victorkaue333/Portifolio-VictorKaue.git
-
-# 2. Entre na pasta
 cd Portifolio-VictorKaue
-
-# 3. Instale as dependências
 npm install
-
-# 4. Inicie o servidor de desenvolvimento
 npm run dev
 ```
 
-O projeto estará disponível em `http://localhost:3000`.
+Acesse: `http://localhost:3000`
+
+### Scripts
+- `npm run dev` - ambiente de desenvolvimento
+- `npm run build` - build de producao
+- `npm run preview` - preview do build
 
 ---
 
-## 🎨 Identidade Visual
-
-- **Primary**: Midnight Indigo (`#0B1220`)
-- **Accent**: Electric Amber (`#F59E0B`)
-- **Surface**: Glassmorphism (Blur 24px)
-- **Typo Primary**: Syne (Bold/ExtraBold)
-- **Typo Secondary**: DM Sans (Regular/Medium)
+## Diferenciais para Processo Seletivo
+- Clareza de arquitetura e organizacao de codigo.
+- Qualidade visual com consistencia de design system.
+- Experiencia de usuario pensada para recrutador e cliente.
+- Facilidade de manutencao e evolucao do projeto.
 
 ---
 
-👨‍💻 Desenvolvido com foco em excelência técnica por **Victor Kauê**.
+## Autor
+**Victor Kaue**  
+Desenvolvedor Full Stack focado em backend, APIs e sistemas web escalaveis.
