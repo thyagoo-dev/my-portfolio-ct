@@ -107,6 +107,8 @@ Acesse: `http://localhost:3000`
 
 ### Scripts:
 
+Aqui estão os scripts disponíveis para desenvolvimento e produção:
+
 - `npm run dev` - ambiente de desenvolvimento
 - `npm run build` - build de producao
 - `npm run preview` - preview do build
