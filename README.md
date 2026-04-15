@@ -37,7 +37,7 @@ O projeto está hospedado no Vercel, garantindo alta performance e disponibilida
 
 ---
 
-## 🧰 Stack Tecnologica:
+## 🧰 Stack Tecnológica:
 
 ### Core:
 
@@ -75,15 +75,19 @@ O projeto está hospedado no Vercel, garantindo alta performance e disponibilida
 
 A estrutura do projeto é organizada para facilitar a manutenção e escalabilidade, seguindo boas práticas de desenvolvimento front-end. Os arquivos estão agrupados por funcionalidade e tipo, garantindo uma navegação intuitiva pelo código.
 
-```txt
-src/
-  components/
-    Layout/        # Navbar, Footer, ScrollToTop, BackToTop
-    ui/            # Button, ProjectCard, PageHero, Reveal
-  data/            # Projetos, certificados, social, expertise
-  hooks/           # Idioma, scroll, reveal
-  pages/           # Home, Sobre, Projetos, Servicos, Certificados, Contato
-  styles/          # Variables, reset, global, animations
+```src/
+├── components/          # Componentes reutilizáveis (UI, layout, etc.)
+├── pages/               # Páginas principais (Home, Projetos, Certificados, etc.)
+├── hooks/               # Custom hooks (ex: useScrollReveal)
+├── data/                # Dados estáticos (projetos, certificados, etc.)
+├── styles/              # Estilos globais e variáveis de design
+├── App.tsx              # Componente raiz com rotas
+├── main.tsx             # Ponto de entrada do React
+├── index.html           # Template HTML
+├── README.md            # Documentação do projeto
+├── package.json         # Configurações e dependências do projeto
+├── tsconfig.json        # Configurações do TypeScript
+└── vite.config.ts       # Configurações do Vite
 ```
 
 ---
