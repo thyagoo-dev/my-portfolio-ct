@@ -322,89 +322,29 @@
     z-index: 5;
 }
 
-.project-pro-card {
-    flex: 0 0 400px; /* Fixed width for carousel */
+/* Carousel Items Width Fix */
+.projects-pro-list .reveal-on-scroll {
+    flex: 0 0 400px; /* Standardize card width in carousel */
     display: flex;
     flex-direction: column;
-    background: var(--gradient-surface);
-    border: 1px solid var(--border-subtle);
-    border-radius: 2.5rem; /* Ultra rounded as requested */
-    overflow: hidden;
-    height: 100%;
-    transition: all var(--transition-normal);
-    scroll-snap-align: center; /* Better centering on mobile */
 }
 
-.project-pro-card:hover {
-    border-color: rgba(245, 158, 11, 0.4);
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: var(--shadow-glow);
-}
-
-.project-pro-card:nth-child(even) .p-image-box { order: unset; }
-
-.p-image-box {
-    width: 100%;
-    aspect-ratio: 16 / 10;
-    overflow: hidden;
-    border-bottom: 1px solid var(--border-subtle);
-}
-
-.p-image-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform var(--transition-slow);
-}
-
-.p-content-box {
-    padding: 1.5rem;
+.projects-pro-list .reveal-on-scroll > div {
     display: flex;
     flex-direction: column;
     flex: 1;
 }
 
-.p-category {
-    font-size: 0.65rem;
-    padding: 0.2rem 0.6rem;
-    margin-bottom: 0.75rem;
+@media (max-width: 1400px) {
+    .projects-pro-list .reveal-on-scroll {
+        flex: 0 0 350px;
+    }
 }
 
-.p-content-box h3 {
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
-    /* Limit title line */
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-.p-content-box p {
-    font-size: 0.88rem;
-    margin-bottom: 1rem;
-    flex: 1;
-    /* Limit description as discussed with user */
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-.p-tags {
-    margin-bottom: 1.5rem;
-    display: flex; /* Ensure flex for gap */
-    gap: 0.75rem; /* Increased gap */
-    flex-wrap: wrap;
-}
-
-.p-tag {
-    font-size: 0.75rem;
-}
-
-.p-link {
-    font-size: 0.85rem;
-    margin-top: auto;
+@media (max-width: 768px) {
+    .projects-pro-list .reveal-on-scroll {
+        flex: 0 0 calc(100vw - 4rem);
+    }
 }
 
 /* ========== RESPONSIVE ========== */

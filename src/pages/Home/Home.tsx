@@ -18,6 +18,7 @@ import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { Button } from '../../components/ui/Button/Button';
 import { Reveal } from '../../components/ui/Reveal/Reveal';
 import { ColorBends } from '../../components/ui/ColorBends/ColorBends';
+import { ProjectCard } from '../../components/ui/ProjectCard/ProjectCard';
 import './Home.css';
 
 export default function Home() {
@@ -155,23 +156,8 @@ export default function Home() {
           <div className="projects-carousel-container">
             <div className="projects-pro-list">
               {featuredProjects.map((project, i) => (
-                <Reveal key={project.id} delay={i * 0.15}>
-                  <div className="project-pro-card">
-                    <div className="p-image-box">
-                      <img src={project.image} alt={project.title} />
-                    </div>
-                    <div className="p-content-box">
-                      <span className="p-category">{project.category === 'pessoal' ? 'Portfólio' : 'Case Real'}</span>
-                      <h3>{project.title}</h3>
-                      <p>{project.description}</p>
-                      <div className="p-tags">
-                        {project.technologies.slice(0, 3).map(t => <span key={t} className="p-tag">{t}</span>)}
-                      </div>
-                      <Button href={project.detailPath} variant="ghost" className="p-link">
-                        Explorar Arquitetura <ChevronRight size={16} />
-                      </Button>
-                    </div>
-                  </div>
+                <Reveal key={project.id} delay={i * 0.15} width="100%" height="100%">
+                  <ProjectCard project={project} />
                 </Reveal>
               ))}
             </div>
