@@ -5,11 +5,12 @@ import './ProjectCard.css';
 
 interface ProjectCardProps {
   project: Project;
+  withReveal?: boolean;
 }
 
-export function ProjectCard({ project }: ProjectCardProps) {
+export function ProjectCard({ project, withReveal = true }: ProjectCardProps) {
   return (
-    <div className="project-card reveal-on-scroll" id={`project-${project.id}`}>
+    <div className={`project-card ${withReveal ? 'reveal-on-scroll' : ''}`} id={`project-${project.id}`}>
       <Link to={project.detailPath} className="project-card-link">
         <div className="project-image">
           <img src={project.image} alt={project.title} loading="lazy" />

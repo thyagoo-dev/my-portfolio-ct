@@ -156,8 +156,8 @@ export default function Home() {
           <div className="projects-carousel-container">
             <div className="projects-pro-list">
               {featuredProjects.map((project, i) => (
-                <Reveal key={project.id} delay={i * 0.15} width="100%" height="100%">
-                  <ProjectCard project={project} />
+                <Reveal key={project.id} delay={i * 0.15} width="100%" height="100%" className="project-carousel-item">
+                  <ProjectCard project={project} withReveal={false} />
                 </Reveal>
               ))}
             </div>

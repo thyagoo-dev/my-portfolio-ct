@@ -323,27 +323,32 @@
 }
 
 /* Carousel Items Width Fix */
-.projects-pro-list .reveal-on-scroll {
-    flex: 0 0 400px; /* Standardize card width in carousel */
+.project-carousel-item {
+    flex: 0 0 380px; /* Fixed width to prevent squeezing */
     display: flex;
     flex-direction: column;
+    scroll-snap-align: start;
+    min-height: 580px; /* Ensure standardized height */
 }
 
-.projects-pro-list .reveal-on-scroll > div {
+.project-carousel-item > div {
     display: flex;
     flex-direction: column;
     flex: 1;
+    height: 100%;
 }
 
 @media (max-width: 1400px) {
-    .projects-pro-list .reveal-on-scroll {
-        flex: 0 0 350px;
+    .project-carousel-item {
+        flex: 0 0 340px;
+        min-height: 540px;
     }
 }
 
 @media (max-width: 768px) {
-    .projects-pro-list .reveal-on-scroll {
+    .project-carousel-item {
         flex: 0 0 calc(100vw - 4rem);
+        min-height: 500px;
     }
 }
 
