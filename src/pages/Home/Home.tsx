@@ -59,9 +59,11 @@ export default function Home() {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
+              className="hero-title-main"
             >
-              Desenvolvedor Python <br />
-              <span className="accent-text">APIs e sistemas web com Django.</span>
+              <span className="title-white">Desenvolvedor</span>
+              <span className="title-gray">Python</span>
+              <span className="title-orange">APIs & Django</span>
             </motion.h1>
 
             <Reveal delay={0.3}>

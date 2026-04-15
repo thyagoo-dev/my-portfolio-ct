@@ -1,6 +1,6 @@
 /* ========== PROJECT CARD — Redesigned Style (Photo 3 Reference) ========== */
 .project-card {
-    background: #0d121f; /* Deep dark background like the reference */
+    background: #0a0a0a; /* Absolute dark base */
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 1.5rem;
     overflow: hidden;
@@ -14,8 +14,8 @@
 
 .project-card:hover {
     transform: translateY(-8px);
-    border-color: rgba(245, 158, 11, 0.3);
-    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), var(--shadow-glow);
+    border-color: rgba(255, 122, 0, 0.3);
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 0 25px rgba(255, 122, 0, 0.1);
 }
 
 .project-card-link {
@@ -125,7 +125,7 @@
 
 .project-tag-icon-wrapper:hover {
     background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(245, 158, 11, 0.3);
+    border-color: rgba(255, 122, 0, 0.3);
     transform: translateY(-2px);
 }
 
@@ -210,7 +210,7 @@
     gap: 0.5rem;
     font-size: 0.9rem;
     font-weight: 700;
-    color: #00d2ff; /* Accenting link color like reference */
+    color: #ff7a00; /* New Orange Accent */
     text-decoration: none;
     transition: opacity 0.2s ease;
 }

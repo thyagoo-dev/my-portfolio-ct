@@ -34,46 +34,47 @@
     display: inline-flex;
     align-items: center;
     gap: 0.6rem;
-    padding: 0.5rem 1rem;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid var(--border-subtle);
+    padding: 0.5rem 1.2rem;
+    background: rgba(255, 122, 0, 0.05);
+    border: 1px solid rgba(255, 122, 0, 0.2);
     border-radius: var(--radius-full);
     font-size: 0.8rem;
-    font-weight: 600;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    color: var(--color-primary-500);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.hero-title-main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
     margin-bottom: 2rem;
-    color: var(--text-muted-color);
 }
 
-.pulse-dot {
-    width: 8px;
-    height: 8px;
-    background: #10B981;
-    border-radius: 50%;
-    box-shadow: 0 0 8px #10B981;
-    animation: glowPulse 2s infinite;
+.hero-title-main span {
+    display: block;
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    line-height: 1.05;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    font-family: var(--font-secondary);
 }
 
-.hero-content h1 {
-    font-size: clamp(2.5rem, 5.5vw, 3.8rem);
-    margin-bottom: 1.5rem;
-    letter-spacing: -0.04em;
-    line-height: 1.1;
-}
-
-.accent-text {
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    display: inline-block;
+.title-white { color: #ffffff; }
+.title-gray { color: #808080; }
+.title-orange { 
+    color: #ff7a00; 
+    text-shadow: 0 0 30px rgba(255, 122, 0, 0.25);
 }
 
 .hero-description {
-    font-size: 1.25rem;
-    line-height: 1.7;
-    margin-bottom: 3rem;
-    max-width: 55ch;
-    color: var(--text-muted-color);
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 3.5rem;
+    max-width: 50ch;
+    color: #a0a0a0;
 }
 
 .hero-actions {
@@ -88,17 +89,23 @@
 }
 
 .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.75rem;
     color: var(--text-dim-color);
     transition: all var(--transition-fast);
 }
 
-.social-icon.github { color: #f0f0f0; }
-.social-icon.linkedin { color: #0077b5; }
-.social-icon.email { color: #EA4335; }
-
 .social-icon:hover {
+    color: var(--color-primary-500);
+    border-color: rgba(255, 122, 0, 0.4);
+    background: rgba(255, 122, 0, 0.05);
     transform: translateY(-3px);
-    opacity: 0.8;
 }
 
 /* Hero Visual */
@@ -112,9 +119,9 @@
     position: relative;
     width: min(500px, 90vw);
     aspect-ratio: 1;
-    overflow: hidden; /* Ensures the image doesn't bleed out */
+    overflow: hidden;
     border-radius: 50%;
-    border: 1px solid rgba(245, 158, 11, 0.3); /* Move border here */
+    border: 1px solid rgba(255, 122, 0, 0.2);
 }
 
 .hero-image {
@@ -132,7 +139,7 @@
 .photo-ring {
     position: absolute;
     inset: -15px;
-    border: 1px solid rgba(245, 158, 11, 0.2);
+    border: 1px solid rgba(255, 122, 0, 0.15);
     border-radius: 50%;
     z-index: 1;
     animation: rotate 20s linear infinite;
@@ -140,7 +147,7 @@
 
 .photo-ring.inner {
     inset: -30px;
-    border: 1px dashed rgba(245, 158, 11, 0.15);
+    border: 1px dashed rgba(255, 122, 0, 0.1);
     animation: rotate 30s linear reverse infinite;
 }
 
@@ -166,7 +173,7 @@
 
 /* ========== RESULTS STRIP (PRO MAX) ========== */
 .results-strip {
-    background: rgba(11, 18, 32, 0.6);
+    background: #080808; /* Darker near black */
     border-top: 1px solid var(--border-subtle);
     border-bottom: 1px solid var(--border-subtle);
     padding: 2.5rem 0;
@@ -228,10 +235,10 @@
 }
 
 .service-pro-card {
-    background: var(--gradient-surface);
-    border: 1px solid var(--border-subtle);
+    background: #0a0a0a;
+    border: 1px solid rgba(255, 255, 255, 0.05);
     padding: 3rem;
-    border-radius: 2.5rem; /* Matched with projects carousel */
+    border-radius: 2.5rem;
     transition: all var(--transition-normal);
     position: relative;
     overflow: hidden;
@@ -244,21 +251,21 @@
     content: '';
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: radial-gradient(circle at 0% 0%, rgba(245, 158, 11, 0.05) 0%, transparent 50%);
+    background: radial-gradient(circle at 0% 0%, rgba(255, 122, 0, 0.04) 0%, transparent 50%);
     pointer-events: none;
 }
 
 .service-pro-card:hover {
-    border-color: rgba(245, 158, 11, 0.3);
+    border-color: rgba(255, 122, 0, 0.3);
     transform: translateY(-8px);
-    box-shadow: var(--shadow-glow);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
 }
 
 .service-icon-box {
     width: 60px;
     height: 60px;
-    background: rgba(245, 158, 11, 0.08);
-    color: var(--accent-color);
+    background: rgba(255, 122, 0, 0.08);
+    color: #ff7a00;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -280,7 +287,7 @@
 /* ========== PROJECTS (PRO MAX) ========== */
 .home-projects {
     padding: 8rem 0;
-    background: radial-gradient(circle at bottom right, rgba(245, 158, 11, 0.03) 0%, transparent 50%);
+    background: radial-gradient(circle at bottom right, rgba(255, 122, 0, 0.03) 0%, transparent 50%);
 }
 
 .header-top {

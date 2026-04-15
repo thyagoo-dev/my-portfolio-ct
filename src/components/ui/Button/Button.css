@@ -35,14 +35,15 @@
 .btn:hover::before { left: 100%; }
 
 .btn-primary {
-    background: var(--gradient-primary);
+    background: #ff7a00;
     color: #FFFFFF;
-    box-shadow: 0 4px 16px rgba(245, 158, 11, 0.25);
+    box-shadow: 0 4px 16px rgba(255, 122, 0, 0.2);
 }
 
 .btn-primary:hover {
+    background: #e66e00;
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(245, 158, 11, 0.35);
+    box-shadow: 0 8px 24px rgba(255, 122, 0, 0.3);
     color: #FFFFFF;
 }
 

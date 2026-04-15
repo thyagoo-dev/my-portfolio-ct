@@ -22,7 +22,8 @@ export function Navbar() {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`} id="main-navbar">
       <div className="navbar-container">
         <Link to="/" className="navbar-logo" aria-label="Victor Kauê — Página inicial">
-          <span>Victor Kauê</span>
+          <span className="logo-white">Victor</span>
+          <span className="logo-orange"> Kauê</span>
         </Link>
 
         <div className={`nav-menu-wrapper ${menuOpen ? 'mobile-open' : ''}`}>
