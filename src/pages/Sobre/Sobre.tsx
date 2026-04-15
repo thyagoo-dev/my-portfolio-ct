@@ -1,18 +1,6 @@
 ﻿import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import {
-    FiBookOpen,
-    FiBriefcase,
-    FiCalendar,
-    FiChevronRight,
-    FiCode,
-    FiGithub,
-    FiLinkedin,
-    FiMail,
-    FiMapPin,
-    FiTarget,
-    FiTool
-} from 'react-icons/fi';
+import {FiBookOpen,FiBriefcase,FiCalendar,FiChevronRight,FiCode,FiGithub,FiLinkedin,FiMail,FiMapPin,FiTarget,FiTool} from 'react-icons/fi';
 import { Button } from '../../components/ui/Button/Button';
 import { education } from '../../data/education';
 import { experiences } from '../../data/experiences';
