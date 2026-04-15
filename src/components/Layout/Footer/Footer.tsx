@@ -35,8 +35,8 @@ export function Footer() {
               <span>Kauê</span>
             </Link>
             <p>
-              Desenvolvedor backend/full-stack com foco em sistemas web escalaveis, Python e Django.
-              Solucoes pensadas com logica e entregues com consistencia.
+              Desenvolvedor backend/full-stack com foco em sistemas web escaláveis, Python e Django.
+              Soluções pensadas com lógica e entregues com consistência.
             </p>
             <div className="footer-contact-icons">
               {socialLinks.map((s) => (
