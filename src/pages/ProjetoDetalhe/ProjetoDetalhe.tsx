@@ -1,16 +1,5 @@
 ﻿import { useEffect } from 'react';
-import {
-    FiArrowLeft,
-    FiArrowRight,
-    FiCheckCircle,
-    FiCpu,
-    FiDatabase,
-    FiExternalLink,
-    FiGithub,
-    FiLayout,
-    FiTarget,
-    FiZap,
-} from 'react-icons/fi';
+import {FiArrowLeft,FiArrowRight,FiCheckCircle,FiCpu,FiDatabase,FiExternalLink,FiGithub,FiLayout,FiTarget,FiZap,} from 'react-icons/fi';
 import { Link, useParams } from 'react-router-dom';
 import { Button } from '../../components/ui/Button/Button';
 import { projects } from '../../data/projects';
