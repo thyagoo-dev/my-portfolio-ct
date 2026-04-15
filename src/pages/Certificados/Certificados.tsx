@@ -24,7 +24,7 @@ export default function Certificados() {
         <div className="container">
           <PageHero
             titleMain="Certificados &"
-            titleAccent="Evolucao Continua"
+            titleAccent="Evolução Contínua"
             subtitle="Formacao tecnica orientada a pratica, validando competencias em backend, dados, DevOps e desenvolvimento web moderno."
             icon={<FiAward size={22} />}
           />

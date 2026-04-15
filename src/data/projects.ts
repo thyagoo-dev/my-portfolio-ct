@@ -225,7 +225,7 @@ const rawProjects: Project[] = [
     title: 'VK Software',
     shortDescription: 'Web app institucional com design system.',
     detailedDescription:
-      'Plataforma web com identidade visual propria e estrutura escalavel para evolucao de produtos digitais.',
+      'Plataforma web com identidade visual propria e estrutura escalavel para Evolução de produtos digitais.',
     description: 'Web App e plataforma da empresa VK Software com design system proprio.',
     image: '/images/fotos-projetos-reais/vksoftware/1.png',
     detailPath: '/projetos/vksoftware',
