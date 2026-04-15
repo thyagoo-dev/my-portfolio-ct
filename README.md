@@ -1,4 +1,4 @@
-﻿# Victor Kaue | Portfolio Full Stack
+﻿# <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="28" alt="React" /> Victor Kaue | Portfolio Full Stack
 
 Portfolio profissional construído para demonstrar capacidade tecnica em **desenvolvimento web full stack**, com foco em **backend (Python/Django)**, UX/UI premium dark e experiencia de navegacao fluida.
 
@@ -10,7 +10,7 @@ Portfolio profissional construído para demonstrar capacidade tecnica em **desen
 
 ---
 
-## Resumo para Recrutadores
+## 👀 Resumo para Recrutadores
 - Projeto autoral com arquitetura front-end moderna e componentes reutilizaveis.
 - Interface premium responsiva (mobile, tablet e desktop) com foco em legibilidade e conversao.
 - Sistema de idiomas funcional (`PT/EN`) com persistencia local.
@@ -19,17 +19,17 @@ Portfolio profissional construído para demonstrar capacidade tecnica em **desen
 
 ---
 
-## Demo e Contato
-- **Repositorio**: `https://github.com/Victorkaue333/Portifolio-VictorKaue`
-- **LinkedIn**: `https://www.linkedin.com/in/victor-kaue-419926364/`
-- **Email**: `kaue.alves.pg@gmail.com`
-- **WhatsApp**: `+55 87 98167-7005`
+## 📬 Demo e Contato
+[![GitHub](https://img.shields.io/badge/GitHub-Victorkaue333-181717?style=for-the-badge&logo=github)](https://github.com/Victorkaue333/Portifolio-VictorKaue)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Victor%20Kaue-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/victor-kaue-419926364/)
+[![Email](https://img.shields.io/badge/Email-kaue.alves.pg%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:kaue.alves.pg@gmail.com)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-+55%2087%2098167--7005-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/5587981677005)
 
 > Se quiser, posso adicionar aqui tambem o link do deploy (Vercel/Netlify).
 
 ---
 
-## Stack Tecnologica (com icones)
+## 🧰 Stack Tecnologica (com icones)
 
 ### Core
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="28" alt="React" />
@@ -37,6 +37,7 @@ Portfolio profissional construído para demonstrar capacidade tecnica em **desen
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" width="28" alt="Vite" />
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="28" alt="JavaScript" />
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="28" alt="CSS" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="28" alt="HTML5" />
 
 ### Backend e Dados (competencias exibidas no portfolio)
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="28" alt="Python" />
@@ -44,6 +45,8 @@ Portfolio profissional construído para demonstrar capacidade tecnica em **desen
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="28" alt="PostgreSQL" />
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="28" alt="MySQL" />
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="28" alt="Docker" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="28" alt="Git" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="28" alt="GitHub" />
 
 ### UI/UX e Experiencia
 - React Icons
@@ -53,7 +56,7 @@ Portfolio profissional construído para demonstrar capacidade tecnica em **desen
 
 ---
 
-## Funcionalidades em Destaque
+## ✨ Funcionalidades em Destaque
 - Navbar premium desktop + bottom navigation mobile (glassmorphism).
 - Paginas com hero visual por nicho (Projetos, Servicos, Certificados, Contato).
 - Filtros interativos em projetos e certificados.
@@ -63,7 +66,7 @@ Portfolio profissional construído para demonstrar capacidade tecnica em **desen
 
 ---
 
-## Galeria (adicione suas fotos aqui)
+## 🖼️ Galeria (adicione suas fotos aqui)
 
 > Crie a pasta `public/images/readme/` e adicione os arquivos com estes nomes para aparecer automaticamente no README.
 
@@ -90,7 +93,7 @@ Portfolio profissional construído para demonstrar capacidade tecnica em **desen
 
 ---
 
-## Estrutura do Projeto
+## 🗂️ Estrutura do Projeto
 ```txt
 src/
   components/
@@ -104,7 +107,7 @@ src/
 
 ---
 
-## Como Rodar Localmente
+## 🚀 Como Rodar Localmente
 ```bash
 git clone https://github.com/Victorkaue333/Portifolio-VictorKaue.git
 cd Portifolio-VictorKaue
@@ -121,7 +124,7 @@ Acesse: `http://localhost:3000`
 
 ---
 
-## Diferenciais para Processo Seletivo
+## 🎯 Diferenciais para Processo Seletivo
 - Clareza de arquitetura e organizacao de codigo.
 - Qualidade visual com consistencia de design system.
 - Experiencia de usuario pensada para recrutador e cliente.
@@ -129,6 +132,6 @@ Acesse: `http://localhost:3000`
 
 ---
 
-## Autor
+## 👨‍💻 Autor
 **Victor Kaue**  
 Desenvolvedor Full Stack focado em backend, APIs e sistemas web escalaveis.
