@@ -1,16 +1,16 @@
-import { useEffect, useState } from 'react';
-import { 
-  FiBriefcase, 
-  FiBookOpen, 
-  FiCode, 
-  FiAward, 
-  FiMapPin, 
-  FiGithub, 
-  FiLinkedin, 
-  FiMail, 
+﻿import { useEffect, useState } from 'react';
+import {
+  FiBriefcase,
+  FiBookOpen,
+  FiCode,
+  FiMapPin,
+  FiGithub,
+  FiLinkedin,
+  FiMail,
   FiCalendar,
   FiChevronRight,
-  FiTarget
+  FiTarget,
+  FiTool
 } from 'react-icons/fi';
 import { useTranslation } from 'react-i18next';
 import { experiences } from '../../data/experiences';
@@ -18,30 +18,27 @@ import { education } from '../../data/education';
 import { expertise } from '../../data/expertise';
 import { socialLinks } from '../../data/social';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
+import { useLanguage } from '../../hooks/useLanguage';
 import { Button } from '../../components/ui/Button/Button';
 import './Sobre.css';
 
 export default function Sobre() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
+  const { lang, setLanguage } = useLanguage();
   const [activeSection, setActiveSection] = useState('intro');
   const [githubStatsError, setGithubStatsError] = useState(false);
   useScrollReveal();
 
-  const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng);
-  };
-
   useEffect(() => {
-    document.title = 'Sobre — Victor Kauê';
+    document.title = 'Sobre - Victor Kaue';
   }, []);
 
   const menuItems = [
     { id: 'intro', label: t('about.title'), icon: <FiTarget size={16} /> },
     { id: 'role', label: t('about.highlights.title'), icon: <FiBriefcase size={16} /> },
-    { id: 'experience', label: 'Experiência', icon: <FiBriefcase size={16} /> },
-    { id: 'education', label: 'Formação', icon: <FiBookOpen size={16} /> },
-    { id: 'certs', label: 'Certificações', icon: <FiAward size={16} /> },
-    { id: 'expertise', label: 'Expertise Técnica', icon: <FiCode size={16} /> },
+    { id: 'experience', label: 'Experiencia', icon: <FiBriefcase size={16} /> },
+    { id: 'education', label: 'Formacao', icon: <FiBookOpen size={16} /> },
+    { id: 'expertise', label: 'Expertise Tecnica', icon: <FiCode size={16} /> },
     { id: 'github', label: 'GitHub', icon: <FiGithub size={16} /> },
   ];
 
@@ -63,38 +60,38 @@ export default function Sobre() {
     <main className="page-sobre">
       <div className="container">
         <div className="about-layout">
-          
-          {/* ========== SIDEBAR ========== */}
           <aside className="about-sidebar">
             <div className="sidebar-sticky">
               <div className="profile-card reveal-on-scroll">
                 <div className="profile-image-container">
                   <div className="profile-glow" aria-hidden="true" />
-                  <img src="/images/eu/victor.webp" alt="Victor Kauê" className="profile-photo" />
+                  <img src="/images/eu/victor.webp" alt="Victor Kaue" className="profile-photo" />
                 </div>
-                
-                <h1 className="sidebar-name">Victor Kauê</h1>
+
+                <h1 className="sidebar-name">Victor Kaue</h1>
                 <h2 className="sidebar-role">Desenvolvedor Full Stack</h2>
 
                 <div className="sidebar-pills">
                   <div className="sidebar-pill">
                     <FiMapPin size={14} />
-                    <span>Itacuruba, PE — Brasil</span>
+                    <span>Itacuruba, PE - Brasil</span>
                   </div>
                 </div>
 
                 <div className="lang-toggle-container">
-                  <button 
-                    className={`lang-btn ${i18n.language === 'en' ? 'active' : ''}`}
-                    onClick={() => changeLanguage('en')}
+                  <button
+                    className={`lang-btn ${lang === 'en' ? 'active' : ''}`}
+                    onClick={() => setLanguage('en')}
+                    aria-pressed={lang === 'en'}
                   >
                     English
                   </button>
-                  <button 
-                    className={`lang-btn ${i18n.language === 'pt' ? 'active' : ''}`}
-                    onClick={() => changeLanguage('pt')}
+                  <button
+                    className={`lang-btn ${lang === 'pt' ? 'active' : ''}`}
+                    onClick={() => setLanguage('pt')}
+                    aria-pressed={lang === 'pt'}
                   >
-                    Português
+                    Portugues
                   </button>
                 </div>
 
@@ -114,21 +111,18 @@ export default function Sobre() {
             </div>
           </aside>
 
-          {/* ========== MAIN CONTENT ========== */}
           <div className="about-main-content">
-            
-            {/* CALL TO ACTION HEADER */}
             <div className="content-header reveal-on-scroll">
               <a href="https://wa.me/5587981677005" target="_blank" rel="noopener noreferrer" className="header-cta">
                 <FiCalendar size={16} />
                 Agendar uma chamada
                 <FiChevronRight size={16} />
               </a>
-              <h2 className="main-title">Victor Kauê</h2>
+              <h2 className="main-title">Victor Kaue</h2>
               <h3 className="main-subtitle">Desenvolvedor Full Stack</h3>
 
-              <div className="social-quick-links">
-                {socialLinks.filter(s => ['GitHub', 'LinkedIn', 'Email'].includes(s.name)).map(link => (
+              <div className="socials-list">
+                {socialLinks.filter((s) => ['GitHub', 'LinkedIn', 'Email'].includes(s.name)).map((link) => (
                   <a key={link.name} href={link.url} target="_blank" rel="noopener noreferrer" className="social-btn">
                     {link.name === 'GitHub' && <FiGithub size={16} />}
                     {link.name === 'LinkedIn' && <FiLinkedin size={16} />}
@@ -139,12 +133,10 @@ export default function Sobre() {
               </div>
             </div>
 
-            {/* INTRODUÇÃO */}
             <section id="intro" className="about-content-section reveal-on-scroll">
               <p className="intro-text">{t('about.intro')}</p>
             </section>
 
-            {/* DIFERENCIAIS */}
             <section id="role" className="about-content-section reveal-on-scroll">
               <h2 className="section-title">
                 <FiTarget size={24} />
@@ -166,11 +158,10 @@ export default function Sobre() {
               </div>
             </section>
 
-            {/* EXPERIÊNCIA */}
             <section id="experience" className="about-content-section reveal-on-scroll">
               <h2 className="section-title">
                 <FiBriefcase size={24} />
-                Experiência Profissional
+                Experiencia Profissional
               </h2>
               <div className="experience-timeline">
                 {experiences.map((exp) => (
@@ -180,7 +171,7 @@ export default function Sobre() {
                       <h3>{exp.title}</h3>
                       <span className="exp-period">{exp.period}</span>
                     </div>
-                    <p className="exp-company">{exp.company} — {exp.location}</p>
+                    <p className="exp-company">{exp.company} - {exp.location}</p>
                     {exp.description && <p className="exp-desc">{exp.description}</p>}
                     {exp.achievements.length > 0 && (
                       <ul className="exp-list">
@@ -192,11 +183,10 @@ export default function Sobre() {
               </div>
             </section>
 
-            {/* FORMAÇÕES */}
             <section id="education" className="about-content-section reveal-on-scroll">
               <h2 className="section-title">
                 <FiBookOpen size={24} />
-                Formações
+                Formacoes
               </h2>
               <div className="education-list">
                 {education.map((edu) => (
@@ -204,18 +194,17 @@ export default function Sobre() {
                     <div className="edu-icon"><FiBookOpen size={20} /></div>
                     <div className="edu-info">
                       <h3>{edu.course}</h3>
-                      <p>{edu.institution} — {edu.period}</p>
+                      <p>{edu.institution} - {edu.period}</p>
                     </div>
                   </div>
                 ))}
               </div>
             </section>
 
-            {/* EXPERTISE TÉCNICA */}
             <section id="expertise" className="about-content-section reveal-on-scroll">
               <h2 className="section-title">
                 <FiCode size={24} />
-                Expertise Técnica
+                Expertise Tecnica
               </h2>
               <div className="expertise-grid">
                 {expertise.map((cat) => (
@@ -224,7 +213,7 @@ export default function Sobre() {
                     <div className="expertise-tags">
                       {cat.items.map((item) => (
                         <div className="tech-tag" key={item.name}>
-                          {item.iconType === 'devicon' && <i className={item.icon} />}
+                          {item.iconType === 'devicon' ? <i className={item.icon} /> : <FiTool size={14} />}
                           <span>{item.name}</span>
                         </div>
                       ))}
@@ -234,7 +223,6 @@ export default function Sobre() {
               </div>
             </section>
 
-            {/* GITHUB */}
             <section id="github" className="about-content-section reveal-on-scroll">
               <h2 className="section-title">
                 <FiGithub size={24} />
@@ -276,7 +264,6 @@ export default function Sobre() {
                 <FiChevronRight size={18} />
               </Button>
             </div>
-
           </div>
         </div>
       </div>

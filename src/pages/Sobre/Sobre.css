@@ -448,7 +448,7 @@
 }
 
 .expertise-box {
-    background: rgba(255, 255, 255, 0.02);
+    background: linear-gradient(145deg, rgba(255, 122, 0, 0.08), rgba(255, 255, 255, 0.02) 45%, rgba(255, 255, 255, 0.01));
     padding: 1.5rem;
     border-radius: var(--radius-lg);
     border: 1px solid var(--border-subtle);
@@ -567,6 +567,21 @@
     .socials-list {
         justify-content: center;
     }
+
+    .about-main-content {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-card {
+        padding: 1.4rem;
+    }
+
+    .profile-image-container {
+        width: 142px;
+        height: 142px;
+    }
 }
 
 @media (max-width: 640px) {
@@ -577,5 +592,19 @@
     .exp-header {
         flex-direction: column;
         gap: 0.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-sobre {
+        padding-top: 6.5rem;
+    }
+
+    .experience-timeline {
+        padding-left: 1.4rem;
+    }
+
+    .exp-dot {
+        left: calc(-1.4rem - 5px);
     }
 }

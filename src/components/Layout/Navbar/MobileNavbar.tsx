@@ -16,7 +16,7 @@ export function MobileNavbar() {
   ];
 
   return (
-    <nav className="mobile-navbar">
+    <nav className="mobile-navbar" aria-label="Navegação mobile">
       <div className="mobile-nav-container">
         {navItems.map((item) => (
           <NavLink

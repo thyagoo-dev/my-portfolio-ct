@@ -15,6 +15,7 @@
     border-radius: var(--radius-xl);
     padding: 2rem;
     backdrop-filter: blur(12px);
+    box-shadow: 0 0 0 1px rgba(255, 122, 0, 0.15);
 }
 
 .form-progress {
@@ -119,7 +120,7 @@
     align-items: center;
     gap: 1rem;
     padding: 1rem 1.2rem;
-    background: var(--gradient-surface);
+    background: linear-gradient(145deg, rgba(255, 122, 0, 0.08), rgba(255, 255, 255, 0.02) 58%, rgba(255, 255, 255, 0.01));
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-lg);
     text-decoration: none;
@@ -129,30 +130,30 @@
 
 /* Brand Specific Default States */
 .contact-card.linkedin { border-color: rgba(0, 119, 181, 0.2); }
-.contact-card.linkedin i { background: rgba(0, 119, 181, 0.1); color: #0077b5; }
+.contact-card.linkedin svg { background: rgba(0, 119, 181, 0.1); color: #0077b5; }
 .contact-card.linkedin:hover { border-color: #0077b5; box-shadow: 0 0 20px rgba(0, 119, 181, 0.2); }
-.contact-card.linkedin:hover i { background: #0077b5; color: #fff; }
+.contact-card.linkedin:hover svg { background: #0077b5; color: #fff; }
 
 .contact-card.github { border-color: rgba(255, 255, 255, 0.2); }
-.contact-card.github i { background: rgba(255, 255, 255, 0.05); color: #f0f0f0; }
+.contact-card.github svg { background: rgba(255, 255, 255, 0.05); color: #f0f0f0; }
 .contact-card.github:hover { border-color: #fff; box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); }
-.contact-card.github:hover i { background: #333; color: #fff; }
+.contact-card.github:hover svg { background: #333; color: #fff; }
 
 .contact-card.whatsapp { border-color: rgba(37, 211, 102, 0.2); }
-.contact-card.whatsapp i { background: rgba(37, 211, 102, 0.1); color: #25D366; }
+.contact-card.whatsapp svg { background: rgba(37, 211, 102, 0.1); color: #25D366; }
 .contact-card.whatsapp:hover { border-color: #25D366; box-shadow: 0 0 20px rgba(37, 211, 102, 0.2); }
-.contact-card.whatsapp:hover i { background: #25D366; color: #fff; }
+.contact-card.whatsapp:hover svg { background: #25D366; color: #fff; }
 
 .contact-card.email { border-color: rgba(234, 67, 53, 0.2); }
-.contact-card.email i { background: rgba(234, 67, 53, 0.1); color: #EA4335; }
+.contact-card.email svg { background: rgba(234, 67, 53, 0.1); color: #EA4335; }
 .contact-card.email:hover { border-color: #EA4335; box-shadow: 0 0 20px rgba(234, 67, 53, 0.2); }
-.contact-card.email:hover i { background: #EA4335; color: #fff; }
+.contact-card.email:hover svg { background: #EA4335; color: #fff; }
 
 .contact-card:hover {
     transform: translateY(-2px);
 }
 
-.contact-card i {
+.contact-card svg {
     font-size: 1.3rem;
     color: var(--accent-color);
     width: 40px;
@@ -179,5 +180,19 @@
 @media (max-width: 900px) {
     .contact-layout {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-contato {
+        padding-top: 6.5rem;
+    }
+
+    .contact-form {
+        padding: 1.25rem;
+    }
+
+    .contact-card {
+        padding: 0.85rem 1rem;
     }
 }

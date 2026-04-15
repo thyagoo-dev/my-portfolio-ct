@@ -88,7 +88,7 @@ export interface SocialLink {
   url: string;
   icon: string;
   detail: string;
-  iconType: 'lucide' | 'bootstrap';
+  iconType: 'react' | 'lucide' | 'bootstrap';
 }
 
 export interface ContactFormData {

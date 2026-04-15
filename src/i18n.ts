@@ -132,13 +132,17 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
+    supportedLngs: ['pt', 'en'],
     fallbackLng: 'pt',
+    load: 'languageOnly',
     interpolation: {
       escapeValue: false
     },
     detection: {
-      order: ['localStorage', 'navigator'],
-      caches: ['localStorage']
+      order: ['localStorage', 'navigator', 'htmlTag'],
+      lookupLocalStorage: 'portfolio-lang',
+      caches: ['localStorage'],
+      convertDetectedLanguage: (lng) => (lng?.toLowerCase().startsWith('en') ? 'en' : 'pt')
     }
   });
 

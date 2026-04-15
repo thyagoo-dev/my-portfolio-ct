@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { FiSend, FiUser, FiMail, FiFileText, FiMessageSquare } from 'react-icons/fi';
+import { FiSend, FiUser, FiMail, FiFileText, FiMessageSquare, FiLinkedin, FiGithub } from 'react-icons/fi';
+import { FaWhatsapp } from 'react-icons/fa';
 import { Button } from '../../components/ui/Button/Button';
 import { socialLinks } from '../../data/social';
 import type { ContactFormData } from '../../types';
@@ -43,6 +44,13 @@ export default function Contato() {
   ) => {
     setForm((prev) => ({ ...prev, [field]: e.target.value }));
   };
+
+  const socialIconMap = {
+    mail: FiMail,
+    linkedin: FiLinkedin,
+    github: FiGithub,
+    whatsapp: FaWhatsapp,
+  } as const;
 
   return (
     <main className="page-contato">
@@ -131,7 +139,10 @@ export default function Contato() {
               <div className="contact-cards">
                 {socialLinks.map((s) => (
                   <a key={s.name} href={s.url} className={`contact-card ${s.name.toLowerCase()}`} target="_blank" rel="noopener noreferrer">
-                    <i className={s.iconType === 'bootstrap' ? s.icon : `bi bi-${s.icon}`} />
+                    {(() => {
+                      const Icon = socialIconMap[s.icon as keyof typeof socialIconMap] || FiMail;
+                      return <Icon size={20} aria-hidden="true" />;
+                    })()}
                     <div>
                       <strong>{s.name}</strong>
                       <span>{s.detail}</span>

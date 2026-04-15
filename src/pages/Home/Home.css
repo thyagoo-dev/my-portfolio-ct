@@ -189,6 +189,10 @@
 .result-item {
     display: flex;
     flex-direction: column;
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-md);
+    background: rgba(255, 122, 0, 0.05);
+    border: 1px solid rgba(255, 122, 0, 0.16);
 }
 
 .result-value {
@@ -380,6 +384,7 @@
     .results-grid {
         width: 100%;
         flex-wrap: wrap;
+        justify-content: center;
     }
 }
 
@@ -415,7 +420,7 @@
     .hero-description {
         font-size: 0.95rem;
         margin-bottom: 2.5rem;
-        padding: 0 1.5rem;
+        padding: 0;
     }
     
     .photo-container {
@@ -439,10 +444,42 @@
         width: 100%;
         margin-top: 0.5rem;
     }
+
+    .service-pro-card {
+        padding: 2rem 1.4rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .header-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.9rem;
+    }
 }
 
 @media (max-width: 480px) {
+    .hero {
+        padding: 5.5rem 0 2.8rem;
+    }
+
     .photo-container {
         width: min(280px, 75vw);
+    }
+
+    .results-grid {
+        gap: 0.8rem;
+    }
+
+    .result-item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 320px) {
+    .hero-title-main span {
+        font-size: clamp(1.45rem, 8vw, 2.2rem);
     }
 }

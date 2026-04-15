@@ -118,7 +118,7 @@
     border-color: currentColor;
 }
 
-.footer-contact-icons i {
+.footer-contact-icons svg {
     font-size: 1rem;
     line-height: 1;
 }

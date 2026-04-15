@@ -109,6 +109,19 @@ body::after {
     }
 }
 
+@media (max-width: 480px) {
+    .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.6rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    body {
+        padding-bottom: 6.2rem;
+    }
+}
+
 /* ========== MODAL OPEN ========== */
 body.modal-open {
     overflow: hidden;
