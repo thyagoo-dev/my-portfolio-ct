@@ -96,6 +96,11 @@
     color: #FFFFFF;
     margin: 0;
     font-family: var(--font-secondary);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 3.5rem; /* Standardize title height */
 }
 
 /* Tech Tags */
@@ -103,6 +108,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
+    min-height: 38px; /* Standardize tags row height */
 }
 
 .project-tag-icon-wrapper {
@@ -124,11 +130,13 @@
 }
 
 .tech-icon-dev {
-    font-size: 1.25rem;
+    font-size: 1.5rem; /* Increased from 1.25rem for better visibility */
 }
 
 .tech-icon-lucide {
     color: var(--text-dim-color);
+    width: 20px; /* Increased from 18px */
+    height: 20px;
 }
 
 .project-tag-icon-wrapper:hover .tech-icon-lucide {
@@ -183,6 +191,7 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    min-height: 3.2rem; /* Standardize description height */
 }
 
 /* Footer Section */

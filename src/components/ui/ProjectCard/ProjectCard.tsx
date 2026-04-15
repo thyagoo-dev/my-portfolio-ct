@@ -62,7 +62,7 @@ function TechIcon({ name }: { name: string }) {
   }
   
   const LucideIcon = icon;
-  return <LucideIcon size={18} className="tech-icon-lucide" title={name} />;
+  return <LucideIcon size={20} className="tech-icon-lucide" title={name} />;
 }
 
 export function ProjectCard({ project, withReveal = true }: ProjectCardProps) {
