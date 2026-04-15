@@ -20,7 +20,7 @@ Portfólio profissional construído para demonstrar capacidade tecnica em **dese
 
 ---
 
-## 📬 Demo e Contato:
+## 📬 Contato:
 
 [![GitHub](https://img.shields.io/badge/GitHub-Victorkaue333-181717?style=for-the-badge&logo=github)](https://github.com/Victorkaue333/Portifolio-VictorKaue)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Victor%20Kaue-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/victor-kaue-419926364/)
