@@ -1,5 +1,5 @@
 ﻿import { useState, useEffect } from 'react';
-import { FiAward, FiFilter } from 'react-icons/fi';
+import { FiAward, FiFilter, FiExternalLink, FiRotateCcw } from 'react-icons/fi';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { certificates, certificateCategories } from '../../data/certificates';
 import { PageHero } from '../../components/ui/PageHero/PageHero';
@@ -42,16 +42,25 @@ export default function Certificados() {
                 </button>
               ))}
             </div>
+            <span className="cert-results-count">{filtered.length} resultados</span>
           </div>
 
           <div className="cert-grid">
             {filtered.map((cert) => (
               <Reveal key={cert.id} delay={0.1}>
-                <div className="cert-card">
+                <a
+                  className="cert-card"
+                  href={cert.image}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Abrir certificado: ${cert.title}`}
+                >
                   <div className="cert-image">
                     <img src={cert.image} alt={cert.title} loading="lazy" />
                     <div className="cert-overlay">
-                      <span>Clique para ver</span>
+                      <span>
+                        Abrir certificado <FiExternalLink size={14} />
+                      </span>
                     </div>
                   </div>
                   <div className="cert-info">
@@ -59,7 +68,7 @@ export default function Certificados() {
                     <h3 className="cert-title">{cert.title}</h3>
                     <div className="cert-badge">{cert.category}</div>
                   </div>
-                </div>
+                </a>
               </Reveal>
             ))}
           </div>
@@ -67,6 +76,10 @@ export default function Certificados() {
           {filtered.length === 0 && (
             <div className="no-results">
               <p>Nenhum certificado encontrado para esta categoria.</p>
+              <button className="reset-filter-btn" onClick={() => setActiveCategory('todos')}>
+                <FiRotateCcw size={15} />
+                Limpar filtro
+              </button>
             </div>
           )}
         </div>
