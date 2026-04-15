@@ -48,13 +48,6 @@ export default function Home() {
         <ColorBends />
         <div className="container hero-container">
           <div className="hero-content">
-            <Reveal delay={0.1}>
-              <div className="hero-status">
-                <span className="pulse-dot"></span>
-                Disponível para novos projetos
-              </div>
-            </Reveal>
-
             <motion.h1 
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -94,8 +87,8 @@ export default function Home() {
             <div className="photo-container reveal-on-scroll">
               <div className="photo-ring" />
               <div className="photo-ring inner" />
+              <div className="glass-overlay" />
               <img src="/images/eu/victorkaue.png" alt="Victor Kauê" className="hero-image" />
-              
             </div>
           </div>
         </div>
