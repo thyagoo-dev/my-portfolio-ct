@@ -10,6 +10,8 @@ Portfólio profissional construído para demonstrar capacidade tecnica em **dese
 
 ---
 
+![Home - Hero](./public/images/readme/home-hero.png)
+
 ## 👀 Resumo para Recrutadores:
 
 - Projeto autoral com arquitetura front-end moderna e componentes reutilizáveis.
@@ -72,7 +74,6 @@ O projeto está hospedado no Vercel, garantindo alta performance e disponibilida
 - Botao de voltar ao topo e controle de scroll por rota.
 - Estrutura preparada para crescer com novas secoes e cases.
 
-![Home - Hero](./public/images/readme/home-hero.png)
 ---
 
 ## 🗂️ Estrutura do Projeto
