@@ -8,7 +8,8 @@ import {
   FiCpu, 
   FiActivity,
   FiZap,
-  FiLayout
+  FiLayout,
+  FiTrendingUp
 } from 'react-icons/fi';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';

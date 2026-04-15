@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { FiFolder, FiFilter, FiAlertCircle } from 'react-icons/fi';
+import { FiFolder, FiAlertCircle } from 'react-icons/fi';
 import { useTranslation } from 'react-i18next';
 import { ProjectCard } from '../../components/ui/ProjectCard/ProjectCard';
 import { projects } from '../../data/projects';

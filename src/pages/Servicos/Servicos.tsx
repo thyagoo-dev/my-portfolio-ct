@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { FiDatabase, FiCpu, FiLayout, FiCheckCircle, FiArrowRight } from 'react-icons/fi';
-import { services } from '../../data/services';
 import { Button } from '../../components/ui/Button/Button';
 import { Reveal } from '../../components/ui/Reveal/Reveal';
 import './Servicos.css';
