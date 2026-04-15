@@ -35,7 +35,7 @@ O projeto está hospedado no Vercel, garantindo alta performance e disponibilida
 
 ---
 
-## 🧰 Stack Tecnologica (com icones)
+## 🧰 Stack Tecnologica:
 
 ### Core
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="28" alt="React" />
