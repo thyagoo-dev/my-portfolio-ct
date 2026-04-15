@@ -43,7 +43,7 @@
 
 .hero-title-main span {
     display: block;
-    font-size: clamp(2.8rem, 7vw, 4.8rem);
+    font-size: clamp(2rem, 8vw, 4.8rem); /* Slightly smaller minimum for mobile */
     line-height: 0.95;
     font-weight: 800;
     letter-spacing: -0.06em;
@@ -394,22 +394,44 @@
         padding: 1rem 0;
     }
 
-    .hero-content h1 {
-        font-size: clamp(2rem, 8vw, 2.8rem);
-        line-height: 1.2;
+    .hero-title-main {
+        width: 100%;
+        max-width: 100vw;
+        overflow: hidden;
+    }
+
+    .hero-title-main span {
+        font-size: clamp(1.6rem, 9vw, 3rem); /* Aggressively smaller for mobile */
+        letter-spacing: -0.04em;
+        white-space: normal; /* Allow wrapping if absolutely necessary */
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+        margin-bottom: 2.5rem;
+        padding: 0 1.5rem;
+    }
+    
+    .photo-container {
+        width: min(300px, 80vw);
     }
 
     .hero-actions {
         flex-direction: column;
         gap: 1.5rem;
-        align-items: center; /* Center buttons */
+        align-items: center;
         margin-top: 2rem;
+    }
+
+    .social-icon {
+        width: 44px;
+        height: 44px;
     }
 
     .hero-socials {
         justify-content: center;
         width: 100%;
-        margin-top: 1rem;
+        margin-top: 0.5rem;
     }
 }
 
