@@ -6,8 +6,6 @@ import {
   FiMail, 
   FiDatabase, 
   FiCpu, 
-  FiChevronRight,
-  FiTrendingUp,
   FiActivity,
   FiZap,
   FiLayout
