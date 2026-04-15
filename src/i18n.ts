@@ -91,7 +91,7 @@ const resources = {
         tech: 'Python',
         subtech: 'APIs & Django',
         description:
-          'Foco em performance e manutencao. Entrego software confiavel para processos criticos, da regra de negocio ao deploy em producao.',
+          'Foco em performance e manutencao. Entrego software confiável para processos criticos, da regra de negocio ao deploy em producao.',
         cta: 'Conheca minha jornada',
       },
       about: {
@@ -102,11 +102,11 @@ const resources = {
         highlights: {
           title: 'Diferenciais',
           backend: 'Backend Especializado',
-          backendDesc: 'Regras de negocio consistentes, autenticacao segura e modelagem de dados orientada a escala.',
-          api: 'APIs Escalaveis',
+          backendDesc: 'Regras de negócio consistentes, autenticação segura e modelagem de dados orientada a escala.',
+          api: 'APIs Escaláveis',
           apiDesc: 'Desenvolvimento de APIs REST com foco em performance, integracao e manutencao de longo prazo.',
           enterprise: 'Sistemas Empresariais',
-          enterpriseDesc: 'Experiencia em projetos reais com entrega ponta a ponta, do planejamento ao deploy em producao.',
+          enterpriseDesc: 'Experiência em projetos reais com entrega ponta a ponta, do planejamento ao deploy em produção.',
         },
       },
       projects: {
