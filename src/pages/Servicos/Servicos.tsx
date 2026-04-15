@@ -48,11 +48,11 @@ export default function Servicos() {
                   <FiDatabase />
                 </div>
                 <h3>Sistemas Customizados</h3>
-                <p>Desenvolvimento de dashboards e paineis administrativos para gestao de dados.</p>
+                <p>Desenvolvimento de dashboards e paineis administrativos para gestão de dados.</p>
                 <ul>
                   <li><FiCheckCircle /> Automacao de Processos</li>
                   <li><FiCheckCircle /> Integracao de APIs</li>
-                  <li><FiCheckCircle /> Gestao de Inventario</li>
+                  <li><FiCheckCircle /> gestão de Inventario</li>
                 </ul>
               </div>
             </Reveal>

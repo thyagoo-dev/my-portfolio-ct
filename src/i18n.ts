@@ -1,6 +1,6 @@
 ﻿import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
+import { initReactI18next } from 'react-i18next';
 
 const resources = {
   en: {
@@ -91,20 +91,20 @@ const resources = {
         tech: 'Python',
         subtech: 'APIs & Django',
         description:
-          'Foco em performance e manutencao. Entrego software confiável para processos criticos, da regra de negocio ao deploy em producao.',
+          'Foco em performance e manutenção. Entrego software confiável para processos criticos, da regra de negocio ao deploy em producao.',
         cta: 'Conheca minha jornada',
       },
       about: {
         title: 'Sobre',
         subtitle: 'Desenvolvedor Full Stack',
         intro:
-          'Sou desenvolvedor com foco em backend e sistemas web, formado em Desenvolvimento de Sistemas e graduando em Gestao da Tecnologia da Informacao. Atuo no desenvolvimento de APIs, regras de negocio, modelagem de dados, interface web e deploy, com foco em arquitetura limpa, seguranca e valor de negocio.',
+          'Sou desenvolvedor com foco em backend e sistemas web, formado em Desenvolvimento de Sistemas e graduando em gestão da Tecnologia da Informacao. Atuo no desenvolvimento de APIs, regras de negocio, modelagem de dados, interface web e deploy, com foco em arquitetura limpa, seguranca e valor de negocio.',
         highlights: {
           title: 'Diferenciais',
           backend: 'Backend Especializado',
           backendDesc: 'Regras de negócio consistentes, autenticação segura e modelagem de dados orientada a escala.',
           api: 'APIs Escaláveis',
-          apiDesc: 'Desenvolvimento de APIs REST com foco em performance, integracao e manutencao de longo prazo.',
+          apiDesc: 'Desenvolvimento de APIs REST com foco em performance, integracao e manutenção de longo prazo.',
           enterprise: 'Sistemas Empresariais',
           enterpriseDesc: 'Experiência em projetos reais com entrega ponta a ponta, do planejamento ao deploy em produção.',
         },

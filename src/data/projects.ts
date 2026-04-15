@@ -57,11 +57,11 @@ const rawProjects: Project[] = [
     id: 'agendeaqui',
     slug: 'agendeaqui',
     title: 'AgendeAqui',
-    shortDescription: 'Plataforma web para gestao de agendamentos.',
+    shortDescription: 'Plataforma web para gestão de agendamentos.',
     detailedDescription:
       'Aplicacao web desenvolvida em Django para autenticar usuarios, organizar horarios e centralizar o fluxo de agendamentos.',
     description:
-      'Plataforma web desenvolvida em Django para gestao de agendamentos, autenticacao de usuarios e organizacao de horarios e espacos.',
+      'Plataforma web desenvolvida em Django para gestão de agendamentos, autenticacao de usuarios e organizacao de horarios e espacos.',
     image: '/images/fotos-projetos-pessoais/agendeaqui/agendeaqui.png',
     github: 'https://github.com/Victorkaue333/AgendeAqui',
     detailPath: '/projetos/agendeaqui',
@@ -71,7 +71,7 @@ const rawProjects: Project[] = [
     category: 'pessoal',
     summary: {
       problema: 'Agendamentos descentralizados',
-      solucao: 'Fluxo unico com autenticacao e gestao de slots',
+      solucao: 'Fluxo unico com autenticacao e gestão de slots',
       stack: 'Django + PostgreSQL',
     },
   },
@@ -145,16 +145,16 @@ const rawProjects: Project[] = [
     id: 'sigref',
     slug: 'sigref',
     title: 'SIGREF',
-    shortDescription: 'Sistema de gestao educacional.',
+    shortDescription: 'Sistema de gestão educacional.',
     detailedDescription:
       'Sistema para organizacao de demandas escolares e processos administrativos da gerencia regional.',
     description:
-      'Sistema de gestao educacional para a Gerencia Regional de Educacao, com foco em organizacao de demandas escolares e processos administrativos.',
+      'Sistema de gestão educacional para a Gerencia Regional de Educacao, com foco em organizacao de demandas escolares e processos administrativos.',
     image: '/images/fotos-projetos-reais/sigref/sigrefsemfundo.png',
     detailPath: '/projetos/sigref',
     technologies: ['Django', 'MySQL', 'SaaS'],
     stack: ['Python', 'Django', 'MySQL'],
-    features: ['Gestao escolar', 'Fluxo administrativo', 'Sistema web corporativo'],
+    features: ['gestão escolar', 'Fluxo administrativo', 'Sistema web corporativo'],
     category: 'real',
   },
   {
@@ -177,16 +177,16 @@ const rawProjects: Project[] = [
     id: 'maratonatech',
     slug: 'maratonatech',
     title: 'MaratonaTech',
-    shortDescription: 'Gestao de eventos de pitch e votacao online.',
+    shortDescription: 'gestão de eventos de pitch e votacao online.',
     detailedDescription:
       'Plataforma para cadastro de apresentacoes, acompanhamento de rodadas e votacao digital.',
     description:
-      'Plataforma web para gestao de eventos de pitch, incluindo cadastro de apresentacoes e sistema de votacao online.',
+      'Plataforma web para gestão de eventos de pitch, incluindo cadastro de apresentacoes e sistema de votacao online.',
     image: '/images/fotos-projetos-reais/maratonatech/MaratonaTech.png',
     detailPath: '/projetos/maratonatech',
     technologies: ['Python', 'Django', 'Eventos'],
     stack: ['Python', 'Django'],
-    features: ['Cadastro de pitch', 'Gestao de eventos', 'Votacao online'],
+    features: ['Cadastro de pitch', 'gestão de eventos', 'Votacao online'],
     category: 'real',
   },
   {
@@ -196,7 +196,7 @@ const rawProjects: Project[] = [
     shortDescription: 'Sistema para estoque e vendas.',
     detailedDescription:
       'Aplicacao de controle operacional para fluxo de estoque e vendas no contexto de suplementos.',
-    description: 'Sistema web para controle de estoque e gestao de vendas de suplementos.',
+    description: 'Sistema web para controle de estoque e gestão de vendas de suplementos.',
     image: '/images/fotos-projetos-reais/va_suplementos/va_suplementos.png',
     detailPath: '/projetos/va-suplementos',
     technologies: ['Python', 'Sistema Web', 'Controle de Estoque'],
