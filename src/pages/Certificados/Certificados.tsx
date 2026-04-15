@@ -47,7 +47,7 @@ export default function Certificados() {
 
           <div className="cert-grid">
             {filtered.map((cert) => (
-              <Reveal key={cert.id} delay={0.1}>
+              <Reveal key={cert.id} delay={0.1} width="100%" height="100%" className="cert-grid-item">
                 <a
                   className="cert-card"
                   href={cert.image}

@@ -72,6 +72,16 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 2rem;
+    align-items: stretch;
+}
+
+.cert-grid-item {
+    height: 100%;
+    width: 100%;
+}
+
+.cert-grid-item > div {
+    height: 100%;
 }
 
 .cert-card {
@@ -84,6 +94,7 @@
     overflow: hidden;
     transition: all var(--transition-normal);
     height: 100%;
+    min-height: 420px;
 }
 
 .cert-card:hover {
