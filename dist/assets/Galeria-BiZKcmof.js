@@ -1,6 +1,0 @@
-import{c as a,r as i,j as e}from"./index-BJj2YNDi.js";import{u as r}from"./useScrollReveal-DwDbEo3f.js";/**
- * @license lucide-react v0.468.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */const o=a("Images",[["path",{d:"M18 22H4a2 2 0 0 1-2-2V6",key:"pblm9e"}],["path",{d:"m22 13-1.296-1.296a2.41 2.41 0 0 0-3.408 0L11 18",key:"nf6bnh"}],["circle",{cx:"12",cy:"8",r:"2",key:"1822b1"}],["rect",{width:"16",height:"16",x:"6",y:"2",rx:"2",key:"12espp"}]]);function n(){r(),i.useEffect(()=>{document.title="Galeria — Victor Kauê"},[]);const t=[{title:"Eventos e Palestras",images:[]},{title:"Equipe e Trabalho",images:[]}];return e.jsx("main",{style:{paddingTop:"8rem"},children:e.jsx("section",{className:"content-section",children:e.jsxs("div",{className:"container",children:[e.jsxs("h1",{className:"section-title",children:[e.jsx(o,{size:28})," Galeria"]}),e.jsx("p",{className:"section-subtitle",children:"Momentos registrados durante minha trajetória."}),t.map(s=>e.jsxs("div",{className:"about-section reveal-on-scroll",children:[e.jsx("h2",{style:{fontSize:"1.3rem",marginBottom:"1rem"},children:s.title}),e.jsx("p",{style:{color:"var(--text-muted-color)"},children:"Em breve — novas fotos serão adicionadas aqui."})]},s.title))]})})})}export{n as default};
