@@ -79,23 +79,6 @@ O projeto está hospedado no Vercel, garantindo alta performance e disponibilida
 ### 1) Home
 ![Home - Hero](./public/images/readme/home-hero.png)
 
-### 2) Sobre
-![Sobre - Perfil e Timeline](./public/images/readme/sobre-perfil.png)
-
-### 3) Projetos
-![Projetos - Grid e filtros](./public/images/readme/projetos-grid.png)
-
-### 4) Servicos
-![Servicos - Cards e especialidades](./public/images/readme/servicos-cards.png)
-
-### 5) Certificados
-![Certificados - Filtros e cards](./public/images/readme/certificados-grid.png)
-
-### 6) Contato
-![Contato - Formulario e canais](./public/images/readme/contato-form.png)
-
-### 7) Mobile
-![Mobile - Bottom navbar](./public/images/readme/mobile-nav.png)
 
 ---
 
