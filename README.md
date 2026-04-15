@@ -82,7 +82,8 @@ src/
 
 ---
 
-## 🚀 Como Rodar Localmente
+## 🚀 Como Rodar Localmente:
+
 ```bash
 git clone https://github.com/Victorkaue333/Portifolio-VictorKaue.git
 cd Portifolio-VictorKaue
@@ -92,21 +93,15 @@ npm run dev
 
 Acesse: `http://localhost:3000`
 
-### Scripts
+### Scripts:
+
 - `npm run dev` - ambiente de desenvolvimento
 - `npm run build` - build de producao
 - `npm run preview` - preview do build
 
 ---
 
-## 🎯 Diferenciais para Processo Seletivo
-- Clareza de arquitetura e organizacao de codigo.
-- Qualidade visual com consistencia de design system.
-- Experiencia de usuario pensada para recrutador e cliente.
-- Facilidade de manutencao e evolucao do projeto.
+## 👨‍💻 Autor:
 
----
-
-## 👨‍💻 Autor
-**Victor Kauê**  
+**Victor Kauê** 
 Desenvolvedor Full Stack focado em backend, APIs e sistemas web escalaveis.
