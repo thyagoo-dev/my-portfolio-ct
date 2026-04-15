@@ -117,5 +117,7 @@ Aqui estão os scripts disponíveis para desenvolvimento e produção:
 
 ## 👨‍💻 Autor:
 
+No que diz respeito a mim, sou um desenvolvedor full stack apaixonado por criar soluções web escaláveis e eficientes. Com experiência em backend (Python/Django) e frontend (React/TypeScript), busco constantemente aprimorar minhas habilidades e entregar projetos de alta qualidade. Este portfólio é uma demonstração do meu compromisso com a excelência técnica e a experiência do usuário.
+
 **Victor Kauê** 
 Desenvolvedor Full Stack focado em backend, APIs e sistemas web escalaveis.
