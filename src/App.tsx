@@ -11,7 +11,7 @@ const Sobre = lazy(() => import('./pages/Sobre/Sobre'));
 const Projetos = lazy(() => import('./pages/Projetos/Projetos'));
 const ProjetoDetalhe = lazy(() => import('./pages/ProjetoDetalhe/ProjetoDetalhe'));
 const Servicos = lazy(() => import('./pages/Servicos/Servicos'));
-const Galeria = lazy(() => import('./pages/Galeria/Galeria'));
+
 const Certificados = lazy(() => import('./pages/Certificados/Certificados'));
 const Contato = lazy(() => import('./pages/Contato/Contato'));
 
@@ -47,7 +47,7 @@ export default function App() {
           <Route path="/projetos" element={<Projetos />} />
           <Route path="/projetos/:id" element={<ProjetoDetalhe />} />
           <Route path="/servicos" element={<Servicos />} />
-          <Route path="/galeria" element={<Galeria />} />
+
           <Route path="/certificados" element={<Certificados />} />
           <Route path="/contato" element={<Contato />} />
         </Routes>

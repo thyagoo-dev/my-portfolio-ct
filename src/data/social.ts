@@ -36,7 +36,7 @@ export const navLinks = [
   { label: 'Sobre', path: '/sobre' },
   { label: 'Projetos', path: '/projetos' },
   { label: 'Serviços', path: '/servicos' },
-  { label: 'Galeria', path: '/galeria' },
+
   { label: 'Certificados', path: '/certificados' },
   { label: 'Contato', path: '/contato' },
 ];
