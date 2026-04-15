@@ -10,7 +10,7 @@ Portfólio profissional construído para demonstrar capacidade tecnica em **dese
 
 ---
 
-![Home - Hero](./public/images/readme/home-hero.png)
+![Home - Hero](./public/images/readme/hero.png)
 
 ## 👀 Resumo para Recrutadores:
 
