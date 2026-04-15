@@ -63,7 +63,8 @@ O projeto está hospedado no Vercel, garantindo alta performance e disponibilida
 
 ---
 
-## ✨ Funcionalidades em Destaque
+## ✨ Funcionalidades em Destaque:
+
 - Navbar premium desktop + bottom navigation mobile (glassmorphism).
 - Paginas com hero visual por nicho (Projetos, Servicos, Certificados, Contato).
 - Filtros interativos em projetos e certificados.
