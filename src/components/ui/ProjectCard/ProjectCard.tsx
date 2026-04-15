@@ -1,11 +1,68 @@
 import { Link } from 'react-router-dom';
-import { Github, ExternalLink, ChevronRight } from 'lucide-react';
-import type { Project } from '../../../types';
-import './ProjectCard.css';
+import { 
+  Github, 
+  ExternalLink, 
+  ChevronRight, 
+  Brain, 
+  Zap, 
+  Smartphone, 
+  Cloud, 
+  Search, 
+  Calendar, 
+  Package, 
+  Layout, 
+  Code2, 
+  TrendingUp, 
+  Globe, 
+  Palette, 
+  BarChart3 
+} from 'lucide-react';
 
-interface ProjectCardProps {
-  project: Project;
-  withReveal?: boolean;
+// ... interface unchanged ...
+
+const techIconMap: Record<string, any> = {
+  // DevIcons (CSS classes)
+  'React': 'devicon-react-original colored',
+  'TypeScript': 'devicon-typescript-plain colored',
+  'Vite': 'devicon-vitejs-plain colored',
+  'CSS': 'devicon-css3-plain colored',
+  'Django': 'devicon-django-plain colored',
+  'PostgreSQL': 'devicon-postgresql-plain colored',
+  'Bootstrap': 'devicon-bootstrap-plain colored',
+  'Python': 'devicon-python-plain colored',
+  'MySQL': 'devicon-mysql-plain colored',
+  'SQLite': 'devicon-sqlite-plain colored',
+  'HTML5': 'devicon-html5-plain colored',
+  'JavaScript': 'devicon-javascript-plain colored',
+  
+  // Lucide Icons (React Components)
+  'IA': Brain,
+  'Automação': Zap,
+  'Responsivo': Smartphone,
+  'SaaS': Cloud,
+  'SEO': Search,
+  'Eventos': Calendar,
+  'Controle de Estoque': Package,
+  'Landing Page': Layout,
+  'Front-end': Code2,
+  'Conversão': TrendingUp,
+  'Web App': Globe,
+  'Sistema Web': Globe,
+  'Design System': Palette,
+  'Escalabilidade': BarChart3,
+};
+
+function TechIcon({ name }: { name: string }) {
+  const icon = techIconMap[name];
+  
+  if (!icon) return <span className="project-tag-text">{name}</span>;
+  
+  if (typeof icon === 'string') {
+    return <i className={`${icon} tech-icon-dev`} title={name} />;
+  }
+  
+  const LucideIcon = icon;
+  return <LucideIcon size={18} className="tech-icon-lucide" title={name} />;
 }
 
 export function ProjectCard({ project, withReveal = true }: ProjectCardProps) {
@@ -23,11 +80,13 @@ export function ProjectCard({ project, withReveal = true }: ProjectCardProps) {
           <h3 className="project-title">{project.title}</h3>
           
           <div className="project-tags">
-            {project.technologies.slice(0, 4).map((tech) => (
-              <span key={tech} className="project-tag">{tech}</span>
+            {project.technologies.slice(0, 5).map((tech) => (
+              <div key={tech} className="project-tag-icon-wrapper" title={tech}>
+                <TechIcon name={tech} />
+              </div>
             ))}
-            {project.technologies.length > 4 && (
-              <span className="project-tag-more">+{project.technologies.length - 4}</span>
+            {project.technologies.length > 5 && (
+              <span className="project-tag-more">+{project.technologies.length - 5}</span>
             )}
           </div>
 
