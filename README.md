@@ -1,6 +1,6 @@
 ﻿# <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="28" alt="React" /> Victor Kauê | Portfolio Full Stack
 
-Portfólio profissional construído para demonstrar capacidade tecnica em **desenvolvimento web full stack**, com foco em **backend (Python/Django)**, UX/UI premium dark e experiencia de navegacao fluida.
+Portfólio profissional construído para demonstrar capacidade técnica em **desenvolvimento web full stack**, com foco em **backend (Python/Django)**, UX/UI premium dark e experiencia de navegacao fluida.
 
 [![React](https://img.shields.io/badge/React-19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)

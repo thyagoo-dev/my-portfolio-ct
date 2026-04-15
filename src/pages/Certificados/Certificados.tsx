@@ -25,7 +25,7 @@ export default function Certificados() {
           <PageHero
             titleMain="Certificados &"
             titleAccent="Evolução Contínua"
-            subtitle="Formacao tecnica orientada a pratica, validando competencias em backend, dados, DevOps e desenvolvimento web moderno."
+            subtitle="Formacao técnica orientada a pratica, validando competencias em backend, dados, DevOps e desenvolvimento web moderno."
             icon={<FiAward size={22} />}
           />
 

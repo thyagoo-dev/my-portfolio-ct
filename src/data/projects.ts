@@ -32,7 +32,7 @@ const rawProjects: Project[] = [
       solucao:
         'Desenvolvimento de portfolio com React 19, TypeScript e CSS moderno, com foco em acessibilidade, responsividade e manutenibilidade.',
       impacto:
-        'Melhor posicionamento profissional, demonstrando capacidade tecnica e qualidade visual em um unico produto.',
+        'Melhor posicionamento profissional, demonstrando capacidade técnica e qualidade visual em um unico produto.',
       arquitetura: {
         frontend: 'React + TypeScript',
         api: 'Dados estaticos tipados',

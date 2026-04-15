@@ -17,7 +17,7 @@ export default function Servicos() {
           <PageHero
             titleMain="Servicos &"
             titleAccent="Especialidades"
-            subtitle="Construindo sistemas robustos, escalaveis e de alta performance com foco absoluto na regra de negocio e eficiencia tecnica."
+            subtitle="Construindo sistemas robustos, escalaveis e de alta performance com foco absoluto na regra de negocio e eficiencia técnica."
             icon={<FiDatabase size={22} />}
           />
         </div>

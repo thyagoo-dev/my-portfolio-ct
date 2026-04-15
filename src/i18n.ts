@@ -124,8 +124,8 @@ const resources = {
         subtitle: 'Aprimoramento tecnico e aprendizado continuo.',
       },
       expertise: {
-        title: 'Expertise Tecnica',
-        subtitle: 'Minha stack tecnica e competencias.',
+        title: 'Expertise técnica',
+        subtitle: 'Minha stack técnica e competencias.',
       },
       common: {
         viewProjects: 'Ver meus projetos',

@@ -1,6 +1,6 @@
 ﻿import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import {FiBookOpen,FiBriefcase,FiCalendar,FiChevronRight,FiCode,FiGithub,FiLinkedin,FiMail,FiMapPin,FiTarget,FiTool} from 'react-icons/fi';
+import { FiBookOpen, FiBriefcase, FiCalendar, FiChevronRight, FiCode, FiGithub, FiLinkedin, FiMail, FiMapPin, FiTarget, FiTool } from 'react-icons/fi';
 import { Button } from '../../components/ui/Button/Button';
 import { education } from '../../data/education';
 import { experiences } from '../../data/experiences';
@@ -26,7 +26,7 @@ export default function Sobre() {
     { id: 'role', label: t('about.highlights.title'), icon: <FiBriefcase size={16} /> },
     { id: 'experience', label: 'Experiencia', icon: <FiBriefcase size={16} /> },
     { id: 'education', label: 'Formacao', icon: <FiBookOpen size={16} /> },
-    { id: 'expertise', label: 'Expertise Tecnica', icon: <FiCode size={16} /> },
+    { id: 'expertise', label: 'Expertise técnica', icon: <FiCode size={16} /> },
     { id: 'github', label: 'GitHub', icon: <FiGithub size={16} /> },
   ];
 
@@ -192,7 +192,7 @@ export default function Sobre() {
             <section id="expertise" className="about-content-section reveal-on-scroll">
               <h2 className="section-title">
                 <FiCode size={24} />
-                Expertise Tecnica
+                Expertise técnica
               </h2>
               <div className="expertise-grid">
                 {expertise.map((cat) => (
