@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import { Database, Cpu, Layout, CheckCircle2, ArrowRight } from 'lucide-react';
-import { services } from '../data/services';
-import { Button } from '../components/ui/Button';
-import { Reveal } from '../components/ui/Reveal';
-import { FloatingLines } from '../components/ui/FloatingLines';
+import { services } from '../../data/services';
+import { Button } from '../../components/ui/Button/Button';
+import { Reveal } from '../../components/ui/Reveal/Reveal';
+import { FloatingLines } from '../../components/ui/FloatingLines/FloatingLines';
 import './Servicos.css';
 
 export default function Servicos() {

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { navLinks, socialLinks, footerTech } from '../../data/social';
+import { navLinks, socialLinks, footerTech } from '../../../data/social';
 import './Footer.css';
 
 export function Footer() {

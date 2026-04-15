@@ -12,8 +12,8 @@ import {
   Layout,
   ArrowRight
 } from 'lucide-react';
-import { projects } from '../data/projects';
-import { Button } from '../components/ui/Button';
+import { projects } from '../../data/projects';
+import { Button } from '../../components/ui/Button/Button';
 import './ProjetoDetalhe.css';
 
 export default function ProjetoDetalhe() {

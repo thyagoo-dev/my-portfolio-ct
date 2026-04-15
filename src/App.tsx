@@ -1,19 +1,19 @@
 import { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Navbar } from './components/Layout/Navbar';
-import { Footer } from './components/Layout/Footer';
-import { BackToTop } from './components/Layout/BackToTop';
-import { Preloader } from './components/Layout/Preloader';
+import { Navbar } from './components/Layout/Navbar/Navbar';
+import { Footer } from './components/Layout/Footer/Footer';
+import { BackToTop } from './components/Layout/BackToTop/BackToTop';
+import { Preloader } from './components/Layout/Preloader/Preloader';
 import './App.css';
 
-const Home = lazy(() => import('./pages/Home'));
-const Sobre = lazy(() => import('./pages/Sobre'));
-const Projetos = lazy(() => import('./pages/Projetos'));
-const ProjetoDetalhe = lazy(() => import('./pages/ProjetoDetalhe'));
-const Servicos = lazy(() => import('./pages/Servicos'));
-const Galeria = lazy(() => import('./pages/Galeria'));
-const Certificados = lazy(() => import('./pages/Certificados'));
-const Contato = lazy(() => import('./pages/Contato'));
+const Home = lazy(() => import('./pages/Home/Home'));
+const Sobre = lazy(() => import('./pages/Sobre/Sobre'));
+const Projetos = lazy(() => import('./pages/Projetos/Projetos'));
+const ProjetoDetalhe = lazy(() => import('./pages/ProjetoDetalhe/ProjetoDetalhe'));
+const Servicos = lazy(() => import('./pages/Servicos/Servicos'));
+const Galeria = lazy(() => import('./pages/Galeria/Galeria'));
+const Certificados = lazy(() => import('./pages/Certificados/Certificados'));
+const Contato = lazy(() => import('./pages/Contato/Contato'));
 
 function PageLoader() {
   return (

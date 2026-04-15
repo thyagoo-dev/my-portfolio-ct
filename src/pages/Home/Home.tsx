@@ -13,11 +13,11 @@ import {
   Layout
 } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { featuredProjects } from '../data/projects';
-import { useScrollReveal } from '../hooks/useScrollReveal';
-import { Button } from '../components/ui/Button';
-import { Reveal } from '../components/ui/Reveal';
-import { ColorBends } from '../components/ui/ColorBends';
+import { featuredProjects } from '../../data/projects';
+import { useScrollReveal } from '../../hooks/useScrollReveal';
+import { Button } from '../../components/ui/Button/Button';
+import { Reveal } from '../../components/ui/Reveal/Reveal';
+import { ColorBends } from '../../components/ui/ColorBends/ColorBends';
 import './Home.css';
 
 export default function Home() {

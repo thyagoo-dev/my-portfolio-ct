@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Award, Filter } from 'lucide-react';
-import { useScrollReveal } from '../hooks/useScrollReveal';
-import { certificates, certificateCategories } from '../data/certificates';
-import { Reveal } from '../components/ui/Reveal';
+import { useScrollReveal } from '../../hooks/useScrollReveal';
+import { certificates, certificateCategories } from '../../data/certificates';
+import { Reveal } from '../../components/ui/Reveal/Reveal';
 import './Certificados.css';
 
 export default function Certificados() {

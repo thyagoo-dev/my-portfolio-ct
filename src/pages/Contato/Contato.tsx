@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Send, User, Mail, FileText, MessageSquare } from 'lucide-react';
-import { Button } from '../components/ui/Button';
-import { socialLinks } from '../data/social';
-import type { ContactFormData } from '../types';
+import { Button } from '../../components/ui/Button/Button';
+import { socialLinks } from '../../data/social';
+import type { ContactFormData } from '../../types';
 import './Contato.css';
 
 const WHATSAPP_PHONE = '5587981677005';

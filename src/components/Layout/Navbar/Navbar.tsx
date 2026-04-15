@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { useScrollPosition } from '../../hooks/useScrollPosition';
-import { navLinks } from '../../data/social';
+import { useScrollPosition } from '../../../hooks/useScrollPosition';
+import { navLinks } from '../../../data/social';
 import { Download } from 'lucide-react';
 import './Navbar.css';
 

@@ -12,12 +12,12 @@ import {
   ChevronRight,
   Sparkles
 } from 'lucide-react';
-import { experiences } from '../data/experiences';
-import { education } from '../data/education';
-import { expertise } from '../data/expertise';
-import { socialLinks } from '../data/social';
-import { useScrollReveal } from '../hooks/useScrollReveal';
-import { Button } from '../components/ui/Button';
+import { experiences } from '../../data/experiences';
+import { education } from '../../data/education';
+import { expertise } from '../../data/expertise';
+import { socialLinks } from '../../data/social';
+import { useScrollReveal } from '../../hooks/useScrollReveal';
+import { Button } from '../../components/ui/Button/Button';
 import './Sobre.css';
 
 export default function Sobre() {

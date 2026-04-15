@@ -1,5 +1,5 @@
 import { ChevronUp } from 'lucide-react';
-import { useScrollPosition } from '../../hooks/useScrollPosition';
+import { useScrollPosition } from '../../../hooks/useScrollPosition';
 
 export function BackToTop() {
   const { scrollY } = useScrollPosition(300);

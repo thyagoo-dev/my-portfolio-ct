@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { FolderGit2 } from 'lucide-react';
-import { ProjectCard } from '../components/ui/ProjectCard';
-import { projects } from '../data/projects';
-import { useScrollReveal } from '../hooks/useScrollReveal';
+import { ProjectCard } from '../../components/ui/ProjectCard/ProjectCard';
+import { projects } from '../../data/projects';
+import { useScrollReveal } from '../../hooks/useScrollReveal';
 import './Projetos.css';
 
 export default function Projetos() {
