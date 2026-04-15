@@ -94,6 +94,8 @@ A estrutura do projeto é organizada para facilitar a manutenção e escalabilid
 
 ## 🚀 Como Rodar Localmente:
 
+Para rodar o projeto localmente, siga os passos abaixo:
+
 ```bash
 git clone https://github.com/Victorkaue333/Portifolio-VictorKaue.git
 cd Portifolio-VictorKaue
