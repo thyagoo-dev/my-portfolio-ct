@@ -1,11 +1,16 @@
 export interface Project {
   id: string;
+  slug?: string;
   title: string;
+  shortDescription?: string;
+  detailedDescription?: string;
   description: string;
   image: string;
   github?: string;
   online?: string;
   detailPath: string;
+  stack?: string[];
+  features?: string[];
   technologies: string[];
   category: 'pessoal' | 'real';
   summary?: {

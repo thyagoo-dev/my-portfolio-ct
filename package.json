@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "projects:enrich": "node scripts/enrich-projects.mjs"
   },
   "dependencies": {
     "@lottiefiles/dotlottie-react": "^0.12.0",
