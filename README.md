@@ -14,13 +14,14 @@ Portfólio profissional construído para demonstrar capacidade tecnica em **dese
 
 - Projeto autoral com arquitetura front-end moderna e componentes reutilizáveis.
 - Interface premium responsiva (mobile, tablet e desktop) com foco em legibilidade e conversão.
-- Sistema de idiomas funcional (`PT/EN`) com persistencia local.
-- Navegacao com React Router, scroll management e UX refinada em paginas de projetos e certificados.
-- Codigo em TypeScript com organizacao por camadas (`components`, `pages`, `hooks`, `data`, `styles`).
+- Sistema de idiomas funcional (`PT/EN`) com persistência local.
+- Navegação com React Router, scroll management e UX refinada em páginas de projetos e certificados.
+- ódigo em TypeScript com organização por camadas (`components`, `pages`, `hooks`, `data`, `styles`).
 
 ---
 
-## 📬 Demo e Contato
+## 📬 Demo e Contato:
+
 [![GitHub](https://img.shields.io/badge/GitHub-Victorkaue333-181717?style=for-the-badge&logo=github)](https://github.com/Victorkaue333/Portifolio-VictorKaue)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Victor%20Kaue-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/victor-kaue-419926364/)
 [![Email](https://img.shields.io/badge/Email-kaue.alves.pg%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:kaue.alves.pg@gmail.com)
