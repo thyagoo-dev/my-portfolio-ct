@@ -1,23 +1,25 @@
-import { useEffect } from 'react';
+﻿import { useEffect } from 'react';
 import { FiDatabase, FiCpu, FiLayout, FiCheckCircle, FiArrowRight } from 'react-icons/fi';
 import { Button } from '../../components/ui/Button/Button';
+import { PageHero } from '../../components/ui/PageHero/PageHero';
 import { Reveal } from '../../components/ui/Reveal/Reveal';
 import './Servicos.css';
 
 export default function Servicos() {
   useEffect(() => {
-    document.title = 'Serviços — Victor Kauê';
+    document.title = 'Servicos - Victor Kaue';
   }, []);
 
   return (
     <main className="page-servicos">
       <section className="services-hero content-section">
-        <div className="container text-center reveal-on-scroll">
-          <h1 className="section-title" style={{ justifyContent: 'center' }}>
-            <FiDatabase size={28} />
-            Nossos Serviços
-          </h1>
-          <p className="section-subtitle">Soluções completas para seu negócio decolar.</p>
+        <div className="container">
+          <PageHero
+            titleMain="Servicos &"
+            titleAccent="Especialidades"
+            subtitle="Construindo sistemas robustos, escalaveis e de alta performance com foco absoluto na regra de negocio e eficiencia tecnica."
+            icon={<FiDatabase size={22} />}
+          />
         </div>
 
         <div className="container">
@@ -28,10 +30,10 @@ export default function Servicos() {
                   <FiLayout />
                 </div>
                 <h3>Desenvolvimento Web</h3>
-                <p>Criação de sites modernos, responsivos e otimizados para SEO e performance.</p>
+                <p>Criacao de sites modernos, responsivos e otimizados para SEO e performance.</p>
                 <ul>
                   <li><FiCheckCircle /> Landing Pages</li>
-                  <li><FiCheckCircle /> Portfólios</li>
+                  <li><FiCheckCircle /> Portfolios</li>
                   <li><FiCheckCircle /> E-commerces</li>
                 </ul>
                 <Button href="/contato" variant="primary">
@@ -46,11 +48,11 @@ export default function Servicos() {
                   <FiDatabase />
                 </div>
                 <h3>Sistemas Customizados</h3>
-                <p>Desenvolvimento de Dashboards e painéis administrativos para gestão de dados.</p>
+                <p>Desenvolvimento de dashboards e paineis administrativos para gestao de dados.</p>
                 <ul>
-                  <li><FiCheckCircle /> Automação de Processos</li>
-                  <li><FiCheckCircle /> Integração de APIs</li>
-                  <li><FiCheckCircle /> Gestão de Inventário</li>
+                  <li><FiCheckCircle /> Automacao de Processos</li>
+                  <li><FiCheckCircle /> Integracao de APIs</li>
+                  <li><FiCheckCircle /> Gestao de Inventario</li>
                 </ul>
               </div>
             </Reveal>
@@ -61,11 +63,11 @@ export default function Servicos() {
                   <FiCpu />
                 </div>
                 <h3>Consultoria Tech</h3>
-                <p>Orientação especializada para escolher a melhor stack para seu projeto.</p>
+                <p>Orientacao especializada para escolher a melhor stack para seu projeto.</p>
                 <ul>
                   <li><FiCheckCircle /> Code Review</li>
-                  <li><FiCheckCircle /> Otimização de Performance</li>
-                  <li><FiCheckCircle /> Estratégia Digital</li>
+                  <li><FiCheckCircle /> Otimizacao de Performance</li>
+                  <li><FiCheckCircle /> Estrategia Digital</li>
                 </ul>
               </div>
             </Reveal>
@@ -73,7 +75,6 @@ export default function Servicos() {
         </div>
       </section>
 
-      {/* ADDITIONAL INFO */}
       <section className="services-approach content-section">
         <div className="container">
           <div className="approach-content">
@@ -82,21 +83,21 @@ export default function Servicos() {
               <div className="step-v2">
                 <span className="step-num">01</span>
                 <h4>Planejamento</h4>
-                <p>Entendimento total do seu negócio e objetivos do projeto.</p>
+                <p>Entendimento total do seu negocio e objetivos do projeto.</p>
               </div>
               <div className="step-v2">
                 <span className="step-num">02</span>
                 <h4>Design & UX</h4>
-                <p>Criação de interfaces intuitivas e visualmente impactantes.</p>
+                <p>Criacao de interfaces intuitivas e visualmente impactantes.</p>
               </div>
               <div className="step-v2">
                 <span className="step-num">03</span>
                 <h4>Desenvolvimento</h4>
-                <p>Transformação do design em código limpo, rápido e escalável.</p>
+                <p>Transformacao do design em codigo limpo, rapido e escalavel.</p>
               </div>
               <div className="step-v2">
                 <span className="step-num">04</span>
-                <h4>Lançamento</h4>
+                <h4>Lancamento</h4>
                 <p>Deploy e acompanhamento inicial para garantir o sucesso.</p>
               </div>
             </div>

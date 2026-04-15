@@ -1,7 +1,8 @@
-import { useState, useEffect } from 'react';
+﻿import { useState, useEffect } from 'react';
 import { FiAward, FiFilter } from 'react-icons/fi';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { certificates, certificateCategories } from '../../data/certificates';
+import { PageHero } from '../../components/ui/PageHero/PageHero';
 import { Reveal } from '../../components/ui/Reveal/Reveal';
 import './Certificados.css';
 
@@ -10,26 +11,24 @@ export default function Certificados() {
   useScrollReveal();
 
   useEffect(() => {
-    document.title = 'Certificados — Victor Kauê';
+    document.title = 'Certificados - Victor Kaue';
   }, []);
 
-  const filtered = activeCategory === 'todos' 
-    ? certificates 
-    : certificates.filter(c => c.category === activeCategory);
+  const filtered = activeCategory === 'todos'
+    ? certificates
+    : certificates.filter((c) => c.category === activeCategory);
 
   return (
     <main className="page-certificados">
       <section className="content-section">
         <div className="container">
-          <div className="section-header reveal-on-scroll">
-            <h1 className="section-title">
-              <FiAward size={28} />
-              Certificados
-            </h1>
-            <p className="section-subtitle">Minhas conquistas e especializações técnicas.</p>
-          </div>
+          <PageHero
+            titleMain="Certificados &"
+            titleAccent="Evolucao Continua"
+            subtitle="Formacao tecnica orientada a pratica, validando competencias em backend, dados, DevOps e desenvolvimento web moderno."
+            icon={<FiAward size={22} />}
+          />
 
-          {/* FILTERS */}
           <div className="cert-filters reveal-on-scroll">
             <div className="filter-icon"><FiFilter size={18} /></div>
             <div className="filter-options">
@@ -45,7 +44,6 @@ export default function Certificados() {
             </div>
           </div>
 
-          {/* GRID */}
           <div className="cert-grid">
             {filtered.map((cert) => (
               <Reveal key={cert.id} delay={0.1}>

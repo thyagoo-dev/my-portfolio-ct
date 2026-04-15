@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { FiFolder, FiAlertCircle } from 'react-icons/fi';
 import { useTranslation } from 'react-i18next';
 import { ProjectCard } from '../../components/ui/ProjectCard/ProjectCard';
+import { PageHero } from '../../components/ui/PageHero/PageHero';
 import { projects } from '../../data/projects';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import './Projetos.css';
@@ -21,11 +22,12 @@ export default function Projetos() {
     <main className="page-projetos">
       <section className="content-section">
         <div className="container">
-          <h1 className="section-title">
-            <FiFolder size={28} />
-            {t('projects.title')}
-          </h1>
-          <p className="section-subtitle">{t('projects.subtitle')}</p>
+          <PageHero
+            titleMain="Projetos &"
+            titleAccent="Soluções Reais"
+            subtitle="Cases pessoais e profissionais construídos com foco em arquitetura, performance e valor de negócio do briefing ao deploy."
+            icon={<FiFolder size={22} />}
+          />
 
           <div className="projects-filter-container">
             {(['todos', 'pessoal', 'real'] as const).map((f) => (

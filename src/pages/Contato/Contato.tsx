@@ -1,7 +1,8 @@
-import { useState, useEffect } from 'react';
+﻿import { useState, useEffect } from 'react';
 import { FiSend, FiUser, FiMail, FiFileText, FiMessageSquare, FiLinkedin, FiGithub } from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa';
 import { Button } from '../../components/ui/Button/Button';
+import { PageHero } from '../../components/ui/PageHero/PageHero';
 import { socialLinks } from '../../data/social';
 import type { ContactFormData } from '../../types';
 import './Contato.css';
@@ -10,11 +11,11 @@ const WHATSAPP_PHONE = '5587981677005';
 
 function buildWhatsAppUrl(data: ContactFormData): string {
   const message = encodeURIComponent(
-    `🟡 *Nova mensagem do Portfólio*\n\n` +
-    `*Nome:* ${data.nome}\n` +
-    `*Email:* ${data.email}\n` +
-    `*Assunto:* ${data.assunto}\n\n` +
-    `*Mensagem:*\n${data.mensagem}`
+    `Nova mensagem do Portfólio\n\n` +
+    `Nome: ${data.nome}\n` +
+    `Email: ${data.email}\n` +
+    `Assunto: ${data.assunto}\n\n` +
+    `Mensagem:\n${data.mensagem}`
   );
   return `https://wa.me/${WHATSAPP_PHONE}?text=${message}`;
 }
@@ -24,7 +25,7 @@ export default function Contato() {
   const [sent, setSent] = useState(false);
 
   useEffect(() => {
-    document.title = 'Contato — Victor Kauê';
+    document.title = 'Contato - Victor Kaue';
   }, []);
 
   const filledFields = [form.nome, form.email, form.assunto, form.mensagem].filter(Boolean).length;
@@ -56,16 +57,14 @@ export default function Contato() {
     <main className="page-contato">
       <section className="contact-hero content-section">
         <div className="container">
-          <h1 className="section-title" style={{ justifyContent: 'center' }}>
-            <FiSend size={28} />
-            Entre em Contato
-          </h1>
-          <p className="section-subtitle text-center">
-            Envie uma mensagem que ela vai direto pro meu WhatsApp.
-          </p>
+          <PageHero
+            titleMain="Contato &"
+            titleAccent="Novas Oportunidades"
+            subtitle="Vamos conversar sobre seu projeto e transformar objetivos em entregas digitais robustas, elegantes e prontas para escalar."
+            icon={<FiSend size={22} />}
+          />
 
           <div className="contact-layout">
-            {/* FORM */}
             <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-progress">
                 <div className="form-progress-bar" style={{ width: `${progress}%` }} />
@@ -128,12 +127,11 @@ export default function Contato() {
 
               {sent && (
                 <div className="form-success">
-                  ✅ Mensagem encaminhada para o WhatsApp!
+                  Mensagem encaminhada para o WhatsApp!
                 </div>
               )}
             </form>
 
-            {/* SIDEBAR */}
             <aside className="contact-sidebar">
               <h3>Outras formas de contato</h3>
               <div className="contact-cards">
