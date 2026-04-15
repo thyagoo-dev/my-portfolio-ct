@@ -72,14 +72,7 @@ O projeto está hospedado no Vercel, garantindo alta performance e disponibilida
 - Botao de voltar ao topo e controle de scroll por rota.
 - Estrutura preparada para crescer com novas secoes e cases.
 
----
-
-## 🖼️ Galeria:
-
-### 1) Home
 ![Home - Hero](./public/images/readme/home-hero.png)
-
-
 ---
 
 ## 🗂️ Estrutura do Projeto
