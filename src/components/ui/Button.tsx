@@ -11,9 +11,20 @@ interface ButtonProps {
   target?: string;
   rel?: string;
   type?: 'button' | 'submit';
+  external?: boolean;
 }
 
-export function Button({ variant = 'primary', href, onClick, children, className = '', target, rel, type = 'button' }: ButtonProps) {
+export function Button({ 
+  variant = 'primary', 
+  href, 
+  onClick, 
+  children, 
+  className = '', 
+  target, 
+  rel, 
+  type = 'button',
+  external 
+}: ButtonProps) {
   const cls = `btn btn-${variant} ${className}`.trim();
 
   const motionProps = {
@@ -23,12 +34,16 @@ export function Button({ variant = 'primary', href, onClick, children, className
   };
 
   if (href) {
+    const isExternal = external || href.startsWith('http');
+    const finalTarget = isExternal ? '_blank' : target;
+    const finalRel = isExternal ? 'noopener noreferrer' : rel;
+
     return (
       <motion.a 
         href={href} 
         className={cls} 
-        target={target} 
-        rel={rel}
+        target={finalTarget} 
+        rel={finalRel}
         {...motionProps}
       >
         {children}
