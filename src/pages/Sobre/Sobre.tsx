@@ -35,6 +35,7 @@ export default function Sobre() {
     document.title = 'Sobre — Victor Kauê';
   }, []);
 
+  const menuItems = [
     { id: 'intro', label: t('about.title'), icon: <FiTarget size={16} /> },
     { id: 'role', label: t('about.highlights.title'), icon: <FiBriefcase size={16} /> },
     { id: 'experience', label: 'Experiência', icon: <FiBriefcase size={16} /> },
