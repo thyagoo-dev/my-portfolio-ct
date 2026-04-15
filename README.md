@@ -65,7 +65,10 @@ O projeto está hospedado no Vercel, garantindo alta performance e disponibilida
 
 ---
 
-## 🗂️ Estrutura do Projeto
+## 🗂️ Estrutura do Projeto:
+
+A estrutura do projeto é organizada para facilitar a manutenção e escalabilidade, seguindo boas práticas de desenvolvimento front-end. Os arquivos estão agrupados por funcionalidade e tipo, garantindo uma navegação intuitiva pelo código.
+
 ```txt
 src/
   components/
