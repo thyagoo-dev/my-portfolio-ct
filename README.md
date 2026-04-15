@@ -27,7 +27,11 @@ Portfólio profissional construído para demonstrar capacidade tecnica em **dese
 [![Email](https://img.shields.io/badge/Email-kaue.alves.pg%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:kaue.alves.pg@gmail.com)
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-+55%2087%2098167--7005-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/5587981677005)
 
-> Se quiser, posso adicionar aqui tambem o link do deploy (Vercel/Netlify).
+---
+
+## 🎯 Deploy:
+O projeto está hospedado no Vercel, garantindo alta performance e disponibilidade global. Acesse o portfólio completo em:
+[https://portifolio-victorkaue.vercel.app/](https://portifolio-victorkaue.vercel.app/)
 
 ---
 
