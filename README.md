@@ -40,7 +40,7 @@ O projeto está hospedado no Vercel, garantindo alta performance e disponibilida
 ## 🧰 Stack Tecnologica:
 
 ### Core:
-<p style="display: flex; gap: 8px; align-items: center;">
+<p style="display: flex; gap: 28px; align-items: center;">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="28" alt="React" />
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="28" alt="TypeScript" />
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" width="28" alt="Vite" />
@@ -50,7 +50,7 @@ O projeto está hospedado no Vercel, garantindo alta performance e disponibilida
 </p>
 
 ### Backend e Dados :
-<p style="display: flex; gap: 8px; align-items: center;">
+<p style="display: flex; gap: 28px; align-items: center;">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="28" alt="Python" />
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" width="28" alt="Django" />
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="28" alt="PostgreSQL" />
