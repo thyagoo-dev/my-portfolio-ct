@@ -1,13 +1,15 @@
-﻿import { useEffect } from 'react';
-import {FiArrowLeft,FiArrowRight,FiCheckCircle,FiCpu,FiDatabase,FiExternalLink,FiGithub,FiLayout,FiTarget,FiZap,} from 'react-icons/fi';
+import { useEffect } from 'react';
+import {FiArrowLeft,FiArrowRight,FiCheckCircle,FiCpu,FiDatabase,FiExternalLink,FiGithub,FiLayout,FiTarget,FiZap,FiList,FiInfo} from 'react-icons/fi';
 import { Link, useParams } from 'react-router-dom';
 import { Button } from '../../components/ui/Button/Button';
 import { projects } from '../../data/projects';
+import { useScrollReveal } from '../../hooks/useScrollReveal';
 import './ProjetoDetalhe.css';
 
 export default function ProjetoDetalhe() {
   const { id } = useParams<{ id: string }>();
   const project = projects.find((p) => p.id === id || p.slug === id);
+  const { revealRef } = useScrollReveal();
 
   useEffect(() => {
     document.title = project ? `${project.title} - Victor Kauê` : 'Projeto nao encontrado';
@@ -97,9 +99,23 @@ export default function ProjetoDetalhe() {
           {detailed && (
             <div className="projeto-extended-info">
               <div className="info-section reveal-on-scroll">
-                <h2 className="detail-section-title">Descricao</h2>
-                <p className="detail-text">{projectDescription}</p>
+                <h2 className="detail-section-title"><FiInfo size={20} /> Descricao Detalhada</h2>
+                <p className="detail-text">{detailed.solucao}</p>
               </div>
+
+              {project.features && project.features.length > 0 && (
+                 <div className="info-section reveal-on-scroll">
+                    <h2 className="detail-section-title"><FiList size={20} /> Funcionalidades</h2>
+                    <div className="features-list-grid">
+                        {project.features.map((feature, idx) => (
+                            <div key={idx} className="feature-item-detail">
+                                <FiCheckCircle size={16} className="feature-check" />
+                                <span>{feature}</span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+              )}
 
               <div className="info-section reveal-on-scroll">
                 <h2 className="detail-section-title">Detalhes do Projeto</h2>
@@ -196,6 +212,40 @@ export default function ProjetoDetalhe() {
                   ))}
                 </div>
               </div>
+            </div>
+          )}
+
+          {!detailed && project.summary && (
+            <div className="projeto-summary-fallback reveal-on-scroll">
+               <h2 className="detail-section-title"><FiInfo size={20} /> Resumo do Projeto</h2>
+               <div className="summary-cards-grid">
+                  <div className="summary-card">
+                    <span className="summary-label">Problema:</span>
+                    <p>{project.summary.problema}</p>
+                  </div>
+                  <div className="summary-card">
+                    <span className="summary-label">Solucao:</span>
+                    <p>{project.summary.solucao}</p>
+                  </div>
+                  <div className="summary-card">
+                    <span className="summary-label">Stack:</span>
+                    <p>{project.summary.stack}</p>
+                  </div>
+               </div>
+               
+               {project.features && project.features.length > 0 && (
+                 <div className="info-section" style={{marginTop: '3rem'}}>
+                    <h3 className="tech-section-subtitle" style={{textAlign: 'left', marginBottom: '1.5rem'}}>Funcionalidades Principais</h3>
+                    <div className="features-list-grid">
+                        {project.features.map((feature, idx) => (
+                            <div key={idx} className="feature-item-detail">
+                                <FiCheckCircle size={16} className="feature-check" />
+                                <span>{feature}</span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+              )}
             </div>
           )}
 
