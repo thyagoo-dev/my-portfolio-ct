@@ -4,7 +4,7 @@ export const services: Service[] = [
   {
     id: 'backend',
     title: 'Desenvolvimento Backend',
-    description: 'Construção de regras de negócio consistentes, autenticação segura e modelagem de dados orientada a escala.',
+    description: 'Construção de regras de negócio consistentes, autenticação segura e modelagem de dados orientada à escala.',
     icon: 'server',
     features: [
       'APIs REST escaláveis',
