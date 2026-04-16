@@ -1,52 +1,68 @@
+.project-carousel-wrapper {
+    width: 100%;
+    position: relative;
+}
+
 .project-carousel-container {
     width: 100%;
     margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
+    outline: none;
 }
 
 .project-carousel-main {
     position: relative;
     width: 100%;
     aspect-ratio: 16 / 9;
-    background: #111111;
+    background: #080808;
     border-radius: 1.5rem;
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.project-carousel-main:hover {
+    border-color: rgba(255, 122, 0, 0.3);
 }
 
 .carousel-image {
     position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Change to contain if you want to see whole image without cropping */
-    cursor: grab;
+    object-fit: cover;
+    cursor: zoom-in;
 }
 
-.carousel-image:active {
-    cursor: grabbing;
+/* UI Overlay */
+.carousel-ui-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 10;
 }
 
 .carousel-nav {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 48px;
-    height: 48px;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(8px);
+    width: 54px;
+    height: 54px;
+    background: rgba(10, 10, 10, 0.4);
+    backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     cursor: pointer;
-    z-index: 10;
-    transition: all 0.2s ease;
+    pointer-events: auto;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     opacity: 0;
 }
 
@@ -57,61 +73,165 @@
 .carousel-nav:hover {
     background: var(--accent-color);
     border-color: var(--accent-color);
-    transform: translateY(-50%) scale(1.1);
+    transform: translateY(-50%) scale(1.15);
+    box-shadow: 0 0 20px rgba(255, 122, 0, 0.4);
 }
 
 .carousel-nav.prev {
-    left: 1.5rem;
+    left: 2rem;
 }
 
 .carousel-nav.next {
-    right: 1.5rem;
+    right: 2rem;
 }
 
 .carousel-zoom-hint {
     position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
-    width: 40px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(4px);
-    border-radius: 50%;
+    bottom: 2rem;
+    right: 2rem;
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 0.75rem;
+    padding: 0.6rem 1.2rem;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    border-radius: var(--radius-full);
     color: white;
-    z-index: 5;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
 }
 
 .project-carousel-main:hover .carousel-zoom-hint {
     opacity: 1;
+    transform: translateY(0);
 }
 
+/* Indicators - Redesigned to Pills */
 .carousel-indicators {
     display: flex;
     justify-content: center;
-    gap: 0.75rem;
-    padding: 0.5rem 0;
+    gap: 0.6rem;
+    align-items: center;
 }
 
 .indicator-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 4px;
-    background: rgba(255, 255, 255, 0.2);
+    width: 6px;
+    height: 24px;
+    background: rgba(255, 255, 255, 0.1);
     border: none;
+    border-radius: 3px;
     padding: 0;
     cursor: pointer;
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.indicator-dot:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.active-piller {
+    position: absolute;
+    inset: 0;
+    background: var(--accent-color);
+    box-shadow: 0 0 10px var(--accent-color);
 }
 
 .indicator-dot.active {
     width: 24px;
     background: var(--accent-color);
-    box-shadow: 0 0 10px rgba(255, 122, 0, 0.5);
+}
+
+/* Lightbox Modal */
+.lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+}
+
+.lightbox-content {
+    position: relative;
+    width: 90vw;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.lightbox-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 1rem;
+    box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.8);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -3rem;
+    right: 0;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.lightbox-close:hover {
+    transform: scale(1.2) rotate(90deg);
+}
+
+.lightbox-nav-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.lightbox-nav {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease;
+}
+
+.lightbox-nav:hover {
+    color: var(--accent-color);
+}
+
+.lightbox-counter {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: white;
+    font-family: var(--font-secondary);
+}
+
+.lightbox-title {
+    color: var(--text-dim-color);
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
 }
 
 @media (max-width: 768px) {
@@ -120,17 +240,27 @@
     }
 
     .carousel-nav {
-        width: 40px;
-        height: 40px;
-        font-size: 1.25rem;
-        opacity: 0.8 !important; /* Always show a bit on touch */
+        width: 44px;
+        height: 44px;
+        opacity: 0.8 !important;
     }
 
-    .carousel-nav.prev {
-        left: 0.75rem;
+    .carousel-nav.prev { left: 1rem; }
+    .carousel-nav.next { right: 1rem; }
+
+    .carousel-zoom-hint {
+        bottom: 1rem;
+        right: 1rem;
+        padding: 0.4rem 0.8rem;
     }
 
-    .carousel-nav.next {
-        right: 0.75rem;
+    .lightbox-content {
+        width: 95vw;
+        height: 80vh;
+    }
+
+    .lightbox-nav-container {
+        gap: 1.5rem;
+        padding: 0.5rem 1rem;
     }
 }

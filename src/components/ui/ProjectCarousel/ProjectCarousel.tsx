@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiChevronLeft, FiChevronRight, FiMaximize2 } from 'react-icons/fi';
+import { FiChevronLeft, FiChevronRight, FiMaximize2, FiX } from 'react-icons/fi';
 import './ProjectCarousel.css';
 
 interface ProjectCarouselProps {
@@ -11,30 +11,9 @@ interface ProjectCarouselProps {
 export const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ images, title }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
   if (!images || images.length === 0) return null;
-
-  const slideVariants = {
-    enter: (direction: number) => ({
-      x: direction > 0 ? 1000 : -1000,
-      opacity: 0
-    }),
-    center: {
-      zIndex: 1,
-      x: 0,
-      opacity: 1
-    },
-    exit: (direction: number) => ({
-      zIndex: 0,
-      x: direction < 0 ? 1000 : -1000,
-      opacity: 0
-    })
-  };
-
-  const swipeConfidenceThreshold = 10000;
-  const swipePower = (offset: number, velocity: number) => {
-    return Math.abs(offset) * velocity;
-  };
 
   const paginate = (newDirection: number) => {
     setDirection(newDirection);
@@ -46,71 +25,170 @@ export const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ images, title 
     });
   };
 
-  return (
-    <div className="project-carousel-container">
-      <div className="project-carousel-main">
-        <AnimatePresence initial={false} custom={direction}>
-          <motion.img
-            key={currentIndex}
-            src={images[currentIndex]}
-            custom={direction}
-            variants={slideVariants}
-            initial="enter"
-            animate="center"
-            exit="exit"
-            transition={{
-              x: { type: "spring", stiffness: 300, damping: 30 },
-              opacity: { duration: 0.2 }
-            }}
-            drag="x"
-            dragConstraints={{ left: 0, right: 0 }}
-            dragElastic={1}
-            onDragEnd={(e, { offset, velocity }) => {
-              const swipe = swipePower(offset.x, velocity.x);
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft') paginate(-1);
+      if (e.key === 'ArrowRight') paginate(1);
+      if (e.key === 'Escape') setIsLightboxOpen(false);
+    };
 
-              if (swipe < -swipeConfidenceThreshold) {
-                paginate(1);
-              } else if (swipe > swipeConfidenceThreshold) {
-                paginate(-1);
-              }
-            }}
-            className="carousel-image"
-            alt={`${title} - screenshot ${currentIndex + 1}`}
-          />
-        </AnimatePresence>
+    if (isLightboxOpen || document.activeElement?.closest('.project-carousel-container')) {
+      window.addEventListener('keydown', handleKeyDown);
+    }
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isLightboxOpen, currentIndex]);
+
+  const slideVariants = {
+    enter: (direction: number) => ({
+      x: direction > 0 ? 500 : -500,
+      opacity: 0,
+      scale: 0.95
+    }),
+    center: {
+      zIndex: 1,
+      x: 0,
+      opacity: 1,
+      scale: 1
+    },
+    exit: (direction: number) => ({
+      zIndex: 0,
+      x: direction < 0 ? 500 : -500,
+      opacity: 0,
+      scale: 0.95
+    })
+  };
+
+  return (
+    <div className="project-carousel-wrapper">
+      <div className="project-carousel-container" tabIndex={0}>
+        <div className="project-carousel-main" onClick={() => setIsLightboxOpen(true)}>
+          <AnimatePresence initial={false} custom={direction}>
+            <motion.img
+              key={currentIndex}
+              src={images[currentIndex]}
+              custom={direction}
+              variants={slideVariants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{
+                x: { type: "spring", stiffness: 300, damping: 30 },
+                opacity: { duration: 0.2 },
+                scale: { duration: 0.3 }
+              }}
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={1}
+              onDragEnd={(_, { offset, velocity }) => {
+                const swipePower = (offset: number, velocity: number) => Math.abs(offset) * velocity;
+                const swipe = swipePower(offset.x, velocity.x);
+
+                if (swipe < -10000) paginate(1);
+                else if (swipe > 10000) paginate(-1);
+              }}
+              className="carousel-image"
+              alt={`${title} - screenshot ${currentIndex + 1}`}
+            />
+          </AnimatePresence>
+
+          <div className="carousel-ui-overlay">
+            {images.length > 1 && (
+              <>
+                <button
+                  className="carousel-nav prev"
+                  onClick={(e) => { e.stopPropagation(); paginate(-1); }}
+                  aria-label="Previous image"
+                >
+                  <FiChevronLeft />
+                </button>
+                <button
+                  className="carousel-nav next"
+                  onClick={(e) => { e.stopPropagation(); paginate(1); }}
+                  aria-label="Next image"
+                >
+                  <FiChevronRight />
+                </button>
+              </>
+            )}
+
+            <div className="carousel-zoom-hint">
+              <FiMaximize2 />
+              <span>Clique para ampliar</span>
+            </div>
+          </div>
+        </div>
 
         {images.length > 1 && (
-          <>
-            <button className="carousel-nav prev" onClick={() => paginate(-1)} aria-label="Previous image">
-              <FiChevronLeft />
-            </button>
-            <button className="carousel-nav next" onClick={() => paginate(1)} aria-label="Next image">
-              <FiChevronRight />
-            </button>
-          </>
+          <div className="carousel-indicators">
+            {images.map((_, index) => (
+              <button
+                key={index}
+                className={`indicator-dot ${index === currentIndex ? 'active' : ''}`}
+                onClick={() => {
+                  setDirection(index > currentIndex ? 1 : -1);
+                  setCurrentIndex(index);
+                }}
+                aria-label={`Go to image ${index + 1}`}
+              >
+                {index === currentIndex && (
+                  <motion.div 
+                      layoutId="active-indicator"
+                      className="active-piller"
+                  />
+                )}
+              </button>
+            ))}
+          </div>
         )}
-
-        {/* Fullscreen indicator if user wants to imply it */}
-        <div className="carousel-zoom-hint">
-            <FiMaximize2 />
-        </div>
       </div>
 
-      {images.length > 1 && (
-        <div className="carousel-indicators">
-          {images.map((_, index) => (
-            <button
-              key={index}
-              className={`indicator-dot ${index === currentIndex ? 'active' : ''}`}
-              onClick={() => {
-                setDirection(index > currentIndex ? 1 : -1);
-                setCurrentIndex(index);
-              }}
-              aria-label={`Go to image ${index + 1}`}
-            />
-          ))}
-        </div>
-      )}
+      {/* Lightbox Modal */}
+      <AnimatePresence>
+        {isLightboxOpen && (
+          <motion.div
+            className="lightbox-overlay"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setIsLightboxOpen(false)}
+          >
+            <motion.div
+              className="lightbox-content"
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <img
+                src={images[currentIndex]}
+                className="lightbox-image"
+                alt={`${title} full size`}
+              />
+              
+              <button className="lightbox-close" onClick={() => setIsLightboxOpen(false)}>
+                <FiX />
+              </button>
+
+              {images.length > 1 && (
+                <div className="lightbox-nav-container">
+                    <button className="lightbox-nav prev" onClick={() => paginate(-1)}>
+                        <FiChevronLeft />
+                    </button>
+                    <span className="lightbox-counter">
+                        {currentIndex + 1} / {images.length}
+                    </span>
+                    <button className="lightbox-nav next" onClick={() => paginate(1)}>
+                        <FiChevronRight />
+                    </button>
+                </div>
+              )}
+
+              <p className="lightbox-title">{title}</p>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
