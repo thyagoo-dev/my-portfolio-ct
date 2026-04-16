@@ -12,7 +12,7 @@ export default function ProjetoDetalhe() {
   const { revealRef } = useScrollReveal();
 
   useEffect(() => {
-    document.title = project ? `${project.title} - Victor Kauê` : 'Projeto nao encontrado';
+    document.title = project ? `${project.title} - Victor Kauê` : 'Projeto não encontrado';
     window.scrollTo(0, 0);
   }, [project]);
 
@@ -20,7 +20,7 @@ export default function ProjetoDetalhe() {
     return (
       <main style={{ paddingTop: '10rem', textAlign: 'center' }}>
         <div className="container">
-          <h1>Projeto nao encontrado</h1>
+          <h1>Projeto não encontrado</h1>
           <p style={{ margin: '1rem 0 2rem', color: 'var(--text-muted-color)' }}>
             O projeto que voce procura nao existe.
           </p>
@@ -36,7 +36,7 @@ export default function ProjetoDetalhe() {
   const detailed = project.detailed_info;
   const projectTitle = project.title || 'Projeto em atualizacao';
   const projectDescription =
-    project.description || project.shortDescription || 'Descricao em atualizacao.';
+    project.description || project.shortDescription || 'Descrição em atualização.';
   const projectTechnologies =
     Array.isArray(project.technologies) && project.technologies.length > 0
       ? project.technologies
@@ -99,7 +99,7 @@ export default function ProjetoDetalhe() {
           {detailed && (
             <div className="projeto-extended-info">
               <div className="info-section reveal-on-scroll">
-                <h2 className="detail-section-title"><FiInfo size={20} /> Descricao Detalhada</h2>
+                <h2 className="detail-section-title"><FiInfo size={20} /> Descrição Detalhada</h2>
                 <p className="detail-text">{detailed.solucao}</p>
               </div>
 
@@ -134,7 +134,7 @@ export default function ProjetoDetalhe() {
                       <FiZap size={20} />
                     </div>
                     <div className="card-text">
-                      <h4 className="card-title-main">Solucao</h4>
+                      <h4 className="card-title-main">Solução</h4>
                       <p>{detailed.solucao}</p>
                     </div>
                   </div>
@@ -184,10 +184,10 @@ export default function ProjetoDetalhe() {
               </div>
 
               <div className="info-section reveal-on-scroll">
-                <h2 className="detail-section-title">Stack e Decisoes</h2>
+                <h2 className="detail-section-title">Stack e Decisões</h2>
                 <div className="decisions-grid">
                   <div className="decision-item">
-                    <span className="decision-label">Autenticacao:</span> {detailed.decisoes.autenticacao}
+                    <span className="decision-label">Autenticação:</span> {detailed.decisoes.autenticacao}
                   </div>
                   <div className="decision-item">
                     <span className="decision-label">Back-end:</span> {detailed.decisoes.backend}
@@ -224,7 +224,7 @@ export default function ProjetoDetalhe() {
                     <p>{project.summary.problema}</p>
                   </div>
                   <div className="summary-card">
-                    <span className="summary-label">Solucao:</span>
+                    <span className="summary-label">Solução:</span>
                     <p>{project.summary.solucao}</p>
                   </div>
                   <div className="summary-card">

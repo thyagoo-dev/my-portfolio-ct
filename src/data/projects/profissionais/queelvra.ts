@@ -19,4 +19,25 @@ export const queelvra: Project = {
     solucao: 'Landing page otimizada com foco em UX e gatilhos de conversão',
     stack: 'HTML, CSS e JavaScript',
   },
+  detailed_info: {
+    desafio: 'Criar uma página extremamente leve e rápida que transmita autoridade instantânea.',
+    solucao: 'Desenvolvimento em HTML/CSS puro com animações sutis e foco em copywriting.',
+    impacto: 'Aumento significativo na taxa de cliques e conversão de leads qualificados.',
+    arquitetura: {
+      frontend: 'HTML5 Sémantico / CSS3 Moderno',
+      api: 'Integração de formulários via API',
+      banco: 'Não aplicável (Página estática)',
+    },
+    decisoes: {
+      autenticacao: 'Não aplicável',
+      backend: 'Lógica mínima em JavaScript',
+      deploy: 'Hospedagem de alta performance',
+      banco: 'Sem necessidade de persistência local',
+    },
+    tech_v2: [
+      { name: 'HTML5', icon: 'devicon-html5-plain colored' },
+      { name: 'CSS3', icon: 'devicon-css3-plain colored' },
+      { name: 'JavaScript', icon: 'devicon-javascript-plain colored' },
+    ],
+  },
 };

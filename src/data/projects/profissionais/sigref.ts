@@ -20,4 +20,26 @@ export const sigref: Project = {
     solucao: 'Sistema web centralizado para gestão de demandas e fluxos educacionais',
     stack: 'Python, Django e MySQL',
   },
+  detailed_info: {
+    desafio: 'Centralizar a gestão de demandas de diversas escolas em uma única plataforma regional com fluxos de aprovação.',
+    solucao: 'Desenvolvimento de um sistema SaaS sob medida com painéis administrativos e relatórios automatizados.',
+    impacto: 'Otimização do tempo de resposta da gerência regional e maior transparência nos processos escolares.',
+    arquitetura: {
+      frontend: 'Django Templates + JavaScript',
+      api: 'Monolito Django',
+      banco: 'MySQL para dados relacionais',
+    },
+    decisoes: {
+      autenticacao: 'Django Auth com níveis de acesso',
+      backend: 'Django Framework',
+      deploy: 'Servidor Linux com Nginx/Gunicorn',
+      banco: 'MySQL pela robustez corporativa',
+    },
+    tech_v2: [
+      { name: 'Python', icon: 'devicon-python-plain colored' },
+      { name: 'Django', icon: 'devicon-django-plain colored' },
+      { name: 'MySQL', icon: 'devicon-mysql-plain colored' },
+      { name: 'Git', icon: 'devicon-git-plain colored' },
+    ],
+  },
 };

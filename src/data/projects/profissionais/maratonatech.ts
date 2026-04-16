@@ -20,4 +20,26 @@ export const maratonatech: Project = {
     solucao: 'Plataforma digital para cadastro de apresentações e sistema de votação online',
     stack: 'Python e Django',
   },
+  detailed_info: {
+    desafio: 'Processar centenas de votos simultâneos durante a SNCT sem perda de dados ou lentidão.',
+    solucao: 'Arquitetura Django otimizada com cache de vanguarda e validação de duplicidade de votos.',
+    impacto: 'Agilidade na apuração dos resultados e interação em tempo real com o público do evento.',
+    arquitetura: {
+      frontend: 'Django + CSS Customizado',
+      api: 'Processamento Síncrono/Assíncrono',
+      banco: 'PostgreSQL estruturado',
+    },
+    decisoes: {
+      autenticacao: 'Validadores de sessão por dispositivo',
+      backend: 'Django Framework',
+      deploy: 'Cloud para suporte a picos de tráfego',
+      banco: 'PostgreSQL pela confiabilidade',
+    },
+    tech_v2: [
+      { name: 'Python', icon: 'devicon-python-plain colored' },
+      { name: 'Django', icon: 'devicon-django-plain colored' },
+      { name: 'PostgreSQL', icon: 'devicon-postgresql-plain colored' },
+      { name: 'Git', icon: 'devicon-git-plain colored' },
+    ],
+  },
 };

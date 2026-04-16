@@ -19,4 +19,26 @@ export const vaSuplementos: Project = {
     solucao: 'Aplicação web para registro de transações e monitoramento de inventário',
     stack: 'Python, Django e SQLite',
   },
+  detailed_info: {
+    desafio: 'Desenvolver um sistema de controle de baixo custo e alta eficiência para operação local.',
+    solucao: 'Uso de Django com SQLite para uma entrega rápida e manutenção simplificada.',
+    impacto: 'Redução de perdas de estoque e organização financeira clara para o negócio.',
+    arquitetura: {
+      frontend: 'HTML/CSS + Bootstrap',
+      api: 'Django (Python)',
+      banco: 'SQLite para simplicidade',
+    },
+    decisoes: {
+      autenticacao: 'Login administrativo Django',
+      backend: 'Django Framework',
+      deploy: 'Hospedagem compartilhada econômica',
+      banco: 'SQLite pela portabilidade do projeto',
+    },
+    tech_v2: [
+      { name: 'Python', icon: 'devicon-python-plain colored' },
+      { name: 'Django', icon: 'devicon-django-plain colored' },
+      { name: 'SQLite', icon: 'devicon-sqlite-plain colored' },
+      { name: 'Bootstrap', icon: 'devicon-bootstrap-plain colored' },
+    ],
+  },
 };
