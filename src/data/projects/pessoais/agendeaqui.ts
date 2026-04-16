@@ -43,4 +43,14 @@ export const agendeaqui: Project = {
       { name: 'Bootstrap', icon: 'devicon-bootstrap-plain colored' },
     ],
   },
+  screenshots: [
+    '/images/fotos-projetos-pessoais/agendeaqui/agendeaqui.png',
+    '/images/fotos-projetos-pessoais/agendeaqui/1.jpg',
+    '/images/fotos-projetos-pessoais/agendeaqui/2.jpg',
+    '/images/fotos-projetos-pessoais/agendeaqui/3.jpg',
+    '/images/fotos-projetos-pessoais/agendeaqui/4.jpg',
+    '/images/fotos-projetos-pessoais/agendeaqui/5.jpg',
+    '/images/fotos-projetos-pessoais/agendeaqui/6.jpg',
+    '/images/fotos-projetos-pessoais/agendeaqui/7.jpg',
+  ],
 };
