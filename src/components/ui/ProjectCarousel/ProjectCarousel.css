@@ -236,31 +236,58 @@
 
 @media (max-width: 768px) {
     .project-carousel-main {
-        aspect-ratio: 4 / 3;
+        aspect-ratio: 16 / 10;
+        border-radius: 1rem;
     }
 
     .carousel-nav {
-        width: 44px;
-        height: 44px;
-        opacity: 0.8 !important;
+        width: 40px;
+        height: 40px;
+        font-size: 1.25rem;
+        opacity: 0.9 !important;
+        background: rgba(10, 10, 10, 0.6);
     }
 
-    .carousel-nav.prev { left: 1rem; }
-    .carousel-nav.next { right: 1rem; }
+    .carousel-nav.prev { left: 0.75rem; }
+    .carousel-nav.next { right: 0.75rem; }
 
     .carousel-zoom-hint {
-        bottom: 1rem;
-        right: 1rem;
-        padding: 0.4rem 0.8rem;
+        bottom: 0.75rem;
+        right: 0.75rem;
+        padding: 0.35rem 0.7rem;
+        font-size: 0.75rem;
+        opacity: 0.8;
+        transform: translateY(0);
     }
 
     .lightbox-content {
         width: 95vw;
-        height: 80vh;
+        height: 90vh;
+        gap: 1.5rem;
+    }
+
+    .lightbox-close {
+        top: -10px;
+        right: 10px;
+        background: rgba(0, 0, 0, 0.5);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        z-index: 100;
     }
 
     .lightbox-nav-container {
-        gap: 1.5rem;
-        padding: 0.5rem 1rem;
+        gap: 1rem;
+        padding: 0.4rem 0.8rem;
+        background: rgba(0, 0, 0, 0.8);
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .lightbox-title {
+        display: none; /* Hide title on small mobile to save space */
     }
 }

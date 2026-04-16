@@ -368,7 +368,7 @@
     }
 
     .photo-container {
-        width: min(350px, 80vw); /* Smaller on tablet/mobile */
+        width: min(280px, 70vw); /* Slightly smaller on mobile for better scale */
         margin: 0 auto;
     }
     
@@ -412,11 +412,12 @@
     }
 
     .hero-title-main span {
-        font-size: clamp(1.45rem, 8vw, 2.6rem);
-        letter-spacing: -0.04em;
+        font-size: clamp(1.8rem, 10vw, 2.8rem); /* Slightly larger for impact */
+        letter-spacing: -0.05em;
         white-space: normal;
         overflow-wrap: anywhere;
         word-break: break-word;
+        line-height: 1.1;
     }
 
     .hero-description {
@@ -426,7 +427,7 @@
     }
     
     .photo-container {
-        width: min(300px, 80vw);
+        width: min(240px, 65vw); /* More compact on phones */
     }
 
     .hero-actions {

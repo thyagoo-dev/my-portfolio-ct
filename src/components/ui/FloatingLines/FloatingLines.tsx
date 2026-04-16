@@ -26,8 +26,15 @@ const fragmentShader = `
     // Floating Lines Logic
     float lines = 0.0;
     vec2 pos = st * vec2(aspect, 1.0);
+    
+    // Dynamic line count and scale based on screen width
+    float isMobile = step(uResolution.x, 768.0);
+    float maxLines = mix(10.0, 6.0, isMobile);
+    float verticalScale = mix(0.12, 0.18, isMobile);
 
-    for(float i = 1.0; i < 10.0; i++) {
+    for(float i = 1.0; i < 11.0; i++) {
+        if (i > maxLines) break;
+        
         float t = uTime * 0.15 + i * 1.5;
         
         // Base sine wave with multiple frequencies
@@ -35,9 +42,9 @@ const fragmentShader = `
         y += sin(pos.x * 2.0 - t * 0.5) * 0.08;
         
         // Vertical offset for each line
-        float offset = (i - 5.0) * 0.12;
+        float offset = (i - (maxLines * 0.5)) * verticalScale;
         
-        // Mouse influence
+        // Mouse/Touch influence
         float dMouse = distance(st, uMouse);
         float mouseEffect = smoothstep(0.5, 0.0, dMouse);
         float bend = sin(st.x * 2.0 + uTime) * mouseEffect * 0.15;
@@ -45,9 +52,9 @@ const fragmentShader = `
         float dist = abs(st.y - (y + offset + bend));
         
         // Dynamic Thickness and Glow
-        float thickness = 0.0012;
+        float thickness = mix(0.0012, 0.0008, isMobile);
         float l = smoothstep(thickness, 0.0, dist);
-        float glow = exp(-dist * 35.0) * 0.5;
+        float glow = exp(-dist * mix(35.0, 25.0, isMobile)) * 0.5;
         
         lines += (l + glow) * (1.2 / i);
     }
