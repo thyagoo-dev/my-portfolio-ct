@@ -48,4 +48,8 @@ export const meuPortfolio: Project = {
       { name: 'React', icon: 'devicon-react-original colored' },
     ],
   },
+  screenshots: [
+    '/images/fotos-projetos-pessoais/vk-portifolio/logotipo-vk.png',
+    '/images/fotos-projetos-pessoais/vk-portifolio/victor_kaue.png',
+  ],
 };
