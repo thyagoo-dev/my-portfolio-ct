@@ -45,7 +45,9 @@ export default function ProjetoDetalhe() {
       ? project.stack
       : ['Stack em atualizacao'];
   const projectGithub = project.github || 'https://github.com/Victorkaue333';
-  const projectImage = project.image || '/images/placeholders/project-placeholder.svg';
+  const carouselImages = project.screenshots && project.screenshots.length > 0 
+    ? project.screenshots 
+    : [project.image || '/images/placeholders/project-placeholder.svg'];
 
   return (
     <main className="page-projeto-detalhe">
@@ -85,12 +87,6 @@ export default function ProjetoDetalhe() {
             </div>
             <div className="projeto-header-image">
               <div className="image-glow" />
-              <img
-                src={projectImage}
-                alt={projectTitle}
-                onError={(event) => {
-                  event.currentTarget.src = '/images/placeholders/project-placeholder.svg';
-                }}
               />
             </div>
           </div>
