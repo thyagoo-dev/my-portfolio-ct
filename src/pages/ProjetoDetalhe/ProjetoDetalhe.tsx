@@ -5,6 +5,7 @@ import { Button } from '../../components/ui/Button/Button';
 import { TechIcon } from '../../components/ui/TechIcon/TechIcon';
 import { projects } from '../../data/projects';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
+import { ProjectCarousel } from '../../components/ui/ProjectCarousel/ProjectCarousel';
 import './ProjetoDetalhe.css';
 
 export default function ProjetoDetalhe() {
@@ -87,7 +88,7 @@ export default function ProjetoDetalhe() {
             </div>
             <div className="projeto-header-image">
               <div className="image-glow" />
-              />
+              <ProjectCarousel images={carouselImages} title={projectTitle} />
             </div>
           </div>
 
