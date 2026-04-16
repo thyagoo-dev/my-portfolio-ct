@@ -58,7 +58,7 @@ export function Footer() {
           </div>
 
           <div className="footer-nav">
-            <p className="footer-label">Navegacao</p>
+            <p className="footer-label">Navegação</p>
             <ul>
               {navLinks.map((link) => (
                 <li key={link.path}>
