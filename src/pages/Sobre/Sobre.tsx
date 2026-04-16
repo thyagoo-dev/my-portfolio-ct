@@ -174,7 +174,7 @@ export default function Sobre() {
             <section id="education" className="about-content-section reveal-on-scroll">
               <h2 className="section-title">
                 <FiBookOpen size={24} />
-                Formacoes
+                Formações
               </h2>
               <div className="education-list">
                 {education.map((edu) => (
