@@ -39,6 +39,7 @@ export interface Project {
       color?: string;
     }[];
   };
+  screenshots?: string[];
 }
 
 export interface Experience {
