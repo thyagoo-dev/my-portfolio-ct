@@ -7,8 +7,8 @@ const rawProjects: Project[] = [
   {
     id: 'meu-portifolio',
     slug: 'meu-portifolio',
-    title: 'Meu Portifolio',
-    shortDescription: 'Portifolio pessoal premium com React e TypeScript.',
+    title: 'Portfólio Web Pessoal',
+    shortDescription: 'Portfólio pessoal premium com React e TypeScript.',
     detailedDescription:
       'Projeto desenvolvido para apresentar meu trabalho, projetos e posicionamento profissional como desenvolvedor backend/full-stack.',
     description:
@@ -70,13 +70,13 @@ const rawProjects: Project[] = [
     features: ['Autenticacao de usuarios', 'Agenda por horarios', 'Painel administrativo'],
     category: 'pessoal',
     summary: {
-      problema: 'Dificuldade no gerenciamento de espacos academicos e conflitos de horários',
-      solucao: 'Sistema centralizado com fluxos de aprovacao e controle de permissoes',
+      problema: 'Dificuldade no gerenciamento de espaços acadêmicos e conflitos de horários',
+      solucao: 'Sistema centralizado com fluxos de aprovação e controle de permissões',
       stack: 'Django 5 e PostgreSQL',
     },
     detailed_info: {
       desafio: 'Prevenir conflitos de reserva e gerir permissões granulares entre professores e coordenação.',
-      solucao: 'Desenvolvimento de uma plataforma robusta com calendario interativo e automação de notificações.',
+      solucao: 'Desenvolvimento de uma plataforma robusta com calendário interativo e automação de notificações.',
       impacto: 'Gestão transparente e eficiente do uso de salas de aula no ambiente acadêmico.',
       arquitetura: {
         frontend: 'Django Templates + Bootstrap 5',
@@ -158,7 +158,7 @@ const rawProjects: Project[] = [
     features: ['Transcricao automatica', 'Organizacao de dados', 'Apoio a pesquisa'],
     category: 'pessoal',
     summary: {
-      problema: 'Processo lento e cansativo de transcrição manual de audios académicos',
+      problema: 'Processo lento e cansativo de transcrição manual de áudios acadêmicos',
       solucao: 'Automação via IA com Whisper e identificação de falantes via PyAnnote',
       stack: 'Python + OpenAI Whisper',
     },
@@ -202,7 +202,7 @@ const rawProjects: Project[] = [
     features: ['Conteudo institucional', 'Navegacao responsiva', 'Divulgacao de projeto'],
     category: 'pessoal',
     summary: {
-      problema: 'Invisibilidade de saberes tradicionais e projetos de extensao indigenas',
+      problema: 'Invisibilidade de saberes tradicionais e projetos de extensão indígenas',
       solucao: 'Portal institucional de valorização cultural com design modular',
       stack: 'HTML, CSS e Bootstrap 5',
     },

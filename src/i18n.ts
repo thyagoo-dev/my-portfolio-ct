@@ -1,4 +1,4 @@
-﻿import i18n from 'i18next';
+import i18n from 'i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { initReactI18next } from 'react-i18next';
 
@@ -73,13 +73,13 @@ const resources = {
   pt: {
     translation: {
       nav: {
-        home: 'Inicio',
+        home: 'Início',
         about: 'Sobre',
         sobre: 'Sobre',
         projects: 'Projetos',
         projetos: 'Projetos',
-        services: 'Servicos',
-        servicos: 'Servicos',
+        services: 'Serviços',
+        servicos: 'Serviços',
         certificates: 'Certificados',
         certificados: 'Certificados',
         contact: 'Contato',
@@ -91,20 +91,20 @@ const resources = {
         tech: 'Python',
         subtech: 'APIs & Django',
         description:
-          'Foco em performance e manutenção. Entrego software confiável para processos criticos, da regra de negocio ao deploy em producao.',
-        cta: 'Conheca minha jornada',
+          'Foco em performance e manutenção. Entrego software confiável para processos críticos, da regra de negócio ao deploy em produção.',
+        cta: 'Conheça minha jornada',
       },
       about: {
         title: 'Sobre',
         subtitle: 'Desenvolvedor Full Stack',
         intro:
-          'Sou desenvolvedor com foco em backend e sistemas web, formado em Desenvolvimento de Sistemas e graduando em gestão da Tecnologia da Informacao. Atuo no desenvolvimento de APIs, regras de negocio, modelagem de dados, interface web e deploy, com foco em arquitetura limpa, seguranca e valor de negocio.',
+          'Sou desenvolvedor com foco em backend e sistemas web, formado em Desenvolvimento de Sistemas e graduando em Gestão da Tecnologia da Informação. Atuo no desenvolvimento de APIs, regras de negócio, modelagem de dados, interface web e deploy, com foco em arquitetura limpa, segurança e valor de negócio.',
         highlights: {
           title: 'Diferenciais',
           backend: 'Backend Especializado',
-          backendDesc: 'Regras de negócio consistentes, autenticação segura e modelagem de dados orientada a escala.',
+          backendDesc: 'Regras de negócio consistentes, autenticação segura e modelagem de dados orientada à escala.',
           api: 'APIs Escaláveis',
-          apiDesc: 'Desenvolvimento de APIs REST com foco em performance, integracao e manutenção de longo prazo.',
+          apiDesc: 'Desenvolvimento de APIs REST com foco em performance, integração e manutenção de longo prazo.',
           enterprise: 'Sistemas Empresariais',
           enterpriseDesc: 'Experiência em projetos reais com entrega ponta a ponta, do planejamento ao deploy em produção.',
         },
@@ -120,19 +120,19 @@ const resources = {
         noFound: 'Nenhum projeto encontrado nessa categoria.',
       },
       certs: {
-        title: 'Certificacoes',
-        subtitle: 'Aprimoramento tecnico e aprendizado continuo.',
+        title: 'Certificações',
+        subtitle: 'Aprimoramento técnico e aprendizado contínuo.',
       },
       expertise: {
         title: 'Expertise técnica',
-        subtitle: 'Minha stack técnica e competencias.',
+        subtitle: 'Minha stack técnica e competências.',
       },
       common: {
         viewProjects: 'Ver meus projetos',
         viewAll: 'Ver todos',
         send: 'Enviar',
         email: 'E-mail',
-        location: 'Localizacao',
+        location: 'Localização',
         at: 'em',
       },
     },
