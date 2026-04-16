@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import {FiArrowLeft,FiArrowRight,FiCheckCircle,FiCpu,FiDatabase,FiExternalLink,FiGithub,FiLayout,FiTarget,FiZap,FiList,FiInfo} from 'react-icons/fi';
 import { Link, useParams } from 'react-router-dom';
 import { Button } from '../../components/ui/Button/Button';
+import { TechIcon } from '../../components/ui/TechIcon/TechIcon';
 import { projects } from '../../data/projects';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import './ProjetoDetalhe.css';
@@ -65,9 +66,7 @@ export default function ProjetoDetalhe() {
 
               <div className="project-tags">
                 {projectTechnologies.map((tech) => (
-                  <span key={tech} className="project-tag">
-                    {tech}
-                  </span>
+                  <TechIcon key={tech} name={tech} size={24} className="project-tag-icon" />
                 ))}
               </div>
 

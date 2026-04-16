@@ -1,23 +1,8 @@
-﻿import {
-    FiBarChart2,
-    FiCalendar,
-    FiChevronRight,
-    FiCloud,
-    FiCode,
-    FiCpu,
-    FiExternalLink,
-    FiGithub,
-    FiGlobe,
-    FiLayers,
-    FiLayout,
-    FiPackage,
-    FiSearch,
-    FiSmartphone,
-    FiTrendingUp,
     FiZap,
 } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import type { Project } from '../../../types';
+import { TechIcon } from '../TechIcon/TechIcon';
 import './ProjectCard.css';
 
 interface ProjectCardProps {
@@ -25,52 +10,6 @@ interface ProjectCardProps {
   withReveal?: boolean;
 }
 
-const techIconMap: Record<string, any> = {
-  React: 'devicon-react-original colored',
-  TypeScript: 'devicon-typescript-plain colored',
-  Vite: 'devicon-vitejs-plain colored',
-  CSS: 'devicon-css3-plain colored',
-  Django: 'devicon-django-plain colored',
-  PostgreSQL: 'devicon-postgresql-plain colored',
-  Bootstrap: 'devicon-bootstrap-plain colored',
-  Python: 'devicon-python-plain colored',
-  MySQL: 'devicon-mysql-plain colored',
-  SQLite: 'devicon-sqlite-plain colored',
-  HTML5: 'devicon-html5-plain colored',
-  JavaScript: 'devicon-javascript-plain colored',
-
-  IA: FiCpu,
-  'AutomaÃ§Ã£o': FiZap,
-  'Automação': FiZap,
-  Automacao: FiZap,
-  Responsivo: FiSmartphone,
-  SaaS: FiCloud,
-  SEO: FiSearch,
-  Eventos: FiCalendar,
-  'Controle de Estoque': FiPackage,
-  'Landing Page': FiLayout,
-  'Front-end': FiCode,
-  'ConversÃ£o': FiTrendingUp,
-  'Conversão': FiTrendingUp,
-  Conversao: FiTrendingUp,
-  'Web App': FiGlobe,
-  'Sistema Web': FiGlobe,
-  'Design System': FiLayers,
-  Escalabilidade: FiBarChart2,
-};
-
-function TechIcon({ name }: { name: string }) {
-  const iconComponent = techIconMap[name];
-
-  if (!iconComponent) return <span className="project-tag-text">{name}</span>;
-
-  if (typeof iconComponent === 'string') {
-    return <i className={`${iconComponent} tech-icon-dev`} title={name} />;
-  }
-
-  const Icon = iconComponent;
-  return <Icon size={20} className="tech-icon-lucide" title={name} />;
-}
 
 export function ProjectCard({ project, withReveal = true }: ProjectCardProps) {
   const projectTitle = project.title || 'Projeto em atualizacao';
@@ -110,9 +49,7 @@ export function ProjectCard({ project, withReveal = true }: ProjectCardProps) {
 
           <div className="project-tags">
             {projectTechnologies.slice(0, 5).map((tech: string) => (
-              <div key={tech} className="project-tag-icon-wrapper" title={tech}>
-                <TechIcon name={tech} />
-              </div>
+              <TechIcon key={tech} name={tech} size={18} className="project-tag-icon-wrapper" />
             ))}
             {projectTechnologies.length > 5 && (
               <span className="project-tag-more">+{projectTechnologies.length - 5}</span>
