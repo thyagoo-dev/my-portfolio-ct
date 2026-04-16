@@ -19,4 +19,26 @@ export const vksoftware: Project = {
     solucao: 'SaaS/Web App com design system próprio e arquitetura moderna',
     stack: 'React, TypeScript e CSS',
   },
+  detailed_info: {
+    desafio: 'Construir uma base tecnológica sólida que permita a criação rápida de novos produtos digitais.',
+    solucao: 'Uso de React com TypeScript e um Design System baseado em tokens CSS.',
+    impacto: 'Plataforma escalável e com identidade visual consistente em todos os pontos de contato.',
+    arquitetura: {
+      frontend: 'React 19 + TypeScript',
+      api: 'Integrações Externas',
+      banco: 'Não aplicável / Local Storage',
+    },
+    decisoes: {
+      autenticacao: 'Em implementação',
+      backend: 'Serverless / API Routes',
+      deploy: 'Vercel para CI/CD contínuo',
+      banco: 'Nenhum por enquanto',
+    },
+    tech_v2: [
+      { name: 'React', icon: 'devicon-react-original colored' },
+      { name: 'TypeScript', icon: 'devicon-typescript-plain colored' },
+      { name: 'Vite', icon: 'devicon-vite-plain colored' },
+      { name: 'CSS3', icon: 'devicon-css3-plain colored' },
+    ],
+  },
 };
