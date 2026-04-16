@@ -91,17 +91,7 @@
 
 .projeto-header-image {
     position: relative;
-    border-radius: var(--radius-xl);
-    overflow: hidden;
-    background: var(--gradient-surface);
-    border: 1px solid var(--border-subtle);
-    box-shadow: var(--shadow-2xl);
-}
-
-.projeto-header-image img {
     width: 100%;
-    height: auto;
-    display: block;
 }
 
 .image-glow {
