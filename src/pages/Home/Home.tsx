@@ -19,7 +19,7 @@ import { Button } from '../../components/ui/Button/Button';
 import { Reveal } from '../../components/ui/Reveal/Reveal';
 import { ColorBends } from '../../components/ui/ColorBends/ColorBends';
 import { ProjectCard } from '../../components/ui/ProjectCard/ProjectCard';
-import { Hero3D } from '../../components/ui/Hero3D/Hero3D';
+import { FloatingLines } from '../../components/ui/FloatingLines/FloatingLines';
 import './Home.css';
 
 export default function Home() {
@@ -47,7 +47,7 @@ export default function Home() {
       
       {/* ========== HERO SECTION (PRO MAX) ========== */}
       <section id="inicio" className="hero">
-        <Hero3D />
+        <FloatingLines />
         <div className="container hero-container">
           <div className="hero-content">
             <motion.h1 
