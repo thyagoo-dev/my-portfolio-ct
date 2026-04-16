@@ -41,4 +41,17 @@ export const vksoftware: Project = {
       { name: 'CSS3', icon: 'devicon-css3-plain colored' },
     ],
   },
+  screenshots: [
+    '/images/fotos-projetos-reais/vksoftware/1.png',
+    '/images/fotos-projetos-reais/vksoftware/2.png',
+    '/images/fotos-projetos-reais/vksoftware/3.png',
+    '/images/fotos-projetos-reais/vksoftware/4.png',
+    '/images/fotos-projetos-reais/vksoftware/5.png',
+    '/images/fotos-projetos-reais/vksoftware/6.png',
+    '/images/fotos-projetos-reais/vksoftware/7.png',
+    '/images/fotos-projetos-reais/vksoftware/8.png',
+    '/images/fotos-projetos-reais/vksoftware/9.png',
+    '/images/fotos-projetos-reais/vksoftware/10.png',
+    '/images/fotos-projetos-reais/vksoftware/11.png',
+  ],
 };
