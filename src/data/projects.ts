@@ -70,9 +70,31 @@ const rawProjects: Project[] = [
     features: ['Autenticacao de usuarios', 'Agenda por horarios', 'Painel administrativo'],
     category: 'pessoal',
     summary: {
-      problema: 'Agendamentos descentralizados',
-      solucao: 'Fluxo unico com autenticacao e gestão de slots',
-      stack: 'Django + PostgreSQL',
+      problema: 'Dificuldade no gerenciamento de espacos academicos e conflitos de horários',
+      solucao: 'Sistema centralizado com fluxos de aprovacao e controle de permissoes',
+      stack: 'Django 5 e PostgreSQL',
+    },
+    detailed_info: {
+      desafio: 'Prevenir conflitos de reserva e gerir permissões granulares entre professores e coordenação.',
+      solucao: 'Desenvolvimento de uma plataforma robusta com calendario interativo e automação de notificações.',
+      impacto: 'Gestão transparente e eficiente do uso de salas de aula no ambiente acadêmico.',
+      arquitetura: {
+        frontend: 'Django Templates + Bootstrap 5',
+        api: 'Arquitetura Monolítica (MVT)',
+        banco: 'PostgreSQL estruturado',
+      },
+      decisoes: {
+        autenticacao: 'Módulo nativo de Auth do Django',
+        backend: 'Django Framework (Python)',
+        deploy: 'Servidor local/Cloud Linux',
+        banco: 'PostgreSQL para robustez de dados',
+      },
+      tech_v2: [
+        { name: 'Python', icon: 'devicon-python-plain colored' },
+        { name: 'Django', icon: 'devicon-django-plain colored' },
+        { name: 'PostgreSQL', icon: 'devicon-postgresql-plain colored' },
+        { name: 'Bootstrap', icon: 'devicon-bootstrap-plain colored' },
+      ],
     },
   },
   {
@@ -92,9 +114,31 @@ const rawProjects: Project[] = [
     features: ['Controle de tempo', 'Painel operacional', 'Fluxo simplificado'],
     category: 'pessoal',
     summary: {
-      problema: 'Controle manual de tempo de uso',
-      solucao: 'Painel visual para operacao diaria',
-      stack: 'Python, Django e MySQL',
+      problema: 'Controle manual e visual impreciso do tempo de uso de carrinhos',
+      solucao: 'Dashboard em tempo real com status visual por cores e HTMX',
+      stack: 'Python, Django e HTMX',
+    },
+    detailed_info: {
+      desafio: 'Criar um painel de controle de tempo real altamente visual que funcione sem refresh de página.',
+      solucao: 'Integração de HTMX para atualizações dinâmicas de cronômetros e cards de status vibrantes.',
+      impacto: 'Redução drástica de erros operacionais e melhoria na experiência do cliente final.',
+      arquitetura: {
+        frontend: 'HTMX + CSS customizado',
+        api: 'Server-side rendering (Django)',
+        banco: 'SQLite com histórico de sessões',
+      },
+      decisoes: {
+        autenticacao: 'Login simples para operadores',
+        backend: 'Django (Lógica de cronometragem)',
+        deploy: 'Instância Cloud / Tablet local',
+        banco: 'Camada de persistência para relatórios',
+      },
+      tech_v2: [
+        { name: 'Python', icon: 'devicon-python-plain colored' },
+        { name: 'Django', icon: 'devicon-django-plain colored' },
+        { name: 'Javascript', icon: 'devicon-javascript-plain colored' },
+        { name: 'HTMX', icon: 'devicon-html5-plain' },
+      ],
     },
   },
   {
@@ -114,9 +158,31 @@ const rawProjects: Project[] = [
     features: ['Transcricao automatica', 'Organizacao de dados', 'Apoio a pesquisa'],
     category: 'pessoal',
     summary: {
-      problema: 'Analise lenta de entrevistas',
-      solucao: 'Transcricao automatica para acelerar pesquisa',
-      stack: 'Python + IA',
+      problema: 'Processo lento e cansativo de transcrição manual de audios académicos',
+      solucao: 'Automação via IA com Whisper e identificação de falantes via PyAnnote',
+      stack: 'Python + OpenAI Whisper',
+    },
+    detailed_info: {
+      desafio: 'Processar grandes volumes de áudio com precisão e diferenciar múltiplas vozes automaticamente.',
+      solucao: 'Implementação de serviços de IA assíncronos integrados a um player web sincronizado.',
+      impacto: 'Economia de centenas de horas de trabalho manual para pesquisadores e jornalistas.',
+      arquitetura: {
+        frontend: 'JS Vanilla (Player customizado)',
+        api: 'FastAPI (Python)',
+        banco: 'JSON Estruturado / File System',
+      },
+      decisoes: {
+        autenticacao: 'Nao necessária (uso local/ferramenta)',
+        backend: 'FastAPI para processamento assíncrono',
+        deploy: 'Localhost / Servidor com GPU',
+        banco: 'Saídas em SRT, JSON e TXT',
+      },
+      tech_v2: [
+        { name: 'Python', icon: 'devicon-python-plain colored' },
+        { name: 'FastAPI', icon: 'devicon-fastapi-plain colored' },
+        { name: 'Pytorch', icon: 'devicon-pytorch-original colored' },
+        { name: 'Whisper', icon: 'devicon-python-plain' },
+      ],
     },
   },
   {
@@ -136,9 +202,31 @@ const rawProjects: Project[] = [
     features: ['Conteudo institucional', 'Navegacao responsiva', 'Divulgacao de projeto'],
     category: 'pessoal',
     summary: {
-      problema: 'Baixa visibilidade do projeto',
-      solucao: 'Portal de divulgacao com navegacao acessivel',
-      stack: 'Django e frontend responsivo',
+      problema: 'Invisibilidade de saberes tradicionais e projetos de extensao indigenas',
+      solucao: 'Portal institucional de valorização cultural com design modular',
+      stack: 'HTML, CSS e Bootstrap 5',
+    },
+    detailed_info: {
+      desafio: 'Organizar uma vasta gama de conteúdos culturais e acadêmicos em uma interface leve.',
+      solucao: 'Desenvolvimento modular de CSS e navegação intuitiva focada no conteúdo visual.',
+      impacto: 'Maior alcance do projeto de extensão e preservação digital de saberes tradicionais.',
+      arquitetura: {
+        frontend: 'Arquitetura CSS Modular',
+        api: 'Dados estáticos estruturados',
+        banco: 'Nao aplicável (Assets locais)',
+      },
+      decisoes: {
+        autenticacao: 'Nao aplicável',
+        backend: 'Front-end estático otimizado',
+        deploy: 'Netlify / GitHub Pages',
+        banco: 'Nao aplicável',
+      },
+      tech_v2: [
+        { name: 'HTML5', icon: 'devicon-html5-plain colored' },
+        { name: 'CSS3', icon: 'devicon-css3-plain colored' },
+        { name: 'Bootstrap', icon: 'devicon-bootstrap-plain colored' },
+        { name: 'Javascript', icon: 'devicon-javascript-plain colored' },
+      ],
     },
   },
   {
@@ -156,6 +244,11 @@ const rawProjects: Project[] = [
     stack: ['Python', 'Django', 'MySQL'],
     features: ['gestão escolar', 'Fluxo administrativo', 'Sistema web corporativo'],
     category: 'real',
+    summary: {
+      problema: 'Processos administrativos escolares descentralizados e manuais',
+      solucao: 'Sistema web centralizado para gestão de demandas e fluxos educacionais',
+      stack: 'Python, Django e MySQL',
+    },
   },
   {
     id: 'ntidi',
@@ -172,6 +265,11 @@ const rawProjects: Project[] = [
     stack: ['Python', 'Django', 'Bootstrap'],
     features: ['Site institucional', 'SEO tecnico', 'Sistemas internos'],
     category: 'real',
+    summary: {
+      problema: 'Necessidade de presença digital e ferramentas de gestão interna',
+      solucao: 'Ecossistema web completo com site institucional e sistemas administrativos',
+      stack: 'Python, Django e Bootstrap',
+    },
   },
   {
     id: 'maratonatech',
@@ -188,6 +286,11 @@ const rawProjects: Project[] = [
     stack: ['Python', 'Django'],
     features: ['Cadastro de pitch', 'gestão de eventos', 'Votacao online'],
     category: 'real',
+    summary: {
+      problema: 'Dificuldade em organizar votações e pitches em tempo real em eventos',
+      solucao: 'Plataforma digital para cadastro de apresentações e sistema de votação online',
+      stack: 'Python e Django',
+    },
   },
   {
     id: 'va-suplementos',
@@ -203,6 +306,11 @@ const rawProjects: Project[] = [
     stack: ['Python', 'Django', 'SQLite'],
     features: ['Controle de estoque', 'Registro de vendas', 'Painel operacional'],
     category: 'real',
+    summary: {
+      problema: 'Falta de controle automatizado de vendas e estoque de suplementos',
+      solucao: 'Aplicação web para registro de transações e monitoramento de inventário',
+      stack: 'Python, Django e SQLite',
+    },
   },
   {
     id: 'queelvra',
@@ -218,6 +326,11 @@ const rawProjects: Project[] = [
     stack: ['HTML', 'CSS', 'JavaScript'],
     features: ['Copy comercial', 'CTA estrategico', 'Layout de conversao'],
     category: 'real',
+    summary: {
+      problema: 'Baixa conversão de visitantes interessados nos serviços',
+      solucao: 'Landing page otimizada com foco em UX e gatilhos de conversão',
+      stack: 'HTML, CSS e JavaScript',
+    },
   },
   {
     id: 'vksoftware',
@@ -233,6 +346,11 @@ const rawProjects: Project[] = [
     stack: ['React', 'TypeScript', 'CSS'],
     features: ['Design system', 'Arquitetura escalavel', 'Experiencia de marca'],
     category: 'real',
+    summary: {
+      problema: 'Ausência de uma plataforma unificada e escalável para a marca',
+      solucao: 'SaaS/Web App com design system próprio e arquitetura moderna',
+      stack: 'React, TypeScript e CSS',
+    },
   },
 ];
 
