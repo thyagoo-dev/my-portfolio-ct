@@ -43,4 +43,15 @@ export const oliveiraKids: Project = {
       { name: 'HTMX', icon: 'devicon-html5-plain' },
     ],
   },
+  screenshots: [
+    '/images/fotos-projetos-pessoais/oliveira-kids/oliveira-kids.png',
+    '/images/fotos-projetos-pessoais/oliveira-kids/1.png',
+    '/images/fotos-projetos-pessoais/oliveira-kids/2.png',
+    '/images/fotos-projetos-pessoais/oliveira-kids/3.png',
+    '/images/fotos-projetos-pessoais/oliveira-kids/4.png',
+    '/images/fotos-projetos-pessoais/oliveira-kids/5.png',
+    '/images/fotos-projetos-pessoais/oliveira-kids/6.png',
+    '/images/fotos-projetos-pessoais/oliveira-kids/7.png',
+    '/images/fotos-projetos-pessoais/oliveira-kids/8.png',
+  ],
 };
