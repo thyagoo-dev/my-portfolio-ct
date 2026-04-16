@@ -1,4 +1,7 @@
-    FiZap,
+import {
+    FiChevronRight,
+    FiExternalLink,
+    FiGithub,
 } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import type { Project } from '../../../types';
