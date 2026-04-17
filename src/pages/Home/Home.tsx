@@ -9,7 +9,8 @@ import {
   FiActivity,
   FiZap,
   FiLayout,
-  FiTrendingUp
+  FiTrendingUp,
+  FiChevronDown
 } from 'react-icons/fi';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
@@ -93,6 +94,21 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        {/* Scroll Down Indicator */}
+        <motion.div 
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.5, duration: 1 }}
+          className="scroll-indicator-wrapper"
+          onClick={() => document.getElementById('servicos')?.scrollIntoView({ behavior: 'smooth' })}
+        >
+          <span className="scroll-text">Explorar</span>
+          <div className="scroll-mouse">
+            <div className="scroll-dot" />
+          </div>
+          <FiChevronDown className="scroll-arrow" />
+        </motion.div>
       </section>
 
       {/* ========== RESULTS STRIP (PRO MAX) ========== */}
