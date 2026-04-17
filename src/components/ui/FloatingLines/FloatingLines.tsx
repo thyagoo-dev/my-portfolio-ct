@@ -79,15 +79,15 @@ function FloatingLinesMesh() {
 
   useFrame((state) => {
     if (meshRef.current) {
-        const material = meshRef.current.material as THREE.ShaderMaterial;
-        material.uniforms.uTime.value = state.clock.getElapsedTime();
-        
-        const targetX = (state.mouse.x + 1) / 2;
-        const targetY = (state.mouse.y + 1) / 2;
-        mouseRef.current.x = THREE.MathUtils.lerp(mouseRef.current.x, targetX, 0.05);
-        mouseRef.current.y = THREE.MathUtils.lerp(mouseRef.current.y, targetY, 0.05);
-        
-        material.uniforms.uMouse.value.copy(mouseRef.current);
+      const material = meshRef.current.material as THREE.ShaderMaterial;
+      material.uniforms.uTime.value = state.clock.getElapsedTime();
+
+      const targetX = (state.mouse.x + 1) / 2;
+      const targetY = (state.mouse.y + 1) / 2;
+      mouseRef.current.x = THREE.MathUtils.lerp(mouseRef.current.x, targetX, 0.05);
+      mouseRef.current.y = THREE.MathUtils.lerp(mouseRef.current.y, targetY, 0.05);
+
+      material.uniforms.uMouse.value.copy(mouseRef.current);
     }
   });
 
@@ -106,14 +106,14 @@ function FloatingLinesMesh() {
 
 export const FloatingLines: React.FC = () => {
   return (
-    <div className="floating-lines-container" style={{ 
-        position: 'absolute', 
-        top: 0, 
-        left: 0, 
-        width: '100%', 
-        height: '100%', 
-        zIndex: 0,
-        pointerEvents: 'none'
+    <div className="floating-lines-container" style={{
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      zIndex: 0,
+      pointerEvents: 'none'
     }}>
       <Canvas dpr={[1, 2]}>
         <OrthographicCamera makeDefault position={[0, 0, 1]} zoom={1} />

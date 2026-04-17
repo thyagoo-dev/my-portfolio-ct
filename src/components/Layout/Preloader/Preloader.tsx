@@ -38,39 +38,39 @@ export function Preloader() {
     <div className={`preloader-wrapper ${progress === 100 ? 'fading' : ''}`} aria-label="Carregando">
       {/* Background Effect */}
       <FloatingLines />
-      
+
       <div className="preloader-overlay" />
 
       <div className="preloading-stage">
         <div className="preloader-logo-group">
-            <div className="logo-v" data-text="V">
-                V
-                <span className="v-glitch-1">V</span>
-                <span className="v-glitch-2">V</span>
-            </div>
-            <div className="logo-k" data-text="K">
-                K
-                <span className="k-glitch-1">K</span>
-                <span className="k-glitch-2">K</span>
-            </div>
+          <div className="logo-v" data-text="V">
+            V
+            <span className="v-glitch-1">V</span>
+            <span className="v-glitch-2">V</span>
+          </div>
+          <div className="logo-k" data-text="K">
+            K
+            <span className="k-glitch-1">K</span>
+            <span className="k-glitch-2">K</span>
+          </div>
         </div>
 
         <div className="preloader-progress-container">
-            <div className="progress-top-info">
-                <span className="loading-status">SINCRONIZANDO</span>
-                <span className="loading-percent">{Math.round(progress)}%</span>
-            </div>
-            
-            <div className="progress-bar-track">
-                <div 
-                    className="progress-bar-fill" 
-                    style={{ width: `${progress}%` }} 
-                />
-            </div>
-            
-            <div className="loading-footer-text">
-                VISUAL KINETIC FLOW
-            </div>
+          <div className="progress-top-info">
+            <span className="loading-status">SINCRONIZANDO</span>
+            <span className="loading-percent">{Math.round(progress)}%</span>
+          </div>
+
+          <div className="progress-bar-track">
+            <div
+              className="progress-bar-fill"
+              style={{ width: `${progress}%` }}
+            />
+          </div>
+
+          <div className="loading-footer-text">
+            VISUAL KINETIC FLOW
+          </div>
         </div>
       </div>
     </div>

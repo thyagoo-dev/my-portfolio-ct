@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
-import { 
-  FiArrowRight, 
-  FiGithub, 
-  FiLinkedin, 
-  FiMail, 
-  FiDatabase, 
-  FiCpu, 
+import {
+  FiArrowRight,
+  FiGithub,
+  FiLinkedin,
+  FiMail,
+  FiDatabase,
+  FiCpu,
   FiActivity,
   FiZap,
   FiLayout,
@@ -47,13 +47,13 @@ export default function Home() {
 
   return (
     <main className="home">
-      
+
       {/* ========== HERO SECTION (PRO MAX) ========== */}
       <section id="inicio" className="hero">
         <FloatingLines />
         <div className="container hero-container">
           <div className="hero-content">
-            <motion.h1 
+            <motion.h1
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
@@ -98,7 +98,7 @@ export default function Home() {
         </div>
 
         {/* Scroll Down Indicator */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.5, duration: 1 }}
