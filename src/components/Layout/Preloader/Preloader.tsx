@@ -2,13 +2,18 @@ import { useState, useEffect } from 'react';
 import { FloatingLines } from '../../ui/FloatingLines/FloatingLines';
 import './Preloader.css';
 
-export function Preloader() {
+interface PreloaderProps {
+  duration?: number;
+}
+
+export function Preloader({ duration = 2000 }: PreloaderProps) {
   const [loading, setLoading] = useState(true);
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    // 2 second loading duration
-    const duration = 2000;
+    setLoading(true);
+    setProgress(0);
+    
     const interval = 10; // Update every 10ms
     const step = 100 / (duration / interval);
 
@@ -30,7 +35,7 @@ export function Preloader() {
       clearInterval(timer);
       clearTimeout(fadeOutTimer);
     };
-  }, []);
+  }, [duration]);
 
   if (!loading) return null;
 
