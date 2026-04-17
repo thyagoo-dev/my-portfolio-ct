@@ -107,12 +107,12 @@ function FloatingLinesMesh() {
 export const FloatingLines: React.FC = () => {
   return (
     <div className="floating-lines-container" style={{
-      position: 'absolute',
+      position: 'fixed',
       top: 0,
       left: 0,
       width: '100%',
       height: '100%',
-      zIndex: 0,
+      zIndex: -1,
       pointerEvents: 'none'
     }}>
       <Canvas dpr={[1, 2]}>
