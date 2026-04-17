@@ -40,7 +40,14 @@ export function Preloader({ duration = 2000 }: PreloaderProps) {
   if (!loading) return null;
 
   return (
-    <div className={`preloader-wrapper ${progress === 100 ? 'fading' : ''}`} aria-label="Carregando">
+    <div 
+      className={`preloader-wrapper ${progress === 100 ? 'fading' : ''}`} 
+      role="progressbar"
+      aria-valuenow={Math.round(progress)}
+      aria-valuemin={0}
+      aria-valuemax={100}
+      aria-label="Carregando portfólio"
+    >
       {/* Background Effect */}
       {/* Background Effect handled globally in App.tsx */}
 
@@ -69,7 +76,10 @@ export function Preloader({ duration = 2000 }: PreloaderProps) {
           <div className="progress-bar-track">
             <div
               className="progress-bar-fill"
-              style={{ width: `${progress}%` }}
+              style={{ 
+                transform: `scaleX(${progress / 100})`,
+                transformOrigin: 'left'
+              }}
             />
           </div>
 
