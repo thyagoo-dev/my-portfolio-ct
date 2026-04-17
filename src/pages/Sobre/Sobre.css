@@ -87,10 +87,11 @@
 
 
 .sidebar-name {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin-bottom: 0.25rem;
     font-family: var(--font-secondary);
     font-weight: 800;
+    white-space: nowrap;
 }
 
 .sidebar-role {
