@@ -79,6 +79,7 @@ export interface Certificate {
   issuer: string;
   category: string;
   image?: string;
+  pdf?: string;
 }
 
 export interface Service {

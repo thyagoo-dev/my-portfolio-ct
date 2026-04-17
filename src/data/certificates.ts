@@ -35,6 +35,38 @@ export const certificates: Certificate[] = [
     issuer: 'Alura',
     category: 'dados',
     image: '/images/certificados/sql.webp'
+  },
+  {
+    id: 'wp-oficina',
+    title: 'Desenvolvimento de sites com Wordpress',
+    issuer: 'Oficina Workshop',
+    category: 'programacao',
+    pdf: '/Certificados/pdfs/Oficina_Workshop - Oficina_ Desenvolvimento de sites com Wordpress.pdf',
+    image: '/Certificados/pdfs/fotos/Oficina_Workshop - Oficina_ Desenvolvimento de sites com Wordpress.png'
+  },
+  {
+    id: 'canva-oficina',
+    title: 'Design com Canva',
+    issuer: 'Oficina Workshop',
+    category: 'design',
+    pdf: '/Certificados/pdfs/Oficina_Workshop - Oficina_ Design com Canva.pdf',
+    image: '/Certificados/pdfs/fotos/Oficina_Workshop - Oficina_ Design com Canva.png'
+  },
+  {
+    id: 'jogos-minicurso',
+    title: 'Aprendendo a Programar Jogos',
+    issuer: 'Minicurso / Workshop',
+    category: 'programacao',
+    pdf: '/Certificados/pdfs/Workshop - Minicurso - Aprendendo a Programar Jogos.pdf',
+    image: '/Certificados/pdfs/fotos/Workshop - Minicurso - Aprendendo a Programar Jogos.png'
+  },
+  {
+    id: 'pm-canvas-workshop',
+    title: 'Planejamento de Projetos com PM Canvas',
+    issuer: 'Workshop',
+    category: 'gestao',
+    pdf: '/Certificados/pdfs/Workshop - Planejamento de Projetos com PM Canvas.pdf',
+    image: '/Certificados/pdfs/fotos/Workshop - Planejamento de Projetos com PM Canvas.png'
   }
 ];
 
@@ -43,5 +75,7 @@ export const certificateCategories = [
   { id: 'programacao', label: 'Programação' },
   { id: 'backend', label: 'Back-end' },
   { id: 'infra', label: 'Infra/DevOps' },
-  { id: 'dados', label: 'Banco de Dados' }
+  { id: 'dados', label: 'Banco de Dados' },
+  { id: 'design', label: 'Design & UI' },
+  { id: 'gestao', label: 'Gestão & Metodologias' }
 ];

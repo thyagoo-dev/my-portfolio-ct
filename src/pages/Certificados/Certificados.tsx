@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FiAward, FiExternalLink, FiFilter, FiRotateCcw } from 'react-icons/fi';
 import { PageHero } from '../../components/ui/PageHero/PageHero';
 import { Reveal } from '../../components/ui/Reveal/Reveal';
@@ -50,7 +50,7 @@ export default function Certificados() {
               <Reveal key={cert.id} delay={0.1} width="100%" height="100%" className="cert-grid-item">
                 <a
                   className="cert-card"
-                  href={cert.image}
+                  href={cert.pdf || cert.image}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`Abrir certificado: ${cert.title}`}
