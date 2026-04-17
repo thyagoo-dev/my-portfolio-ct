@@ -22,6 +22,7 @@ import { ColorBends } from '../../components/ui/ColorBends/ColorBends';
 import { ProjectCard } from '../../components/ui/ProjectCard/ProjectCard';
 import { FloatingLines } from '../../components/ui/FloatingLines/FloatingLines';
 import { Counter } from '../../components/ui/Counter/Counter';
+import { TechMarquee } from '../../components/ui/TechMarquee/TechMarquee';
 import './Home.css';
 
 export default function Home() {
@@ -133,6 +134,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <TechMarquee />
 
       {/* ========== SERVICES (PRO MAX) ========== */}
       <section id="servicos" className="home-services">

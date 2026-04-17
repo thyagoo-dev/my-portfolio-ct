@@ -10,8 +10,8 @@
 
 .footer-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.9fr) minmax(0, 0.95fr);
-    gap: 40px;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+    gap: 60px;
     align-items: start;
 }
 

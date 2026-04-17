@@ -1,4 +1,4 @@
-﻿import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import { FaWhatsapp } from 'react-icons/fa';
 import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
@@ -68,17 +68,6 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="footer-tech">
-            <p className="footer-label">Stack Principal</p>
-            <ul className="footer-tech-badges">
-              {footerTech.map((tech) => (
-                <li key={tech.name}>
-                  <i className={tech.icon} />
-                  <span>{tech.name}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
 
         <div className="footer-bottom">
