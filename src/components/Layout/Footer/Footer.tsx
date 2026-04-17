@@ -68,6 +68,33 @@ export function Footer() {
             </ul>
           </div>
 
+          <div className="footer-contact">
+            <p className="footer-label">Fale Comigo</p>
+            <div className="availability-status">
+              <span className="status-dot"></span>
+              <p>Disponível para novos projetos</p>
+            </div>
+            <a href="mailto:kaue.alves.pg@gmail.com" className="footer-email-cta">
+              kaue.alves.pg@gmail.com
+            </a>
+            <div className="footer-contact-icons">
+              {socialLinks.map((s) => (
+                <a
+                  key={s.name}
+                  href={s.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={s.name}
+                  className={s.name.toLowerCase()}
+                >
+                  {(() => {
+                    const Icon = socialIconMap[s.icon as keyof typeof socialIconMap] || FiMail;
+                    return <Icon size={18} aria-hidden="true" />;
+                  })()}
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
 
         <div className="footer-bottom">
