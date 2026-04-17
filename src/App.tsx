@@ -1,11 +1,12 @@
-import { lazy, Suspense } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { lazy, Suspense, useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { Navbar } from './components/Layout/Navbar/Navbar';
 import { Footer } from './components/Layout/Footer/Footer';
 import { BackToTop } from './components/Layout/BackToTop/BackToTop';
 import { Preloader } from './components/Layout/Preloader/Preloader';
 import ScrollToTop from './components/Layout/ScrollToTop/ScrollToTop';
 import { MobileNavbar } from './components/Layout/Navbar/MobileNavbar';
+import { FloatingLines } from './components/ui/FloatingLines/FloatingLines';
 import './App.css';
 
 const Home = lazy(() => import('./pages/Home/Home'));
@@ -37,11 +38,29 @@ function PageLoader() {
   );
 }
 
+function TransitionManager() {
+  const location = useLocation();
+  const [mountKey, setMountKey] = useState(0);
+  const [duration, setDuration] = useState(2000);
+
+  useEffect(() => {
+    // Determine duration: 2s for first load, 800ms for transitions
+    const isFirstLoad = mountKey === 0;
+    setDuration(isFirstLoad ? 2000 : 800);
+    
+    // Explicitly update key to force remount of Preloader
+    setMountKey(prev => prev + 1);
+  }, [location.pathname]);
+
+  return <Preloader key={mountKey} duration={duration} />;
+}
+
 export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <Preloader />
+      <TransitionManager />
+      <FloatingLines />
       <Navbar />
       <Suspense fallback={<PageLoader />}>
         <Routes>
