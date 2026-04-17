@@ -42,7 +42,7 @@ export function Preloader({ duration = 2000 }: PreloaderProps) {
   return (
     <div className={`preloader-wrapper ${progress === 100 ? 'fading' : ''}`} aria-label="Carregando">
       {/* Background Effect */}
-      <FloatingLines />
+      {/* Background Effect handled globally in App.tsx */}
 
       <div className="preloader-overlay" />
 

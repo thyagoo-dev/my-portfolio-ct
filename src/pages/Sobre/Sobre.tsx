@@ -47,7 +47,6 @@ export default function Sobre() {
 
   return (
     <main className="page-sobre">
-      <FloatingLines />
       <div className="container">
         <div className="about-layout">
           <aside className="about-sidebar">
