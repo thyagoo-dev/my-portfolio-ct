@@ -1,6 +1,23 @@
 .page-sobre {
     padding-top: 8rem;
     padding-bottom: 5rem;
+    position: relative;
+    overflow: hidden;
+    background: var(--bg-color);
+}
+
+/* Base glow for the page */
+.page-sobre::before {
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vw;
+    background: radial-gradient(circle at center, rgba(255, 122, 0, 0.05) 0%, transparent 60%);
+    z-index: 0;
+    pointer-events: none;
 }
 
 .about-layout {
@@ -8,6 +25,8 @@
     grid-template-columns: 320px 1fr;
     gap: 4rem;
     align-items: start;
+    position: relative;
+    z-index: 1;
 }
 
 /* ========== SIDEBAR ========== */
@@ -21,15 +40,20 @@
 }
 
 .profile-card {
-    background: var(--gradient-surface);
-    border: 1px solid var(--border-subtle);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
     border-radius: var(--radius-xl);
-    padding: 2rem;
+    padding: 2.5rem 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    backdrop-filter: blur(12px);
+    backdrop-filter: var(--glass-blur);
     box-shadow: var(--shadow-xl);
+    transition: transform var(--transition-normal), border-color var(--transition-normal);
+}
+
+.profile-card:hover {
+    border-color: rgba(255, 122, 0, 0.3);
 }
 
 .profile-image-container {
@@ -275,8 +299,8 @@
 }
 
 .diferencial-card {
-    background: rgba(255, 122, 0, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
     border-radius: var(--radius-lg);
     padding: 1.75rem;
     transition: all var(--transition-normal);
@@ -285,6 +309,7 @@
     flex-direction: column;
     position: relative;
     overflow: hidden;
+    backdrop-filter: var(--glass-blur);
 }
 
 .diferencial-card::before {
@@ -411,11 +436,18 @@
 .education-item-row {
     display: flex;
     gap: 1.25rem;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid var(--border-subtle);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: var(--glass-blur);
     border-radius: var(--radius-lg);
     padding: 1.25rem;
     align-items: center;
+    transition: transform var(--transition-normal), border-color var(--transition-normal);
+}
+
+.education-item-row:hover {
+    border-color: rgba(255, 122, 0, 0.2);
+    transform: translateX(5px);
 }
 
 .edu-icon {
@@ -448,11 +480,18 @@
 }
 
 .expertise-box {
-    background: linear-gradient(145deg, rgba(255, 122, 0, 0.08), rgba(255, 255, 255, 0.02) 45%, rgba(255, 255, 255, 0.01));
-    padding: 1.5rem;
+    background: var(--glass-bg);
+    padding: 1.75rem;
     border-radius: var(--radius-lg);
-    border: 1px solid var(--border-subtle);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: var(--glass-blur);
     height: 100%;
+    transition: transform var(--transition-normal), border-color var(--transition-normal);
+}
+
+.expertise-box:hover {
+    border-color: rgba(255, 122, 0, 0.25);
+    transform: translateY(-5px);
 }
 
 .expertise-title {
@@ -501,8 +540,9 @@
 }
 
 .github-card-link {
-    background: var(--gradient-surface);
-    border: 1px solid var(--border-subtle);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: var(--glass-blur);
     padding: 1.5rem;
     border-radius: var(--radius-xl);
     transition: all var(--transition-normal);

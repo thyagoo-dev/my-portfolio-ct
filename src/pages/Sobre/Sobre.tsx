@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FiBookOpen, FiBriefcase, FiCalendar, FiChevronRight, FiCode, FiGithub, FiLinkedin, FiMail, FiMapPin, FiTarget, FiTool } from 'react-icons/fi';
 import { Button } from '../../components/ui/Button/Button';
@@ -8,6 +8,7 @@ import { expertise } from '../../data/expertise';
 import { socialLinks } from '../../data/social';
 import { useLanguage } from '../../hooks/useLanguage';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
+import { FloatingLines } from '../../components/ui/FloatingLines/FloatingLines';
 import './Sobre.css';
 
 export default function Sobre() {
@@ -46,6 +47,7 @@ export default function Sobre() {
 
   return (
     <main className="page-sobre">
+      <FloatingLines />
       <div className="container">
         <div className="about-layout">
           <aside className="about-sidebar">
