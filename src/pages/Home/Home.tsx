@@ -50,7 +50,6 @@ export default function Home() {
 
       {/* ========== HERO SECTION (PRO MAX) ========== */}
       <section id="inicio" className="hero">
-        <FloatingLines />
         <div className="container hero-container">
           <div className="hero-content">
             <motion.h1
