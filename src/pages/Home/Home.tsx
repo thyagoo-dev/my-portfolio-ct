@@ -103,7 +103,6 @@ export default function Home() {
           className="scroll-indicator-wrapper"
           onClick={() => document.getElementById('servicos')?.scrollIntoView({ behavior: 'smooth' })}
         >
-          <span className="scroll-text">Explorar</span>
           <div className="scroll-mouse">
             <div className="scroll-dot" />
           </div>
