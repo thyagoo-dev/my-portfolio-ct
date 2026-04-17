@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { FaWhatsapp } from 'react-icons/fa';
 import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
-import { footerTech, navLinks, socialLinks } from '../../../data/social';
+import { navLinks, socialLinks } from '../../../data/social';
 import './Footer.css';
 
 export function Footer() {

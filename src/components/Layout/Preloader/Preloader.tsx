@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { FloatingLines } from '../../ui/FloatingLines/FloatingLines';
 import './Preloader.css';
 
 interface PreloaderProps {

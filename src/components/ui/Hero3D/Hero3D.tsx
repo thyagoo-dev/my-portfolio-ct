@@ -4,7 +4,7 @@ import { Points, PointMaterial, Float, MeshDistortMaterial } from '@react-three/
 import * as THREE from 'three';
 
 function ParticleField() {
-  const ref = useRef<any>();
+  const ref = useRef<any>(null);
 
   // Generate particles
   const [positions] = useMemo(() => {

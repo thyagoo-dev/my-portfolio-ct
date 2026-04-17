@@ -6,7 +6,6 @@ interface CounterProps {
   direction?: "up" | "down";
   prefix?: string;
   suffix?: string;
-  duration?: number;
 }
 
 export function Counter({
@@ -14,7 +13,6 @@ export function Counter({
   direction = "up",
   prefix = "",
   suffix = "",
-  duration = 2
 }: CounterProps) {
   const ref = useRef<HTMLSpanElement>(null);
   const motionValue = useMotionValue(direction === "down" ? value : 0);

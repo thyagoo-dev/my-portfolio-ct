@@ -11,7 +11,7 @@ import './ProjetoDetalhe.css';
 export default function ProjetoDetalhe() {
   const { id } = useParams<{ id: string }>();
   const project = projects.find((p) => p.id === id || p.slug === id);
-  const { revealRef } = useScrollReveal();
+  useScrollReveal();
 
   useEffect(() => {
     document.title = project ? `${project.title} - Victor Kauê` : 'Projeto não encontrado';

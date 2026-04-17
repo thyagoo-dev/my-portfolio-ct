@@ -8,7 +8,6 @@ import { expertise } from '../../data/expertise';
 import { socialLinks } from '../../data/social';
 import { useLanguage } from '../../hooks/useLanguage';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
-import { FloatingLines } from '../../components/ui/FloatingLines/FloatingLines';
 import './Sobre.css';
 
 export default function Sobre() {

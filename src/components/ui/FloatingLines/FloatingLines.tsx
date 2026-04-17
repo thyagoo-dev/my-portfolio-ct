@@ -80,14 +80,18 @@ function FloatingLinesMesh() {
   useFrame((state) => {
     if (meshRef.current) {
       const material = meshRef.current.material as THREE.ShaderMaterial;
-      material.uniforms.uTime.value = state.clock.getElapsedTime();
+      if (material.uniforms?.uTime) {
+        material.uniforms.uTime.value = state.clock.getElapsedTime();
+      }
 
       const targetX = (state.mouse.x + 1) / 2;
       const targetY = (state.mouse.y + 1) / 2;
       mouseRef.current.x = THREE.MathUtils.lerp(mouseRef.current.x, targetX, 0.05);
       mouseRef.current.y = THREE.MathUtils.lerp(mouseRef.current.y, targetY, 0.05);
 
-      material.uniforms.uMouse.value.copy(mouseRef.current);
+      if (material.uniforms?.uMouse?.value) {
+        material.uniforms.uMouse.value.copy(mouseRef.current);
+      }
     }
   });
 
