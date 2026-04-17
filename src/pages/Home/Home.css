@@ -493,15 +493,18 @@
         max-width: 100%;
         overflow: visible;
         align-items: center;
+        text-align: center;
     }
 
     .hero-title-main span {
-        font-size: clamp(1.4rem, 8.5vw, 2.4rem);
-        letter-spacing: -0.04em;
+        font-size: clamp(1.2rem, 7.8vw, 2.22rem); /* Reduced further for long words */
+        letter-spacing: -0.03em;
         white-space: normal;
         line-height: 1.1;
         max-width: 100%;
-        word-break: keep-all; 
+        word-break: break-word; /* Essential fallback */
+        overflow-wrap: break-word;
+        hyphens: auto;
     }
 
     .hero-description {
