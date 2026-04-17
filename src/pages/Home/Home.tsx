@@ -21,6 +21,7 @@ import { Reveal } from '../../components/ui/Reveal/Reveal';
 import { ColorBends } from '../../components/ui/ColorBends/ColorBends';
 import { ProjectCard } from '../../components/ui/ProjectCard/ProjectCard';
 import { FloatingLines } from '../../components/ui/FloatingLines/FloatingLines';
+import { Counter } from '../../components/ui/Counter/Counter';
 import './Home.css';
 
 export default function Home() {
@@ -32,9 +33,9 @@ export default function Home() {
   }, []);
 
   const results = [
-    { value: '30%', label: 'Crescimento em Performance' },
-    { value: '25+', label: 'APIs Escaláveis Criadas' },
-    { value: '10+', label: 'Sistemas em Produção' },
+    { value: 30, suffix: '%', label: 'Crescimento em Performance' },
+    { value: 25, suffix: '+', label: 'APIs Escaláveis Criadas' },
+    { value: 10, suffix: '+', label: 'Sistemas em Produção' },
   ];
 
   const services = [
@@ -121,7 +122,9 @@ export default function Home() {
               {results.map((res, i) => (
                 <Reveal key={i} delay={i * 0.1} yOffset={20}>
                   <div className="result-item">
-                    <span className="result-value">{res.value}</span>
+                    <span className="result-value">
+                      <Counter value={res.value} suffix={res.suffix} />
+                    </span>
                     <span className="result-label">{res.label}</span>
                   </div>
                 </Reveal>
