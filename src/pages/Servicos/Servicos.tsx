@@ -1,4 +1,4 @@
-﻿import { useEffect } from 'react';
+import { useEffect } from 'react';
 import { FiArrowRight, FiCheckCircle, FiCpu, FiDatabase, FiLayout } from 'react-icons/fi';
 import { Button } from '../../components/ui/Button/Button';
 import { PageHero } from '../../components/ui/PageHero/PageHero';
@@ -25,6 +25,21 @@ export default function Servicos() {
         <div className="container">
           <div className="services-grid">
             <Reveal delay={0.1}>
+              <div className="service-card">
+                <div className="service-icon">
+                  <FiDatabase />
+                </div>
+                <h3>Sistemas Customizados</h3>
+                <p>Desenvolvimento de dashboards e paineis administrativos para gestão de dados.</p>
+                <ul>
+                  <li><FiCheckCircle /> Automacao de Processos</li>
+                  <li><FiCheckCircle /> Integracao de APIs</li>
+                  <li><FiCheckCircle /> gestão de Inventario</li>
+                </ul>
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.2}>
               <div className="service-card featured">
                 <div className="service-icon">
                   <FiLayout />
@@ -39,21 +54,6 @@ export default function Servicos() {
                 <Button href="/contato" variant="primary">
                   Saber mais <FiArrowRight />
                 </Button>
-              </div>
-            </Reveal>
-
-            <Reveal delay={0.2}>
-              <div className="service-card">
-                <div className="service-icon">
-                  <FiDatabase />
-                </div>
-                <h3>Sistemas Customizados</h3>
-                <p>Desenvolvimento de dashboards e paineis administrativos para gestão de dados.</p>
-                <ul>
-                  <li><FiCheckCircle /> Automacao de Processos</li>
-                  <li><FiCheckCircle /> Integracao de APIs</li>
-                  <li><FiCheckCircle /> gestão de Inventario</li>
-                </ul>
               </div>
             </Reveal>
 
