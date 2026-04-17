@@ -43,8 +43,16 @@ export function Preloader() {
 
       <div className="preloading-stage">
         <div className="preloader-logo-group">
-            <span className="logo-v">V</span>
-            <span className="logo-k">K</span>
+            <div className="logo-v" data-text="V">
+                V
+                <span className="v-glitch-1">V</span>
+                <span className="v-glitch-2">V</span>
+            </div>
+            <div className="logo-k" data-text="K">
+                K
+                <span className="k-glitch-1">K</span>
+                <span className="k-glitch-2">K</span>
+            </div>
         </div>
 
         <div className="preloader-progress-container">
