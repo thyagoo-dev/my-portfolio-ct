@@ -89,12 +89,9 @@ A estrutura do projeto é organizada para facilitar a manutenção e escalabilid
 │       ├── eu
 │       ├── fotos-projetos-pessoais
 │       ├── fotos-projetos-reais
-│       ├── 📁 ideias
-│       │   └── 🖼️ Esboço do portfólio de Victor Kauê.png
-│       ├── 📁 placeholders
-│       │   └── 🖼️ project-placeholder.svg
-│       └── 📁 readme
-│           └── 🖼️ hero.png
+│       ├── ideias
+│       ├── placeholders
+│       └── readme
 ├── 📁 scripts
 │   └── 📄 enrich-projects.mjs
 ├── 📁 skills
