@@ -83,8 +83,8 @@ A estrutura do projeto é organizada para facilitar a manutenção e escalabilid
 │   │       ├── fotos
 │   ├── docs
 │   │   └── Curriculo
-│   └── 📁 images
-│       ├── 📁 Galeria
+│   └── images
+│       ├── Galeria
 │       │   └── 📁 Serra_do_Arapua
 │       │       ├── 🖼️ 1.jpg
 │       │       ├── 🖼️ 10.jpg
