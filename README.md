@@ -118,18 +118,18 @@ A estrutura do projeto é organizada para facilitar a manutenção e escalabilid
 │   ├── data
 │   │   ├── projects
 │   │   │   ├── pessoais
-│   │   │   │   ├── 📄 agendeaqui.ts
-│   │   │   │   ├── 📄 meu-portfolio.ts
-│   │   │   │   ├── 📄 oliveira-kids.ts
-│   │   │   │   ├── 📄 saberes-interculturais.ts
-│   │   │   │   └── 📄 transcritor-entrevistas.ts
-│   │   │   └── 📁 profissionais
-│   │   │       ├── 📄 maratonatech.ts
-│   │   │       ├── 📄 ntidi.ts
-│   │   │       ├── 📄 queelvra.ts
-│   │   │       ├── 📄 sigref.ts
-│   │   │       ├── 📄 va-suplementos.ts
-│   │   │       └── 📄 vksoftware.ts
+│   │   │   │   ├── agendeaqui.ts
+│   │   │   │   ├── meu-portfolio.ts
+│   │   │   │   ├── oliveira-kids.ts
+│   │   │   │   ├── saberes-interculturais.ts
+│   │   │   │   └── transcritor-entrevistas.ts
+│   │   │   └── profissionais
+│   │   │       ├── maratonatech.ts
+│   │   │       ├── ntidi.ts
+│   │   │       ├── queelvra.ts
+│   │   │       ├── sigref.ts
+│   │   │       ├── va-suplementos.ts
+│   │   │       └── vksoftware.ts
 │   │   ├── 📄 certificates.ts
 │   │   ├── 📄 education.ts
 │   │   ├── 📄 experiences.ts
