@@ -77,10 +77,10 @@ A estrutura do projeto é organizada para facilitar a manutenção e escalabilid
 
 ```
 ```
-├── 📁 public
-│   ├── 📁 Certificados
-│   │   └── 📁 pdfs
-│   │       ├── 📁 fotos
+├── public
+│   ├── Certificados
+│   │   └── pdfs
+│   │       ├── fotos
 │   ├── 📁 docs
 │   │   └── 📁 Curriculo
 │   │       └── 📕 Curriculo_Victor_Kaue.pdf
