@@ -93,10 +93,10 @@ A estrutura do projeto é organizada para facilitar a manutenção e escalabilid
 │       ├── placeholders
 │       └── readme
 ├── scripts
-├── 📁 skills
-├── 📁 src
-│   ├── 📁 components
-│   │   ├── 📁 Layout
+├── skills
+├── src
+│   ├── components
+│   │   ├── Layout
 │   │   │   ├── 📁 BackToTop
 │   │   │   │   ├── 🎨 BackToTop.css
 │   │   │   │   └── 📄 BackToTop.tsx
