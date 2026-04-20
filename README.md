@@ -81,14 +81,6 @@ A estrutura do projeto é organizada para facilitar a manutenção e escalabilid
 │   ├── 📁 Certificados
 │   │   └── 📁 pdfs
 │   │       ├── 📁 fotos
-│   │       │   ├── 🖼️ Oficina_Workshop - Oficina_ Desenvolvimento de sites com Wordpress.png
-│   │       │   ├── 🖼️ Oficina_Workshop - Oficina_ Design com Canva.png
-│   │       │   ├── 🖼️ Workshop - Minicurso - Aprendendo a Programar Jogos.png
-│   │       │   └── 🖼️ Workshop - Planejamento de Projetos com PM Canvas.png
-│   │       ├── 📕 Oficina_Workshop - Oficina_ Desenvolvimento de sites com Wordpress.pdf
-│   │       ├── 📕 Oficina_Workshop - Oficina_ Design com Canva.pdf
-│   │       ├── 📕 Workshop - Minicurso - Aprendendo a Programar Jogos.pdf
-│   │       └── 📕 Workshop - Planejamento de Projetos com PM Canvas.pdf
 │   ├── 📁 docs
 │   │   └── 📁 Curriculo
 │   │       └── 📕 Curriculo_Victor_Kaue.pdf
