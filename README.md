@@ -12,7 +12,7 @@ Portfólio profissional construído para demonstrar capacidade técnica em **des
 
 ---
 
-## 👀 Resumo para Recrutadores:
+## 👀 Resumo :
 
 - Projeto autoral com arquitetura front-end moderna e componentes reutilizáveis.
 - Interface premium responsiva (mobile, tablet e desktop) com foco em legibilidade e conversão.
