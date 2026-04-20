@@ -114,9 +114,7 @@ A estrutura do projeto é organizada para facilitar a manutenção e escalabilid
 │   │       ├── ProjectCarousel
 │   │       ├── Reveal
 │   │       ├── TechIcon
-│   │       └── 📁 TechMarquee
-│   │           ├── 🎨 TechMarquee.css
-│   │           └── 📄 TechMarquee.tsx
+│   │       └── TechMarquee
 │   ├── 📁 data
 │   │   ├── 📁 projects
 │   │   │   ├── 📁 pessoais
