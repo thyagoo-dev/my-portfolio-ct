@@ -85,9 +85,7 @@ A estrutura do projeto é organizada para facilitar a manutenção e escalabilid
 │   │   └── Curriculo
 │   └── images
 │       ├── Galeria
-│       ├── 📁 background
-│       │   ├── 🖼️ back.png
-│       │   └── 🖼️ backgrou-hero-top.png
+│       ├── background
 │       ├── 📁 eu
 │       │   ├── 🖼️ victor.webp
 │       │   └── 🖼️ victorkaue.png
