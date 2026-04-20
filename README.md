@@ -101,8 +101,6 @@ A estrutura do projeto é organizada para facilitar a manutenção e escalabilid
 │   │   │   ├── Footer
 │   │   │   ├── Navbar
 │   │   │   ├── Preloader
-│   │   │   │   ├── Preloader.css
-│   │   │   │   └── Preloader.tsx
 │   │   │   └── ScrollToTop
 │   │   │       └── ScrollToTop.tsx
 │   │   └── 📁 ui
