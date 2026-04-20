@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="28" alt="React" /> Victor Kauê | Portfolio Full Stack
+# <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="28" alt="React" /> Victor Kauê | Portfolio Full Stack
 
 Portfólio profissional construído para demonstrar capacidade técnica em **desenvolvimento web full stack**, com foco em **backend (Python/Django)**, UX/UI premium dark e experiencia de navegacao fluida.
 
@@ -18,7 +18,7 @@ Portfólio profissional construído para demonstrar capacidade técnica em **des
 - Interface premium responsiva (mobile, tablet e desktop) com foco em legibilidade e conversão.
 - Sistema de idiomas funcional (`PT/EN`) com persistência local.
 - Navegação com React Router, scroll management e UX refinada em páginas de projetos e certificados.
-- ódigo em TypeScript com organização por camadas (`components`, `pages`, `hooks`, `data`, `styles`).
+- Código em TypeScript com organização por camadas (`components`, `pages`, `hooks`, `data`, `styles`).
 
 ---
 
@@ -75,7 +75,6 @@ O projeto está hospedado no Vercel, garantindo alta performance e disponibilida
 
 A estrutura do projeto é organizada para facilitar a manutenção e escalabilidade, seguindo boas práticas de desenvolvimento front-end. Os arquivos estão agrupados por funcionalidade e tipo, garantindo uma navegação intuitiva pelo código.
 
-```
 ```
 ├── public
 │   ├── Certificados
