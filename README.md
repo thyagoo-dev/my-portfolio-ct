@@ -92,8 +92,7 @@ A estrutura do projeto é organizada para facilitar a manutenção e escalabilid
 │       ├── ideias
 │       ├── placeholders
 │       └── readme
-├── 📁 scripts
-│   └── 📄 enrich-projects.mjs
+├── scripts
 ├── 📁 skills
 │   ├── 📝 frontend-design.md
 │   └── 📝 ui-ux-pro-max.md
