@@ -109,9 +109,7 @@ A estrutura do projeto é organizada para facilitar a manutenção e escalabilid
 │   │       ├── Counter
 │   │       ├── FloatingLines
 │   │       ├── Hero3D
-│   │       ├── 📁 PageHero
-│   │       │   ├── 🎨 PageHero.css
-│   │       │   └── 📄 PageHero.tsx
+│   │       ├── PageHero
 │   │       ├── 📁 ProjectCard
 │   │       │   ├── 🎨 ProjectCard.css
 │   │       │   └── 📄 ProjectCard.tsx
