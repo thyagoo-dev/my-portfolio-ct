@@ -110,12 +110,12 @@ A estrutura do projeto é organizada para facilitar a manutenção e escalabilid
 │   │       ├── FloatingLines
 │   │       ├── Hero3D
 │   │       ├── PageHero
-│   │       ├── 📁 ProjectCard
-│   │       │   ├── 🎨 ProjectCard.css
-│   │       │   └── 📄 ProjectCard.tsx
-│   │       ├── 📁 ProjectCarousel
-│   │       │   ├── 🎨 ProjectCarousel.css
-│   │       │   └── 📄 ProjectCarousel.tsx
+│   │       ├── ProjectCard
+│   │       │   ├── ProjectCard.css
+│   │       │   └── ProjectCard.tsx
+│   │       ├── ProjectCarousel
+│   │       │   ├── ProjectCarousel.css
+│   │       │   └── ProjectCarousel.tsx
 │   │       ├── 📁 Reveal
 │   │       │   └── 📄 Reveal.tsx
 │   │       ├── 📁 TechIcon
