@@ -81,9 +81,8 @@ A estrutura do projeto é organizada para facilitar a manutenção e escalabilid
 │   ├── Certificados
 │   │   └── pdfs
 │   │       ├── fotos
-│   ├── 📁 docs
-│   │   └── 📁 Curriculo
-│   │       └── 📕 Curriculo_Victor_Kaue.pdf
+│   ├── docs
+│   │   └── Curriculo
 │   └── 📁 images
 │       ├── 📁 Galeria
 │       │   └── 📁 Serra_do_Arapua
