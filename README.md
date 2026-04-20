@@ -100,10 +100,6 @@ A estrutura do projeto é organizada para facilitar a manutenção e escalabilid
 │   │   │   ├── BackToTop
 │   │   │   ├── Footer
 │   │   │   ├── Navbar
-│   │   │   │   ├── 🎨 MobileNavbar.css
-│   │   │   │   ├── 📄 MobileNavbar.tsx
-│   │   │   │   ├── 🎨 Navbar.css
-│   │   │   │   └── 📄 Navbar.tsx
 │   │   │   ├── 📁 Preloader
 │   │   │   │   ├── 🎨 Preloader.css
 │   │   │   │   └── 📄 Preloader.tsx
