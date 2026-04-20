@@ -75,6 +75,11 @@ export default function Home() {
                 </Button>
               </Reveal>
               <Reveal delay={0.6}>
+                <Button href="/projetos" variant="outline">
+                  {t('hero.cta2')}
+                </Button>
+              </Reveal>
+              <Reveal delay={0.7}>
                 <div className="hero-socials">
                   <a href="https://github.com/Victorkaue333" target="_blank" rel="noopener noreferrer" className="social-icon github" aria-label="GitHub"><FiGithub size={20} /></a>
                   <a href="https://linkedin.com/in/victorkaue" target="_blank" rel="noopener noreferrer" className="social-icon linkedin" aria-label="LinkedIn"><FiLinkedin size={20} /></a>

@@ -26,6 +26,7 @@ const resources = {
         description:
           'Focus on performance and maintenance. I deliver reliable software for critical processes, from business rules to production deployment.',
         cta: 'Meet my journey',
+        cta2: 'View Projects',
       },
       about: {
         title: 'About',
@@ -93,6 +94,7 @@ const resources = {
         description:
           'Foco em performance e manutenção. Entrego software confiável para processos críticos, da regra de negócio ao deploy em produção.',
         cta: 'Conheça minha jornada',
+        cta2: 'Ver Projetos',
       },
       about: {
         title: 'Sobre',
