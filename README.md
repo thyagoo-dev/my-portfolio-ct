@@ -86,9 +86,7 @@ A estrutura do projeto é organizada para facilitar a manutenção e escalabilid
 │   └── images
 │       ├── Galeria
 │       ├── background
-│       ├── 📁 eu
-│       │   ├── 🖼️ victor.webp
-│       │   └── 🖼️ victorkaue.png
+│       ├── eu
 │       ├── 📁 fotos-projetos-pessoais
 │       │   ├── 📁 1-ano-de-namoro
 │       │   │   ├── 🖼️ 1-Ano-Aniversario-De-Namoro.png
