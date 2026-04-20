@@ -87,49 +87,7 @@ A estrutura do projeto é organizada para facilitar a manutenção e escalabilid
 │       ├── Galeria
 │       ├── background
 │       ├── eu
-│       ├── 📁 fotos-projetos-pessoais
-│       │   ├── 📁 1-ano-de-namoro
-│       │   │   ├── 🖼️ 1-Ano-Aniversario-De-Namoro.png
-│       │   │   ├── 🖼️ 1.png
-│       │   │   ├── 🖼️ 2.png
-│       │   │   ├── 🖼️ 3.png
-│       │   │   ├── 🖼️ 4.png
-│       │   │   ├── 🖼️ 5.png
-│       │   │   ├── 🖼️ 6.png
-│       │   │   ├── 🖼️ 7.png
-│       │   │   ├── 🖼️ 8.png
-│       │   │   └── 🖼️ 9.png
-│       │   ├── 📁 agendeaqui
-│       │   │   ├── 🖼️ 1.jpg
-│       │   │   ├── 🖼️ 2.jpg
-│       │   │   ├── 🖼️ 3.jpg
-│       │   │   ├── 🖼️ 4.jpg
-│       │   │   ├── 🖼️ 5.jpg
-│       │   │   ├── 🖼️ 6.jpg
-│       │   │   ├── 🖼️ 7.jpg
-│       │   │   └── 🖼️ agendeaqui.png
-│       │   ├── 📁 oliveira-kids
-│       │   │   ├── 🖼️ 1.png
-│       │   │   ├── 🖼️ 2.png
-│       │   │   ├── 🖼️ 3.png
-│       │   │   ├── 🖼️ 4.png
-│       │   │   ├── 🖼️ 5.png
-│       │   │   ├── 🖼️ 6.png
-│       │   │   ├── 🖼️ 7.png
-│       │   │   ├── 🖼️ 8.png
-│       │   │   └── 🖼️ oliveira-kids.png
-│       │   ├── 📁 rastreador-de-despesas
-│       │   │   ├── 🖼️ 1.png
-│       │   │   ├── 🖼️ 2.png
-│       │   │   ├── 🖼️ 3.png
-│       │   │   └── 🖼️ rastreador-de-despesas.png
-│       │   ├── 📁 saberes-interculturais
-│       │   │   └── 🖼️ saberes-interculturais.png
-│       │   ├── 📁 transcritor-de-entrevistas
-│       │   │   └── 🖼️ Transcritor_de_Entrevistas.png
-│       │   └── 📁 vk-portifolio
-│       │       ├── 🖼️ logotipo-vk.png
-│       │       └── 🖼️ victor_kaue.png
+│       ├── fotos-projetos-pessoais
 │       ├── 📁 fotos-projetos-reais
 │       │   ├── 📁 maratonatech
 │       │   │   └── 🖼️ MaratonaTech.png
