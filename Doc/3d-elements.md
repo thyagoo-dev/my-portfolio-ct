@@ -1,6 +1,5 @@
 # Elementos 3D (3D Elements):
 
-
 Este portfólio utiliza uma camada visual 3D de alta performance para criar uma atmosfera imersiva sem comprometer o carregamento da página.
 
 ## 🛠️ Tecnologias Utilizadas:
