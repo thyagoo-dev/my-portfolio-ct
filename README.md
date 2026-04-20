@@ -103,19 +103,12 @@ A estrutura do projeto é organizada para facilitar a manutenção e escalabilid
 │   │   │   ├── Preloader
 │   │   │   └── ScrollToTop
 │   │   │       └── ScrollToTop.tsx
-│   │   └── 📁 ui
-│   │       ├── 📁 Button
-│   │       │   ├── 🎨 Button.css
-│   │       │   └── 📄 Button.tsx
-│   │       ├── 📁 ColorBends
-│   │       │   ├── 🎨 ColorBends.css
-│   │       │   └── 📄 ColorBends.tsx
-│   │       ├── 📁 Counter
-│   │       │   └── 📄 Counter.tsx
-│   │       ├── 📁 FloatingLines
-│   │       │   └── 📄 FloatingLines.tsx
-│   │       ├── 📁 Hero3D
-│   │       │   └── 📄 Hero3D.tsx
+│   │   └── ui
+│   │       ├── Button
+│   │       ├── ColorBends
+│   │       ├── Counter
+│   │       ├── FloatingLines
+│   │       ├── Hero3D
 │   │       ├── 📁 PageHero
 │   │       │   ├── 🎨 PageHero.css
 │   │       │   └── 📄 PageHero.tsx
