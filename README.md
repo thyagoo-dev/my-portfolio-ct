@@ -115,9 +115,9 @@ A estrutura do projeto é organizada para facilitar a manutenção e escalabilid
 │   │       ├── Reveal
 │   │       ├── TechIcon
 │   │       └── TechMarquee
-│   ├── 📁 data
-│   │   ├── 📁 projects
-│   │   │   ├── 📁 pessoais
+│   ├── data
+│   │   ├── projects
+│   │   │   ├── pessoais
 │   │   │   │   ├── 📄 agendeaqui.ts
 │   │   │   │   ├── 📄 meu-portfolio.ts
 │   │   │   │   ├── 📄 oliveira-kids.ts
