@@ -94,8 +94,6 @@ A estrutura do projeto é organizada para facilitar a manutenção e escalabilid
 │       └── readme
 ├── scripts
 ├── 📁 skills
-│   ├── 📝 frontend-design.md
-│   └── 📝 ui-ux-pro-max.md
 ├── 📁 src
 │   ├── 📁 components
 │   │   ├── 📁 Layout
