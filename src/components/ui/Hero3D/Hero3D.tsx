@@ -90,7 +90,12 @@ export const Hero3D: React.FC = () => {
       pointerEvents: 'none',
       opacity: 0.6
     }}>
-      <Canvas camera={{ position: [0, 0, 5], fov: 75 }}>
+      <Canvas 
+        camera={{ position: [0, 0, 5], fov: 75 }}
+        dpr={[1, 2]}
+        performance={{ min: 0.5 }}
+        gl={{ antialias: false }}
+      >
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 10, 10]} intensity={1} />
         <ParticleField />
