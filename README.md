@@ -75,19 +75,259 @@ O projeto está hospedado no Vercel, garantindo alta performance e disponibilida
 
 A estrutura do projeto é organizada para facilitar a manutenção e escalabilidade, seguindo boas práticas de desenvolvimento front-end. Os arquivos estão agrupados por funcionalidade e tipo, garantindo uma navegação intuitiva pelo código.
 
-```src/
-├── components/          # Componentes reutilizáveis (UI, layout, etc.)
-├── pages/               # Páginas principais (Home, Projetos, Certificados, etc.)
-├── hooks/               # Custom hooks (ex: useScrollReveal)
-├── data/                # Dados estáticos (projetos, certificados, etc.)
-├── styles/              # Estilos globais e variáveis de design
-├── App.tsx              # Componente raiz com rotas
-├── main.tsx             # Ponto de entrada do React
-├── index.html           # Template HTML
-├── README.md            # Documentação do projeto
-├── package.json         # Configurações e dependências do projeto
-├── tsconfig.json        # Configurações do TypeScript
-└── vite.config.ts       # Configurações do Vite
+```
+```
+├── 📁 public
+│   ├── 📁 Certificados
+│   │   └── 📁 pdfs
+│   │       ├── 📁 fotos
+│   │       │   ├── 🖼️ Oficina_Workshop - Oficina_ Desenvolvimento de sites com Wordpress.png
+│   │       │   ├── 🖼️ Oficina_Workshop - Oficina_ Design com Canva.png
+│   │       │   ├── 🖼️ Workshop - Minicurso - Aprendendo a Programar Jogos.png
+│   │       │   └── 🖼️ Workshop - Planejamento de Projetos com PM Canvas.png
+│   │       ├── 📕 Oficina_Workshop - Oficina_ Desenvolvimento de sites com Wordpress.pdf
+│   │       ├── 📕 Oficina_Workshop - Oficina_ Design com Canva.pdf
+│   │       ├── 📕 Workshop - Minicurso - Aprendendo a Programar Jogos.pdf
+│   │       └── 📕 Workshop - Planejamento de Projetos com PM Canvas.pdf
+│   ├── 📁 docs
+│   │   └── 📁 Curriculo
+│   │       └── 📕 Curriculo_Victor_Kaue.pdf
+│   └── 📁 images
+│       ├── 📁 Galeria
+│       │   └── 📁 Serra_do_Arapua
+│       │       ├── 🖼️ 1.jpg
+│       │       ├── 🖼️ 10.jpg
+│       │       ├── 🖼️ 11.jpg
+│       │       ├── 🖼️ 12.jpg
+│       │       ├── 🖼️ 13.jpg
+│       │       ├── 🖼️ 14.jpg
+│       │       ├── 🖼️ 2.jpg
+│       │       ├── 🖼️ 3.jpg
+│       │       ├── 🖼️ 4.jpg
+│       │       ├── 🖼️ 5.jpg
+│       │       ├── 🖼️ 6.jpg
+│       │       ├── 🖼️ 7.jpg
+│       │       ├── 🖼️ 8.jpg
+│       │       └── 🖼️ 9.jpg
+│       ├── 📁 background
+│       │   ├── 🖼️ back.png
+│       │   └── 🖼️ backgrou-hero-top.png
+│       ├── 📁 eu
+│       │   ├── 🖼️ victor.webp
+│       │   └── 🖼️ victorkaue.png
+│       ├── 📁 fotos-projetos-pessoais
+│       │   ├── 📁 1-ano-de-namoro
+│       │   │   ├── 🖼️ 1-Ano-Aniversario-De-Namoro.png
+│       │   │   ├── 🖼️ 1.png
+│       │   │   ├── 🖼️ 2.png
+│       │   │   ├── 🖼️ 3.png
+│       │   │   ├── 🖼️ 4.png
+│       │   │   ├── 🖼️ 5.png
+│       │   │   ├── 🖼️ 6.png
+│       │   │   ├── 🖼️ 7.png
+│       │   │   ├── 🖼️ 8.png
+│       │   │   └── 🖼️ 9.png
+│       │   ├── 📁 agendeaqui
+│       │   │   ├── 🖼️ 1.jpg
+│       │   │   ├── 🖼️ 2.jpg
+│       │   │   ├── 🖼️ 3.jpg
+│       │   │   ├── 🖼️ 4.jpg
+│       │   │   ├── 🖼️ 5.jpg
+│       │   │   ├── 🖼️ 6.jpg
+│       │   │   ├── 🖼️ 7.jpg
+│       │   │   └── 🖼️ agendeaqui.png
+│       │   ├── 📁 oliveira-kids
+│       │   │   ├── 🖼️ 1.png
+│       │   │   ├── 🖼️ 2.png
+│       │   │   ├── 🖼️ 3.png
+│       │   │   ├── 🖼️ 4.png
+│       │   │   ├── 🖼️ 5.png
+│       │   │   ├── 🖼️ 6.png
+│       │   │   ├── 🖼️ 7.png
+│       │   │   ├── 🖼️ 8.png
+│       │   │   └── 🖼️ oliveira-kids.png
+│       │   ├── 📁 rastreador-de-despesas
+│       │   │   ├── 🖼️ 1.png
+│       │   │   ├── 🖼️ 2.png
+│       │   │   ├── 🖼️ 3.png
+│       │   │   └── 🖼️ rastreador-de-despesas.png
+│       │   ├── 📁 saberes-interculturais
+│       │   │   └── 🖼️ saberes-interculturais.png
+│       │   ├── 📁 transcritor-de-entrevistas
+│       │   │   └── 🖼️ Transcritor_de_Entrevistas.png
+│       │   └── 📁 vk-portifolio
+│       │       ├── 🖼️ logotipo-vk.png
+│       │       └── 🖼️ victor_kaue.png
+│       ├── 📁 fotos-projetos-reais
+│       │   ├── 📁 maratonatech
+│       │   │   └── 🖼️ MaratonaTech.png
+│       │   ├── 📁 ntidi
+│       │   │   ├── 🖼️ 1-sem-fundo.png
+│       │   │   ├── 🖼️ 10.png
+│       │   │   ├── 🖼️ 11.png
+│       │   │   ├── 🖼️ 12.png
+│       │   │   ├── 🖼️ 13.png
+│       │   │   ├── 🖼️ 14.png
+│       │   │   ├── 🖼️ 15.png
+│       │   │   ├── 🖼️ 16.png
+│       │   │   ├── 🖼️ 2.png
+│       │   │   ├── 🖼️ 3.png
+│       │   │   ├── 🖼️ 4.png
+│       │   │   ├── 🖼️ 5.png
+│       │   │   ├── 🖼️ 6.png
+│       │   │   ├── 🖼️ 7.png
+│       │   │   ├── 🖼️ 8.png
+│       │   │   ├── 🖼️ 9.png
+│       │   │   └── 🖼️ NTIDI.jpg
+│       │   ├── 📁 queelvra
+│       │   │   └── 🖼️ queelvra.png
+│       │   ├── 📁 sigref
+│       │   │   ├── 🖼️ SIGREF_antiga.png
+│       │   │   └── 🖼️ sigrefsemfundo.png
+│       │   ├── 📁 va_suplementos
+│       │   │   └── 🖼️ va_suplementos.png
+│       │   └── 📁 vksoftware
+│       │       ├── 🖼️ 1.png
+│       │       ├── 🖼️ 10.png
+│       │       ├── 🖼️ 11.png
+│       │       ├── 🖼️ 2.png
+│       │       ├── 🖼️ 3.png
+│       │       ├── 🖼️ 4.png
+│       │       ├── 🖼️ 5.png
+│       │       ├── 🖼️ 6.png
+│       │       ├── 🖼️ 7.png
+│       │       ├── 🖼️ 8.png
+│       │       └── 🖼️ 9.png
+│       ├── 📁 ideias
+│       │   └── 🖼️ Esboço do portfólio de Victor Kauê.png
+│       ├── 📁 placeholders
+│       │   └── 🖼️ project-placeholder.svg
+│       └── 📁 readme
+│           └── 🖼️ hero.png
+├── 📁 scripts
+│   └── 📄 enrich-projects.mjs
+├── 📁 skills
+│   ├── 📝 frontend-design.md
+│   └── 📝 ui-ux-pro-max.md
+├── 📁 src
+│   ├── 📁 components
+│   │   ├── 📁 Layout
+│   │   │   ├── 📁 BackToTop
+│   │   │   │   ├── 🎨 BackToTop.css
+│   │   │   │   └── 📄 BackToTop.tsx
+│   │   │   ├── 📁 Footer
+│   │   │   │   ├── 🎨 Footer.css
+│   │   │   │   └── 📄 Footer.tsx
+│   │   │   ├── 📁 Navbar
+│   │   │   │   ├── 🎨 MobileNavbar.css
+│   │   │   │   ├── 📄 MobileNavbar.tsx
+│   │   │   │   ├── 🎨 Navbar.css
+│   │   │   │   └── 📄 Navbar.tsx
+│   │   │   ├── 📁 Preloader
+│   │   │   │   ├── 🎨 Preloader.css
+│   │   │   │   └── 📄 Preloader.tsx
+│   │   │   └── 📁 ScrollToTop
+│   │   │       └── 📄 ScrollToTop.tsx
+│   │   └── 📁 ui
+│   │       ├── 📁 Button
+│   │       │   ├── 🎨 Button.css
+│   │       │   └── 📄 Button.tsx
+│   │       ├── 📁 ColorBends
+│   │       │   ├── 🎨 ColorBends.css
+│   │       │   └── 📄 ColorBends.tsx
+│   │       ├── 📁 Counter
+│   │       │   └── 📄 Counter.tsx
+│   │       ├── 📁 FloatingLines
+│   │       │   └── 📄 FloatingLines.tsx
+│   │       ├── 📁 Hero3D
+│   │       │   └── 📄 Hero3D.tsx
+│   │       ├── 📁 PageHero
+│   │       │   ├── 🎨 PageHero.css
+│   │       │   └── 📄 PageHero.tsx
+│   │       ├── 📁 ProjectCard
+│   │       │   ├── 🎨 ProjectCard.css
+│   │       │   └── 📄 ProjectCard.tsx
+│   │       ├── 📁 ProjectCarousel
+│   │       │   ├── 🎨 ProjectCarousel.css
+│   │       │   └── 📄 ProjectCarousel.tsx
+│   │       ├── 📁 Reveal
+│   │       │   └── 📄 Reveal.tsx
+│   │       ├── 📁 TechIcon
+│   │       │   └── 📄 TechIcon.tsx
+│   │       └── 📁 TechMarquee
+│   │           ├── 🎨 TechMarquee.css
+│   │           └── 📄 TechMarquee.tsx
+│   ├── 📁 data
+│   │   ├── 📁 projects
+│   │   │   ├── 📁 pessoais
+│   │   │   │   ├── 📄 agendeaqui.ts
+│   │   │   │   ├── 📄 meu-portfolio.ts
+│   │   │   │   ├── 📄 oliveira-kids.ts
+│   │   │   │   ├── 📄 saberes-interculturais.ts
+│   │   │   │   └── 📄 transcritor-entrevistas.ts
+│   │   │   └── 📁 profissionais
+│   │   │       ├── 📄 maratonatech.ts
+│   │   │       ├── 📄 ntidi.ts
+│   │   │       ├── 📄 queelvra.ts
+│   │   │       ├── 📄 sigref.ts
+│   │   │       ├── 📄 va-suplementos.ts
+│   │   │       └── 📄 vksoftware.ts
+│   │   ├── 📄 certificates.ts
+│   │   ├── 📄 education.ts
+│   │   ├── 📄 experiences.ts
+│   │   ├── 📄 expertise.ts
+│   │   ├── ⚙️ projects.enrichment.json
+│   │   ├── 📄 projects.ts
+│   │   ├── 📄 services.ts
+│   │   └── 📄 social.ts
+│   ├── 📁 hooks
+│   │   ├── 📄 useLanguage.ts
+│   │   ├── 📄 useScrollPosition.ts
+│   │   └── 📄 useScrollReveal.ts
+│   ├── 📁 pages
+│   │   ├── 📁 Certificados
+│   │   │   ├── 🎨 Certificados.css
+│   │   │   └── 📄 Certificados.tsx
+│   │   ├── 📁 Contato
+│   │   │   ├── 🎨 Contato.css
+│   │   │   └── 📄 Contato.tsx
+│   │   ├── 📁 Home
+│   │   │   ├── 🎨 Home.css
+│   │   │   └── 📄 Home.tsx
+│   │   ├── 📁 ProjetoDetalhe
+│   │   │   ├── 🎨 ProjetoDetalhe.css
+│   │   │   └── 📄 ProjetoDetalhe.tsx
+│   │   ├── 📁 Projetos
+│   │   │   ├── 🎨 Projetos.css
+│   │   │   └── 📄 Projetos.tsx
+│   │   ├── 📁 Servicos
+│   │   │   ├── 🎨 Servicos.css
+│   │   │   └── 📄 Servicos.tsx
+│   │   └── 📁 Sobre
+│   │       ├── 🎨 Sobre.css
+│   │       └── 📄 Sobre.tsx
+│   ├── 📁 styles
+│   │   ├── 🎨 animations.css
+│   │   ├── 🎨 global.css
+│   │   ├── 🎨 reset.css
+│   │   └── 🎨 variables.css
+│   ├── 📁 types
+│   │   └── 📄 index.ts
+│   ├── 🎨 App.css
+│   ├── 📄 App.tsx
+│   ├── 📄 i18n.ts
+│   ├── 📄 main.tsx
+│   └── 📄 vite-env.d.ts
+├── ⚙️ .gitignore
+├── 📝 README.md
+├── 📝 comandos.md
+├── 🌐 index.html
+├── ⚙️ package-lock.json
+├── ⚙️ package.json
+├── ⚙️ tsconfig.app.json
+├── ⚙️ tsconfig.json
+├── ⚙️ tsconfig.node.json
+└── 📄 vite.config.ts
 ```
 
 ---
