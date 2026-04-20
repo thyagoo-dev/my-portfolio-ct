@@ -99,9 +99,7 @@ A estrutura do projeto é organizada para facilitar a manutenção e escalabilid
 │   │   ├── Layout
 │   │   │   ├── BackToTop
 │   │   │   ├── Footer
-│   │   │   │   ├── 🎨 Footer.css
-│   │   │   │   └── 📄 Footer.tsx
-│   │   │   ├── 📁 Navbar
+│   │   │   ├── Navbar
 │   │   │   │   ├── 🎨 MobileNavbar.css
 │   │   │   │   ├── 📄 MobileNavbar.tsx
 │   │   │   │   ├── 🎨 Navbar.css
