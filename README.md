@@ -111,8 +111,7 @@ A estrutura do projeto é organizada para facilitar a manutenção e escalabilid
 │   │       ├── Hero3D
 │   │       ├── PageHero
 │   │       ├── ProjectCard
-│   │       │   ├── ProjectCard.css
-│   │       │   └── ProjectCard.tsx
+
 │   │       ├── ProjectCarousel
 │   │       │   ├── ProjectCarousel.css
 │   │       │   └── ProjectCarousel.tsx
