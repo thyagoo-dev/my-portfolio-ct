@@ -111,14 +111,9 @@ A estrutura do projeto é organizada para facilitar a manutenção e escalabilid
 │   │       ├── Hero3D
 │   │       ├── PageHero
 │   │       ├── ProjectCard
-
 │   │       ├── ProjectCarousel
-│   │       │   ├── ProjectCarousel.css
-│   │       │   └── ProjectCarousel.tsx
-│   │       ├── 📁 Reveal
-│   │       │   └── 📄 Reveal.tsx
-│   │       ├── 📁 TechIcon
-│   │       │   └── 📄 TechIcon.tsx
+│   │       ├── Reveal
+│   │       ├── TechIcon
 │   │       └── 📁 TechMarquee
 │   │           ├── 🎨 TechMarquee.css
 │   │           └── 📄 TechMarquee.tsx
