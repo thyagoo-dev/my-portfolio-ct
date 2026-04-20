@@ -162,10 +162,10 @@ A estrutura do projeto é organizada para facilitar a manutenção e escalabilid
 │   │       ├── Sobre.css
 │   │       └── Sobre.tsx
 │   ├── styles
-│   │   ├── 🎨 animations.css
-│   │   ├── 🎨 global.css
-│   │   ├── 🎨 reset.css
-│   │   └── 🎨 variables.css
+│   │   ├── animations.css
+│   │   ├── global.css
+│   │   ├── reset.css
+│   │   └── variables.css
 │   ├── types
 │   │   └── index.ts
 │   ├── App.css
