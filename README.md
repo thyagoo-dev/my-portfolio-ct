@@ -139,9 +139,6 @@ A estrutura do projeto é organizada para facilitar a manutenção e escalabilid
 │   │   ├── services.ts
 │   │   └── social.ts
 │   ├── hooks
-│   │   ├── useLanguage.ts
-│   │   ├── useScrollPosition.ts
-│   │   └── useScrollReveal.ts
 │   ├── pages
 │   │   ├── 📁 Certificados
 │   │   │   ├── 🎨 Certificados.css
