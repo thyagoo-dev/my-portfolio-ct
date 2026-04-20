@@ -130,14 +130,14 @@ A estrutura do projeto é organizada para facilitar a manutenção e escalabilid
 │   │   │       ├── sigref.ts
 │   │   │       ├── va-suplementos.ts
 │   │   │       └── vksoftware.ts
-│   │   ├── 📄 certificates.ts
-│   │   ├── 📄 education.ts
-│   │   ├── 📄 experiences.ts
-│   │   ├── 📄 expertise.ts
-│   │   ├── ⚙️ projects.enrichment.json
-│   │   ├── 📄 projects.ts
-│   │   ├── 📄 services.ts
-│   │   └── 📄 social.ts
+│   │   ├── certificates.ts
+│   │   ├── education.ts
+│   │   ├── experiences.ts
+│   │   ├── expertise.ts
+│   │   ├── projects.enrichment.json
+│   │   ├── projects.ts
+│   │   ├── services.ts
+│   │   └── social.ts
 │   ├── 📁 hooks
 │   │   ├── 📄 useLanguage.ts
 │   │   ├── 📄 useScrollPosition.ts
