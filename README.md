@@ -97,10 +97,8 @@ A estrutura do projeto é organizada para facilitar a manutenção e escalabilid
 ├── src
 │   ├── components
 │   │   ├── Layout
-│   │   │   ├── 📁 BackToTop
-│   │   │   │   ├── 🎨 BackToTop.css
-│   │   │   │   └── 📄 BackToTop.tsx
-│   │   │   ├── 📁 Footer
+│   │   │   ├── BackToTop
+│   │   │   ├── Footer
 │   │   │   │   ├── 🎨 Footer.css
 │   │   │   │   └── 📄 Footer.tsx
 │   │   │   ├── 📁 Navbar
