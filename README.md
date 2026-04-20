@@ -140,40 +140,40 @@ A estrutura do projeto é organizada para facilitar a manutenção e escalabilid
 │   │   └── social.ts
 │   ├── hooks
 │   ├── pages
-│   │   ├── 📁 Certificados
-│   │   │   ├── 🎨 Certificados.css
-│   │   │   └── 📄 Certificados.tsx
-│   │   ├── 📁 Contato
-│   │   │   ├── 🎨 Contato.css
-│   │   │   └── 📄 Contato.tsx
-│   │   ├── 📁 Home
-│   │   │   ├── 🎨 Home.css
-│   │   │   └── 📄 Home.tsx
-│   │   ├── 📁 ProjetoDetalhe
-│   │   │   ├── 🎨 ProjetoDetalhe.css
-│   │   │   └── 📄 ProjetoDetalhe.tsx
-│   │   ├── 📁 Projetos
-│   │   │   ├── 🎨 Projetos.css
-│   │   │   └── 📄 Projetos.tsx
-│   │   ├── 📁 Servicos
-│   │   │   ├── 🎨 Servicos.css
-│   │   │   └── 📄 Servicos.tsx
-│   │   └── 📁 Sobre
-│   │       ├── 🎨 Sobre.css
-│   │       └── 📄 Sobre.tsx
-│   ├── 📁 styles
+│   │   ├── Certificados
+│   │   │   ├── Certificados.css
+│   │   │   └── Certificados.tsx
+│   │   ├── Contato
+│   │   │   ├── Contato.css
+│   │   │   └── Contato.tsx
+│   │   ├── Home
+│   │   │   ├── Home.css
+│   │   │   └── Home.tsx
+│   │   ├── ProjetoDetalhe
+│   │   │   ├── ProjetoDetalhe.css
+│   │   │   └── ProjetoDetalhe.tsx
+│   │   ├── Projetos
+│   │   │   ├── Projetos.css
+│   │   │   └── Projetos.tsx
+│   │   ├── Servicos
+│   │   │   ├── Servicos.css
+│   │   │   └── Servicos.tsx
+│   │   └── Sobre
+│   │       ├── Sobre.css
+│   │       └── Sobre.tsx
+│   ├── styles
 │   │   ├── 🎨 animations.css
 │   │   ├── 🎨 global.css
 │   │   ├── 🎨 reset.css
 │   │   └── 🎨 variables.css
-│   ├── 📁 types
-│   │   └── 📄 index.ts
-│   ├── 🎨 App.css
-│   ├── 📄 App.tsx
-│   ├── 📄 i18n.ts
-│   ├── 📄 main.tsx
-│   └── 📄 vite-env.d.ts
-├── ⚙️ .gitignore
+│   ├── types
+│   │   └── index.ts
+│   ├── App.css
+│   ├── App.tsx
+│   ├── i18n.ts
+│   ├── main.tsx
+│   └── vite-env.d.ts
+├── .gitignore
 ├── 📝 README.md
 ├── 📝 comandos.md
 ├── 🌐 index.html
@@ -182,7 +182,7 @@ A estrutura do projeto é organizada para facilitar a manutenção e escalabilid
 ├── ⚙️ tsconfig.app.json
 ├── ⚙️ tsconfig.json
 ├── ⚙️ tsconfig.node.json
-└── 📄 vite.config.ts
+└── vite.config.ts
 ```
 
 ---
