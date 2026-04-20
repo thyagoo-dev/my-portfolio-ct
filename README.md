@@ -88,46 +88,7 @@ A estrutura do projeto é organizada para facilitar a manutenção e escalabilid
 │       ├── background
 │       ├── eu
 │       ├── fotos-projetos-pessoais
-│       ├── 📁 fotos-projetos-reais
-│       │   ├── 📁 maratonatech
-│       │   │   └── 🖼️ MaratonaTech.png
-│       │   ├── 📁 ntidi
-│       │   │   ├── 🖼️ 1-sem-fundo.png
-│       │   │   ├── 🖼️ 10.png
-│       │   │   ├── 🖼️ 11.png
-│       │   │   ├── 🖼️ 12.png
-│       │   │   ├── 🖼️ 13.png
-│       │   │   ├── 🖼️ 14.png
-│       │   │   ├── 🖼️ 15.png
-│       │   │   ├── 🖼️ 16.png
-│       │   │   ├── 🖼️ 2.png
-│       │   │   ├── 🖼️ 3.png
-│       │   │   ├── 🖼️ 4.png
-│       │   │   ├── 🖼️ 5.png
-│       │   │   ├── 🖼️ 6.png
-│       │   │   ├── 🖼️ 7.png
-│       │   │   ├── 🖼️ 8.png
-│       │   │   ├── 🖼️ 9.png
-│       │   │   └── 🖼️ NTIDI.jpg
-│       │   ├── 📁 queelvra
-│       │   │   └── 🖼️ queelvra.png
-│       │   ├── 📁 sigref
-│       │   │   ├── 🖼️ SIGREF_antiga.png
-│       │   │   └── 🖼️ sigrefsemfundo.png
-│       │   ├── 📁 va_suplementos
-│       │   │   └── 🖼️ va_suplementos.png
-│       │   └── 📁 vksoftware
-│       │       ├── 🖼️ 1.png
-│       │       ├── 🖼️ 10.png
-│       │       ├── 🖼️ 11.png
-│       │       ├── 🖼️ 2.png
-│       │       ├── 🖼️ 3.png
-│       │       ├── 🖼️ 4.png
-│       │       ├── 🖼️ 5.png
-│       │       ├── 🖼️ 6.png
-│       │       ├── 🖼️ 7.png
-│       │       ├── 🖼️ 8.png
-│       │       └── 🖼️ 9.png
+│       ├── fotos-projetos-reais
 │       ├── 📁 ideias
 │       │   └── 🖼️ Esboço do portfólio de Victor Kauê.png
 │       ├── 📁 placeholders
