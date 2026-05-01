@@ -8,7 +8,7 @@ export const vaSuplementos: Project = {
   detailedDescription:
     'Aplicação de controle operacional para fluxo de estoque e vendas no contexto de suplementos.',
   description: 'Sistema web para controle de estoque e gestão de vendas de suplementos.',
-  image: '/images/fotos-projetos-reais/va_suplementos/va_suplementos.png',
+  image: '/images/fotos-projetos-reais/va_suplementos/va_suplementos.webp',
   detailPath: '/projetos/va-suplementos',
   technologies: ['Python', 'Sistema Web', 'Controle de Estoque'],
   stack: ['Python', 'Django', 'SQLite'],

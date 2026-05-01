@@ -9,7 +9,7 @@ export const meuPortfolio: Project = {
     'Projeto desenvolvido para apresentar meu trabalho, projetos e posicionamento profissional como desenvolvedor backend/full-stack.',
   description:
     'Projeto desenvolvido para apresentar meu trabalho, projetos e posicionamento profissional como desenvolvedor backend/full-stack.',
-  image: '/images/fotos-projetos-pessoais/vk-portifolio/logotipo-vk.png',
+  image: '/images/fotos-projetos-pessoais/vk-portifolio/logotipo-vk.webp',
   github: 'https://github.com/Victorkaue333/meu_portifolio',
   online: 'https://victor-kaue.vercel.app/',
   detailPath: '/projetos/meu-portfolio',
@@ -49,7 +49,7 @@ export const meuPortfolio: Project = {
     ],
   },
   screenshots: [
-    '/images/fotos-projetos-pessoais/vk-portifolio/logotipo-vk.png',
-    '/images/fotos-projetos-pessoais/vk-portifolio/victor_kaue.png',
+    '/images/fotos-projetos-pessoais/vk-portifolio/logotipo-vk.webp',
+    '/images/fotos-projetos-pessoais/vk-portifolio/victor_kaue.webp',
   ],
 };

@@ -9,7 +9,7 @@ export const transcritorEntrevistas: Project = {
     'Ferramenta para acelerar análise de entrevistas, automatizando transcrição e organização de conteúdo textual.',
   description:
     'Aplicativo desenvolvido para transcrever entrevistas de forma automática, facilitando a análise e organização dos dados coletados.',
-  image: '/images/fotos-projetos-pessoais/transcritor-de-entrevistas/Transcritor_de_Entrevistas.png',
+  image: '/images/fotos-projetos-pessoais/transcritor-de-entrevistas/Transcritor_de_Entrevistas.webp',
   github: 'https://github.com/Victorkaue333/transcritor-de-entrevistas',
   detailPath: '/projetos/transcritor-de-entrevistas',
   technologies: ['Python', 'IA', 'Automação'],

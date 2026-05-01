@@ -8,7 +8,7 @@ Portfólio profissional construído para demonstrar capacidade técnica em **des
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-Animations-black?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
 [![i18next](https://img.shields.io/badge/i18next-Localization-26A69A?style=for-the-badge)](https://www.i18next.com/)
 
-![Home - Hero](./public/images/readme/hero.png)
+![Home - Hero](./public/images/readme/hero.webp)
 
 ---
 

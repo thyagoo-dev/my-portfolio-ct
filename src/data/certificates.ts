@@ -7,7 +7,7 @@ export const certificates: Certificate[] = [
     issuer: 'Oficina Workshop',
     category: 'programacao',
     pdf: '/Certificados/pdfs/Oficina_Workshop - Oficina_ Desenvolvimento de sites com Wordpress.pdf',
-    image: '/Certificados/pdfs/fotos/Oficina_Workshop - Oficina_ Desenvolvimento de sites com Wordpress.png'
+    image: '/Certificados/pdfs/fotos/Oficina_Workshop - Oficina_ Desenvolvimento de sites com Wordpress.webp'
   },
   {
     id: 'canva-oficina',
@@ -15,7 +15,7 @@ export const certificates: Certificate[] = [
     issuer: 'Oficina Workshop',
     category: 'design',
     pdf: '/Certificados/pdfs/Oficina_Workshop - Oficina_ Design com Canva.pdf',
-    image: '/Certificados/pdfs/fotos/Oficina_Workshop - Oficina_ Design com Canva.png'
+    image: '/Certificados/pdfs/fotos/Oficina_Workshop - Oficina_ Design com Canva.webp'
   },
   {
     id: 'jogos-minicurso',
@@ -23,7 +23,7 @@ export const certificates: Certificate[] = [
     issuer: 'Minicurso / Workshop',
     category: 'programacao',
     pdf: '/Certificados/pdfs/Workshop - Minicurso - Aprendendo a Programar Jogos.pdf',
-    image: '/Certificados/pdfs/fotos/Workshop - Minicurso - Aprendendo a Programar Jogos.png'
+    image: '/Certificados/pdfs/fotos/Workshop - Minicurso - Aprendendo a Programar Jogos.webp'
   },
   {
     id: 'pm-canvas-workshop',
@@ -31,7 +31,7 @@ export const certificates: Certificate[] = [
     issuer: 'Workshop',
     category: 'gestao',
     pdf: '/Certificados/pdfs/Workshop - Planejamento de Projetos com PM Canvas.pdf',
-    image: '/Certificados/pdfs/fotos/Workshop - Planejamento de Projetos com PM Canvas.png'
+    image: '/Certificados/pdfs/fotos/Workshop - Planejamento de Projetos com PM Canvas.webp'
   }
 ];
 

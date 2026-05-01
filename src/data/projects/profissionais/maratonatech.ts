@@ -9,7 +9,7 @@ export const maratonatech: Project = {
     'Plataforma para cadastro de apresentações, acompanhamento de rodadas e votação digital.',
   description:
     'Plataforma web para gestão de eventos de pitch, incluindo cadastro de apresentações e sistema de votação online.',
-  image: '/images/fotos-projetos-reais/maratonatech/MaratonaTech.png',
+  image: '/images/fotos-projetos-reais/maratonatech/MaratonaTech.webp',
   detailPath: '/projetos/maratonatech',
   technologies: ['Python', 'Django', 'Eventos'],
   stack: ['Python', 'Django'],

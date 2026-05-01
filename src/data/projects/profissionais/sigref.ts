@@ -9,7 +9,7 @@ export const sigref: Project = {
     'Sistema para organização de demandas escolares e processos administrativos da gerência regional.',
   description:
     'Sistema de gestão educacional para a Gerência Regional de Educação, com foco em organização de demandas escolares e processos administrativos.',
-  image: '/images/fotos-projetos-reais/sigref/sigrefsemfundo.png',
+  image: '/images/fotos-projetos-reais/sigref/sigrefsemfundo.webp',
   detailPath: '/projetos/sigref',
   technologies: ['Django', 'MySQL', 'SaaS'],
   stack: ['Python', 'Django', 'MySQL'],

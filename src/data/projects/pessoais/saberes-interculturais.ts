@@ -9,7 +9,7 @@ export const saberesInterculturais: Project = {
     'Site de extensão voltado a saberes interculturais e valorização cultural dos povos indígenas de Itaparica.',
   description:
     'Site de divulgação de projeto de extensão voltado aos saberes interculturais, práticas corporais e valorização cultural dos povos indígenas de Itaparica.',
-  image: '/images/fotos-projetos-pessoais/saberes-interculturais/saberes-interculturais.png',
+  image: '/images/fotos-projetos-pessoais/saberes-interculturais/saberes-interculturais.webp',
   github: 'https://github.com/Victorkaue333/saberes-interculturais-itaparica',
   detailPath: '/projetos/saberes-interculturais',
   technologies: ['Django', 'SQLite', 'Responsivo'],

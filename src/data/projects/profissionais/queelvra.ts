@@ -8,7 +8,7 @@ export const queelvra: Project = {
   detailedDescription:
     'Página comercial com foco em performance, design objetivo e captura de leads.',
   description: 'Landing page de alta conversão para divulgação de serviços.',
-  image: '/images/fotos-projetos-reais/queelvra/queelvra.png',
+  image: '/images/fotos-projetos-reais/queelvra/queelvra.webp',
   detailPath: '/projetos/queelvra',
   technologies: ['Landing Page', 'Front-end', 'Conversão'],
   stack: ['HTML', 'CSS', 'JavaScript'],
