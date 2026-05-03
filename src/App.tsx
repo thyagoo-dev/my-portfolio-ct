@@ -5,8 +5,11 @@ import { Footer } from './components/Layout/Footer/Footer';
 import { BackToTop } from './components/Layout/BackToTop/BackToTop';
 import ScrollToTop from './components/Layout/ScrollToTop/ScrollToTop';
 import { MobileNavbar } from './components/Layout/Navbar/MobileNavbar';
-import { FloatingLines } from './components/ui/FloatingLines/FloatingLines';
 import './App.css';
+
+const FloatingLines = lazy(() =>
+  import('./components/ui/FloatingLines/FloatingLines').then(m => ({ default: m.FloatingLines }))
+);
 
 const Home = lazy(() => import('./pages/Home/Home'));
 const Sobre = lazy(() => import('./pages/Sobre/Sobre'));
@@ -41,7 +44,9 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <FloatingLines />
+      <Suspense fallback={null}>
+        <FloatingLines />
+      </Suspense>
       <Navbar />
       <Suspense fallback={<PageLoader />}>
         <Routes>

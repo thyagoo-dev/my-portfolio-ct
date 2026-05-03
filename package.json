@@ -10,13 +10,11 @@
     "projects:enrich": "node scripts/enrich-projects.mjs"
   },
   "dependencies": {
-    "@lottiefiles/dotlottie-react": "^0.12.0",
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.6.0",
     "@tailwindcss/vite": "^4.2.2",
     "@types/three": "^0.184.0",
     "framer-motion": "^12.38.0",
-    "gsap": "^3.12.5",
     "i18next": "^26.0.5",
     "i18next-browser-languagedetector": "^8.2.1",
     "react": "^19.0.0",
