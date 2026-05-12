@@ -60,7 +60,7 @@ export function ProjectCard({ project, withReveal = true }: ProjectCardProps) {
           </div>
 
           <div className="project-author">
-            <img src="/images/eu/victor.webp" alt="Victor Kauê" className="author-avatar" />
+            <img src="/images/eu/victor.webp" alt="Victor Kauê" className="author-avatar" width="24" height="24" loading="lazy" decoding="async" />
             <span className="author-name">Victor Kauê</span>
           </div>
 
