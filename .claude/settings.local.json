@@ -3,7 +3,9 @@
     "allow": [
       "Bash(sort -k5 -rh)",
       "Bash(npm install *)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(python3 -c ' *)",
+      "Bash(identify \"c:\\\\Users\\\\Victor Alves\\\\Documents\\\\GitHub\\\\VICTORKAUE\\\\meu_portifolio\\\\public\\\\images\\\\eu\\\\victorkaue.webp\")"
     ]
   }
 }
