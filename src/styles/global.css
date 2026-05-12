@@ -89,6 +89,7 @@ body::after {
 @media (prefers-reduced-motion: reduce) {
   body::after {
     animation: none;
+  }
 }
 
 /* ========== SCROLLBAR CUSTOM ========== */
