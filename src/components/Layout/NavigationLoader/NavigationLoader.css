@@ -1,0 +1,24 @@
+.nav-loader-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9990;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.nav-loader-arc {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2.5px solid transparent;
+  border-top-color: #ff7a00;
+  border-right-color: rgba(255, 122, 0, 0.45);
+  border-bottom-color: rgba(255, 122, 0, 0.1);
+  animation: nav-arc-spin 0.7s linear infinite;
+}
+
+@keyframes nav-arc-spin {
+  to { transform: rotate(360deg); }
+}
