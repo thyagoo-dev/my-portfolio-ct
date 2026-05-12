@@ -23,20 +23,8 @@ const Contato = lazy(() => import('./pages/Contato/Contato'));
 
 function PageLoader() {
   return (
-    <div style={{
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      minHeight: '60vh',
-    }}>
-      <div style={{
-        width: '36px',
-        height: '36px',
-        border: '3px solid rgba(245, 158, 11, 0.2)',
-        borderTopColor: '#F59E0B',
-        borderRadius: '50%',
-        animation: 'spin 0.8s linear infinite',
-      }} />
+    <div className="page-loader-wrapper">
+      <div className="page-loader-arc" />
     </div>
   );
 }
