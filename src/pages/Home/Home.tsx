@@ -94,7 +94,7 @@ export default function Home() {
               <div className="photo-ring" />
               <div className="photo-ring inner" />
               <div className="glass-overlay" />
-              <img src="/images/eu/victorkaue.webp" alt="Victor Kauê" className="hero-image" />
+              <img src="/images/eu/victorkaue.webp" alt="Victor Kauê" className="hero-image" fetchPriority="high" />
             </div>
           </div>
         </div>
