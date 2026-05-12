@@ -119,7 +119,7 @@ export const FloatingLines: React.FC = () => {
       zIndex: -1,
       pointerEvents: 'none'
     }}>
-      <Canvas dpr={[1, 2]}>
+      <Canvas dpr={1} performance={{ min: 0.5 }} gl={{ antialias: false, powerPreference: 'low-power' }}>
         <OrthographicCamera makeDefault position={[0, 0, 1]} zoom={1} />
         <FloatingLinesMesh />
       </Canvas>
