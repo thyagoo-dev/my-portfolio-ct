@@ -9,11 +9,11 @@ export function FirstVisitLoader() {
 
   useEffect(() => {
     if (!visible) return;
-    const fadeTimer = setTimeout(() => setFading(true), 1400);
+    const fadeTimer = setTimeout(() => setFading(true), 1500);
     const hideTimer = setTimeout(() => {
       localStorage.setItem(STORAGE_KEY, '1');
       setVisible(false);
-    }, 1900);
+    }, 2000);
     return () => { clearTimeout(fadeTimer); clearTimeout(hideTimer); };
   }, [visible]);
 
