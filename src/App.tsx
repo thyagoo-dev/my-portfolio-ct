@@ -6,6 +6,7 @@ import { BackToTop } from './components/Layout/BackToTop/BackToTop';
 import ScrollToTop from './components/Layout/ScrollToTop/ScrollToTop';
 import { MobileNavbar } from './components/Layout/Navbar/MobileNavbar';
 import { FirstVisitLoader } from './components/Layout/FirstVisitLoader/FirstVisitLoader';
+import { NavigationLoader } from './components/Layout/NavigationLoader/NavigationLoader';
 import './App.css';
 
 const FloatingLines = lazy(() =>
