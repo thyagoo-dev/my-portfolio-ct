@@ -1,24 +1,26 @@
-.nav-loader-overlay {
+.nav-curtain {
   position: fixed;
   inset: 0;
   z-index: 9990;
+  background: #050505;
   display: flex;
   align-items: center;
   justify-content: center;
   pointer-events: none;
+  will-change: transform;
 }
 
-.nav-loader-arc {
-  width: 36px;
-  height: 36px;
+.nav-curtain-arc {
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  border: 2.5px solid transparent;
+  border: 2px solid transparent;
   border-top-color: #ff7a00;
-  border-right-color: rgba(255, 122, 0, 0.45);
-  border-bottom-color: rgba(255, 122, 0, 0.1);
-  animation: nav-arc-spin 0.7s linear infinite;
+  border-right-color: rgba(255, 122, 0, 0.4);
+  border-bottom-color: rgba(255, 122, 0, 0.08);
+  animation: curtain-spin 0.75s linear infinite;
 }
 
-@keyframes nav-arc-spin {
+@keyframes curtain-spin {
   to { transform: rotate(360deg); }
 }
