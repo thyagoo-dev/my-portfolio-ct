@@ -32,6 +32,7 @@ function PageLoader() {
 export default function App() {
   return (
     <BrowserRouter>
+      <FirstVisitLoader />
       <ScrollToTop />
       <Suspense fallback={null}>
         <FloatingLines />
