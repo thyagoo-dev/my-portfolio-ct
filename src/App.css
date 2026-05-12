@@ -1,5 +1,13 @@
 /* App-level styles — minimal, layout only */
 
+/* Page transition wrapper — flex child so main gets flex:1 */
+.page-motion-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
 /* Suspense fallback wrapper */
 .page-loader-wrapper {
   display: flex;
