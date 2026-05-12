@@ -5,7 +5,10 @@
       "Bash(npm install *)",
       "Bash(npm run *)",
       "Bash(python3 -c ' *)",
-      "Bash(identify \"c:\\\\Users\\\\Victor Alves\\\\Documents\\\\GitHub\\\\VICTORKAUE\\\\meu_portifolio\\\\public\\\\images\\\\eu\\\\victorkaue.webp\")"
+      "Bash(identify \"c:\\\\Users\\\\Victor Alves\\\\Documents\\\\GitHub\\\\VICTORKAUE\\\\meu_portifolio\\\\public\\\\images\\\\eu\\\\victorkaue.webp\")",
+      "Bash(grep '\\\\.css$')",
+      "Bash(grep -E \"\\\\.\\(js|css\\)$\")",
+      "Bash(awk '{print $9, $5}')"
     ]
   }
 }

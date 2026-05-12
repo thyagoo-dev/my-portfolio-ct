@@ -223,6 +223,8 @@ export default function Sobre() {
                       src="https://github-readme-stats.vercel.app/api?username=Victorkaue333&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0B1220&title_color=F59E0B&icon_color=F59E0B&text_color=F3F4F6"
                       alt="GitHub Stats"
                       className="github-img"
+                      loading="lazy"
+                      decoding="async"
                       onError={() => setGithubStatsError(true)}
                     />
                   </a>
@@ -231,6 +233,8 @@ export default function Sobre() {
                       src="https://github-readme-stats.vercel.app/api/top-langs/?username=Victorkaue333&layout=compact&theme=tokyonight&hide_border=true&bg_color=0B1220&title_color=F59E0B&text_color=F3F4F6"
                       alt="Top Languages"
                       className="github-img"
+                      loading="lazy"
+                      decoding="async"
                       onError={() => setGithubStatsError(true)}
                     />
                   </a>

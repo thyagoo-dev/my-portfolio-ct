@@ -10,6 +10,9 @@
     "projects:enrich": "node scripts/enrich-projects.mjs"
   },
   "dependencies": {
+    "@fontsource-variable/dm-sans": "^5.2.8",
+    "@fontsource-variable/syne": "^5.2.7",
+    "@fontsource/orbitron": "^5.2.8",
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.6.0",
     "@tailwindcss/vite": "^4.2.2",
