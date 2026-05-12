@@ -34,6 +34,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <FirstVisitLoader />
+      <NavigationLoader />
       <ScrollToTop />
       <Suspense fallback={null}>
         <FloatingLines />
