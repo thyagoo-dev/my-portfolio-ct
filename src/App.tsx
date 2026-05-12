@@ -24,8 +24,8 @@ const Contato = lazy(() => import('./pages/Contato/Contato'));
 
 function PageLoader() {
   return (
-    <div className="page-loader-wrapper">
-      <div className="page-loader-arc" />
+    <div className="page-loader-wrapper" aria-hidden="true">
+      <div className="nav-loader-arc" />
     </div>
   );
 }
