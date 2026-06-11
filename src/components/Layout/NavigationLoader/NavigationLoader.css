@@ -1,26 +1,36 @@
-.nav-curtain {
+.nav-progress {
   position: fixed;
-  inset: 0;
-  z-index: 9990;
-  background: #050505;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9980;
+  height: 3px;
   pointer-events: none;
-  will-change: transform;
+  overflow: hidden;
+  background: rgba(255, 122, 0, 0.12);
+  box-shadow: 0 0 18px rgba(255, 122, 0, 0.24);
 }
 
-.nav-curtain-arc {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: 2px solid transparent;
-  border-top-color: #ff7a00;
-  border-right-color: rgba(255, 122, 0, 0.4);
-  border-bottom-color: rgba(255, 122, 0, 0.08);
-  animation: curtain-spin 0.75s linear infinite;
+.nav-progress::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 58%;
+  background: linear-gradient(90deg, transparent, #ff7a00 35%, #ffb36b 70%, transparent);
+  transform: translateX(-100%);
+  animation: nav-progress-sweep 0.42s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-@keyframes curtain-spin {
-  to { transform: rotate(360deg); }
+@keyframes nav-progress-sweep {
+  to {
+    transform: translateX(180%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-progress::before {
+    animation: none;
+    transform: none;
+    width: 100%;
+  }
 }
