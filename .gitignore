@@ -33,3 +33,36 @@ dist-ssr/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Environment & Secrets (AIOX)
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+
+# Dependencies (AIOX)
+node_modules
+
+# Build & Logs (AIOX)
+build/
+logs/
+
+# IDE & OS (AIOX)
+*.swp
+
+# AIOX Local (AIOX)
+.aiox-core/
+.aiox/
+
+# AI agent folders
+.antigravity/
+.claude/
+.codex/
+.cursor/
+.gemini/
+.kimi/
+.github/agents/
+AGENTS.md
+.claude/settings.local.json
+.aiox/install-log.txt
