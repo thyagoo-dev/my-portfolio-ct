@@ -10,7 +10,7 @@ import './Projetos.css';
 export default function Projetos() {
   const { t } = useTranslation();
   const [filter, setFilter] = useState<'todos' | 'pessoal' | 'real'>('todos');
-  useScrollReveal();
+  useScrollReveal([filter]);
 
   useEffect(() => {
     document.title = 'Projetos — Victor Kauê';

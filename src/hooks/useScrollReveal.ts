@@ -1,6 +1,6 @@
 import { useEffect, useRef, useCallback } from 'react';
 
-export function useScrollReveal() {
+export function useScrollReveal(deps: readonly unknown[] = []) {
   const observerRef = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {
@@ -30,7 +30,8 @@ export function useScrollReveal() {
     return () => {
       observerRef.current?.disconnect();
     };
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, deps);
 
   const revealRef = useCallback((node: HTMLElement | null) => {
     if (node && observerRef.current) {
