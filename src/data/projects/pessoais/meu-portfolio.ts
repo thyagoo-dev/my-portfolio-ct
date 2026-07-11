@@ -6,9 +6,9 @@ export const meuPortfolio: Project = {
   title: 'Portfólio Web Pessoal',
   shortDescription: 'Portfólio pessoal premium com React e TypeScript.',
   detailedDescription:
-    'Projeto desenvolvido para apresentar meu trabalho, projetos e posicionamento profissional como desenvolvedor backend/full-stack.',
+    'Projeto desenvolvido para apresentar meu trabalho, projetos e posicionamento profissional como desenvolvedor full-stack.',
   description:
-    'Projeto desenvolvido para apresentar meu trabalho, projetos e posicionamento profissional como desenvolvedor backend/full-stack.',
+    'Projeto desenvolvido para apresentar meu trabalho, projetos e posicionamento profissional como desenvolvedor full-stack.',
   image: '/images/fotos-projetos-pessoais/vk-portifolio/logotipo-vk.webp',
   github: 'https://github.com/Victorkaue333/meu_portifolio',
   online: 'https://victor-kaue.vercel.app/',
