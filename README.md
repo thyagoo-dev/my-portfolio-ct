@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="public/images/readme/logotipo-vk.webp" alt="Victor Kauê — Portfólio" width="760" />
+<img src="public/images/readme/logotipo-vk.webp" alt="Victor Kauê — Portfólio" width="260" />
 
 ### Portfólio Full Stack de Victor Kauê
 
