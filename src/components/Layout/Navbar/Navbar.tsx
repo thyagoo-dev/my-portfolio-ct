@@ -7,12 +7,15 @@ import {
     FiHome,
     FiLayers,
     FiMail,
+    FiMoon,
+    FiSun,
     FiUser,
 } from 'react-icons/fi';
 import { Link, NavLink } from 'react-router-dom';
 import { navLinks } from '../../../data/social';
 import { useLanguage } from '../../../hooks/useLanguage';
 import { useScrollPosition } from '../../../hooks/useScrollPosition';
+import { useTheme } from '../../../theme/ThemeProvider';
 import './Navbar.css';
 
 const navIconByPath = {
@@ -37,6 +40,7 @@ export function Navbar() {
   const { t } = useTranslation();
   const { scrolled } = useScrollPosition(60);
   const { lang, toggleLanguage } = useLanguage();
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`} id="main-navbar" aria-label="Navegação principal">
@@ -66,6 +70,14 @@ export function Navbar() {
         </div>
 
         <div className="navbar-actions">
+          <button
+            className="btn-theme"
+            onClick={(e) => toggleTheme(e.currentTarget)}
+            aria-label={theme === 'dark' ? 'Ativar tema claro' : 'Ativar tema escuro'}
+          >
+            {theme === 'dark' ? <FiSun size={16} aria-hidden="true" /> : <FiMoon size={16} aria-hidden="true" />}
+          </button>
+
           <button className="btn-lang" onClick={toggleLanguage} aria-label="Trocar idioma / Change language">
             <FiGlobe size={14} aria-hidden="true" />
             {lang === 'pt' ? 'EN' : 'PT'}

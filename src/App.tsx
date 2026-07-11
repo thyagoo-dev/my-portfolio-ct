@@ -63,14 +63,23 @@ function AppRoutes() {
   );
 }
 
+function BackgroundFX() {
+  const location = useLocation();
+  // Fundo de linhas laranja só na Home; demais páginas ficam dark liso
+  if (location.pathname !== '/') return null;
+  return (
+    <Suspense fallback={null}>
+      <FloatingLines />
+    </Suspense>
+  );
+}
+
 export default function App() {
   return (
     <BrowserRouter>
       <FirstVisitLoader />
       <ScrollToTop />
-      <Suspense fallback={null}>
-        <FloatingLines />
-      </Suspense>
+      <BackgroundFX />
       <Navbar />
       <AppRoutes />
       <Footer />

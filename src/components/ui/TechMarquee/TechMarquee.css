@@ -45,9 +45,28 @@
 .marquee-track {
     display: flex;
     flex-shrink: 0;
+    width: max-content;
     gap: 3rem;
     padding: 0.5rem 0;
     white-space: nowrap;
+    animation: marquee-scroll 40s linear infinite;
+    will-change: transform;
+}
+
+/* pausa ao passar o mouse */
+.marquee-row:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+        animation: none;
+    }
 }
 
 .marquee-item {

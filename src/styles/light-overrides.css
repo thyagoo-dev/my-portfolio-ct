@@ -1,0 +1,149 @@
+/* ==========================================================================
+   Overrides do TEMA CLARO
+   Corrige valores hardcoded (branco/preto) que não passam pelos tokens.
+   Carregado por último para vencer as folhas de estilo por componente.
+   ========================================================================== */
+
+/* ---- Texto que era branco fixo → escuro (alto contraste) ---- */
+html.light .title-white,
+html.light .result-value,
+html.light .project-title,
+html.light .page-hero-main,
+html.light .exp-company,
+html.light .decision-label,
+html.light .section-title,
+html.light .nav-item:hover,
+html.light .social-btn:hover,
+html.light .tech-tag:hover,
+html.light .footer-icon-link:hover {
+    color: var(--text-color);
+}
+
+html.light .title-gray { color: #67707b; }
+html.light .hero-description { color: var(--text-muted-color); }
+
+/* ---- Fundos escuros sólidos → claros ---- */
+html.light .results-strip { background: #ffffff; }
+html.light .service-pro-card,
+html.light .project-card,
+html.light .service-card {
+    background: var(--surface-color);
+    border-color: var(--border-color);
+}
+html.light .projeto-extended-info,
+html.light .projeto-summary-fallback {
+    background: rgba(255, 255, 255, 0.66);
+}
+html.light .photo-container { background: #ffffff; }
+html.light .project-image { background: #e6e9ee; }
+
+/* ---- Superfícies "overlay branco" (rgba(255,255,255,.0x)) → overlay escuro ---- */
+html.light .social-icon,
+html.light .sidebar-pill,
+html.light .lang-toggle-container,
+html.light .social-btn,
+html.light .tech-tag,
+html.light .project-tag-icon,
+html.light .project-tag-icon-wrapper,
+html.light .project-tag-text,
+html.light .detail-card-item,
+html.light .architecture-flow,
+html.light .decision-item,
+html.light .feature-item-detail,
+html.light .summary-card {
+    background: rgba(0, 0, 0, 0.035);
+    border-color: rgba(0, 0, 0, 0.09);
+}
+
+/* bordas brancas fixas remanescentes */
+html.light .social-icon,
+html.light .project-tag-icon-wrapper { border-color: rgba(0, 0, 0, 0.1); }
+html.light .scroll-mouse { border-color: rgba(0, 0, 0, 0.35); }
+
+/* ---- Hovers que usavam overlay branco → overlay escuro ---- */
+html.light .social-btn:hover,
+html.light .project-tag-icon:hover,
+html.light .project-tag-icon-wrapper:hover,
+html.light .feature-item-detail:hover {
+    background: rgba(0, 0, 0, 0.06);
+}
+
+/* ---- ProjectCard footer ---- */
+html.light .project-footer {
+    background: rgba(0, 0, 0, 0.02);
+    border-top-color: rgba(0, 0, 0, 0.07);
+}
+
+/* ---- Filtros (Projetos / Certificados) ---- */
+html.light .filter-btn {
+    background: rgba(0, 0, 0, 0.04);
+    color: var(--text-muted-color);
+}
+
+/* ---- Padrão de grid pontilhado do hero (era branco) → escuro ---- */
+html.light .hero {
+    background-image:
+        radial-gradient(circle at 20% 20%, rgba(255, 122, 0, 0.06) 0%, transparent 40%),
+        radial-gradient(circle at 80% 80%, rgba(255, 122, 0, 0.04) 0%, transparent 40%),
+        radial-gradient(rgba(0, 0, 0, 0.06) 1px, transparent 1px);
+}
+
+/* grão de ruído: quase imperceptível, mas escurece um tico para não sumir */
+html.light body::after { opacity: 0.03; }
+
+/* ===================== Componentes restantes ===================== */
+
+/* ---- MobileNavbar ---- */
+html.light .mobile-nav-container {
+    background: rgba(255, 255, 255, 0.82);
+    border-color: rgba(0, 0, 0, 0.08);
+    box-shadow: 0 14px 34px rgba(16, 24, 40, 0.16), 0 0 20px rgba(255, 122, 0, 0.06);
+}
+
+/* ---- Footer ---- */
+html.light .footer-contact-icons a {
+    background: rgba(0, 0, 0, 0.035);
+}
+
+/* ---- Contato: form + inputs ---- */
+html.light .form-progress { background: rgba(0, 0, 0, 0.08); }
+
+html.light .form-group input,
+html.light .form-group textarea {
+    background: #ffffff;
+    border-color: rgba(0, 0, 0, 0.14);
+}
+
+html.light .contact-card.github { border-color: rgba(0, 0, 0, 0.18); }
+html.light .contact-card.github svg { background: rgba(0, 0, 0, 0.06); color: #24292f; }
+html.light .contact-card.github:hover { border-color: #24292f; }
+html.light .contact-card.github:hover svg { background: #24292f; color: #fff; }
+
+/* ---- Serviços: passos + approach ---- */
+html.light .step-v2 {
+    background: #ffffff;
+    border-color: rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-sm);
+}
+html.light .approach-content { border-color: rgba(0, 0, 0, 0.08); }
+
+/* ---- Certificados ---- */
+html.light .cert-filters,
+html.light .cert-results-count,
+html.light .cert-badge {
+    background: rgba(0, 0, 0, 0.035);
+}
+html.light .filter-btn:hover { background: rgba(0, 0, 0, 0.06); color: var(--text-color); }
+html.light .cert-image { background: #e9ebef; }
+
+/* ---- Projetos: filtros + estado vazio ---- */
+html.light .filter-btn { border-color: rgba(0, 0, 0, 0.1); }
+html.light .no-projects-found {
+    background: rgba(0, 0, 0, 0.03);
+    border-color: rgba(0, 0, 0, 0.12);
+}
+
+/* ===================== Fix da transição de tema ===================== */
+/* O grão (body::after) é 400%×400% do viewport = camada gigante. Rasterizá-la
+   no snapshot da View Transition trava. Some com ela durante a troca. */
+html.vt-active body::after { display: none; }
