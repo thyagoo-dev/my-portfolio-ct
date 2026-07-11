@@ -1,6 +1,9 @@
 import type { ReactNode } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import './Button.css';
+
+const MotionLink = motion.create(Link);
 
 interface ButtonProps {
   variant?: 'primary' | 'secondary' | 'ghost' | 'outline';
@@ -34,15 +37,25 @@ export function Button({
   };
 
   if (href) {
-    const isExternal = external || href.startsWith('http');
+    const isExternal = external || href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('tel:');
+    const isInternalRoute = !isExternal && href.startsWith('/');
+
+    if (isInternalRoute) {
+      return (
+        <MotionLink to={href} className={cls} target={target} rel={rel} {...motionProps}>
+          {children}
+        </MotionLink>
+      );
+    }
+
     const finalTarget = isExternal ? '_blank' : target;
     const finalRel = isExternal ? 'noopener noreferrer' : rel;
 
     return (
-      <motion.a 
-        href={href} 
-        className={cls} 
-        target={finalTarget} 
+      <motion.a
+        href={href}
+        className={cls}
+        target={finalTarget}
         rel={finalRel}
         {...motionProps}
       >

@@ -9,6 +9,10 @@ function normalizeLanguage(value: string | undefined): Language {
   return value?.toLowerCase().startsWith('en') ? 'en' : 'pt';
 }
 
+function persistLang(next: Language): void {
+  try { localStorage.setItem(STORAGE_KEY, next); } catch { /* storage bloqueado — ignora */ }
+}
+
 export function useLanguage() {
   const { i18n } = useTranslation();
 
@@ -18,7 +22,7 @@ export function useLanguage() {
     async (next: Language) => {
       if (next === lang) return;
       await i18n.changeLanguage(next);
-      localStorage.setItem(STORAGE_KEY, next);
+      persistLang(next);
     },
     [i18n, lang]
   );

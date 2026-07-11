@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { FiAward, FiExternalLink, FiFilter, FiRotateCcw } from 'react-icons/fi';
 import { PageHero } from '../../components/ui/PageHero/PageHero';
 import { Reveal } from '../../components/ui/Reveal/Reveal';
@@ -7,25 +8,29 @@ import { useScrollReveal } from '../../hooks/useScrollReveal';
 import './Certificados.css';
 
 export default function Certificados() {
+  const { t } = useTranslation();
   const [activeCategory, setActiveCategory] = useState('todos');
   useScrollReveal();
 
   useEffect(() => {
-    document.title = 'Certificados - Victor Kauê';
-  }, []);
+    document.title = t('certsPage.docTitle');
+  }, [t]);
 
   const filtered = activeCategory === 'todos'
     ? certificates
     : certificates.filter((c) => c.category === activeCategory);
+
+  const categoryLabel = (id: string) =>
+    certificateCategories.find((c) => c.id === id)?.label ?? id;
 
   return (
     <main className="page-certificados">
       <section className="content-section">
         <div className="container">
           <PageHero
-            titleMain="Certificados &"
-            titleAccent="Evolução Contínua"
-            subtitle="Formacao técnica orientada a pratica, validando competencias em backend, dados, DevOps e desenvolvimento web moderno."
+            titleMain={t('certsPage.heroMain')}
+            titleAccent={t('certsPage.heroAccent')}
+            subtitle={t('certsPage.heroSubtitle')}
             icon={<FiAward size={22} />}
           />
 
@@ -42,7 +47,7 @@ export default function Certificados() {
                 </button>
               ))}
             </div>
-            <span className="cert-results-count">{filtered.length} resultados</span>
+            <span className="cert-results-count">{filtered.length} {t('certsPage.results')}</span>
           </div>
 
           <div className="cert-grid">
@@ -66,7 +71,7 @@ export default function Certificados() {
                   <div className="cert-info">
                     <span className="cert-issuer">{cert.issuer}</span>
                     <h3 className="cert-title">{cert.title}</h3>
-                    <div className="cert-badge">{cert.category}</div>
+                    <div className="cert-badge">{categoryLabel(cert.category)}</div>
                   </div>
                 </a>
               </Reveal>
@@ -75,10 +80,10 @@ export default function Certificados() {
 
           {filtered.length === 0 && (
             <div className="no-results">
-              <p>Nenhum certificado encontrado para esta categoria.</p>
+              <p>{t('certsPage.empty')}</p>
               <button className="reset-filter-btn" onClick={() => setActiveCategory('todos')}>
                 <FiRotateCcw size={15} />
-                Limpar filtro
+                {t('certsPage.reset')}
               </button>
             </div>
           )}

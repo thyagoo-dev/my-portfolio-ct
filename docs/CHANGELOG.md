@@ -14,7 +14,33 @@ Tipos: **Adicionado**, **Alterado**, **Corrigido**, **Removido**.
 - Documentação padrão do projeto: `PROJECT_CONTEXT.md`, `CLAUDE.md` (raiz) e
   `docs/` com `PRD`, `ARCHITECTURE`, `API`, `DATABASE`, `DEPLOY`,
   `ENVIRONMENT`, `DECISIONS` e `CHANGELOG`.
-- Índice de documentação no `README.md`.
+- Índice de documentação e README no estilo do padrão AEX.
+- SEO: `public/robots.txt`, `public/sitemap.xml`, `vercel.json` (rewrite SPA +
+  cache de assets), `<link rel="canonical">`, JSON-LD `Person`, Open Graph
+  completo e Twitter Card corrigido (`name=`).
+- Rota 404 (`*`) com página `NaoEncontrado` (evita soft-404).
+- Internacionalização (PT/EN) das páginas Serviços, Certificados, Contato,
+  Detalhe do Projeto e lacunas da Home; `<html lang>` sincronizado ao idioma.
+
+### Alterado
+- **Performance:** `FloatingLines` reescrito de three.js/R3F para Canvas 2D
+  (chunk 1.006 kB → 2,3 kB) e removidas as deps `three`, `@react-three/fiber`,
+  `@react-three/drei`; ícones migrados de devicon (fonte ~1,5 MB + 140 kB de CSS)
+  para react-icons/Simple Icons; loader de primeira visita 2 s → 0,8 s.
+- `Button` passa a renderizar `<Link>` para rotas internas (sem full reload).
+- Transição de página usa `location.pathname` (não remonta ao reclicar a rota).
+
+### Corrigido
+- `ProjectCarousel`: hook condicional (risco de crash) e navegação por teclado.
+- `FirstVisitLoader`/`useLanguage`: acesso a `localStorage` com guarda
+  (evita crash com cookies bloqueados).
+- Contato: `setTimeout` sem cleanup; deep-link `#hash` agora rola até a âncora;
+  badge de categoria em Certificados exibe o rótulo (não o id).
+
+### Removido
+- `~12,9 MB` de assets: galeria morta (`Serra_do_Arapua`, 8,3 MB) e fontes
+  devicon (11,2 MB não copiadas ao build); deps mortas `axios`, `lucide-react`,
+  `radix-ui`, `class-variance-authority`, `@fontsource/orbitron`, `devicon`.
 
 ## [2.0.0] — 2026
 

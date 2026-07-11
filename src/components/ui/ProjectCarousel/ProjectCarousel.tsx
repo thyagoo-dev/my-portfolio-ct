@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiChevronLeft, FiChevronRight, FiMaximize2, FiX } from 'react-icons/fi';
 import './ProjectCarousel.css';
@@ -9,35 +10,47 @@ interface ProjectCarouselProps {
 }
 
 export const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ images, title }) => {
+  const { t } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
-  if (!images || images.length === 0) return null;
+  const count = images?.length ?? 0;
 
   const paginate = (newDirection: number) => {
+    if (count === 0) return;
     setDirection(newDirection);
     setCurrentIndex((prevIndex) => {
       let nextIndex = prevIndex + newDirection;
-      if (nextIndex < 0) nextIndex = images.length - 1;
-      if (nextIndex >= images.length) nextIndex = 0;
+      if (nextIndex < 0) nextIndex = count - 1;
+      if (nextIndex >= count) nextIndex = 0;
       return nextIndex;
     });
   };
 
-  // Keyboard navigation
+  // Keyboard navigation — sempre registrado; decide dentro do handler
   useEffect(() => {
+    if (count === 0) return;
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'ArrowLeft') paginate(-1);
-      if (e.key === 'ArrowRight') paginate(1);
+      const isActive = isLightboxOpen || !!document.activeElement?.closest('.project-carousel-container');
+      if (!isActive) return;
+      if (e.key === 'ArrowLeft') { e.preventDefault(); paginate(-1); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); paginate(1); }
       if (e.key === 'Escape') setIsLightboxOpen(false);
     };
-
-    if (isLightboxOpen || document.activeElement?.closest('.project-carousel-container')) {
-      window.addEventListener('keydown', handleKeyDown);
-    }
+    window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isLightboxOpen, currentIndex]);
+  }, [isLightboxOpen, count]);
+
+  // Scroll-lock enquanto o lightbox está aberto
+  useEffect(() => {
+    if (!isLightboxOpen) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => { document.body.style.overflow = prev; };
+  }, [isLightboxOpen]);
+
+  if (count === 0) return null;
 
   const slideVariants = {
     enter: (direction: number) => ({
@@ -114,7 +127,7 @@ export const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ images, title 
 
             <div className="carousel-zoom-hint">
               <FiMaximize2 />
-              <span>Clique para ampliar</span>
+              <span>{t('projectDetail.zoomHint')}</span>
             </div>
           </div>
         </div>

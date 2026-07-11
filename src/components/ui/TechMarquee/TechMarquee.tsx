@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion';
 import { expertise } from '../../../data/expertise';
+import { TechGlyph, hasTechIcon } from '../TechIcon/TechIcon';
 import './TechMarquee.css';
 
 export function TechMarquee() {
-  // Flatten all tech items from expertise categories
-  const allTech = expertise.flatMap(cat => cat.items);
-  
+  // Flatten all tech items — descarta itens sem ícone (evita buracos no loop)
+  const allTech = expertise.flatMap(cat => cat.items).filter(t => hasTechIcon(t.name));
+
   // Duplicate items to ensure smooth infinite loop
   const marqueeItems = [...allTech, ...allTech];
 
@@ -24,7 +25,7 @@ export function TechMarquee() {
           >
             {marqueeItems.map((tech, i) => (
               <div key={`${tech.name}-${i}`} className="marquee-item">
-                {tech.icon && <i className={`${tech.icon} tech-icon`} />}
+                <TechGlyph name={tech.name} size={40} className="tech-icon" />
               </div>
             ))}
           </motion.div>

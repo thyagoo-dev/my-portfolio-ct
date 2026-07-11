@@ -1,128 +1,144 @@
-import React, { useRef, useMemo } from 'react';
-import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import { OrthographicCamera } from '@react-three/drei';
-import * as THREE from 'three';
+import React, { useEffect, useRef } from 'react';
 
-const vertexShader = `
-  varying vec2 vUv;
-  void main() {
-    vUv = uv;
-    gl_Position = vec4(position, 1.0);
-  }
-`;
-
-const fragmentShader = `
-  uniform float uTime;
-  uniform vec2 uMouse;
-  uniform vec2 uResolution;
-  varying vec2 vUv;
-
-  #define PI 3.14159265359
-
-  void main() {
-    vec2 st = gl_FragCoord.xy / uResolution.xy;
-    float aspect = uResolution.x / uResolution.y;
-    
-    // Floating Lines Logic
-    float lines = 0.0;
-    vec2 pos = st * vec2(aspect, 1.0);
-    
-    // Dynamic line count and scale based on screen width
-    float isMobile = step(uResolution.x, 768.0);
-    float maxLines = mix(10.0, 6.0, isMobile);
-    float verticalScale = mix(0.12, 0.18, isMobile);
-
-    for(float i = 1.0; i < 11.0; i++) {
-        if (i > maxLines) break;
-        
-        float t = uTime * 0.15 + i * 1.5;
-        
-        // Base sine wave with multiple frequencies
-        float y = 0.5 + sin(pos.x * (0.4 + i * 0.05) + t) * 0.2;
-        y += sin(pos.x * 2.0 - t * 0.5) * 0.08;
-        
-        // Vertical offset for each line
-        float offset = (i - (maxLines * 0.5)) * verticalScale;
-        
-        // Mouse/Touch influence
-        float dMouse = distance(st, uMouse);
-        float mouseEffect = smoothstep(0.5, 0.0, dMouse);
-        float bend = sin(st.x * 2.0 + uTime) * mouseEffect * 0.15;
-        
-        float dist = abs(st.y - (y + offset + bend));
-        
-        // Dynamic Thickness and Glow
-        float thickness = mix(0.0012, 0.0008, isMobile);
-        float l = smoothstep(thickness, 0.0, dist);
-        float glow = exp(-dist * mix(35.0, 25.0, isMobile)) * 0.5;
-        
-        lines += (l + glow) * (1.2 / i);
-    }
-
-    vec3 lineColor = vec3(1.0, 0.48, 0.0); // Brand Orange
-    float alpha = clamp(lines * 0.4, 0.0, 1.0);
-    
-    gl_FragColor = vec4(lineColor, alpha);
-  }
-`;
-
-function FloatingLinesMesh() {
-  const meshRef = useRef<THREE.Mesh>(null);
-  const { size } = useThree();
-  const mouseRef = useRef(new THREE.Vector2(0.5, 0.5));
-
-  const uniforms = useMemo(() => ({
-    uTime: { value: 0 },
-    uMouse: { value: new THREE.Vector2(0.5, 0.5) },
-    uResolution: { value: new THREE.Vector2(size.width, size.height) }
-  }), [size]);
-
-  useFrame((state) => {
-    if (meshRef.current) {
-      const material = meshRef.current.material as THREE.ShaderMaterial;
-      if (material.uniforms?.uTime) {
-        material.uniforms.uTime.value = state.clock.getElapsedTime();
-      }
-
-      const targetX = (state.mouse.x + 1) / 2;
-      const targetY = (state.mouse.y + 1) / 2;
-      mouseRef.current.x = THREE.MathUtils.lerp(mouseRef.current.x, targetX, 0.05);
-      mouseRef.current.y = THREE.MathUtils.lerp(mouseRef.current.y, targetY, 0.05);
-
-      if (material.uniforms?.uMouse?.value) {
-        material.uniforms.uMouse.value.copy(mouseRef.current);
-      }
-    }
-  });
-
-  return (
-    <mesh ref={meshRef}>
-      <planeGeometry args={[2, 2]} />
-      <shaderMaterial
-        vertexShader={vertexShader}
-        fragmentShader={fragmentShader}
-        uniforms={uniforms}
-        transparent
-      />
-    </mesh>
-  );
-}
+/**
+ * Linhas onduladas animadas com brilho (fundo). Reescrito de three.js/R3F
+ * para Canvas 2D — mesmo visual, sem o bundle de ~1 MB do WebGL.
+ * Respeita prefers-reduced-motion e pausa quando a aba fica oculta.
+ */
+const LINE_COLOR = '255, 122, 0'; // laranja da marca (rgb)
 
 export const FloatingLines: React.FC = () => {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    const reduceMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ?? false;
+
+    let width = 0;
+    let height = 0;
+    // mouse normalizado [0,1], origem no canto inferior-esquerdo (como no shader)
+    const mouse = { x: 0.5, y: 0.5, tx: 0.5, ty: 0.5 };
+    let raf = 0;
+    let running = true;
+    let startTime: number | null = null;
+
+    const resize = () => {
+      width = canvas.clientWidth;
+      height = canvas.clientHeight;
+      canvas.width = width;
+      canvas.height = height;
+    };
+    resize();
+
+    const onPointerMove = (e: PointerEvent) => {
+      mouse.tx = e.clientX / window.innerWidth;
+      mouse.ty = 1 - e.clientY / window.innerHeight;
+    };
+
+    const drawFrame = (elapsed: number) => {
+      ctx.clearRect(0, 0, width, height);
+      const aspect = width / Math.max(height, 1);
+      const isMobile = width <= 768;
+      const maxLines = isMobile ? 6 : 10;
+      const verticalScale = isMobile ? 0.18 : 0.12;
+
+      mouse.x += (mouse.tx - mouse.x) * 0.05;
+      mouse.y += (mouse.ty - mouse.y) * 0.05;
+
+      ctx.lineCap = 'round';
+      ctx.shadowColor = `rgba(${LINE_COLOR}, 0.9)`;
+
+      const step = Math.max(4, Math.round(width / 220));
+
+      for (let i = 1; i <= maxLines; i++) {
+        const t = elapsed * 0.15 + i * 1.5;
+        const offset = (i - maxLines * 0.5) * verticalScale;
+        const alpha = Math.min(0.5, 0.55 / i);
+
+        ctx.beginPath();
+        for (let px = 0; px <= width; px += step) {
+          const stx = px / width;
+          const posx = stx * aspect;
+          let y = 0.5 + Math.sin(posx * (0.4 + i * 0.05) + t) * 0.2;
+          y += Math.sin(posx * 2.0 - t * 0.5) * 0.08;
+
+          const lineY = y + offset;
+          const dMouse = Math.hypot(stx - mouse.x, lineY - mouse.y);
+          const mouseEffect = smoothstep(0.5, 0.0, dMouse);
+          const bend = Math.sin(stx * 2.0 + elapsed) * mouseEffect * 0.15;
+
+          const yNorm = lineY + bend;
+          const pyPixel = (1 - yNorm) * height;
+          if (px === 0) ctx.moveTo(px, pyPixel);
+          else ctx.lineTo(px, pyPixel);
+        }
+        ctx.strokeStyle = `rgba(${LINE_COLOR}, ${alpha})`;
+        ctx.lineWidth = isMobile ? 1 : 1.4;
+        ctx.shadowBlur = isMobile ? 8 : 12;
+        ctx.stroke();
+      }
+      ctx.shadowBlur = 0;
+    };
+
+    const loop = (now: number) => {
+      if (!running) return;
+      if (startTime === null) startTime = now;
+      drawFrame((now - startTime) / 1000);
+      raf = requestAnimationFrame(loop);
+    };
+
+    const onVisibility = () => {
+      if (document.hidden) {
+        running = false;
+        cancelAnimationFrame(raf);
+      } else if (!reduceMotion) {
+        running = true;
+        raf = requestAnimationFrame(loop);
+      }
+    };
+
+    window.addEventListener('resize', resize);
+    window.addEventListener('pointermove', onPointerMove, { passive: true });
+    document.addEventListener('visibilitychange', onVisibility);
+
+    if (reduceMotion) {
+      drawFrame(0); // um quadro estático
+    } else {
+      raf = requestAnimationFrame(loop);
+    }
+
+    return () => {
+      running = false;
+      cancelAnimationFrame(raf);
+      window.removeEventListener('resize', resize);
+      window.removeEventListener('pointermove', onPointerMove);
+      document.removeEventListener('visibilitychange', onVisibility);
+    };
+  }, []);
+
   return (
-    <div className="floating-lines-container" style={{
-      position: 'fixed',
-      top: 0,
-      left: 0,
-      width: '100%',
-      height: '100%',
-      zIndex: -1,
-      pointerEvents: 'none'
-    }}>
-      <Canvas dpr={1} performance={{ min: 0.5 }} gl={{ antialias: false, powerPreference: 'low-power' }}>
-        <OrthographicCamera makeDefault position={[0, 0, 1]} zoom={1} />
-        <FloatingLinesMesh />
-      </Canvas>
-    </div>
+    <canvas
+      ref={canvasRef}
+      className="floating-lines-container"
+      aria-hidden="true"
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        zIndex: -1,
+        pointerEvents: 'none',
+      }}
+    />
   );
 };
+
+function smoothstep(edge0: number, edge1: number, x: number): number {
+  const t = Math.min(1, Math.max(0, (x - edge0) / (edge1 - edge0)));
+  return t * t * (3 - 2 * t);
+}

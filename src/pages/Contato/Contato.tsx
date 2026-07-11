@@ -1,4 +1,5 @@
-﻿import { useEffect, useState } from 'react';
+﻿import { useEffect, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { FaWhatsapp } from 'react-icons/fa';
 import { FiFileText, FiGithub, FiLinkedin, FiMail, FiMessageSquare, FiSend, FiUser } from 'react-icons/fi';
 import { Button } from '../../components/ui/Button/Button';
@@ -21,12 +22,15 @@ function buildWhatsAppUrl(data: ContactFormData): string {
 }
 
 export default function Contato() {
+  const { t } = useTranslation();
   const [form, setForm] = useState<ContactFormData>({ nome: '', email: '', assunto: '', mensagem: '' });
   const [sent, setSent] = useState(false);
+  const sentTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
-    document.title = 'Contato - Victor Kauê';
-  }, []);
+    document.title = t('contato.docTitle');
+    return () => { if (sentTimer.current) clearTimeout(sentTimer.current); };
+  }, [t]);
 
   const filledFields = [form.nome, form.email, form.assunto, form.mensagem].filter(Boolean).length;
   const progress = (filledFields / 4) * 100;
@@ -37,7 +41,8 @@ export default function Contato() {
     window.open(url, '_blank');
     setSent(true);
     setForm({ nome: '', email: '', assunto: '', mensagem: '' });
-    setTimeout(() => setSent(false), 4000);
+    if (sentTimer.current) clearTimeout(sentTimer.current);
+    sentTimer.current = setTimeout(() => setSent(false), 4000);
   };
 
   const handleChange = (field: keyof ContactFormData) => (
@@ -58,9 +63,9 @@ export default function Contato() {
       <section className="contact-hero content-section">
         <div className="container">
           <PageHero
-            titleMain="Contato &"
-            titleAccent="Novas Oportunidades"
-            subtitle="Vamos conversar sobre seu projeto e transformar objetivos em entregas digitais robustas, elegantes e prontas para escalar."
+            titleMain={t('contato.heroMain')}
+            titleAccent={t('contato.heroAccent')}
+            subtitle={t('contato.heroSubtitle')}
             icon={<FiSend size={22} />}
           />
 
@@ -71,43 +76,43 @@ export default function Contato() {
               </div>
 
               <div className="form-group">
-                <label htmlFor="nome"><FiUser size={16} /> Nome</label>
+                <label htmlFor="nome"><FiUser size={16} /> {t('contato.nome')}</label>
                 <input
                   id="nome"
                   type="text"
                   value={form.nome}
                   onChange={handleChange('nome')}
                   required
-                  placeholder="Seu nome completo"
+                  placeholder={t('contato.nomePh')}
                 />
               </div>
 
               <div className="form-group">
-                <label htmlFor="email"><FiMail size={16} /> Email</label>
+                <label htmlFor="email"><FiMail size={16} /> {t('contato.email')}</label>
                 <input
                   id="email"
                   type="email"
                   value={form.email}
                   onChange={handleChange('email')}
                   required
-                  placeholder="seu@email.com"
+                  placeholder={t('contato.emailPh')}
                 />
               </div>
 
               <div className="form-group">
-                <label htmlFor="assunto"><FiFileText size={16} /> Assunto</label>
+                <label htmlFor="assunto"><FiFileText size={16} /> {t('contato.assunto')}</label>
                 <input
                   id="assunto"
                   type="text"
                   value={form.assunto}
                   onChange={handleChange('assunto')}
                   required
-                  placeholder="Qual o assunto?"
+                  placeholder={t('contato.assuntoPh')}
                 />
               </div>
 
               <div className="form-group">
-                <label htmlFor="mensagem"><FiMessageSquare size={16} /> Mensagem</label>
+                <label htmlFor="mensagem"><FiMessageSquare size={16} /> {t('contato.mensagem')}</label>
                 <textarea
                   id="mensagem"
                   value={form.mensagem}
@@ -115,25 +120,25 @@ export default function Contato() {
                   required
                   rows={5}
                   maxLength={1000}
-                  placeholder="Descreva seu projeto ou ideia..."
+                  placeholder={t('contato.mensagemPh')}
                 />
                 <span className="char-counter">{form.mensagem.length}/1000</span>
               </div>
 
               <Button type="submit" variant="primary" className="submit-btn">
                 <FiSend size={18} />
-                Enviar via WhatsApp
+                {t('contato.submit')}
               </Button>
 
               {sent && (
                 <div className="form-success">
-                  Mensagem encaminhada para o WhatsApp!
+                  {t('contato.success')}
                 </div>
               )}
             </form>
 
             <aside className="contact-sidebar">
-              <h3>Outras formas de contato</h3>
+              <h3>{t('contato.otherWays')}</h3>
               <div className="contact-cards">
                 {socialLinks.map((s) => (
                   <a key={s.name} href={s.url} className={`contact-card ${s.name.toLowerCase()}`} target="_blank" rel="noopener noreferrer">

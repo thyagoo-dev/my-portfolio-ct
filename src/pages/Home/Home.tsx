@@ -32,9 +32,9 @@ export default function Home() {
   }, []);
 
   const results = [
-    { value: 30, suffix: '%', label: 'Crescimento em Performance' },
-    { value: 25, suffix: '+', label: 'APIs Escaláveis Criadas' },
-    { value: 10, suffix: '+', label: 'Sistemas em Produção' },
+    { value: 30, suffix: '%', label: t('home.result1') },
+    { value: 25, suffix: '+', label: t('home.result2') },
+    { value: 10, suffix: '+', label: t('home.result3') },
   ];
 
   const services = [
@@ -100,18 +100,20 @@ export default function Home() {
         </div>
 
         {/* Scroll Down Indicator */}
-        <motion.div
+        <motion.button
+          type="button"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.5, duration: 1 }}
           className="scroll-indicator-wrapper"
+          aria-label="Rolar para a próxima seção"
           onClick={() => document.getElementById('servicos')?.scrollIntoView({ behavior: 'smooth' })}
         >
           <div className="scroll-mouse">
             <div className="scroll-dot" />
           </div>
           <FiChevronDown className="scroll-arrow" />
-        </motion.div>
+        </motion.button>
       </section>
 
       {/* ========== RESULTS STRIP (PRO MAX) ========== */}
@@ -119,7 +121,7 @@ export default function Home() {
         <div className="container">
           <div className="results-inner">
             <div className="results-badge">
-              <FiTrendingUp size={16} /> Impacto Real
+              <FiTrendingUp size={16} /> {t('home.impactTitle')}
             </div>
             <div className="results-grid">
               {results.map((res, i) => (
@@ -144,7 +146,7 @@ export default function Home() {
         <div className="container">
           <div className="section-header reveal-on-scroll">
             <h2 className="section-title"><FiActivity /> {t('about.highlights.title')}</h2>
-            <p className="section-subtitle">Onde a lógica encontra a performance para criar valor.</p>
+            <p className="section-subtitle">{t('home.servicesSubtitle')}</p>
           </div>
 
           <div className="services-grid">
@@ -166,10 +168,10 @@ export default function Home() {
         <div className="container">
           <div className="section-header reveal-on-scroll">
             <div className="header-top">
-              <h2 className="section-title"><FiZap /> Projetos em Destaque</h2>
+              <h2 className="section-title"><FiZap /> {t('home.featuredTitle')}</h2>
               <Button href="/projetos" variant="ghost">{t('common.viewAll')} <FiArrowRight size={18} /></Button>
             </div>
-            <p className="section-subtitle">Uma amostra do que eu construo com foco em escalabilidade.</p>
+            <p className="section-subtitle">{t('home.featuredSubtitle')}</p>
           </div>
 
           <div className="projects-carousel-container">

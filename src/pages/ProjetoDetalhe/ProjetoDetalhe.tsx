@@ -1,34 +1,36 @@
 import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import {FiArrowLeft,FiArrowRight,FiCheckCircle,FiCpu,FiDatabase,FiExternalLink,FiGithub,FiLayout,FiTarget,FiZap,FiList,FiInfo} from 'react-icons/fi';
 import { Link, useParams } from 'react-router-dom';
 import { Button } from '../../components/ui/Button/Button';
-import { TechIcon } from '../../components/ui/TechIcon/TechIcon';
+import { TechIcon, TechGlyph } from '../../components/ui/TechIcon/TechIcon';
 import { projects } from '../../data/projects';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { ProjectCarousel } from '../../components/ui/ProjectCarousel/ProjectCarousel';
 import './ProjetoDetalhe.css';
 
 export default function ProjetoDetalhe() {
+  const { t } = useTranslation();
   const { id } = useParams<{ id: string }>();
   const project = projects.find((p) => p.id === id || p.slug === id);
   useScrollReveal();
 
   useEffect(() => {
-    document.title = project ? `${project.title} - Victor Kauê` : 'Projeto não encontrado';
+    document.title = project ? `${project.title} - Victor Kauê` : t('projectDetail.notFoundTitle');
     window.scrollTo(0, 0);
-  }, [project]);
+  }, [project, t]);
 
   if (!project) {
     return (
       <main style={{ paddingTop: '10rem', textAlign: 'center' }}>
         <div className="container">
-          <h1>Projeto não encontrado</h1>
+          <h1>{t('projectDetail.notFoundTitle')}</h1>
           <p style={{ margin: '1rem 0 2rem', color: 'var(--text-muted-color)' }}>
-            O projeto que voce procura nao existe.
+            {t('projectDetail.notFoundText')}
           </p>
           <Button href="/projetos" variant="secondary">
             <FiArrowLeft size={18} />
-            Voltar aos projetos
+            {t('projectDetail.back')}
           </Button>
         </div>
       </main>
@@ -56,13 +58,13 @@ export default function ProjetoDetalhe() {
         <div className="container">
           <Link to="/projetos" className="back-link">
             <FiArrowLeft size={18} />
-            Voltar aos projetos
+            {t('projectDetail.back')}
           </Link>
 
           <div className="projeto-header">
             <div className="projeto-header-text">
               <span className="project-category-badge">
-                {project.category === 'pessoal' ? 'Projeto Pessoal' : 'Projeto Real / Empresa'}
+                {project.category === 'pessoal' ? t('projectDetail.categoryPersonal') : t('projectDetail.categoryReal')}
               </span>
               <h1>{projectTitle}</h1>
               <p className="projeto-desc">{projectDescription}</p>
@@ -76,12 +78,12 @@ export default function ProjetoDetalhe() {
               <div className="projeto-actions">
                 <Button href={projectGithub} target="_blank" rel="noopener noreferrer" variant="secondary">
                   <FiGithub size={18} />
-                  Ver codigo
+                  {t('projectDetail.viewCode')}
                 </Button>
                 {project.online && (
                   <Button href={project.online} target="_blank" rel="noopener noreferrer" variant="primary">
                     <FiExternalLink size={18} />
-                    Ver online
+                    {t('projectDetail.viewOnline')}
                   </Button>
                 )}
               </div>
@@ -95,13 +97,13 @@ export default function ProjetoDetalhe() {
           {detailed && (
             <div className="projeto-extended-info">
               <div className="info-section reveal-on-scroll">
-                <h2 className="detail-section-title"><FiInfo size={20} /> Descrição Detalhada</h2>
+                <h2 className="detail-section-title"><FiInfo size={20} /> {t('projectDetail.detailedDesc')}</h2>
                 <p className="detail-text">{detailed.solucao}</p>
               </div>
 
               {project.features && project.features.length > 0 && (
                  <div className="info-section reveal-on-scroll">
-                    <h2 className="detail-section-title"><FiList size={20} /> Funcionalidades</h2>
+                    <h2 className="detail-section-title"><FiList size={20} /> {t('projectDetail.features')}</h2>
                     <div className="features-list-grid">
                         {project.features.map((feature, idx) => (
                             <div key={idx} className="feature-item-detail">
@@ -114,14 +116,14 @@ export default function ProjetoDetalhe() {
               )}
 
               <div className="info-section reveal-on-scroll">
-                <h2 className="detail-section-title">Detalhes do Projeto</h2>
+                <h2 className="detail-section-title">{t('projectDetail.projectDetails')}</h2>
                 <div className="details-grid-custom">
                   <div className="detail-card-item">
                     <div className="card-icon">
                       <FiTarget size={20} />
                     </div>
                     <div className="card-text">
-                      <h4 className="card-title-main">Desafio</h4>
+                      <h4 className="card-title-main">{t('projectDetail.challenge')}</h4>
                       <p>{detailed.desafio}</p>
                     </div>
                   </div>
@@ -130,7 +132,7 @@ export default function ProjetoDetalhe() {
                       <FiZap size={20} />
                     </div>
                     <div className="card-text">
-                      <h4 className="card-title-main">Solução</h4>
+                      <h4 className="card-title-main">{t('projectDetail.solution')}</h4>
                       <p>{detailed.solucao}</p>
                     </div>
                   </div>
@@ -139,7 +141,7 @@ export default function ProjetoDetalhe() {
                       <FiCheckCircle size={20} />
                     </div>
                     <div className="card-text">
-                      <h4 className="card-title-main">Impacto</h4>
+                      <h4 className="card-title-main">{t('projectDetail.impact')}</h4>
                       <p>{detailed.impacto}</p>
                     </div>
                   </div>
@@ -147,13 +149,13 @@ export default function ProjetoDetalhe() {
               </div>
 
               <div className="info-section architecture-section reveal-on-scroll">
-                <h2 className="detail-section-title">Arquitetura</h2>
+                <h2 className="detail-section-title">{t('projectDetail.architecture')}</h2>
                 <div className="architecture-flow">
                   <div className="arch-node">
                     <div className="node-icon">
                       <FiLayout size={24} />
                     </div>
-                    <span>Frontend</span>
+                    <span>{t('projectDetail.frontend')}</span>
                     <small>{detailed.arquitetura.frontend}</small>
                   </div>
                   <div className="arch-arrow">
@@ -163,7 +165,7 @@ export default function ProjetoDetalhe() {
                     <div className="node-icon">
                       <FiCpu size={24} />
                     </div>
-                    <span>API / Backend</span>
+                    <span>{t('projectDetail.apiBackend')}</span>
                     <small>{detailed.arquitetura.api}</small>
                   </div>
                   <div className="arch-arrow">
@@ -173,36 +175,36 @@ export default function ProjetoDetalhe() {
                     <div className="node-icon">
                       <FiDatabase size={24} />
                     </div>
-                    <span>Banco de Dados</span>
+                    <span>{t('projectDetail.database')}</span>
                     <small>{detailed.arquitetura.banco}</small>
                   </div>
                 </div>
               </div>
 
               <div className="info-section reveal-on-scroll">
-                <h2 className="detail-section-title">Stack e Decisões</h2>
+                <h2 className="detail-section-title">{t('projectDetail.stackDecisions')}</h2>
                 <div className="decisions-grid">
                   <div className="decision-item">
-                    <span className="decision-label">Autenticação:</span> {detailed.decisoes.autenticacao}
+                    <span className="decision-label">{t('projectDetail.authLabel')}:</span> {detailed.decisoes.autenticacao}
                   </div>
                   <div className="decision-item">
-                    <span className="decision-label">Back-end:</span> {detailed.decisoes.backend}
+                    <span className="decision-label">{t('projectDetail.backendLabel')}:</span> {detailed.decisoes.backend}
                   </div>
                   <div className="decision-item">
-                    <span className="decision-label">Deploy:</span> {detailed.decisoes.deploy}
+                    <span className="decision-label">{t('projectDetail.deployLabel')}:</span> {detailed.decisoes.deploy}
                   </div>
                   <div className="decision-item">
-                    <span className="decision-label">Banco:</span> {detailed.decisoes.banco}
+                    <span className="decision-label">{t('projectDetail.dbLabel')}:</span> {detailed.decisoes.banco}
                   </div>
                 </div>
               </div>
 
               <div className="info-section reveal-on-scroll">
-                <h3 className="tech-section-subtitle">Tecnologias Usadas</h3>
+                <h3 className="tech-section-subtitle">{t('projectDetail.techUsed')}</h3>
                 <div className="tech-v2-grid">
                   {detailed.tech_v2.map((tech) => (
                     <div className="tech-card-v2" key={tech.name}>
-                      <i className={tech.icon} />
+                      <TechGlyph name={tech.name} size={26} />
                       <span>{tech.name}</span>
                     </div>
                   ))}
@@ -213,25 +215,25 @@ export default function ProjetoDetalhe() {
 
           {!detailed && project.summary && (
             <div className="projeto-summary-fallback reveal-on-scroll">
-               <h2 className="detail-section-title"><FiInfo size={20} /> Resumo do Projeto</h2>
+               <h2 className="detail-section-title"><FiInfo size={20} /> {t('projectDetail.summaryTitle')}</h2>
                <div className="summary-cards-grid">
                   <div className="summary-card">
-                    <span className="summary-label">Problema:</span>
+                    <span className="summary-label">{t('projectDetail.problem')}:</span>
                     <p>{project.summary.problema}</p>
                   </div>
                   <div className="summary-card">
-                    <span className="summary-label">Solução:</span>
+                    <span className="summary-label">{t('projectDetail.solution')}:</span>
                     <p>{project.summary.solucao}</p>
                   </div>
                   <div className="summary-card">
-                    <span className="summary-label">Stack:</span>
+                    <span className="summary-label">{t('projectDetail.stackLabel')}:</span>
                     <p>{project.summary.stack}</p>
                   </div>
                </div>
-               
+
                {project.features && project.features.length > 0 && (
                  <div className="info-section" style={{marginTop: '3rem'}}>
-                    <h3 className="tech-section-subtitle" style={{textAlign: 'left', marginBottom: '1.5rem'}}>Funcionalidades Principais</h3>
+                    <h3 className="tech-section-subtitle" style={{textAlign: 'left', marginBottom: '1.5rem'}}>{t('projectDetail.mainFeatures')}</h3>
                     <div className="features-list-grid">
                         {project.features.map((feature, idx) => (
                             <div key={idx} className="feature-item-detail">
@@ -248,12 +250,12 @@ export default function ProjetoDetalhe() {
           <div className="final-project-action">
             {project.online ? (
               <Button href={project.online} target="_blank" rel="noopener noreferrer" variant="primary">
-                Acessar Projeto Completo
+                {t('projectDetail.accessFull')}
                 <FiExternalLink size={20} />
               </Button>
             ) : (
               <Button href="/contato" variant="primary">
-                Fale comigo sobre este projeto
+                {t('projectDetail.talkAbout')}
                 <FiCheckCircle size={20} />
               </Button>
             )}

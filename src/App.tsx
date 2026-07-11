@@ -21,6 +21,7 @@ const ProjetoDetalhe = lazy(() => import('./pages/ProjetoDetalhe/ProjetoDetalhe'
 const Servicos = lazy(() => import('./pages/Servicos/Servicos'));
 const Certificados = lazy(() => import('./pages/Certificados/Certificados'));
 const Contato = lazy(() => import('./pages/Contato/Contato'));
+const NaoEncontrado = lazy(() => import('./pages/NaoEncontrado/NaoEncontrado'));
 
 function PageLoader() {
   return (
@@ -38,7 +39,7 @@ function AppRoutes() {
       <NavigationLoader />
       <AnimatePresence mode="wait" initial={false}>
         <motion.div
-          key={location.key}
+          key={location.pathname}
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.28, ease: 'easeOut' }}
@@ -53,6 +54,7 @@ function AppRoutes() {
               <Route path="/servicos" element={<Servicos />} />
               <Route path="/certificados" element={<Certificados />} />
               <Route path="/contato" element={<Contato />} />
+              <Route path="*" element={<NaoEncontrado />} />
             </Routes>
           </Suspense>
         </motion.div>

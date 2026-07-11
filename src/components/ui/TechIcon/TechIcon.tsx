@@ -1,58 +1,107 @@
 import React from 'react';
+import type { IconType } from 'react-icons';
 import {
-  FiCpu,
-  FiZap,
-  FiSmartphone,
-  FiCloud,
-  FiSearch,
-  FiCalendar,
-  FiPackage,
-  FiLayout,
-  FiCode,
-  FiTrendingUp,
-  FiGlobe,
-  FiLayers,
-  FiBarChart2
+  FiCpu, FiZap, FiSmartphone, FiCloud, FiSearch, FiCalendar,
+  FiPackage, FiLayout, FiCode, FiTrendingUp, FiGlobe, FiLayers, FiBarChart2,
 } from 'react-icons/fi';
+import {
+  SiPython, SiJavascript, SiTypescript, SiReact, SiVite, SiCss, SiHtml5,
+  SiDjango, SiFastapi, SiPytorch, SiOpenai, SiPhp, SiLaravel, SiBootstrap,
+  SiPostgresql, SiMysql, SiSqlite, SiMongodb, SiDocker, SiNginx, SiGit,
+  SiGithub, SiGunicorn, SiNodedotjs, SiHtmx, SiDbeaver, SiBruno,
+} from 'react-icons/si';
 
-const techIconMap: Record<string, any> = {
-  // Devicons
-  React: 'devicon-react-original colored',
-  TypeScript: 'devicon-typescript-plain colored',
-  Vite: 'devicon-vitejs-plain colored',
-  CSS: 'devicon-css3-plain colored',
-  CSS3: 'devicon-css3-plain colored',
-  Django: 'devicon-django-plain colored',
-  PostgreSQL: 'devicon-postgresql-plain colored',
-  Bootstrap: 'devicon-bootstrap-plain colored',
-  Python: 'devicon-python-plain colored',
-  MySQL: 'devicon-mysql-plain colored',
-  SQLite: 'devicon-sqlite-plain colored',
-  HTML5: 'devicon-html5-plain colored',
-  HTML: 'devicon-html5-plain colored',
-  JavaScript: 'devicon-javascript-plain colored',
-  Git: 'devicon-git-plain colored',
-  Docker: 'devicon-docker-plain colored',
-  Node: 'devicon-nodejs-plain colored',
-  'Node.js': 'devicon-nodejs-plain colored',
+interface TechEntry {
+  Icon: IconType;
+  /** Cor de marca (dark-friendly). Ausente = herda currentColor. */
+  color?: string;
+}
 
-  // Lucide/Feather Icons for abstract concepts
-  IA: FiCpu,
-  'Automação': FiZap,
-  Automacao: FiZap,
-  Responsivo: FiSmartphone,
-  SaaS: FiCloud,
-  SEO: FiSearch,
-  Eventos: FiCalendar,
-  'Controle de Estoque': FiPackage,
-  'Landing Page': FiLayout,
-  'Front-end': FiCode,
-  'Conversão': FiTrendingUp,
-  Conversao: FiTrendingUp,
-  'Web App': FiGlobe,
-  'Sistema Web': FiGlobe,
-  'Design System': FiLayers,
-  Escalabilidade: FiBarChart2,
+/**
+ * Fonte única de ícones de tecnologia — Simple Icons (react-icons) em vez do
+ * font-icon devicon (removido: ~1,5 MB). Resolvido por nome da tecnologia.
+ */
+const TECH_ICONS: Record<string, TechEntry> = {
+  // Linguagens / core
+  Python: { Icon: SiPython, color: '#4B8BBE' },
+  JavaScript: { Icon: SiJavascript, color: '#F7DF1E' },
+  TypeScript: { Icon: SiTypescript, color: '#3178C6' },
+  PHP: { Icon: SiPhp, color: '#9CA3EB' },
+  HTML5: { Icon: SiHtml5, color: '#E34F26' },
+  HTML: { Icon: SiHtml5, color: '#E34F26' },
+  HTMX: { Icon: SiHtmx, color: '#3D72D7' },
+  CSS3: { Icon: SiCss, color: '#3D9CD8' },
+  CSS: { Icon: SiCss, color: '#3D9CD8' },
+  SQL: { Icon: SiPostgresql, color: '#7AA7E6' },
+
+  // Frameworks / libs
+  React: { Icon: SiReact, color: '#61DAFB' },
+  Vite: { Icon: SiVite, color: '#8B7BFF' },
+  Django: { Icon: SiDjango, color: '#44B78B' },
+  FastAPI: { Icon: SiFastapi, color: '#009688' },
+  Laravel: { Icon: SiLaravel, color: '#FF2D20' },
+  Bootstrap: { Icon: SiBootstrap, color: '#8B5CF6' },
+  PyTorch: { Icon: SiPytorch, color: '#EE4C2C' },
+  Whisper: { Icon: SiOpenai, color: '#FFFFFF' },
+
+  // Bancos de dados
+  PostgreSQL: { Icon: SiPostgresql, color: '#4F86E6' },
+  MySQL: { Icon: SiMysql, color: '#00758F' },
+  SQLite: { Icon: SiSqlite, color: '#4FB8E8' },
+  MongoDB: { Icon: SiMongodb, color: '#47A248' },
+
+  // DevOps / ferramentas
+  Docker: { Icon: SiDocker, color: '#2496ED' },
+  Nginx: { Icon: SiNginx, color: '#009639' },
+  Git: { Icon: SiGit, color: '#F05032' },
+  GitHub: { Icon: SiGithub, color: '#FFFFFF' },
+  'GitHub Actions': { Icon: SiGithub, color: '#FFFFFF' },
+  Gunicorn: { Icon: SiGunicorn, color: '#5F9E52' },
+  Node: { Icon: SiNodedotjs, color: '#5FA04E' },
+  'Node.js': { Icon: SiNodedotjs, color: '#5FA04E' },
+  'VS Code': { Icon: FiCode, color: '#3B9EFF' },
+  DBeaver: { Icon: SiDbeaver, color: '#C9A66B' },
+  Bruno: { Icon: SiBruno, color: '#F4AA41' },
+  SEO: { Icon: FiSearch, color: '#8B5CF6' },
+
+  // Conceitos abstratos (herdam a cor do contexto)
+  IA: { Icon: FiCpu },
+  'Automação': { Icon: FiZap },
+  Automacao: { Icon: FiZap },
+  Responsivo: { Icon: FiSmartphone },
+  SaaS: { Icon: FiCloud },
+  Eventos: { Icon: FiCalendar },
+  'Controle de Estoque': { Icon: FiPackage },
+  'Landing Page': { Icon: FiLayout },
+  'Front-end': { Icon: FiCode },
+  'Conversão': { Icon: FiTrendingUp },
+  Conversao: { Icon: FiTrendingUp },
+  'Web App': { Icon: FiGlobe },
+  'Sistema Web': { Icon: FiGlobe },
+  'Design System': { Icon: FiLayers },
+  Escalabilidade: { Icon: FiBarChart2 },
+};
+
+export function resolveTechIcon(name: string): TechEntry | undefined {
+  return TECH_ICONS[name];
+}
+
+export function hasTechIcon(name: string): boolean {
+  return name in TECH_ICONS;
+}
+
+interface GlyphProps {
+  name: string;
+  size?: number;
+  className?: string;
+}
+
+/** Só o ícone (sem wrapper) — para drop-in onde antes havia `<i className="devicon-..." />`. */
+export const TechGlyph: React.FC<GlyphProps> = ({ name, size = 20, className }) => {
+  const entry = TECH_ICONS[name];
+  if (!entry) return null;
+  const { Icon, color } = entry;
+  return <Icon size={size} color={color} className={className} title={name} aria-hidden="true" />;
 };
 
 interface TechIconProps {
@@ -62,31 +111,22 @@ interface TechIconProps {
   className?: string;
 }
 
-export const TechIcon: React.FC<TechIconProps> = ({ 
-  name, 
-  size = 20, 
+export const TechIcon: React.FC<TechIconProps> = ({
+  name,
+  size = 20,
   showName = false,
-  className = "" 
+  className = '',
 }) => {
-  const iconComponent = techIconMap[name];
+  const entry = TECH_ICONS[name];
 
-  if (!iconComponent) {
+  if (!entry) {
     return <span className={`tech-tag-fallback ${className}`}>{name}</span>;
   }
 
-  if (typeof iconComponent === 'string') {
-    return (
-      <div className={`tech-icon-wrapper ${className}`} title={name}>
-        <i className={`${iconComponent} tech-icon-dev`} style={{ fontSize: size }} />
-        {showName && <span className="tech-icon-name">{name}</span>}
-      </div>
-    );
-  }
-
-  const Icon = iconComponent;
+  const { Icon, color } = entry;
   return (
     <div className={`tech-icon-wrapper ${className}`} title={name}>
-      <Icon size={size} className="tech-icon-lucide" />
+      <Icon size={size} color={color} className="tech-icon-svg" aria-hidden="true" />
       {showName && <span className="tech-icon-name">{name}</span>}
     </div>
   );

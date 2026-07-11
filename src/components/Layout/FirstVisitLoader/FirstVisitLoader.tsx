@@ -3,17 +3,24 @@ import './FirstVisitLoader.css';
 
 const STORAGE_KEY = 'vk_visited';
 
+function safeGet(key: string): string | null {
+  try { return localStorage.getItem(key); } catch { return null; }
+}
+function safeSet(key: string, value: string): void {
+  try { localStorage.setItem(key, value); } catch { /* storage bloqueado — ignora */ }
+}
+
 export function FirstVisitLoader() {
-  const [visible, setVisible] = useState(() => !localStorage.getItem(STORAGE_KEY));
+  const [visible, setVisible] = useState(() => !safeGet(STORAGE_KEY));
   const [fading, setFading] = useState(false);
 
   useEffect(() => {
     if (!visible) return;
-    const fadeTimer = setTimeout(() => setFading(true), 1500);
+    const fadeTimer = setTimeout(() => setFading(true), 500);
     const hideTimer = setTimeout(() => {
-      localStorage.setItem(STORAGE_KEY, '1');
+      safeSet(STORAGE_KEY, '1');
       setVisible(false);
-    }, 2000);
+    }, 800);
     return () => { clearTimeout(fadeTimer); clearTimeout(hideTimer); };
   }, [visible]);
 
