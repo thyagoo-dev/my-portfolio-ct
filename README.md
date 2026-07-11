@@ -206,6 +206,29 @@ Aqui estão os scripts disponíveis para desenvolvimento e produção:
 - `npm run dev` - ambiente de desenvolvimento
 - `npm run build` - build de producao
 - `npm run preview` - preview do build
+- `npm run projects:enrich` - enriquece projetos a partir dos READMEs do GitHub
+
+> Pré-requisitos: Node.js 18+ (LTS recomendado) e npm. Sem variáveis de
+> ambiente necessárias — ver [docs/ENVIRONMENT.md](docs/ENVIRONMENT.md).
+> Não há testes automatizados; "testar" = `npm run build` sem erros + validação visual.
+
+---
+
+## 📚 Documentação:
+
+| Documento | Local | Função |
+| --- | --- | --- |
+| [README.md](README.md) | raiz | Objetivo do projeto e como executá-lo. |
+| [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) | raiz | Contexto do negócio e do problema. |
+| [CLAUDE.md](CLAUDE.md) | raiz | Regras e diretrizes para a IA. |
+| [PRD.md](docs/PRD.md) | docs/ | Requisitos do produto. |
+| [ARCHITECTURE.md](docs/ARCHITECTURE.md) | docs/ | Arquitetura e decisões estruturais. |
+| [API.md](docs/API.md) | docs/ | Contratos externos (sem API própria). |
+| [DATABASE.md](docs/DATABASE.md) | docs/ | Modelo de dados (conteúdo estático). |
+| [DEPLOY.md](docs/DEPLOY.md) | docs/ | Processo de publicação. |
+| [ENVIRONMENT.md](docs/ENVIRONMENT.md) | docs/ | Variáveis de ambiente. |
+| [DECISIONS.md](docs/DECISIONS.md) | docs/ | Registro de decisões técnicas. |
+| [CHANGELOG.md](docs/CHANGELOG.md) | docs/ | Histórico de mudanças por versão. |
 
 ---
 

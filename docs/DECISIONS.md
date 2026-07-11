@@ -1,0 +1,72 @@
+# DECISIONS
+
+Registro de decisões técnicas (ADRs). Decisões são **acrescentadas, não
+apagadas** — o histórico é a memória do projeto. Mais recente no topo.
+
+Formato de cada entrada: data · contexto · decisão · alternativas · consequências.
+
+---
+
+## ADR-0004 — Contato via deep-link de WhatsApp (sem e-mail server-side)
+
+- **Data:** 2026-07-11 (registro; decisão vigente no código)
+- **Contexto:** O formulário de contato precisa entregar mensagens sem manter
+  backend, servidor de e-mail ou proteção anti-spam.
+- **Decisão:** Ao enviar, montar uma URL `wa.me` com os campos pré-formatados e
+  abrir o WhatsApp em nova aba (`src/pages/Contato/Contato.tsx`).
+- **Alternativas consideradas:** serviço de e-mail (EmailJS/Formspree);
+  função serverless de envio; `mailto:`.
+- **Consequências:** Zero backend e canal direto/imediato; porém depende de o
+  usuário ter WhatsApp e não gera registro server-side das mensagens.
+
+## ADR-0003 — Conteúdo como código TypeScript (sem CMS/banco)
+
+- **Data:** 2026-07-11 (registro; decisão vigente no código)
+- **Contexto:** Projetos, experiências e certificados precisam ser exibidos e
+  atualizados com segurança de tipos.
+- **Decisão:** Modelar o conteúdo como módulos `.ts` tipados em `src/data/`,
+  agregados/normalizados em build (ver `projects.ts`).
+- **Alternativas consideradas:** CMS headless (Contentful/Sanity); banco +
+  API; arquivos Markdown/JSON.
+- **Consequências:** Type-safety, histórico via git e deploy trivial; em troca,
+  editar conteúdo exige alterar código e refazer o build (sem edição em runtime).
+
+## ADR-0002 — Manter arquivos `.env`/`.env.example` do AIOX apenas documentados
+
+- **Data:** 2026-07-11
+- **Contexto:** A raiz contém `.env` e `.env.example` do instalador "Synkra
+  AIOX" (chaves de LLM, Supabase, etc.) que **não são usados** pelo app. O
+  `.env.example` versionado é enganoso.
+- **Decisão:** Documentar a discrepância em [ENVIRONMENT.md](ENVIRONMENT.md) e
+  **não** remover/reescrever os arquivos sem confirmação do autor, por serem
+  tooling externo.
+- **Alternativas consideradas:** apagar ambos; reescrever `.env.example` já.
+- **Consequências:** Nenhum risco de quebrar tooling externo; pendência aberta
+  para limpar o `.env.example` quando confirmado.
+
+## ADR-0001 — Stack front-end: React 19 + TypeScript + Vite, SPA estática
+
+- **Data:** 2026-07-11 (registro; decisão vigente no código)
+- **Contexto:** Portfólio precisa de UI premium/animada, bilíngue e de fácil
+  hospedagem, servindo também como prova de competência técnica.
+- **Decisão:** SPA com React 19, TypeScript strict, Vite 6, react-router-dom 7,
+  Tailwind 4, framer-motion, three/@react-three/fiber e i18next; deploy estático
+  na Vercel.
+- **Alternativas consideradas:** Next.js (SSR/SSG); Astro; site estático simples.
+- **Consequências:** Navegação fluida e DX moderna; SEO limitado a meta tags
+  estáticas (sem SSR) e conteúdo dependente de rebuild para atualizar.
+
+---
+
+## Como adicionar uma decisão
+
+Copie o bloco abaixo no topo da lista, incremente o número e preencha:
+
+```
+## ADR-XXXX — <título curto>
+- **Data:** AAAA-MM-DD
+- **Contexto:** <por que a decisão foi necessária>
+- **Decisão:** <o que foi decidido>
+- **Alternativas consideradas:** <opções descartadas>
+- **Consequências:** <trade-offs, impactos, dívidas>
+```
