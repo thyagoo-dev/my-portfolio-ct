@@ -19,7 +19,7 @@ Valores hoje "configuráveis" estão hard-coded como constantes de código, não
 
 | Constante | Local | Valor |
 | --- | --- | --- |
-| Telefone do WhatsApp | `src/pages/Contato/Contato.tsx` | `5587981677005` |
+| Telefone do WhatsApp | `src/pages/Contato/Contato.tsx` | `5587981774951` |
 | Perfil GitHub padrão | `src/data/projects.ts` | `https://github.com/Victorkaue333` |
 | Porta do dev server | `vite.config.ts` | `3000` |
 
@@ -41,7 +41,7 @@ honesto deste projeto, por exemplo:
 # Este projeto é uma SPA estática e não requer variáveis de ambiente.
 # Adicione variáveis VITE_* aqui apenas se/quando o código passar a consumi-las.
 # Ex.:
-# VITE_WHATSAPP_PHONE=5587981677005
+# VITE_WHATSAPP_PHONE=5587981774951
 ```
 
 > Não removi/reescrevi esses arquivos automaticamente para não alterar

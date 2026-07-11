@@ -102,7 +102,7 @@ export default function Sobre() {
 
           <div className="about-main-content">
             <div className="content-header reveal-on-scroll">
-              <a href="https://wa.me/5587981677005" target="_blank" rel="noopener noreferrer" className="header-cta">
+              <a href="https://wa.me/5587981774951" target="_blank" rel="noopener noreferrer" className="header-cta">
                 <FiCalendar size={16} />
                 Agendar uma chamada
                 <FiChevronRight size={16} />

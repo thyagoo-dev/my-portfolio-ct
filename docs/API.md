@@ -19,7 +19,7 @@ Runtime. Disparado ao enviar o formulário de contato.
 - **Origem:** `src/pages/Contato/Contato.tsx`
 - **Método:** navegação `window.open(url, '_blank')`
 - **Destino:** `https://wa.me/{PHONE}?text={mensagem}`
-- **Telefone:** `5587981677005`
+- **Telefone:** `558798774951`
 - **Parâmetros (query):**
 
   | Param | Origem | Descrição |
@@ -42,7 +42,7 @@ Mensagem:
 **Exemplo:**
 
 ```
-https://wa.me/5587981677005?text=Nova%20mensagem%20do%20Portf%C3%B3lio%0A%0ANome%3A%20...
+https://wa.me/5587981774951?text=Nova%20mensagem%20do%20Portf%C3%B3lio%0A%0ANome%3A%20...
 ```
 
 Não há resposta programática — abre o WhatsApp do usuário.
