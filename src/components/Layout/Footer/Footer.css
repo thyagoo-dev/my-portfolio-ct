@@ -153,13 +153,11 @@
     transition: all var(--transition-normal);
 }
 
-.footer-contact-icons a:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 122, 0, 0.1);
-    border-color: var(--accent-color);
-    color: var(--accent-color);
-    box-shadow: 0 10px 20px -5px rgba(255, 122, 0, 0.2);
-}
+/* Cor oficial de cada marca */
+.footer-contact-icons a.github { color: #ffffff; }
+.footer-contact-icons a.linkedin { color: #0a66c2; }
+.footer-contact-icons a.whatsapp { color: #25d366; }
+.footer-contact-icons a.email { color: #ea4335; }
 
 .footer-bottom {
     margin-top: 60px;

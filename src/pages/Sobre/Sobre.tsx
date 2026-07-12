@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { FiBookOpen, FiBriefcase, FiCalendar, FiChevronRight, FiCode, FiGithub, FiLinkedin, FiMail, FiMapPin, FiTarget } from 'react-icons/fi';
+import { FiBookOpen, FiBriefcase, FiCalendar, FiChevronRight, FiCode, FiMail, FiMapPin, FiTarget } from 'react-icons/fi';
+import { FaLinkedin } from 'react-icons/fa6';
+import { SiGithub } from 'react-icons/si';
 import { Button } from '../../components/ui/Button/Button';
 import { TechGlyph } from '../../components/ui/TechIcon/TechIcon';
 import { TechMarquee } from '../../components/ui/TechMarquee/TechMarquee';
@@ -63,7 +65,7 @@ export default function Sobre() {
     { id: 'experience', label: 'Experiencia', icon: <FiBriefcase size={16} /> },
     { id: 'education', label: 'Formacao', icon: <FiBookOpen size={16} /> },
     { id: 'expertise', label: 'Expertise técnica', icon: <FiCode size={16} /> },
-    { id: 'github', label: 'GitHub', icon: <FiGithub size={16} /> },
+    { id: 'github', label: 'GitHub', icon: <SiGithub size={16} /> },
   ];
 
   const scrollToSection = (id: string) => {
@@ -148,8 +150,8 @@ export default function Sobre() {
               <div className="socials-list">
                 {socialLinks.filter((s) => ['GitHub', 'LinkedIn', 'Email'].includes(s.name)).map((link) => (
                   <a key={link.name} href={link.url} target="_blank" rel="noopener noreferrer" className="social-btn">
-                    {link.name === 'GitHub' && <FiGithub size={16} />}
-                    {link.name === 'LinkedIn' && <FiLinkedin size={16} />}
+                    {link.name === 'GitHub' && <SiGithub size={16} />}
+                    {link.name === 'LinkedIn' && <FaLinkedin size={16} />}
                     {link.name === 'Email' && <FiMail size={16} />}
                     {link.name}
                   </a>
@@ -284,7 +286,7 @@ export default function Sobre() {
 
             <section id="github" className="about-content-section reveal-on-scroll">
               <h2 className="section-title">
-                <FiGithub size={24} />
+                <SiGithub size={24} />
                 GitHub Stats
               </h2>
               {!githubStatsError ? (
@@ -314,7 +316,7 @@ export default function Sobre() {
                 <div className="github-fallback-card">
                   <p>Confira minhas atividades diretamente no meu perfil:</p>
                   <Button href="https://github.com/Victorkaue333" variant="outline" external>
-                    <FiGithub size={18} />
+                    <SiGithub size={18} />
                     Ver GitHub
                   </Button>
                 </div>

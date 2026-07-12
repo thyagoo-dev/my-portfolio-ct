@@ -52,9 +52,13 @@
 
 .title-white { color: #ffffff; }
 .title-gray { color: #808080; }
-.title-orange { 
-    color: #ff7a00; 
+.hero-title-main span.title-orange {
+    color: #ff7a00;
     text-shadow: 0 0 30px rgba(255, 122, 0, 0.25);
+    font-size: clamp(1.4rem, 5vw, 3rem);
+    letter-spacing: -0.03em;
+    margin-top: 0.35rem;
+    white-space: nowrap;
 }
 
 .hero-description {
@@ -89,12 +93,10 @@
     transition: all var(--transition-fast);
 }
 
-.social-icon:hover {
-    color: var(--color-primary-500);
-    border-color: rgba(255, 122, 0, 0.4);
-    background: rgba(255, 122, 0, 0.05);
-    transform: translateY(-3px);
-}
+/* Cor oficial de cada marca */
+.social-icon.github { color: #ffffff; }
+.social-icon.linkedin { color: #0a66c2; }
+.social-icon.email { color: #ea4335; }
 
 /* Hero Visual - The Lens */
 .hero-visual {
@@ -502,6 +504,12 @@
         word-break: break-word; /* Essential fallback */
         overflow-wrap: break-word;
         hyphens: auto;
+    }
+
+    .hero-title-main span.title-orange {
+        font-size: clamp(1.05rem, 6vw, 1.7rem);
+        white-space: normal;
+        margin-top: 0.2rem;
     }
 
     .hero-description {

@@ -12,28 +12,21 @@
     gap: 1.5rem;
     position: relative;
     width: 100%;
-}
-
-/* Edge Masking for smooth fade in/out */
-.marquee-container::before,
-.marquee-container::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 15rem;
-    height: 100%;
-    z-index: 2;
-    pointer-events: none;
-}
-
-.marquee-container::before {
-    left: 0;
-    background: linear-gradient(to right, var(--bg-color), transparent);
-}
-
-.marquee-container::after {
-    right: 0;
-    background: linear-gradient(to left, var(--bg-color), transparent);
+    /* Fade nas bordas direto na transparência — independe da cor de fundo */
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0,
+        #000 8rem,
+        #000 calc(100% - 8rem),
+        transparent 100%
+    );
+    mask-image: linear-gradient(
+        to right,
+        transparent 0,
+        #000 8rem,
+        #000 calc(100% - 8rem),
+        transparent 100%
+    );
 }
 
 .marquee-row {
@@ -93,12 +86,11 @@
 
 .tech-icon {
     font-size: 2.8rem;
-    filter: grayscale(1) brightness(1.5);
-    transition: filter 0.3s ease, transform 0.3s ease;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .marquee-item:hover .tech-icon {
-    filter: grayscale(0) brightness(1);
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.15));
 }
 
 .tech-name {
@@ -114,9 +106,21 @@
         padding: 1.5rem 0;
     }
     
-    .marquee-container::before,
-    .marquee-container::after {
-        width: 5rem;
+    .marquee-container {
+        -webkit-mask-image: linear-gradient(
+            to right,
+            transparent 0,
+            #000 3rem,
+            #000 calc(100% - 3rem),
+            transparent 100%
+        );
+        mask-image: linear-gradient(
+            to right,
+            transparent 0,
+            #000 3rem,
+            #000 calc(100% - 3rem),
+            transparent 100%
+        );
     }
 
     .tech-icon {

@@ -9,7 +9,8 @@
       "Bash(sed -i 's/off\\\\.result\\\\.value/off.result.result.value/; s/chk\\\\.result\\\\.value/chk.result.result.value/' cdp-shot.mjs)",
       "Bash(node cdp-count.mjs)",
       "Bash(node cdp-overflow.mjs)",
-      "Bash(npm uninstall *)"
+      "Bash(npm uninstall *)",
+      "Bash(node -e \"const s=require\\('react-icons/si'\\); console.log\\('SiGithub',!!s.SiGithub,'SiWhatsapp',!!s.SiWhatsapp,'SiLinkedin',!!s.SiLinkedin\\); const f=require\\('react-icons/fa6'\\); console.log\\('FaGithub',!!f.FaGithub,'FaLinkedin',!!f.FaLinkedin,'FaLinkedinIn',!!f.FaLinkedinIn,'FaWhatsapp',!!f.FaWhatsapp\\)\")"
     ]
   }
 }

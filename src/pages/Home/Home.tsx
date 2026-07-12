@@ -1,8 +1,6 @@
 import { useEffect } from 'react';
 import {
   FiArrowRight,
-  FiGithub,
-  FiLinkedin,
   FiMail,
   FiDatabase,
   FiCpu,
@@ -12,6 +10,8 @@ import {
   FiTrendingUp,
   FiChevronDown
 } from 'react-icons/fi';
+import { FaLinkedin } from 'react-icons/fa6';
+import { SiGithub } from 'react-icons/si';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { featuredProjects } from '../../data/projects';
@@ -83,8 +83,8 @@ export default function Home() {
               </Reveal>
               <Reveal delay={0.7}>
                 <div className="hero-socials">
-                  <a href="https://github.com/Victorkaue333" target="_blank" rel="noopener noreferrer" className="social-icon github" aria-label="GitHub"><FiGithub size={20} /></a>
-                  <a href="https://linkedin.com/in/victorkaue" target="_blank" rel="noopener noreferrer" className="social-icon linkedin" aria-label="LinkedIn"><FiLinkedin size={20} /></a>
+                  <a href="https://github.com/Victorkaue333" target="_blank" rel="noopener noreferrer" className="social-icon github" aria-label="GitHub"><SiGithub size={20} /></a>
+                  <a href="https://linkedin.com/in/victorkaue" target="_blank" rel="noopener noreferrer" className="social-icon linkedin" aria-label="LinkedIn"><FaLinkedin size={20} /></a>
                   <a href="mailto:kaue.alves.pg@gmail.com" className="social-icon email" aria-label="Email"><FiMail size={20} /></a>
                 </div>
               </Reveal>

@@ -1,7 +1,8 @@
 ﻿import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { FaWhatsapp } from 'react-icons/fa';
-import { FiFileText, FiGithub, FiLinkedin, FiMail, FiMessageSquare, FiSend, FiUser } from 'react-icons/fi';
+import { FaLinkedin } from 'react-icons/fa6';
+import { FiFileText, FiMail, FiMessageSquare, FiSend, FiUser } from 'react-icons/fi';
+import { SiGithub, SiWhatsapp } from 'react-icons/si';
 import { Button } from '../../components/ui/Button/Button';
 import { PageHero } from '../../components/ui/PageHero/PageHero';
 import { socialLinks } from '../../data/social';
@@ -53,9 +54,9 @@ export default function Contato() {
 
   const socialIconMap = {
     mail: FiMail,
-    linkedin: FiLinkedin,
-    github: FiGithub,
-    whatsapp: FaWhatsapp,
+    linkedin: FaLinkedin,
+    github: SiGithub,
+    whatsapp: SiWhatsapp,
   } as const;
 
   return (

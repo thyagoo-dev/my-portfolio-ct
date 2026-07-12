@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
-import { FaWhatsapp } from 'react-icons/fa';
-import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
+import { FaLinkedin } from 'react-icons/fa6';
+import { FiMail } from 'react-icons/fi';
+import { SiGithub, SiWhatsapp } from 'react-icons/si';
 import { Link } from 'react-router-dom';
 import { navLinks, socialLinks } from '../../../data/social';
 import './Footer.css';
@@ -11,9 +12,9 @@ export function Footer() {
 
   const socialIconMap = {
     mail: FiMail,
-    linkedin: FiLinkedin,
-    github: FiGithub,
-    whatsapp: FaWhatsapp,
+    linkedin: FaLinkedin,
+    github: SiGithub,
+    whatsapp: SiWhatsapp,
   } as const;
 
   const navKeyByPath = {

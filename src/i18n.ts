@@ -22,7 +22,7 @@ const resources = {
       hero: {
         role: 'Developer',
         tech: 'Full Stack',
-        subtech: 'APIs & Django',
+        subtech: 'From Idea to Deploy',
         description:
           'Focus on performance and maintenance. I deliver reliable software for critical processes, from business rules to production deployment.',
         cta: 'Meet my journey',
@@ -50,6 +50,10 @@ const resources = {
           all: 'All',
           personal: 'Personal',
           real: 'Professional',
+        },
+        sections: {
+          personal: 'Personal Projects',
+          real: 'Professional Projects',
         },
         noFound: 'No projects found in this category.',
       },
@@ -190,7 +194,7 @@ const resources = {
       hero: {
         role: 'Desenvolvedor',
         tech: 'Full Stack',
-        subtech: 'APIs & Django',
+        subtech: 'Da Ideia ao Deploy',
         description:
           'Foco em performance e manutenção. Entrego software confiável para processos críticos, da regra de negócio ao deploy em produção.',
         cta: 'Conheça minha jornada',
@@ -218,6 +222,10 @@ const resources = {
           all: 'Todos',
           personal: 'Pessoais',
           real: 'Profissionais',
+        },
+        sections: {
+          personal: 'Projetos Pessoais',
+          real: 'Projetos Profissionais',
         },
         noFound: 'Nenhum projeto encontrado nessa categoria.',
       },
