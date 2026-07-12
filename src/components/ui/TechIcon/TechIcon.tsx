@@ -9,6 +9,7 @@ import {
   SiDjango, SiFastapi, SiPytorch, SiOpenai, SiPhp, SiLaravel, SiBootstrap,
   SiPostgresql, SiMysql, SiSqlite, SiMongodb, SiDocker, SiNginx, SiGit,
   SiGithub, SiGunicorn, SiNodedotjs, SiHtmx, SiDbeaver, SiBruno,
+  SiNextdotjs, SiNestjs,
 } from 'react-icons/si';
 
 interface TechEntry {
@@ -36,6 +37,9 @@ const TECH_ICONS: Record<string, TechEntry> = {
 
   // Frameworks / libs
   React: { Icon: SiReact, color: '#61DAFB' },
+  'Next.js': { Icon: SiNextdotjs, color: '#FFFFFF' },
+  'Nest.js': { Icon: SiNestjs, color: '#E0234E' },
+  'NestJS': { Icon: SiNestjs, color: '#E0234E' },
   Vite: { Icon: SiVite, color: '#8B7BFF' },
   Django: { Icon: SiDjango, color: '#44B78B' },
   FastAPI: { Icon: SiFastapi, color: '#009688' },

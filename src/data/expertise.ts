@@ -6,6 +6,8 @@ export const expertise: ExpertiseCategory[] = [
     items: [
       { name: 'Python', icon: 'devicon-python-plain colored', iconType: 'devicon' },
       { name: 'JavaScript', icon: 'devicon-javascript-plain colored', iconType: 'devicon' },
+      { name: 'TypeScript', icon: 'devicon-typescript-plain colored', iconType: 'devicon' },
+      { name: 'Node.js', icon: 'devicon-nodejs-plain colored', iconType: 'devicon' },
       { name: 'PHP', icon: 'devicon-php-plain colored', iconType: 'devicon' },
       { name: 'HTML5', icon: 'devicon-html5-plain colored', iconType: 'devicon' },
       { name: 'CSS3', icon: 'devicon-css3-plain colored', iconType: 'devicon' },
@@ -15,6 +17,9 @@ export const expertise: ExpertiseCategory[] = [
   {
     title: 'Frameworks/Bibliotecas',
     items: [
+      { name: 'React', icon: 'devicon-react-original colored', iconType: 'devicon' },
+      { name: 'Next.js', icon: 'devicon-nextjs-plain', iconType: 'devicon' },
+      { name: 'Nest.js', icon: 'devicon-nestjs-plain colored', iconType: 'devicon' },
       { name: 'Django', icon: 'devicon-django-plain colored', iconType: 'devicon' },
       { name: 'Laravel', icon: 'devicon-laravel-plain colored', iconType: 'devicon' },
       { name: 'Bootstrap', icon: 'devicon-bootstrap-plain colored', iconType: 'devicon' },

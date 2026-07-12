@@ -42,16 +42,35 @@ export interface Project {
   screenshots?: string[];
 }
 
-export interface Experience {
-  id: string;
+/** Um cargo (posição) — modelo estilo LinkedIn. */
+export interface ExperienceRole {
   title: string;
-  company: string;
+  /** Ex.: "jun 2026 - o momento" */
   period: string;
-  location: string;
-  type: 'current' | 'past';
-  icon: string;
-  achievements: string[];
+  /** Ex.: "2 meses", "1 ano 2 meses" */
+  duration?: string;
+  /** "Tempo integral" | "Freelance" | "Autônomo" | "Estágio" | "Temporário" — usado em grupos de 1 cargo. */
+  employmentType?: string;
+  /** Cidade/estado — usado em grupos de 1 cargo. */
+  location?: string;
+  /** "Remoto" | "Híbrido" | "Presencial" */
+  workMode?: string;
   description?: string;
+  activities?: string[];
+  skills?: string[];
+}
+
+/** Empresa agrupando um ou mais cargos (estilo LinkedIn). */
+export interface ExperienceGroup {
+  id: string;
+  company: string;
+  /** Caminho do logo em /images/... — sem logo cai no monograma. */
+  logo?: string;
+  /** Meta a nível de empresa (exibido quando há vários cargos). */
+  employmentType?: string;
+  totalDuration?: string;
+  location?: string;
+  roles: ExperienceRole[];
 }
 
 export interface Education {

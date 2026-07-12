@@ -53,6 +53,16 @@
     will-change: transform;
 }
 
+/* linha de cima: esquerda -> direita (sentido normal, -50%) */
+.marquee-track--ltr {
+    animation-direction: normal;
+}
+
+/* linha de baixo: direita -> esquerda (sentido inverso) */
+.marquee-track--rtl {
+    animation-direction: reverse;
+}
+
 /* pausa ao passar o mouse */
 .marquee-row:hover .marquee-track {
     animation-play-state: paused;
