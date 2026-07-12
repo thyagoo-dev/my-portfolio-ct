@@ -87,9 +87,8 @@ export interface ExpertiseCategory {
 }
 
 export interface ExpertiseItem {
+  /** Nome da tecnologia — o ícone é resolvido por nome em TechIcon (TECH_ICONS). */
   name: string;
-  icon: string;
-  iconType: 'devicon' | 'lucide' | 'svg';
 }
 
 export interface Certificate {
@@ -112,9 +111,9 @@ export interface Service {
 export interface SocialLink {
   name: string;
   url: string;
+  /** Chave do ícone react-icons mapeada nos consumidores (ex.: Footer). */
   icon: string;
   detail: string;
-  iconType: 'react' | 'lucide' | 'bootstrap';
 }
 
 export interface ContactFormData {

@@ -7,6 +7,38 @@ Formato de cada entrada: data · contexto · decisão · alternativas · consequ
 
 ---
 
+## ADR-0006 — Conteúdo de `src/data/` em PT-BR fixo (i18n cobre só a UI)
+
+- **Data:** 2026-07-12
+- **Contexto:** O i18next traduz a UI (navegação, heros, formulários), mas o
+  conteúdo em `src/data/` (experiências, expertise, descrições de projetos) é
+  texto PT-BR hard-coded. Ao trocar para EN, esse conteúdo permanece em PT.
+- **Decisão:** Manter o conteúdo de dados apenas em PT-BR. O público-alvo do
+  portfólio é brasileiro; duplicar todo o conteúdo em EN custaria manutenção
+  contínua sem retorno claro.
+- **Alternativas consideradas:** campos `{ pt, en }` nos tipos de dados;
+  arquivos de dados por idioma; mover conteúdo para chaves i18n.
+- **Consequências:** Página em EN fica híbrida (chrome em EN, conteúdo em PT).
+  Se o público internacional crescer, migrar os tipos de dados para campos
+  bilíngues é o caminho.
+
+## ADR-0005 — Canvas 2D + react-icons no lugar de three.js/R3F e devicon
+
+- **Data:** 2026-07-12 (registro; decisão vigente no código)
+- **Contexto:** O background 3D do Hero (three/@react-three/fiber/drei) pesava
+  ~1 MB de bundle WebGL, e o font-icon devicon somava ~1,5 MB para exibir
+  ícones de tecnologia.
+- **Decisão:** Reescrever o background como Canvas 2D
+  (`components/ui/FloatingLines`) com o mesmo visual, e resolver ícones de
+  tecnologia por nome via react-icons (Simple Icons/Feather) no mapa
+  `TECH_ICONS` (`components/ui/TechIcon`). Dependências three/R3F, devicon e
+  lucide-react removidas do `package.json`.
+- **Alternativas consideradas:** manter WebGL com lazy-load; sprite SVG próprio;
+  CDN devicon (dependência externa em runtime).
+- **Consequências:** ~2,5 MB a menos de bundle e zero CDN em runtime; novas
+  tecnologias exigem registrar o ícone no mapa `TECH_ICONS`. Atualiza o stack
+  descrito no ADR-0001.
+
 ## ADR-0004 — Contato via deep-link de WhatsApp (sem e-mail server-side)
 
 - **Data:** 2026-07-11 (registro; decisão vigente no código)

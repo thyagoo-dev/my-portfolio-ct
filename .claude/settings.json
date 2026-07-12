@@ -8,7 +8,8 @@
       "Bash(node cdp-shot.mjs)",
       "Bash(sed -i 's/off\\\\.result\\\\.value/off.result.result.value/; s/chk\\\\.result\\\\.value/chk.result.result.value/' cdp-shot.mjs)",
       "Bash(node cdp-count.mjs)",
-      "Bash(node cdp-overflow.mjs)"
+      "Bash(node cdp-overflow.mjs)",
+      "Bash(npm uninstall *)"
     ]
   }
 }
