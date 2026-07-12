@@ -176,12 +176,12 @@ export default function Home() {
             <p className="section-subtitle">{t('home.featuredSubtitle')}</p>
           </div>
 
-          <div className="projects-carousel-container">
-            <div className="projects-pro-list">
-              {featuredProjects.map((project, i) => (
-                <Reveal key={project.id} delay={i * 0.15} width="100%" height="100%" className="project-carousel-item">
+          <div className="projects-marquee">
+            <div className="projects-marquee-track">
+              {[...featuredProjects, ...featuredProjects].map((project, i) => (
+                <div key={`${project.id}-${i}`} className="projects-marquee-item">
                   <ProjectCard project={project} withReveal={false} />
-                </Reveal>
+                </div>
               ))}
             </div>
           </div>
