@@ -21,7 +21,7 @@ const resources = {
       },
       hero: {
         role: 'Developer',
-        tech: 'Python',
+        tech: 'Full Stack',
         subtech: 'APIs & Django',
         description:
           'Focus on performance and maintenance. I deliver reliable software for critical processes, from business rules to production deployment.',
@@ -189,7 +189,7 @@ const resources = {
       },
       hero: {
         role: 'Desenvolvedor',
-        tech: 'Python',
+        tech: 'Full Stack',
         subtech: 'APIs & Django',
         description:
           'Foco em performance e manutenção. Entrego software confiável para processos críticos, da regra de negócio ao deploy em produção.',
