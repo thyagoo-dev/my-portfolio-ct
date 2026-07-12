@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FiBookOpen, FiBriefcase, FiCalendar, FiChevronRight, FiCode, FiGithub, FiLinkedin, FiMail, FiMapPin, FiTarget } from 'react-icons/fi';
 import { Button } from '../../components/ui/Button/Button';
+import { TechGlyph } from '../../components/ui/TechIcon/TechIcon';
 import { TechMarquee } from '../../components/ui/TechMarquee/TechMarquee';
 import { education } from '../../data/education';
 import { experiences } from '../../data/experiences';
@@ -34,7 +35,10 @@ function ExperienceBody({ role }: { role: ExperienceRole }) {
       {role.skills && role.skills.length > 0 && (
         <div className="li-exp-skills">
           {role.skills.map((s) => (
-            <span className="li-exp-skill" key={s}>{s}</span>
+            <span className="li-exp-skill" key={s}>
+              <TechGlyph name={s} size={13} className="li-exp-skill-icon" />
+              {s}
+            </span>
           ))}
         </div>
       )}

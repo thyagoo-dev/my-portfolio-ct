@@ -3,13 +3,17 @@ import type { IconType } from 'react-icons';
 import {
   FiCpu, FiZap, FiSmartphone, FiCloud, FiSearch, FiCalendar,
   FiPackage, FiLayout, FiCode, FiTrendingUp, FiGlobe, FiLayers, FiBarChart2,
+  FiPenTool, FiClipboard, FiMessageCircle, FiEdit3, FiDatabase, FiRefreshCw,
+  FiShare2, FiBookOpen, FiPlayCircle,
 } from 'react-icons/fi';
+import { FaAws } from 'react-icons/fa';
 import {
   SiPython, SiJavascript, SiTypescript, SiReact, SiVite, SiCss, SiHtml5,
   SiDjango, SiFastapi, SiPytorch, SiOpenai, SiPhp, SiLaravel, SiBootstrap,
   SiPostgresql, SiMysql, SiSqlite, SiMongodb, SiDocker, SiNginx, SiGit,
   SiGithub, SiGunicorn, SiNodedotjs, SiHtmx, SiDbeaver, SiBruno,
-  SiNextdotjs, SiNestjs,
+  SiNextdotjs, SiNestjs, SiTailwindcss, SiShadcnui, SiFramer, SiRedis,
+  SiJest, SiSupabase, SiFlutter, SiLinux, SiSocketdotio,
 } from 'react-icons/si';
 
 interface TechEntry {
@@ -47,12 +51,23 @@ const TECH_ICONS: Record<string, TechEntry> = {
   Bootstrap: { Icon: SiBootstrap, color: '#8B5CF6' },
   PyTorch: { Icon: SiPytorch, color: '#EE4C2C' },
   Whisper: { Icon: SiOpenai, color: '#FFFFFF' },
+  'Tailwind CSS': { Icon: SiTailwindcss, color: '#38BDF8' },
+  Tailwind: { Icon: SiTailwindcss, color: '#38BDF8' },
+  'Shadcn/UI': { Icon: SiShadcnui, color: '#FFFFFF' },
+  'shadcn/ui': { Icon: SiShadcnui, color: '#FFFFFF' },
+  'Framer Motion': { Icon: SiFramer, color: '#C77DFF' },
+  Jest: { Icon: SiJest, color: '#E14C4C' },
+  Playwright: { Icon: FiPlayCircle, color: '#2EAD33' },
+  Flutter: { Icon: SiFlutter, color: '#47C5FB' },
+  WebSockets: { Icon: SiSocketdotio, color: '#FFFFFF' },
 
   // Bancos de dados
   PostgreSQL: { Icon: SiPostgresql, color: '#4F86E6' },
   MySQL: { Icon: SiMysql, color: '#00758F' },
   SQLite: { Icon: SiSqlite, color: '#4FB8E8' },
   MongoDB: { Icon: SiMongodb, color: '#47A248' },
+  Redis: { Icon: SiRedis, color: '#FF4438' },
+  Supabase: { Icon: SiSupabase, color: '#3ECF8E' },
 
   // DevOps / ferramentas
   Docker: { Icon: SiDocker, color: '#2496ED' },
@@ -61,6 +76,9 @@ const TECH_ICONS: Record<string, TechEntry> = {
   GitHub: { Icon: SiGithub, color: '#FFFFFF' },
   'GitHub Actions': { Icon: SiGithub, color: '#FFFFFF' },
   Gunicorn: { Icon: SiGunicorn, color: '#5F9E52' },
+  AWS: { Icon: FaAws, color: '#FF9900' },
+  Linux: { Icon: SiLinux, color: '#FCC624' },
+  'CI/CD': { Icon: FiRefreshCw, color: '#4F86E6' },
   Node: { Icon: SiNodedotjs, color: '#5FA04E' },
   'Node.js': { Icon: SiNodedotjs, color: '#5FA04E' },
   'VS Code': { Icon: FiCode, color: '#3B9EFF' },
@@ -84,6 +102,18 @@ const TECH_ICONS: Record<string, TechEntry> = {
   'Sistema Web': { Icon: FiGlobe },
   'Design System': { Icon: FiLayers },
   Escalabilidade: { Icon: FiBarChart2 },
+  'Machine Learning': { Icon: FiCpu },
+  'Inteligência Artificial': { Icon: FiCpu },
+  'UX/UI': { Icon: FiLayout },
+  Branding: { Icon: FiPenTool },
+  'Marketing Digital': { Icon: FiTrendingUp },
+  'Gestão de Projetos': { Icon: FiClipboard },
+  Pesquisa: { Icon: FiBookOpen },
+  'Divulgação Científica': { Icon: FiShare2 },
+  'Sistematização de Dados': { Icon: FiDatabase },
+  'Banco de Dados': { Icon: FiDatabase },
+  Comunicação: { Icon: FiMessageCircle },
+  'Produção de Conteúdo': { Icon: FiEdit3 },
 };
 
 export function resolveTechIcon(name: string): TechEntry | undefined {
