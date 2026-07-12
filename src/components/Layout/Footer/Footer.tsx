@@ -70,11 +70,7 @@ export function Footer() {
           </div>
 
           <div className="footer-contact">
-            <p className="footer-label">Fale Comigo</p>
-            <div className="availability-status">
-              <span className="status-dot"></span>
-              <p>Disponível para novos projetos</p>
-            </div>
+            <p className="footer-label">Ficou na dúvida? Fale Comigo:</p>
             <a href="mailto:kaue.alves.pg@gmail.com" className="footer-email-cta">
               kaue.alves.pg@gmail.com
             </a>

@@ -110,49 +110,247 @@
     flex-shrink: 0;
 }
 
-.services-approach {
+/* ========== "Como eu trabalho" — scroll horizontal fixado ========== */
+.approach-pin {
+    position: relative;
+}
+
+.approach-sticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.5rem;
+    overflow: hidden;
+}
+
+.approach-head {
+    text-align: center;
+}
+
+.approach-viewport {
+    width: 100%;
+    overflow: hidden;
+    padding: 0 clamp(1.25rem, 8vw, 10rem);
+}
+
+.approach-track {
+    display: flex;
+    gap: 1.75rem;
+    width: max-content;
+    will-change: transform;
+}
+
+.approach-panel {
+    position: relative;
+    flex: 0 0 auto;
+    width: clamp(300px, 44vw, 640px);
+    min-height: 340px;
+    padding: 2.75rem;
+    border-radius: 1.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: linear-gradient(155deg, #161616, #0a0a0a);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.approach-panel::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 0% 0%, rgba(255, 122, 0, 0.08), transparent 55%);
+    pointer-events: none;
+}
+
+.approach-num {
+    display: block;
+    font-size: 3.25rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 1rem;
+    color: transparent;
+    -webkit-text-stroke: 1.5px rgba(255, 122, 0, 0.6);
+}
+
+.approach-panel h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.approach-panel p {
+    color: var(--text-muted-color);
+    line-height: 1.65;
+}
+
+/* ========== Faixa de tecnologias ========== */
+.services-tech {
     padding-top: 2rem;
 }
 
-.approach-content {
-    padding: 2rem;
-    border-radius: 1.75rem;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    background: linear-gradient(140deg, rgba(255, 122, 0, 0.08), rgba(255, 122, 0, 0.03) 25%, rgba(255, 255, 255, 0.02) 70%);
-}
-
-.steps-v2 {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 1rem;
+.services-tech .tech-marquee-section {
     margin-top: 1.5rem;
 }
 
-.step-v2 {
-    padding: 1.1rem;
+/* ========== Depoimentos ========== */
+.testimonials-grid {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.4rem;
+}
+
+.testimonial-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 1.75rem;
+    border-radius: var(--radius-xl);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: linear-gradient(155deg, #121212, #0a0a0a);
+}
+
+.testimonial-card blockquote {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--text-color);
+}
+
+.testimonial-card figcaption {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+}
+
+.testimonial-avatar {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--color-primary-400);
+    background: rgba(255, 122, 0, 0.12);
+    border: 1px solid rgba(255, 122, 0, 0.28);
+}
+
+.testimonial-meta {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+}
+
+.testimonial-meta strong {
+    font-size: 0.95rem;
+}
+
+.testimonial-meta small {
+    color: var(--text-muted-color);
+    font-size: 0.82rem;
+}
+
+/* ========== FAQ ========== */
+.faq-list {
+    margin-top: 2rem;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.faq-item {
     border-radius: var(--radius-lg);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    background: rgba(8, 8, 8, 0.62);
+    background: rgba(10, 10, 10, 0.6);
+    overflow: hidden;
 }
 
-.step-num {
-    display: inline-flex;
-    margin-bottom: 0.6rem;
-    padding: 0.2rem 0.55rem;
-    border-radius: var(--radius-full);
-    color: var(--color-primary-400);
-    background: rgba(255, 122, 0, 0.1);
-    font-size: 0.72rem;
-    font-weight: 700;
+.faq-item.open {
+    border-color: rgba(255, 122, 0, 0.35);
 }
 
-.step-v2 h4 {
-    margin-bottom: 0.45rem;
+.faq-question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.15rem 1.35rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 600;
 }
 
-.step-v2 p {
-    font-size: 0.9rem;
-    line-height: 1.6;
+.faq-icon {
+    flex-shrink: 0;
+    color: var(--color-primary-500);
+    transition: transform var(--transition-normal);
+}
+
+.faq-item.open .faq-icon {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows var(--transition-normal);
+}
+
+.faq-item.open .faq-answer {
+    grid-template-rows: 1fr;
+}
+
+.faq-answer > p {
+    overflow: hidden;
+    margin: 0;
+    padding: 0 1.35rem;
+    color: var(--text-muted-color);
+    line-height: 1.65;
+}
+
+.faq-item.open .faq-answer > p {
+    padding-bottom: 1.25rem;
+}
+
+/* ========== CTA final ========== */
+.cta-panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    padding: 2.5rem;
+    border-radius: 1.75rem;
+    border: 1px solid rgba(255, 122, 0, 0.28);
+    background: linear-gradient(140deg, rgba(255, 122, 0, 0.14), rgba(255, 122, 0, 0.04) 40%, rgba(255, 255, 255, 0.02) 80%);
+}
+
+.cta-copy h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-bottom: 0.5rem;
+}
+
+.cta-copy p {
+    color: var(--text-muted-color);
+    max-width: 46ch;
 }
 
 @media (max-width: 1280px) {
@@ -160,8 +358,8 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .steps-v2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+    .testimonials-grid {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -170,21 +368,43 @@
         padding-top: 6.4rem;
     }
 
-    .services-grid {
+    .services-grid,
+    .testimonials-grid {
         grid-template-columns: 1fr;
     }
 
-    .approach-content {
-        padding: 1.25rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .step-v2 {
-        padding: 0.95rem;
+    /* Mobile: troca o pin por swipe horizontal nativo com snap. */
+    .approach-pin {
+        height: auto !important;
     }
 
-    .steps-v2 {
-        grid-template-columns: 1fr;
+    .approach-sticky {
+        position: static;
+        height: auto;
+        padding: 1rem 0;
+    }
+
+    .approach-viewport {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding: 0.5rem 1.25rem 1.25rem;
+    }
+
+    .approach-viewport::-webkit-scrollbar {
+        display: none;
+    }
+
+    .approach-track {
+        transform: none !important;
+    }
+
+    .approach-panel {
+        scroll-snap-align: center;
+        min-height: 260px;
+    }
+
+    .cta-panel {
+        padding: 1.75rem;
     }
 }

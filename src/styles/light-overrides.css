@@ -119,13 +119,28 @@ html.light .contact-card.github svg { background: rgba(0, 0, 0, 0.06); color: #2
 html.light .contact-card.github:hover { border-color: #24292f; }
 html.light .contact-card.github:hover svg { background: #24292f; color: #fff; }
 
-/* ---- Serviços: passos + approach ---- */
-html.light .step-v2 {
+/* ---- Serviços: approach horizontal, depoimentos, FAQ, CTA ---- */
+html.light .approach-panel {
     background: #ffffff;
     border-color: rgba(0, 0, 0, 0.08);
     box-shadow: var(--shadow-sm);
 }
-html.light .approach-content { border-color: rgba(0, 0, 0, 0.08); }
+
+html.light .testimonial-card {
+    background: #ffffff;
+    border-color: rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-sm);
+}
+
+html.light .faq-item {
+    background: #ffffff;
+    border-color: rgba(0, 0, 0, 0.08);
+}
+
+html.light .cta-panel {
+    border-color: rgba(255, 122, 0, 0.32);
+    background: linear-gradient(140deg, rgba(255, 122, 0, 0.12), rgba(255, 122, 0, 0.03) 45%, rgba(0, 0, 0, 0.02) 85%);
+}
 
 /* ---- Certificados ---- */
 html.light .cert-filters,
