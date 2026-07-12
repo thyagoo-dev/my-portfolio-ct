@@ -21,6 +21,7 @@ import { Reveal } from '../../components/ui/Reveal/Reveal';
 import { ProjectCard } from '../../components/ui/ProjectCard/ProjectCard';
 import { Counter } from '../../components/ui/Counter/Counter';
 import { TechMarquee } from '../../components/ui/TechMarquee/TechMarquee';
+import { FloatingLines } from '../../components/ui/FloatingLines/FloatingLines';
 import './Home.css';
 
 export default function Home() {
@@ -48,6 +49,7 @@ export default function Home() {
 
       {/* ========== HERO SECTION (PRO MAX) ========== */}
       <section id="inicio" className="hero">
+        <FloatingLines />
         <div className="container hero-container">
           <div className="hero-content">
             <motion.h1

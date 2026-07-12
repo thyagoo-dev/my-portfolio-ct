@@ -10,10 +10,6 @@ import { FirstVisitLoader } from './components/Layout/FirstVisitLoader/FirstVisi
 import { NavigationLoader } from './components/Layout/NavigationLoader/NavigationLoader';
 import './App.css';
 
-const FloatingLines = lazy(() =>
-  import('./components/ui/FloatingLines/FloatingLines').then(m => ({ default: m.FloatingLines }))
-);
-
 const Home = lazy(() => import('./pages/Home/Home'));
 const Sobre = lazy(() => import('./pages/Sobre/Sobre'));
 const Projetos = lazy(() => import('./pages/Projetos/Projetos'));
@@ -63,23 +59,11 @@ function AppRoutes() {
   );
 }
 
-function BackgroundFX() {
-  const location = useLocation();
-  // Fundo de linhas laranja só na Home; demais páginas ficam dark liso
-  if (location.pathname !== '/') return null;
-  return (
-    <Suspense fallback={null}>
-      <FloatingLines />
-    </Suspense>
-  );
-}
-
 export default function App() {
   return (
     <BrowserRouter>
       <FirstVisitLoader />
       <ScrollToTop />
-      <BackgroundFX />
       <Navbar />
       <AppRoutes />
       <Footer />
