@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import {
   FiArrowRight,
   FiMail,
@@ -16,6 +15,7 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { featuredProjects } from '../../data/projects';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
+import { useSeo } from '../../hooks/useSeo';
 import { Button } from '../../components/ui/Button/Button';
 import { Reveal } from '../../components/ui/Reveal/Reveal';
 import { ProjectCard } from '../../components/ui/ProjectCard/ProjectCard';
@@ -28,9 +28,11 @@ export default function Home() {
   const { t } = useTranslation();
   useScrollReveal();
 
-  useEffect(() => {
-    document.title = 'Victor Kauê — Desenvolvedor Full Stack';
-  }, []);
+  useSeo({
+    title: t('seo.homeTitle'),
+    description: t('seo.homeDesc'),
+    path: '/',
+  });
 
   const results = [
     { value: 30, suffix: '%', label: t('home.result1') },
@@ -96,7 +98,7 @@ export default function Home() {
               <div className="photo-ring" />
               <div className="photo-ring inner" />
               <div className="glass-overlay" />
-              <img src="/images/eu/victorkaue.webp" alt="Victor Kauê" className="hero-image" fetchPriority="high" />
+              <img src="/images/eu/victorkaue.webp" alt="Victor Kauê" className="hero-image" width={1024} height={1536} fetchPriority="high" />
             </div>
           </div>
         </div>

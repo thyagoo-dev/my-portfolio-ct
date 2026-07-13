@@ -15,6 +15,26 @@
   justify-content: center;
   min-height: 60vh;
 }
+
+/* Arc do loader — cor (--loader-accent) muda por página, definida em App.tsx */
+.nav-loader-arc {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, transparent 0%, var(--loader-accent, #ff7a00) 100%);
+  -webkit-mask: radial-gradient(circle, transparent 56%, #000 57%);
+  mask: radial-gradient(circle, transparent 56%, #000 57%);
+  animation: nav-loader-spin 0.9s linear infinite;
+  filter: drop-shadow(0 0 10px color-mix(in srgb, var(--loader-accent, #ff7a00) 45%, transparent));
+}
+
+@keyframes nav-loader-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-loader-arc { animation: none; }
+}
 #root {
     min-height: 100vh;
     display: flex;

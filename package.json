@@ -5,13 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && node scripts/prerender-meta.mjs",
+    "prerender": "node scripts/prerender-meta.mjs",
     "preview": "vite preview",
     "projects:enrich": "node scripts/enrich-projects.mjs"
   },
   "dependencies": {
-    "@fontsource-variable/dm-sans": "^5.2.8",
-    "@fontsource-variable/syne": "^5.2.7",
     "@tailwindcss/vite": "^4.2.2",
     "framer-motion": "^12.38.0",
     "i18next": "^26.0.5",

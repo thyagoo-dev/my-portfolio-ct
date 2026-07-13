@@ -1,13 +1,23 @@
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import {FiArrowLeft,FiArrowRight,FiCheckCircle,FiCpu,FiDatabase,FiExternalLink,FiGithub,FiLayout,FiTarget,FiZap,FiList,FiInfo} from 'react-icons/fi';
+import {
+  FiArrowLeft, FiArrowRight, FiCheckCircle, FiCpu, FiDatabase,
+  FiExternalLink, FiGithub, FiLayout,
+} from 'react-icons/fi';
 import { Link, useParams } from 'react-router-dom';
 import { Button } from '../../components/ui/Button/Button';
-import { TechIcon, TechGlyph } from '../../components/ui/TechIcon/TechIcon';
+import { TechGlyph } from '../../components/ui/TechIcon/TechIcon';
 import { projects } from '../../data/projects';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
+import { useSeo } from '../../hooks/useSeo';
 import { ProjectCarousel } from '../../components/ui/ProjectCarousel/ProjectCarousel';
 import './ProjetoDetalhe.css';
+
+/** Iniciais do título para o monograma (fallback quando não há screenshot/logo). */
+function projectInitials(title: string): string {
+  const words = title.replace(/[—–-].*$/, '').trim().split(/\s+/).filter(Boolean);
+  return (words.slice(0, 2).map((w) => w[0]).join('') || '?').toUpperCase();
+}
 
 export default function ProjetoDetalhe() {
   const { t } = useTranslation();
@@ -15,19 +25,24 @@ export default function ProjetoDetalhe() {
   const project = projects.find((p) => p.id === id || p.slug === id);
   useScrollReveal();
 
+  useSeo({
+    title: project ? `${project.title} — Victor Kauê` : t('seo.notFoundTitle'),
+    description: project ? (project.shortDescription || project.description) : t('seo.notFoundDesc'),
+    path: `/projetos/${id ?? ''}`,
+    image: project?.image,
+    noindex: !project,
+  });
+
   useEffect(() => {
-    document.title = project ? `${project.title} - Victor Kauê` : t('projectDetail.notFoundTitle');
     window.scrollTo(0, 0);
-  }, [project, t]);
+  }, [id]);
 
   if (!project) {
     return (
-      <main style={{ paddingTop: '10rem', textAlign: 'center' }}>
-        <div className="container">
+      <main className="page-projeto-detalhe">
+        <div className="container pd-notfound">
           <h1>{t('projectDetail.notFoundTitle')}</h1>
-          <p style={{ margin: '1rem 0 2rem', color: 'var(--text-muted-color)' }}>
-            {t('projectDetail.notFoundText')}
-          </p>
+          <p>{t('projectDetail.notFoundText')}</p>
           <Button href="/projetos" variant="secondary">
             <FiArrowLeft size={18} />
             {t('projectDetail.back')}
@@ -38,151 +53,143 @@ export default function ProjetoDetalhe() {
   }
 
   const detailed = project.detailed_info;
-  const projectTitle = project.title || 'Projeto em atualizacao';
-  const projectDescription =
-    project.description || project.shortDescription || 'Descrição em atualização.';
-  const projectTechnologies =
-    Array.isArray(project.technologies) && project.technologies.length > 0
-      ? project.technologies
-      : project.stack && project.stack.length > 0
-      ? project.stack
-      : ['Stack em atualizacao'];
-  const projectGithub = project.github || 'https://github.com/Victorkaue333';
-  const carouselImages = project.screenshots && project.screenshots.length > 0 
-    ? project.screenshots 
-    : [project.image || '/images/placeholders/project-placeholder.svg'];
+  const title = project.title || 'Projeto em atualização';
+  const lead = project.shortDescription || project.description || 'Descrição em atualização.';
+  const techs = project.technologies?.length ? project.technologies : project.stack ?? [];
+  const heroTechs = techs.slice(0, 6);
+  const extraTechs = Math.max(0, techs.length - heroTechs.length);
+  const github = project.github || 'https://github.com/Victorkaue333';
+
+  const hasShots = !!project.screenshots && project.screenshots.length > 0;
+  const isPlaceholder = !project.image || project.image.includes('placeholder');
+
+  const story = detailed
+    ? [
+        { key: 'challenge', label: t('projectDetail.challenge'), text: detailed.desafio },
+        { key: 'solution', label: t('projectDetail.solution'), text: detailed.solucao },
+        { key: 'impact', label: t('projectDetail.impact'), text: detailed.impacto },
+      ]
+    : [];
 
   return (
     <main className="page-projeto-detalhe">
-      <section className="projeto-hero">
-        <div className="container">
-          <Link to="/projetos" className="back-link">
-            <FiArrowLeft size={18} />
-            {t('projectDetail.back')}
-          </Link>
+      <div className="container">
+        <Link to="/projetos" className="back-link">
+          <FiArrowLeft size={18} />
+          {t('projectDetail.back')}
+        </Link>
 
-          <div className="projeto-header">
-            <div className="projeto-header-text">
-              <span className="project-category-badge">
-                {project.category === 'pessoal' ? t('projectDetail.categoryPersonal') : t('projectDetail.categoryReal')}
-              </span>
-              <h1>{projectTitle}</h1>
-              <p className="projeto-desc">{projectDescription}</p>
+        {/* ===== HERO ===== */}
+        <section className="pd-hero">
+          <div className="pd-hero-text">
+            <span className="project-category-badge">
+              {project.category === 'pessoal'
+                ? t('projectDetail.categoryPersonal')
+                : t('projectDetail.categoryReal')}
+            </span>
+            <h1>{title}</h1>
+            <p className="pd-lead">{lead}</p>
 
-              <div className="project-tags">
-                {projectTechnologies.map((tech) => (
-                  <TechIcon key={tech} name={tech} size={24} className="project-tag-icon" />
-                ))}
-              </div>
-
-              <div className="projeto-actions">
-                <Button href={projectGithub} target="_blank" rel="noopener noreferrer" variant="secondary">
-                  <FiGithub size={18} />
-                  {t('projectDetail.viewCode')}
-                </Button>
-                {project.online && (
-                  <Button href={project.online} target="_blank" rel="noopener noreferrer" variant="primary">
-                    <FiExternalLink size={18} />
-                    {t('projectDetail.viewOnline')}
-                  </Button>
-                )}
-              </div>
+            <div className="pd-stack">
+              {heroTechs.map((tech) => (
+                <span className="pd-stack-chip" key={tech}>
+                  <TechGlyph name={tech} size={18} />
+                  <span>{tech}</span>
+                </span>
+              ))}
+              {extraTechs > 0 && <span className="pd-stack-chip pd-stack-more">+{extraTechs}</span>}
             </div>
-            <div className="projeto-header-image">
-              <div className="image-glow" />
-              <ProjectCarousel images={carouselImages} title={projectTitle} />
+
+            <div className="pd-actions">
+              <Button href={github} target="_blank" rel="noopener noreferrer" variant="secondary">
+                <FiGithub size={18} />
+                {t('projectDetail.viewCode')}
+              </Button>
+              {project.online && (
+                <Button href={project.online} target="_blank" rel="noopener noreferrer" variant="primary">
+                  <FiExternalLink size={18} />
+                  {t('projectDetail.viewOnline')}
+                </Button>
+              )}
             </div>
           </div>
+        </section>
 
-          {detailed && (
-            <div className="projeto-extended-info">
-              <div className="info-section reveal-on-scroll">
-                <h2 className="detail-section-title"><FiInfo size={20} /> {t('projectDetail.detailedDesc')}</h2>
-                <p className="detail-text">{detailed.solucao}</p>
+        {/* ===== SHOWCASE (visual full-width, entre texto e história) ===== */}
+        <section className="pd-showcase reveal-on-scroll">
+          <div className="pd-showcase-inner">
+            <div className="pd-visual-glow" aria-hidden="true" />
+            {hasShots ? (
+              <ProjectCarousel images={project.screenshots!} title={title} />
+            ) : isPlaceholder ? (
+              <div className="pd-monogram" aria-hidden="true">{projectInitials(title)}</div>
+            ) : (
+              <div className="pd-logo-frame">
+                <img src={project.image} alt={title} loading="lazy" />
               </div>
+            )}
+          </div>
+        </section>
 
-              {project.features && project.features.length > 0 && (
-                 <div className="info-section reveal-on-scroll">
-                    <h2 className="detail-section-title"><FiList size={20} /> {t('projectDetail.features')}</h2>
-                    <div className="features-list-grid">
-                        {project.features.map((feature, idx) => (
-                            <div key={idx} className="feature-item-detail">
-                                <FiCheckCircle size={16} className="feature-check" />
-                                <span>{feature}</span>
-                            </div>
-                        ))}
+        {detailed && (
+          <>
+            {/* ===== HISTÓRIA (Desafio → Solução → Impacto) ===== */}
+            <section className="pd-story reveal-on-scroll">
+              {story.map((s) => (
+                <article
+                  key={s.key}
+                  className={`pd-story-item ${s.key === 'impact' ? 'is-impact' : ''}`}
+                >
+                  <span className="pd-eyebrow">{s.label}</span>
+                  <p className="pd-story-text">{s.text}</p>
+                </article>
+              ))}
+            </section>
+
+            {/* ===== FEATURES ===== */}
+            {project.features && project.features.length > 0 && (
+              <section className="pd-section reveal-on-scroll">
+                <h2 className="pd-section-title">{t('projectDetail.features')}</h2>
+                <div className="features-list-grid">
+                  {project.features.map((feature, idx) => (
+                    <div key={idx} className="feature-item-detail">
+                      <FiCheckCircle size={16} className="feature-check" />
+                      <span>{feature}</span>
                     </div>
+                  ))}
                 </div>
-              )}
+              </section>
+            )}
 
-              <div className="info-section reveal-on-scroll">
-                <h2 className="detail-section-title">{t('projectDetail.projectDetails')}</h2>
-                <div className="details-grid-custom">
-                  <div className="detail-card-item">
-                    <div className="card-icon">
-                      <FiTarget size={20} />
-                    </div>
-                    <div className="card-text">
-                      <h4 className="card-title-main">{t('projectDetail.challenge')}</h4>
-                      <p>{detailed.desafio}</p>
-                    </div>
-                  </div>
-                  <div className="detail-card-item">
-                    <div className="card-icon">
-                      <FiZap size={20} />
-                    </div>
-                    <div className="card-text">
-                      <h4 className="card-title-main">{t('projectDetail.solution')}</h4>
-                      <p>{detailed.solucao}</p>
-                    </div>
-                  </div>
-                  <div className="detail-card-item">
-                    <div className="card-icon">
-                      <FiCheckCircle size={20} />
-                    </div>
-                    <div className="card-text">
-                      <h4 className="card-title-main">{t('projectDetail.impact')}</h4>
-                      <p>{detailed.impacto}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            {/* ===== SOB O CAPÔ (técnico, secundário) ===== */}
+            <section className="pd-tech-block reveal-on-scroll">
+              <h2 className="pd-section-title">{t('projectDetail.projectDetails')}</h2>
 
-              <div className="info-section architecture-section reveal-on-scroll">
-                <h2 className="detail-section-title">{t('projectDetail.architecture')}</h2>
+              <div className="pd-subsection">
+                <h3 className="pd-subtitle">{t('projectDetail.architecture')}</h3>
                 <div className="architecture-flow">
                   <div className="arch-node">
-                    <div className="node-icon">
-                      <FiLayout size={24} />
-                    </div>
+                    <div className="node-icon"><FiLayout size={24} /></div>
                     <span>{t('projectDetail.frontend')}</span>
                     <small>{detailed.arquitetura.frontend}</small>
                   </div>
-                  <div className="arch-arrow">
-                    <FiArrowRight size={24} />
-                  </div>
+                  <div className="arch-arrow"><FiArrowRight size={24} /></div>
                   <div className="arch-node">
-                    <div className="node-icon">
-                      <FiCpu size={24} />
-                    </div>
+                    <div className="node-icon"><FiCpu size={24} /></div>
                     <span>{t('projectDetail.apiBackend')}</span>
                     <small>{detailed.arquitetura.api}</small>
                   </div>
-                  <div className="arch-arrow">
-                    <FiArrowRight size={24} />
-                  </div>
+                  <div className="arch-arrow"><FiArrowRight size={24} /></div>
                   <div className="arch-node">
-                    <div className="node-icon">
-                      <FiDatabase size={24} />
-                    </div>
+                    <div className="node-icon"><FiDatabase size={24} /></div>
                     <span>{t('projectDetail.database')}</span>
                     <small>{detailed.arquitetura.banco}</small>
                   </div>
                 </div>
               </div>
 
-              <div className="info-section reveal-on-scroll">
-                <h2 className="detail-section-title">{t('projectDetail.stackDecisions')}</h2>
+              <div className="pd-subsection">
+                <h3 className="pd-subtitle">{t('projectDetail.stackDecisions')}</h3>
                 <div className="decisions-grid">
                   <div className="decision-item">
                     <span className="decision-label">{t('projectDetail.authLabel')}:</span> {detailed.decisoes.autenticacao}
@@ -199,8 +206,8 @@ export default function ProjetoDetalhe() {
                 </div>
               </div>
 
-              <div className="info-section reveal-on-scroll">
-                <h3 className="tech-section-subtitle">{t('projectDetail.techUsed')}</h3>
+              <div className="pd-subsection">
+                <h3 className="pd-subtitle">{t('projectDetail.techUsed')}</h3>
                 <div className="tech-v2-grid">
                   {detailed.tech_v2.map((tech) => (
                     <div className="tech-card-v2" key={tech.name}>
@@ -210,58 +217,24 @@ export default function ProjetoDetalhe() {
                   ))}
                 </div>
               </div>
-            </div>
+            </section>
+          </>
+        )}
+
+        <div className="pd-final-cta">
+          {project.online ? (
+            <Button href={project.online} target="_blank" rel="noopener noreferrer" variant="primary">
+              {t('projectDetail.accessFull')}
+              <FiExternalLink size={20} />
+            </Button>
+          ) : (
+            <Button href="/contato" variant="primary">
+              {t('projectDetail.talkAbout')}
+              <FiCheckCircle size={20} />
+            </Button>
           )}
-
-          {!detailed && project.summary && (
-            <div className="projeto-summary-fallback reveal-on-scroll">
-               <h2 className="detail-section-title"><FiInfo size={20} /> {t('projectDetail.summaryTitle')}</h2>
-               <div className="summary-cards-grid">
-                  <div className="summary-card">
-                    <span className="summary-label">{t('projectDetail.problem')}:</span>
-                    <p>{project.summary.problema}</p>
-                  </div>
-                  <div className="summary-card">
-                    <span className="summary-label">{t('projectDetail.solution')}:</span>
-                    <p>{project.summary.solucao}</p>
-                  </div>
-                  <div className="summary-card">
-                    <span className="summary-label">{t('projectDetail.stackLabel')}:</span>
-                    <p>{project.summary.stack}</p>
-                  </div>
-               </div>
-
-               {project.features && project.features.length > 0 && (
-                 <div className="info-section" style={{marginTop: '3rem'}}>
-                    <h3 className="tech-section-subtitle" style={{textAlign: 'left', marginBottom: '1.5rem'}}>{t('projectDetail.mainFeatures')}</h3>
-                    <div className="features-list-grid">
-                        {project.features.map((feature, idx) => (
-                            <div key={idx} className="feature-item-detail">
-                                <FiCheckCircle size={16} className="feature-check" />
-                                <span>{feature}</span>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-              )}
-            </div>
-          )}
-
-          <div className="final-project-action">
-            {project.online ? (
-              <Button href={project.online} target="_blank" rel="noopener noreferrer" variant="primary">
-                {t('projectDetail.accessFull')}
-                <FiExternalLink size={20} />
-              </Button>
-            ) : (
-              <Button href="/contato" variant="primary">
-                {t('projectDetail.talkAbout')}
-                <FiCheckCircle size={20} />
-              </Button>
-            )}
-          </div>
         </div>
-      </section>
+      </div>
     </main>
   );
 }

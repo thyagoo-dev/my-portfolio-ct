@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FiBookOpen, FiBriefcase, FiCalendar, FiChevronRight, FiCode, FiMail, FiMapPin, FiTarget } from 'react-icons/fi';
 import { FaLinkedin } from 'react-icons/fa6';
@@ -11,6 +11,7 @@ import { experiences } from '../../data/experiences';
 import { socialLinks } from '../../data/social';
 import { useLanguage } from '../../hooks/useLanguage';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
+import { useSeo } from '../../hooks/useSeo';
 import type { ExperienceRole } from '../../types';
 import './Sobre.css';
 
@@ -55,9 +56,11 @@ export default function Sobre() {
   const [githubStatsError, setGithubStatsError] = useState(false);
   useScrollReveal();
 
-  useEffect(() => {
-    document.title = 'Sobre - Victor Kauê';
-  }, []);
+  useSeo({
+    title: t('seo.aboutTitle'),
+    description: t('seo.aboutDesc'),
+    path: '/sobre',
+  });
 
   const menuItems = [
     { id: 'intro', label: t('about.title'), icon: <FiTarget size={16} /> },

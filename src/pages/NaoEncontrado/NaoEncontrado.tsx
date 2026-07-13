@@ -1,13 +1,19 @@
-import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { FiCompass } from 'react-icons/fi';
 import { Button } from '../../components/ui/Button/Button';
 import { PageHero } from '../../components/ui/PageHero/PageHero';
+import { useSeo } from '../../hooks/useSeo';
 import './NaoEncontrado.css';
 
 export default function NaoEncontrado() {
-  useEffect(() => {
-    document.title = '404 — Página não encontrada | Victor Kauê';
-  }, []);
+  const { t } = useTranslation();
+
+  useSeo({
+    title: t('seo.notFoundTitle'),
+    description: t('seo.notFoundDesc'),
+    path: '/404',
+    noindex: true,
+  });
 
   return (
     <main className="page-404">

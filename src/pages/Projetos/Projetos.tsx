@@ -1,10 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { FiFolder, FiAlertCircle, FiUser, FiBriefcase } from 'react-icons/fi';
 import { useTranslation } from 'react-i18next';
 import { ProjectCard } from '../../components/ui/ProjectCard/ProjectCard';
 import { PageHero } from '../../components/ui/PageHero/PageHero';
 import { projects } from '../../data/projects';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
+import { useSeo } from '../../hooks/useSeo';
 import type { Project } from '../../types';
 import './Projetos.css';
 
@@ -13,9 +14,11 @@ export default function Projetos() {
   const [filter, setFilter] = useState<'todos' | 'pessoal' | 'real'>('todos');
   useScrollReveal([filter]);
 
-  useEffect(() => {
-    document.title = 'Projetos — Victor Kauê';
-  }, []);
+  useSeo({
+    title: t('seo.projectsTitle'),
+    description: t('seo.projectsDesc'),
+    path: '/projetos',
+  });
 
   const personal = projects.filter((p) => p.category === 'pessoal');
   const real = projects.filter((p) => p.category === 'real');

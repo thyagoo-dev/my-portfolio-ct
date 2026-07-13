@@ -1,10 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FiAward, FiExternalLink, FiFilter, FiRotateCcw } from 'react-icons/fi';
 import { PageHero } from '../../components/ui/PageHero/PageHero';
 import { Reveal } from '../../components/ui/Reveal/Reveal';
 import { certificateCategories, certificates } from '../../data/certificates';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
+import { useSeo } from '../../hooks/useSeo';
 import './Certificados.css';
 
 export default function Certificados() {
@@ -12,9 +13,11 @@ export default function Certificados() {
   const [activeCategory, setActiveCategory] = useState('todos');
   useScrollReveal();
 
-  useEffect(() => {
-    document.title = t('certsPage.docTitle');
-  }, [t]);
+  useSeo({
+    title: t('seo.certsTitle'),
+    description: t('seo.certsDesc'),
+    path: '/certificados',
+  });
 
   const filtered = activeCategory === 'todos'
     ? certificates

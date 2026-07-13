@@ -6,6 +6,7 @@ import { SiGithub, SiWhatsapp } from 'react-icons/si';
 import { Button } from '../../components/ui/Button/Button';
 import { PageHero } from '../../components/ui/PageHero/PageHero';
 import { socialLinks } from '../../data/social';
+import { useSeo } from '../../hooks/useSeo';
 import type { ContactFormData } from '../../types';
 import './Contato.css';
 
@@ -28,10 +29,15 @@ export default function Contato() {
   const [sent, setSent] = useState(false);
   const sentTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
+  useSeo({
+    title: t('seo.contactTitle'),
+    description: t('seo.contactDesc'),
+    path: '/contato',
+  });
+
   useEffect(() => {
-    document.title = t('contato.docTitle');
     return () => { if (sentTimer.current) clearTimeout(sentTimer.current); };
-  }, [t]);
+  }, []);
 
   const filledFields = [form.nome, form.email, form.assunto, form.mensagem].filter(Boolean).length;
   const progress = (filledFields / 4) * 100;

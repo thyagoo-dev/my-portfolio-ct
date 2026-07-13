@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { FiArrowRight, FiCheckCircle, FiCpu, FiDatabase, FiLayout, FiMessageCircle, FiPlus } from 'react-icons/fi';
@@ -7,6 +7,8 @@ import { PageHero } from '../../components/ui/PageHero/PageHero';
 import { Reveal } from '../../components/ui/Reveal/Reveal';
 import { TechMarquee } from '../../components/ui/TechMarquee/TechMarquee';
 import { useLanguage } from '../../hooks/useLanguage';
+import { useScrollReveal } from '../../hooks/useScrollReveal';
+import { useSeo } from '../../hooks/useSeo';
 import { testimonials } from '../../data/testimonials';
 import './Servicos.css';
 
@@ -126,10 +128,13 @@ function Faq() {
 export default function Servicos() {
   const { t } = useTranslation();
   const { lang } = useLanguage();
+  useScrollReveal();
 
-  useEffect(() => {
-    document.title = t('servicos.docTitle');
-  }, [t]);
+  useSeo({
+    title: t('seo.servicesTitle'),
+    description: t('seo.servicesDesc'),
+    path: '/servicos',
+  });
 
   return (
     <main className="page-servicos">
