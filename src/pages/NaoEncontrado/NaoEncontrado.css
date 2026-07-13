@@ -1,7 +1,12 @@
 .page-404 {
   min-height: 70vh;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.page-404 .content-section {
+  width: 100%;
 }
 
 .notfound-actions {
