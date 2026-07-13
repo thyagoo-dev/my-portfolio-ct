@@ -13,9 +13,10 @@ Portfólio pessoal de **Victor Kauê** — SPA front-end, sem backend. Conteúdo
 - React 19 + TypeScript (strict) + Vite 6
 - Roteamento: react-router-dom 7 (`BrowserRouter`, SPA)
 - Estilo: Tailwind CSS 4 + CSS por componente + design tokens em `src/styles/variables.css`
-- Animação: framer-motion; 3D: three / @react-three/fiber / drei
+- Animação: framer-motion (transições de página e reveals); background do Hero é Canvas 2D (`FloatingLines`) — three.js/R3F foi removido
+- Tema claro/escuro: `src/theme/ThemeProvider.tsx` (persistido em `localStorage`)
 - i18n: i18next + react-i18next (PT/EN), detecção via `localStorage` (`portfolio-lang`)
-- Ícones: react-icons, lucide-react, devicon
+- Ícones: react-icons (Simple Icons + Feather), resolvidos por nome em `src/components/ui/TechIcon/TechIcon.tsx` (`TECH_ICONS`); devicon foi removido
 - Deploy: Vercel
 
 ## Estrutura

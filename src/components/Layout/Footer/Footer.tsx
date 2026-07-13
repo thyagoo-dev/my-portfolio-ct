@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
-import { FaWhatsapp } from 'react-icons/fa';
-import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
+import { FaLinkedin } from 'react-icons/fa6';
+import { FiMail } from 'react-icons/fi';
+import { SiGithub, SiWhatsapp } from 'react-icons/si';
 import { Link } from 'react-router-dom';
 import { navLinks, socialLinks } from '../../../data/social';
 import './Footer.css';
@@ -11,9 +12,9 @@ export function Footer() {
 
   const socialIconMap = {
     mail: FiMail,
-    linkedin: FiLinkedin,
-    github: FiGithub,
-    whatsapp: FaWhatsapp,
+    linkedin: FaLinkedin,
+    github: SiGithub,
+    whatsapp: SiWhatsapp,
   } as const;
 
   const navKeyByPath = {
@@ -69,11 +70,7 @@ export function Footer() {
           </div>
 
           <div className="footer-contact">
-            <p className="footer-label">Fale Comigo</p>
-            <div className="availability-status">
-              <span className="status-dot"></span>
-              <p>Disponível para novos projetos</p>
-            </div>
+            <p className="footer-label">Ficou na dúvida? Fale Comigo:</p>
             <a href="mailto:kaue.alves.pg@gmail.com" className="footer-email-cta">
               kaue.alves.pg@gmail.com
             </a>

@@ -21,10 +21,10 @@ banco de dados.
 │        │ Layout persistente        │  Rotas (lazy)          │   │
 │        │ Navbar / Footer /         │  /          Home       │   │
 │        │ MobileNavbar / BackToTop  │  /sobre     Sobre      │   │
-│        │ FloatingLines (3D)        │  /projetos  Projetos   │   │
-│        │ Loaders / ScrollToTop     │  /projetos/:id Detalhe │   │
-│        └──────────────────────────┤  /servicos  Servicos   │   │
-│                                    │  /certificados         │   │
+│        │ Loaders / ScrollToTop     │  /projetos  Projetos   │   │
+│        └──────────────────────────┤  /projetos/:id Detalhe │   │
+│                                    │  /servicos  Servicos   │   │
+│   ThemeProvider (claro/escuro)     │  /certificados         │   │
 │   i18next (PT/EN) ◀── localStorage │  /contato   Contato    │   │
 │                                    └───────────────────────┘   │
 │                                                                │
@@ -32,7 +32,7 @@ banco de dados.
 └───────────────┬────────────────────────────────┬──────────────┘
                 │ deep-link                       │ links externos
                 ▼                                 ▼
-          WhatsApp (wa.me)              GitHub / LinkedIn / CDN devicon
+          WhatsApp (wa.me)              GitHub / LinkedIn
 ```
 
 Integração externa **em build-time** (não runtime):
@@ -48,13 +48,23 @@ scripts/enrich-projects.mjs ──▶ raw.githubusercontent.com (READMEs)
 - `pages/` — uma pasta por rota; cada página monta seções e consome dados.
 - `components/Layout/` — chrome persistente (Navbar, Footer, loaders, scroll).
 - `components/ui/` — blocos reutilizáveis (Button, PageHero, ProjectCard,
-  ProjectCarousel, TechMarquee, Counter, 3D: Hero3D/FloatingLines).
-- Estilo: Tailwind 4 + CSS por componente + tokens em `styles/variables.css`.
+  ProjectCarousel, TechMarquee, TechIcon, Counter, Reveal, FloatingLines).
+- `FloatingLines` — background animado do Hero em Canvas 2D (three.js/R3F
+  foi removido para cortar ~1 MB de bundle WebGL).
+- Ícones de tecnologia: resolvidos por nome via `TECH_ICONS` em
+  `components/ui/TechIcon/TechIcon.tsx` (react-icons — Simple Icons/Feather).
+  O font-icon devicon foi removido (~1,5 MB).
+- Estilo: Tailwind 4 + CSS por componente + tokens em `styles/variables.css`
+  (+ `light-overrides.css` para o tema claro).
 
 ### Estado / infraestrutura de cliente
 - Roteamento SPA com `react-router-dom` (lazy loading + `Suspense` por rota).
+- Tema claro/escuro em `src/theme/ThemeProvider.tsx` (contexto React,
+  persistido em `localStorage`; tokens do tema claro em
+  `styles/light-overrides.css`).
 - i18n com `i18next` + `react-i18next`; idioma persiste em `localStorage`
-  (`portfolio-lang`).
+  (`portfolio-lang`). Cobre a UI; o conteúdo de `src/data/` é PT-BR fixo
+  (ver DECISIONS.md).
 - Animações com `framer-motion` (transições de página em `AnimatePresence`).
 - Hooks locais em `src/hooks/` (ex.: `useScrollPosition`, `useLanguage`).
 
@@ -77,8 +87,10 @@ scripts/enrich-projects.mjs ──▶ raw.githubusercontent.com (READMEs)
 | --- | --- | --- |
 | WhatsApp `wa.me` | Runtime | Deep-link do formulário de contato. |
 | GitHub / LinkedIn / e-mail | Runtime | Links sociais e repositórios. |
-| CDN devicon (jsdelivr) | Runtime | Ícones de tecnologias (README e UI). |
 | `raw.githubusercontent.com` | Build-time | Enriquecimento de projetos (script opcional). |
+
+Ícones de tecnologia são bundlados via react-icons — não há mais CDN devicon
+em runtime.
 
 ## Decisões-chave
 

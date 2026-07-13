@@ -1,15 +1,53 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { FiBookOpen, FiBriefcase, FiCalendar, FiChevronRight, FiCode, FiGithub, FiLinkedin, FiMail, FiMapPin, FiTarget, FiTool } from 'react-icons/fi';
+import { FiBookOpen, FiBriefcase, FiCalendar, FiChevronRight, FiCode, FiMail, FiMapPin, FiTarget } from 'react-icons/fi';
+import { FaLinkedin } from 'react-icons/fa6';
+import { SiGithub } from 'react-icons/si';
 import { Button } from '../../components/ui/Button/Button';
-import { TechGlyph, hasTechIcon } from '../../components/ui/TechIcon/TechIcon';
+import { TechGlyph } from '../../components/ui/TechIcon/TechIcon';
+import { TechMarquee } from '../../components/ui/TechMarquee/TechMarquee';
 import { education } from '../../data/education';
 import { experiences } from '../../data/experiences';
-import { expertise } from '../../data/expertise';
 import { socialLinks } from '../../data/social';
 import { useLanguage } from '../../hooks/useLanguage';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
+import { useSeo } from '../../hooks/useSeo';
+import type { ExperienceRole } from '../../types';
 import './Sobre.css';
+
+/** Monograma (iniciais) para empresas sem logo. Ignora conectivos e sufixos após "—" ou parênteses. */
+function companyInitials(name: string): string {
+  const stop = new Set(['do', 'de', 'da', 'dos', 'das', 'e']);
+  const clean = name.replace(/[—–-].*$/, '').replace(/\(.*?\)/g, '').trim();
+  const words = clean.split(/\s+/).filter((w) => w && !stop.has(w.toLowerCase()));
+  return (words.slice(0, 2).map((w) => w[0]).join('') || name[0] || '?').toUpperCase();
+}
+
+/** Corpo de um cargo: descrição + atividades + chips de skills. */
+function ExperienceBody({ role }: { role: ExperienceRole }) {
+  return (
+    <>
+      {role.description && <p className="li-exp-desc">{role.description}</p>}
+      {role.activities && role.activities.length > 0 && (
+        <ul className="li-exp-acts">
+          {role.activities.map((a, i) => (
+            <li key={i}>{a}</li>
+          ))}
+        </ul>
+      )}
+      {role.skills && role.skills.length > 0 && (
+        <div className="li-exp-skills">
+          {role.skills.map((s) => (
+            <span className="li-exp-skill" key={s}>
+              <TechGlyph name={s} size={13} className="li-exp-skill-icon" />
+              {s}
+            </span>
+          ))}
+        </div>
+      )}
+    </>
+  );
+}
 
 export default function Sobre() {
   const { t } = useTranslation();
@@ -18,9 +56,11 @@ export default function Sobre() {
   const [githubStatsError, setGithubStatsError] = useState(false);
   useScrollReveal();
 
-  useEffect(() => {
-    document.title = 'Sobre - Victor Kauê';
-  }, []);
+  useSeo({
+    title: t('seo.aboutTitle'),
+    description: t('seo.aboutDesc'),
+    path: '/sobre',
+  });
 
   const menuItems = [
     { id: 'intro', label: t('about.title'), icon: <FiTarget size={16} /> },
@@ -28,7 +68,7 @@ export default function Sobre() {
     { id: 'experience', label: 'Experiencia', icon: <FiBriefcase size={16} /> },
     { id: 'education', label: 'Formacao', icon: <FiBookOpen size={16} /> },
     { id: 'expertise', label: 'Expertise técnica', icon: <FiCode size={16} /> },
-    { id: 'github', label: 'GitHub', icon: <FiGithub size={16} /> },
+    { id: 'github', label: 'GitHub', icon: <SiGithub size={16} /> },
   ];
 
   const scrollToSection = (id: string) => {
@@ -113,8 +153,8 @@ export default function Sobre() {
               <div className="socials-list">
                 {socialLinks.filter((s) => ['GitHub', 'LinkedIn', 'Email'].includes(s.name)).map((link) => (
                   <a key={link.name} href={link.url} target="_blank" rel="noopener noreferrer" className="social-btn">
-                    {link.name === 'GitHub' && <FiGithub size={16} />}
-                    {link.name === 'LinkedIn' && <FiLinkedin size={16} />}
+                    {link.name === 'GitHub' && <SiGithub size={16} />}
+                    {link.name === 'LinkedIn' && <FaLinkedin size={16} />}
                     {link.name === 'Email' && <FiMail size={16} />}
                     {link.name}
                   </a>
@@ -147,28 +187,77 @@ export default function Sobre() {
               </div>
             </section>
 
-            <section id="experience" className="about-content-section reveal-on-scroll">
-              <h2 className="section-title">
+            <section id="experience" className="about-content-section">
+              <h2 className="section-title reveal-on-scroll">
                 <FiBriefcase size={24} />
-                Experiencia Profissional
+                Experiência Profissional
               </h2>
-              <div className="experience-timeline">
-                {experiences.map((exp) => (
-                  <div className="experience-block" key={exp.id}>
-                    <div className="exp-dot" />
-                    <div className="exp-header">
-                      <h3>{exp.title}</h3>
-                      <span className="exp-period">{exp.period}</span>
-                    </div>
-                    <p className="exp-company">{exp.company} - {exp.location}</p>
-                    {exp.description && <p className="exp-desc">{exp.description}</p>}
-                    {exp.achievements.length > 0 && (
-                      <ul className="exp-list">
-                        {exp.achievements.map((a, i) => <li key={i}>{a}</li>)}
-                      </ul>
-                    )}
-                  </div>
-                ))}
+              <div className="li-exp-list">
+                {experiences.map((group) => {
+                  const multi = group.roles.length > 1;
+                  const primary = group.roles[0];
+                  if (!primary) return null;
+                  return (
+                    <article className="li-exp-item reveal-on-scroll" key={group.id}>
+                      <div className="li-exp-head">
+                        <div className="li-exp-logo">
+                          {group.logo ? (
+                            <img src={group.logo} alt={group.company} loading="lazy" decoding="async" />
+                          ) : (
+                            <span className="li-exp-monogram">{companyInitials(group.company)}</span>
+                          )}
+                        </div>
+                        <div className="li-exp-head-text">
+                          {multi ? (
+                            <>
+                              <h3 className="li-exp-primary">{group.company}</h3>
+                              <p className="li-exp-secondary">
+                                {[group.employmentType, group.totalDuration].filter(Boolean).join(' · ')}
+                              </p>
+                              {group.location && <p className="li-exp-muted">{group.location}</p>}
+                            </>
+                          ) : (
+                            (() => {
+                              const r = primary;
+                              const locLine = [r.location, r.workMode].filter(Boolean).join(' · ');
+                              return (
+                                <>
+                                  <h3 className="li-exp-primary">{r.title}</h3>
+                                  <p className="li-exp-secondary">
+                                    {[group.company, r.employmentType].filter(Boolean).join(' · ')}
+                                  </p>
+                                  <p className="li-exp-muted">
+                                    {[r.period, r.duration].filter(Boolean).join(' · ')}
+                                  </p>
+                                  {locLine && <p className="li-exp-muted">{locLine}</p>}
+                                </>
+                              );
+                            })()
+                          )}
+                        </div>
+                      </div>
+
+                      {multi ? (
+                        <div className="li-exp-roles">
+                          {group.roles.map((r, ri) => (
+                            <div className="li-exp-role" key={ri}>
+                              <span className="li-exp-role-dot" />
+                              <h4 className="li-exp-role-title">{r.title}</h4>
+                              <p className="li-exp-muted">
+                                {[r.period, r.duration].filter(Boolean).join(' · ')}
+                              </p>
+                              <ExperienceBody role={r} />
+                            </div>
+                          ))}
+                        </div>
+                      ) : (
+                        <div className="li-exp-body">
+                          <ExperienceBody role={primary} />
+                        </div>
+                      )}
+                    </article>
+                  );
+                })}
               </div>
             </section>
 
@@ -195,26 +284,12 @@ export default function Sobre() {
                 <FiCode size={24} />
                 Expertise técnica
               </h2>
-              <div className="expertise-grid">
-                {expertise.map((cat) => (
-                  <div className="expertise-box" key={cat.title}>
-                    <h4 className="expertise-title">{cat.title}</h4>
-                    <div className="expertise-tags">
-                      {cat.items.map((item) => (
-                        <div className="tech-tag" key={item.name}>
-                          {hasTechIcon(item.name) ? <TechGlyph name={item.name} size={16} /> : <FiTool size={14} />}
-                          <span>{item.name}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
+              <TechMarquee />
             </section>
 
             <section id="github" className="about-content-section reveal-on-scroll">
               <h2 className="section-title">
-                <FiGithub size={24} />
+                <SiGithub size={24} />
                 GitHub Stats
               </h2>
               {!githubStatsError ? (
@@ -244,7 +319,7 @@ export default function Sobre() {
                 <div className="github-fallback-card">
                   <p>Confira minhas atividades diretamente no meu perfil:</p>
                   <Button href="https://github.com/Victorkaue333" variant="outline" external>
-                    <FiGithub size={18} />
+                    <SiGithub size={18} />
                     Ver GitHub
                   </Button>
                 </div>

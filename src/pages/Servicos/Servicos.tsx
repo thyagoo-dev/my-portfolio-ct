@@ -1,17 +1,140 @@
-import { useEffect } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { FiArrowRight, FiCheckCircle, FiCpu, FiDatabase, FiLayout } from 'react-icons/fi';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { FiArrowRight, FiCheckCircle, FiCpu, FiDatabase, FiLayout, FiMessageCircle, FiPlus } from 'react-icons/fi';
 import { Button } from '../../components/ui/Button/Button';
 import { PageHero } from '../../components/ui/PageHero/PageHero';
 import { Reveal } from '../../components/ui/Reveal/Reveal';
+import { TechMarquee } from '../../components/ui/TechMarquee/TechMarquee';
+import { useLanguage } from '../../hooks/useLanguage';
+import { useScrollReveal } from '../../hooks/useScrollReveal';
+import { useSeo } from '../../hooks/useSeo';
+import { testimonials } from '../../data/testimonials';
 import './Servicos.css';
+
+/** Seção "Como eu trabalho" — os passos deslizam na horizontal conforme a página rola. */
+function ApproachHorizontal() {
+  const { t } = useTranslation();
+  const sectionRef = useRef<HTMLElement>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const [distance, setDistance] = useState(0);
+
+  const steps = [1, 2, 3, 4].map((n) => ({
+    num: `0${n}`,
+    title: t(`servicos.step${n}Title`),
+    desc: t(`servicos.step${n}Desc`),
+  }));
+
+  // Mede quanto o track precisa deslizar (largura total - viewport visível).
+  useLayoutEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
+
+    const calc = () => {
+      const viewport = track.parentElement?.clientWidth ?? 0;
+      setDistance(Math.max(0, track.scrollWidth - viewport));
+    };
+    calc();
+
+    // Recalcula quando o track muda de tamanho (fontes, resize, i18n).
+    const ro = new ResizeObserver(calc);
+    ro.observe(track);
+    if (track.parentElement) ro.observe(track.parentElement);
+    window.addEventListener('resize', calc);
+    window.addEventListener('load', calc);
+    return () => {
+      ro.disconnect();
+      window.removeEventListener('resize', calc);
+      window.removeEventListener('load', calc);
+    };
+  }, [t]);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ['start start', 'end end'],
+  });
+  const x = useTransform(scrollYProgress, [0, 1], [0, -distance]);
+
+  return (
+    <section
+      ref={sectionRef}
+      className="approach-pin"
+      // Altura extra = distância horizontal, para o scroll vertical virar movimento lateral 1:1.
+      style={{ height: `calc(100vh + ${distance}px)` }}
+    >
+      <div className="approach-sticky">
+        <div className="container approach-head">
+          <h2 className="section-title">{t('servicos.approachTitle')}</h2>
+          <p className="section-subtitle">{t('servicos.approachSubtitle')}</p>
+        </div>
+
+        <div className="approach-viewport">
+          <motion.div ref={trackRef} style={{ x }} className="approach-track">
+            {steps.map((step) => (
+              <article key={step.num} className="approach-panel">
+                <span className="approach-num">{step.num}</span>
+                <h3>{step.title}</h3>
+                <p>{step.desc}</p>
+              </article>
+            ))}
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/** FAQ com acordeão. */
+function Faq() {
+  const { t } = useTranslation();
+  const [open, setOpen] = useState<number | null>(0);
+  const items = [1, 2, 3, 4].map((n) => ({
+    q: t(`servicos.faq${n}Q`),
+    a: t(`servicos.faq${n}A`),
+  }));
+
+  return (
+    <section className="services-faq content-section">
+      <div className="container">
+        <div className="section-header reveal-on-scroll">
+          <h2 className="section-title">{t('servicos.faqTitle')}</h2>
+        </div>
+        <div className="faq-list">
+          {items.map((item, i) => {
+            const isOpen = open === i;
+            return (
+              <div key={i} className={`faq-item ${isOpen ? 'open' : ''}`}>
+                <button
+                  type="button"
+                  className="faq-question"
+                  aria-expanded={isOpen}
+                  onClick={() => setOpen(isOpen ? null : i)}
+                >
+                  <span>{item.q}</span>
+                  <FiPlus className="faq-icon" aria-hidden="true" />
+                </button>
+                <div className="faq-answer" role="region">
+                  <p>{item.a}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export default function Servicos() {
   const { t } = useTranslation();
+  const { lang } = useLanguage();
+  useScrollReveal();
 
-  useEffect(() => {
-    document.title = t('servicos.docTitle');
-  }, [t]);
+  useSeo({
+    title: t('seo.servicesTitle'),
+    description: t('seo.servicesDesc'),
+    path: '/servicos',
+  });
 
   return (
     <main className="page-servicos">
@@ -78,32 +201,58 @@ export default function Servicos() {
         </div>
       </section>
 
-      <section className="services-approach content-section">
+      <ApproachHorizontal />
+
+      {/* Faixa de tecnologias */}
+      <section className="services-tech content-section">
         <div className="container">
-          <div className="approach-content">
-            <h2 className="section-title">{t('servicos.approachTitle')}</h2>
-            <div className="steps-v2">
-              <div className="step-v2">
-                <span className="step-num">01</span>
-                <h4>{t('servicos.step1Title')}</h4>
-                <p>{t('servicos.step1Desc')}</p>
-              </div>
-              <div className="step-v2">
-                <span className="step-num">02</span>
-                <h4>{t('servicos.step2Title')}</h4>
-                <p>{t('servicos.step2Desc')}</p>
-              </div>
-              <div className="step-v2">
-                <span className="step-num">03</span>
-                <h4>{t('servicos.step3Title')}</h4>
-                <p>{t('servicos.step3Desc')}</p>
-              </div>
-              <div className="step-v2">
-                <span className="step-num">04</span>
-                <h4>{t('servicos.step4Title')}</h4>
-                <p>{t('servicos.step4Desc')}</p>
-              </div>
+          <div className="section-header reveal-on-scroll">
+            <h2 className="section-title">{t('servicos.techTitle')}</h2>
+            <p className="section-subtitle">{t('servicos.techSubtitle')}</p>
+          </div>
+        </div>
+        <TechMarquee />
+      </section>
+
+      {/* Depoimentos */}
+      <section className="services-testimonials content-section">
+        <div className="container">
+          <div className="section-header reveal-on-scroll">
+            <h2 className="section-title">{t('servicos.testimonialsTitle')}</h2>
+            <p className="section-subtitle">{t('servicos.testimonialsSubtitle')}</p>
+          </div>
+          <div className="testimonials-grid">
+            {testimonials.map((item, i) => (
+              <Reveal key={item.id} delay={i * 0.12}>
+                <figure className="testimonial-card">
+                  <blockquote>“{item.quote[lang]}”</blockquote>
+                  <figcaption>
+                    <span className="testimonial-avatar" aria-hidden="true">{item.initials}</span>
+                    <span className="testimonial-meta">
+                      <strong>{item.name}</strong>
+                      <small>{item.role[lang]}</small>
+                    </span>
+                  </figcaption>
+                </figure>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <Faq />
+
+      {/* CTA final */}
+      <section className="services-cta content-section">
+        <div className="container">
+          <div className="cta-panel reveal-on-scroll">
+            <div className="cta-copy">
+              <h2>{t('servicos.ctaTitle')}</h2>
+              <p>{t('servicos.ctaDesc')}</p>
             </div>
+            <Button href="/contato" variant="primary">
+              <FiMessageCircle /> {t('servicos.ctaButton')}
+            </Button>
           </div>
         </div>
       </section>

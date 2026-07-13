@@ -43,6 +43,17 @@
     to { opacity: 0; visibility: hidden; }
 }
 
+/* ── Luz que percorre a borda dos cards ── */
+@property --border-angle {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+@keyframes borderLight {
+    to { --border-angle: 360deg; }
+}
+
 /* ── Glow pulse suave para acentos ── */
 @keyframes glowPulse {
     0%, 100% { box-shadow: 0 0 20px rgba(245, 158, 11, 0.15), 0 0 60px rgba(245, 158, 11, 0.05); }

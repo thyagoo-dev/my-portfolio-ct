@@ -1,10 +1,12 @@
-import { useState, useEffect } from 'react';
-import { FiFolder, FiAlertCircle } from 'react-icons/fi';
+import { useState } from 'react';
+import { FiFolder, FiAlertCircle, FiUser, FiBriefcase } from 'react-icons/fi';
 import { useTranslation } from 'react-i18next';
 import { ProjectCard } from '../../components/ui/ProjectCard/ProjectCard';
 import { PageHero } from '../../components/ui/PageHero/PageHero';
 import { projects } from '../../data/projects';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
+import { useSeo } from '../../hooks/useSeo';
+import type { Project } from '../../types';
 import './Projetos.css';
 
 export default function Projetos() {
@@ -12,11 +14,21 @@ export default function Projetos() {
   const [filter, setFilter] = useState<'todos' | 'pessoal' | 'real'>('todos');
   useScrollReveal([filter]);
 
-  useEffect(() => {
-    document.title = 'Projetos — Victor Kauê';
-  }, []);
+  useSeo({
+    title: t('seo.projectsTitle'),
+    description: t('seo.projectsDesc'),
+    path: '/projetos',
+  });
 
-  const filtered = filter === 'todos' ? projects : projects.filter((p) => p.category === filter);
+  const personal = projects.filter((p) => p.category === 'pessoal');
+  const real = projects.filter((p) => p.category === 'real');
+
+  const sections: { key: 'pessoal' | 'real'; items: Project[]; icon: React.ReactNode }[] = [
+    { key: 'pessoal', items: personal, icon: <FiUser size={20} /> },
+    { key: 'real', items: real, icon: <FiBriefcase size={20} /> },
+  ];
+
+  const visible = sections.filter((s) => (filter === 'todos' || filter === s.key) && s.items.length > 0);
 
   return (
     <main className="page-projetos">
@@ -41,13 +53,24 @@ export default function Projetos() {
             ))}
           </div>
 
-          <div className="projects-grid">
-            {filtered.map((project) => (
-              <ProjectCard key={project.id} project={project} />
-            ))}
-          </div>
+          {visible.map((s) => (
+            <section key={s.key} className="projects-section">
+              <div className="projects-section-header">
+                <span className="projects-section-icon">{s.icon}</span>
+                <h2 className="projects-section-title">
+                  {t(`projects.sections.${s.key === 'pessoal' ? 'personal' : 'real'}`)}
+                </h2>
+                <span className="projects-section-count">{s.items.length}</span>
+              </div>
+              <div className="projects-grid">
+                {s.items.map((project) => (
+                  <ProjectCard key={project.id} project={project} />
+                ))}
+              </div>
+            </section>
+          ))}
 
-          {filtered.length === 0 && (
+          {visible.length === 0 && (
             <div className="no-projects-found">
               <FiAlertCircle size={32} />
               <p>{t('projects.noFound')}</p>
