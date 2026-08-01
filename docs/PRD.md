@@ -1,4 +1,4 @@
-# PRD — Portfólio Victor Kauê
+# PRD — Portfólio Cicero Thyago
 
 Requisitos do produto. Complementa [PROJECT_CONTEXT.md](../PROJECT_CONTEXT.md).
 

@@ -42,7 +42,7 @@ Mensagem:
 **Exemplo:**
 
 ```
-https://wa.me/5587981774951?text=Nova%20mensagem%20do%20Portf%C3%B3lio%0A%0ANome%3A%20...
+https://wa.me/5588988723523?text=Nova%20mensagem%20do%20Portf%C3%B3lio%0A%0ANome%3A%20...
 ```
 
 Não há resposta programática — abre o WhatsApp do usuário.
@@ -53,7 +53,7 @@ Runtime. Navegação direta (`<a target="_blank" rel="noopener noreferrer">`).
 
 - Definidos em `src/data/social.ts` (`SocialLink`): e-mail, LinkedIn, GitHub, WhatsApp.
 - Repositórios de projeto: campos `github` / `online` de cada `Project`.
-- Currículo: `public/docs/Curriculo/Curriculo_Victor_Kaue.pdf`.
+- Currículo: `public/docs/Curriculo/Curriculo_Cicero_Thyago.pdf`.
 - Certificados: PDFs em `public/Certificados/pdfs/`.
 
 ## Contrato 3 — Enriquecimento de projetos (build-time, opcional)

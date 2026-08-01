@@ -26,7 +26,7 @@ export function ProjectCard({ project, withReveal = true }: ProjectCardProps) {
       : ['Stack em atualizacao'];
   const detailPath = project.detailPath || `/projetos/${project.slug || project.id}`;
   const imageSrc = project.image || '/images/placeholders/project-placeholder.svg';
-  const githubUrl = project.github || 'https://github.com/Victorkaue333';
+  const githubUrl = project.github || 'https://github.com/thyagoo-dev';
 
   return (
     <div className={`project-card ${withReveal ? 'reveal-on-scroll' : ''}`} id={`project-${project.id}`}>
@@ -60,8 +60,8 @@ export function ProjectCard({ project, withReveal = true }: ProjectCardProps) {
           </div>
 
           <div className="project-author">
-            <img src="/images/eu/victor.webp" alt="Victor Kauê" className="author-avatar" width="24" height="24" loading="lazy" decoding="async" />
-            <span className="author-name">Victor Kauê</span>
+            <img src="/images/eu/cicerothyago.webp" alt="Cicero Thyago" className="author-avatar" width="24" height="24" loading="lazy" decoding="async" />
+            <span className="author-name">Cicero Thyago</span>
           </div>
 
           <p className="project-desc">{projectDescription}</p>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './FirstVisitLoader.css';
 
-const STORAGE_KEY = 'vk_visited';
+const STORAGE_KEY = 'ct_visited';
 
 function safeGet(key: string): string | null {
   try { return localStorage.getItem(key); } catch { return null; }

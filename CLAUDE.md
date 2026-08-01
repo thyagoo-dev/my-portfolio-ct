@@ -4,7 +4,7 @@ Regras para IA atuar neste repositório. Objetivo, conciso.
 
 ## Identidade do projeto
 
-Portfólio pessoal de **Victor Kauê** — SPA front-end, sem backend. Conteúdo
+Portfólio pessoal de **Cicero Thyago** — SPA front-end, sem backend. Conteúdo
 (projetos, experiências, certificados) vive como dados TypeScript em
 `src/data/`. Idioma do produto: PT-BR (com EN via i18n). Idioma dos docs: PT-BR.
 

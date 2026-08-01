@@ -12,46 +12,48 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DIST = join(__dirname, '..', 'dist');
-const SITE = 'https://victor-kaue.vercel.app';
-const DEFAULT_IMAGE = `${SITE}/images/fotos-projetos-pessoais/vk-portifolio/victor_kaue.webp`;
+
+// ALTERE AQUI COM O DOMÍNIO ONDE O SEU PORTFÓLIO FICARÁ HOSPEDADO
+const SITE = 'https://SEU_DOMINIO.vercel.app';
+const DEFAULT_IMAGE = `${SITE}/images/fotos-projetos-pessoais/ct-portifolio/cicerothyago.webp`;
 
 // Espelha src/i18n.ts (seo.*, PT — idioma padrão indexado).
 const routes = [
   {
     path: '/',
-    title: 'Victor Kauê | Desenvolvedor Full Stack',
+    title: 'Cicero Thyago | Desenvolvedor Full Stack',
     description:
-      'Portfólio de Victor Kauê — desenvolvedor backend/full-stack com foco em Python, Django, APIs escaláveis e sistemas web modernos, da ideia ao deploy.',
+      'Portfólio de Cicero Thyago — desenvolvedor backend/full-stack com foco em Java, Spring Boot, APIs escaláveis e sistemas web modernos, da ideia ao deploy.',
   },
   {
     path: '/sobre',
-    title: 'Sobre — Victor Kauê',
+    title: 'Sobre — Cicero Thyago',
     description:
-      'Conheça Victor Kauê: desenvolvedor backend/full-stack — trajetória técnica, experiência profissional, formação e stack de tecnologias.',
+      'Conheça Cicero Thyago: desenvolvedor backend/full-stack — trajetória técnica, experiência profissional, formação e stack de tecnologias.',
   },
   {
     path: '/projetos',
-    title: 'Projetos — Victor Kauê',
+    title: 'Projetos — Cicero Thyago',
     description:
-      'Projetos selecionados de Victor Kauê: sistemas web, APIs REST, dashboards e aplicações feitas com Python, Django, React e TypeScript.',
+      'Projetos selecionados de Cicero Thyago: sistemas web, APIs REST, dashboards e aplicações feitas com Java, Spring Boot, React e TypeScript.',
   },
   {
     path: '/servicos',
-    title: 'Serviços — Victor Kauê',
+    title: 'Serviços — Cicero Thyago',
     description:
-      'Serviços de Victor Kauê: sistemas customizados, desenvolvimento web, APIs REST e consultoria tech — robustos, escaláveis e de alta performance.',
+      'Serviços de Cicero Thyago: sistemas customizados, desenvolvimento web, APIs REST e consultoria tech — robustos, escaláveis e de alta performance.',
   },
   {
     path: '/certificados',
-    title: 'Certificados — Victor Kauê',
+    title: 'Certificados — Cicero Thyago',
     description:
-      'Certificações e cursos concluídos por Victor Kauê em backend, frontend e engenharia de software.',
+      'Certificações e cursos concluídos por Cicero Thyago em backend, frontend, engenharia de software e infraestrutura de redes.',
   },
   {
     path: '/contato',
-    title: 'Contato — Victor Kauê',
+    title: 'Contato — Cicero Thyago',
     description:
-      'Vamos conversar sobre seu projeto. Fale com Victor Kauê e transforme sua ideia em um produto digital robusto e escalável.',
+      'Vamos conversar sobre seu projeto. Fale com Cicero Thyago e transforme sua ideia em um produto digital robusto e escalável.',
   },
 ];
 

@@ -32,8 +32,8 @@ export function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <Link to="/" className="logo">
-              <span>Victor</span>
-              <span>Kauê</span>
+              <span>Cicero</span>
+              <span>Thyago</span>
             </Link>
             <p>
               Desenvolvedor full-stack com foco em sistemas web escaláveis, React, TypeScript, Python e Django.
@@ -71,8 +71,8 @@ export function Footer() {
 
           <div className="footer-contact">
             <p className="footer-label">Ficou na dúvida? Fale Comigo:</p>
-            <a href="mailto:kaue.alves.pg@gmail.com" className="footer-email-cta">
-              kaue.alves.pg@gmail.com
+            <a href="mailto:c.thyago.of@gmail.com" className="footer-email-cta">
+              c.thyago.of@gmail.com
             </a>
             <div className="footer-contact-icons">
               {socialLinks.map((s) => (
@@ -95,7 +95,7 @@ export function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>© {year} Victor Kauê - Todos os direitos reservados.</p>
+          <p>© {year} Cicero Thyago - Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

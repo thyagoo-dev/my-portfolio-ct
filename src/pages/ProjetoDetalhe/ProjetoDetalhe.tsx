@@ -26,7 +26,7 @@ export default function ProjetoDetalhe() {
   useScrollReveal();
 
   useSeo({
-    title: project ? `${project.title} — Victor Kauê` : t('seo.notFoundTitle'),
+    title: project ? `${project.title} — Cicero Thyago` : t('seo.notFoundTitle'),
     description: project ? (project.shortDescription || project.description) : t('seo.notFoundDesc'),
     path: `/projetos/${id ?? ''}`,
     image: project?.image,
@@ -58,7 +58,7 @@ export default function ProjetoDetalhe() {
   const techs = project.technologies?.length ? project.technologies : project.stack ?? [];
   const heroTechs = techs.slice(0, 6);
   const extraTechs = Math.max(0, techs.length - heroTechs.length);
-  const github = project.github || 'https://github.com/Victorkaue333';
+  const github = project.github || 'https://github.com/thyagoo-dev';
 
   const hasShots = !!project.screenshots && project.screenshots.length > 0;
   const isPlaceholder = !project.image || project.image.includes('placeholder');

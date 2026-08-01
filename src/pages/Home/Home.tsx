@@ -85,9 +85,10 @@ export default function Home() {
               </Reveal>
               <Reveal delay={0.7}>
                 <div className="hero-socials">
-                  <a href="https://github.com/Victorkaue333" target="_blank" rel="noopener noreferrer" className="social-icon github" aria-label="GitHub"><SiGithub size={20} /></a>
-                  <a href="https://linkedin.com/in/victorkaue" target="_blank" rel="noopener noreferrer" className="social-icon linkedin" aria-label="LinkedIn"><FaLinkedin size={20} /></a>
-                  <a href="mailto:kaue.alves.pg@gmail.com" className="social-icon email" aria-label="Email"><FiMail size={20} /></a>
+                  {/* ALTERE AQUI COM SEUS LINKS REAIS DO GITHUB, LINKEDIN E SEU EMAIL */}
+                  <a href="https://github.com/SEU_USUARIO_GITHUB" target="_blank" rel="noopener noreferrer" className="social-icon github" aria-label="GitHub"><SiGithub size={20} /></a>
+                  <a href="https://linkedin.com/in/SEU_USUARIO_LINKEDIN" target="_blank" rel="noopener noreferrer" className="social-icon linkedin" aria-label="LinkedIn"><FaLinkedin size={20} /></a>
+                  <a href="mailto:SEU_EMAIL@gmail.com" className="social-icon email" aria-label="Email"><FiMail size={20} /></a>
                 </div>
               </Reveal>
             </div>
@@ -98,7 +99,8 @@ export default function Home() {
               <div className="photo-ring" />
               <div className="photo-ring inner" />
               <div className="glass-overlay" />
-              <img src="/images/eu/victorkaue.webp" alt="Victor Kauê" className="hero-image" width={1024} height={1536} fetchPriority="high" />
+              {/* ALTERE AQUI O NOME DA SUA FOTO. Lembre-se de colocar sua foto na pasta public/images/eu/ com o nome cicerothyago.webp (ou mude a extensão se for .png ou .jpg) */}
+              <img src="/images/eu/cicerothyago.webp" alt="Cicero Thyago" className="hero-image" width={1024} height={1536} fetchPriority="high" />
             </div>
           </div>
         </div>

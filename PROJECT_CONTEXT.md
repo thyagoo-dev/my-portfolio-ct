@@ -1,6 +1,6 @@
 # PROJECT_CONTEXT
 
-Contexto de negócio e do problema por trás do portfólio de Victor Kauê.
+Contexto de negócio e do problema por trás do portfólio de Cicero Thyago.
 
 ## Problema que resolve
 
@@ -33,7 +33,7 @@ capacidade em front-end.
 
 1. Gerar oportunidades (entrevistas, propostas de projeto).
 2. Servir como cartão de visita técnico atualizável sem retrabalho.
-3. Reforçar marca pessoal "Victor Kauê / VK Software".
+3. Reforçar marca pessoal "Cicero Thyago / CT Software".
 
 ## Métricas de sucesso
 

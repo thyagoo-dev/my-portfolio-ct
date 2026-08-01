@@ -19,8 +19,8 @@ Valores hoje "configuráveis" estão hard-coded como constantes de código, não
 
 | Constante | Local | Valor |
 | --- | --- | --- |
-| Telefone do WhatsApp | `src/pages/Contato/Contato.tsx` | `5587981774951` |
-| Perfil GitHub padrão | `src/data/projects.ts` | `https://github.com/Victorkaue333` |
+| Telefone do WhatsApp | `src/pages/Contato/Contato.tsx` | `5588988723523` |
+| Perfil GitHub padrão | `src/data/projects.ts` | `https://github.com/thyagoo-dev` |
 | Porta do dev server | `vite.config.ts` | `3000` |
 
 Se no futuro algum valor precisar variar por ambiente, expor via

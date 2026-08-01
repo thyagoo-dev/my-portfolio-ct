@@ -3,27 +3,27 @@ import type { SocialLink } from '../types';
 export const socialLinks: SocialLink[] = [
   {
     name: 'Email',
-    url: 'mailto:kaue.alves.pg@gmail.com',
+    url: 'mailto:c.thyago.of@gmail.com',
     icon: 'mail',
-    detail: 'kaue.alves.pg@gmail.com',
+    detail: 'c.thyago.of@gmail.com',
   },
   {
     name: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/victor-kaue-419926364/',
+    url: 'https://www.linkedin.com/in/thyagoodev/',
     icon: 'linkedin',
-    detail: 'Victor Kauê',
+    detail: 'Cicero Thyago',
   },
   {
     name: 'GitHub',
-    url: 'https://github.com/Victorkaue333',
+    url: 'https://github.com/thyagoo-dev',
     icon: 'github',
-    detail: 'Victorkaue333',
+    detail: 'thyagoo-dev',
   },
   {
     name: 'WhatsApp',
-    url: 'https://wa.me/5587981774951',
+    url: 'https://wa.me/5588988723523',
     icon: 'whatsapp',
-    detail: '(87) 98167-7005',
+    detail: '(88) 98872-3523',
   },
 ];
 

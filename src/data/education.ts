@@ -2,17 +2,17 @@ import type { Education } from '../types';
 
 export const education: Education[] = [
   {
-    id: 'ifsertao-gti',
-    institution: 'Instituto Federal do Sertão Pernambucano',
-    course: 'CST em Gestão da Tecnologia da Informação',
-    period: 'mar 2022 - 2026',
+    id: 'ifce-bcc',
+    institution: 'Instituto Federal do Ceará (IFCE)',
+    course: 'Bacharelado em Ciência da Computação',
+    period: 'ago 2023 - jun 2027 (em andamento)',
     icon: 'graduation-cap',
   },
   {
-    id: 'ete-dev',
-    institution: 'ETE - Professor Antônio Carlos Gomes da Costa',
-    course: 'Técnico em Desenvolvimento de Sistemas',
-    period: 'ago 2021 - 2023',
+    id: 'ifce-info',
+    institution: 'Instituto Federal do Ceará (IFCE)',
+    course: 'Técnico em Informática',
+    period: 'jan 2019 - dez 2021',
     icon: 'book-open',
   },
 ];

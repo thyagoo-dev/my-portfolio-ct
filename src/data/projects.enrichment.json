@@ -1,53 +1,59 @@
 [
   {
-    "url": "https://github.com/Victorkaue333/meu_portifolio",
-    "resumo": "",
-    "tecnologias": []
-  },
-  {
-    "url": "https://github.com/Victorkaue333/AgendeAqui",
-    "resumo": "AgendeAqui é um sistema web robusto para agendamento e gerenciamento de salas de aula, projetado para otimizar a utilização dos espaços acadêmicos e facilitar o controle de reservas por professores, coordenadores e admin",
+    "url": "https://github.com/thyagoo-dev/meu-portfolio",
+    "resumo": "Portfólio pessoal e profissional desenvolvido com componentes modernos para apresentar projetos, experiências e certificações de forma dinâmica.",
     "tecnologias": [
-      "Python",
-      "Django",
-      "PostgreSQL",
-      "Bootstrap"
+      "React",
+      "TypeScript",
+      "Tailwind CSS"
     ]
   },
   {
-    "url": "https://github.com/Victorkaue333/OliveiraKids",
-    "resumo": "Sistema web completo desenvolvido em Django para controlar o tempo de uso de carrinhos elétricos infantis.",
+    "url": "https://github.com/thyagoo-dev/hipocampo",
+    "resumo": "Workspace local-first que integra dashboard modular, editor de textos rico (TipTap), calendário e Kanban em um único ambiente persistente no navegador, com autenticação via Auth0.",
     "tecnologias": [
-      "JavaScript",
-      "Python",
-      "Django",
-      "PostgreSQL",
-      "SQLite",
-      "Bootstrap",
-      "HTML",
-      "CSS"
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Auth0"
     ]
   },
   {
-    "url": "https://github.com/Victorkaue333/transcritor-de-entrevistas",
-    "resumo": "> Sistema web de transcrição automática de áudio e vídeo com navegação por timestamps, identificação de speakers e exportação em múltiplos formatos.",
+    "url": "https://github.com/thyagoo-dev/mofidax",
+    "resumo": "Progressive Web App (PWA) de alta performance para processamento de imagens 100% no lado do cliente, garantindo privacidade extrema utilizando Web Workers.",
     "tecnologias": [
-      "JavaScript",
-      "Python",
-      "HTML",
-      "CSS"
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "JavaScript"
     ]
   },
   {
-    "url": "https://github.com/Victorkaue333/saberes-interculturais-itaparica",
-    "resumo": "O presente site institucional foi desenvolvido para divulgar um projeto acadêmico de pesquisa e extensão voltado à valorização dos saberes tradicionais indígenas da região de Itaparica (mediações de Itacuruba - Pernambuc",
+    "url": "https://github.com/thyagoo-dev/yugioh-multiverse",
+    "resumo": "Plataforma front-end mobile-first criada para catalogar, organizar e apresentar os personagens e as diversas séries do universo e franquia de Yu-Gi-Oh!.",
     "tecnologias": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ]
+  },
+  {
+    "url": "https://github.com/thyagoo-dev/multiverse-protocol",
+    "resumo": "Ecossistema Web3 descentralizado na rede Sepolia composto por contratos inteligentes interligados para NFTs, staking dinâmico via oráculos Chainlink e governança (DAO).",
+    "tecnologias": [
+      "Solidity",
       "JavaScript",
-      "Python",
-      "Django",
-      "Bootstrap",
-      "HTML",
-      "CSS"
+      "TypeScript",
+      "Blockchain"
+    ]
+  },
+  {
+    "url": "https://github.com/thyagoo-dev/meu-ifce",
+    "resumo": "Plataforma web unificada desenvolvida para o ecossistema do Instituto Federal do Ceará, centralizando o acesso aos dados acadêmicos e aos serviços de refeitório dos estudantes.",
+    "tecnologias": [
+      "Next.js",
+      "TypeScript",
+      "React"
     ]
   }
 ]

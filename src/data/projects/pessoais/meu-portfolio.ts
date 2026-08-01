@@ -9,9 +9,9 @@ export const meuPortfolio: Project = {
     'Projeto desenvolvido para apresentar meu trabalho, projetos e posicionamento profissional como desenvolvedor full-stack.',
   description:
     'Projeto desenvolvido para apresentar meu trabalho, projetos e posicionamento profissional como desenvolvedor full-stack.',
-  image: '/images/fotos-projetos-pessoais/vk-portifolio/logotipo-vk.webp',
-  github: 'https://github.com/Victorkaue333/meu_portifolio',
-  online: 'https://victor-kaue.vercel.app/',
+  image: '/images/fotos-projetos-pessoais/ct-portifolio/logotipo-ct.webp',
+  github: 'https://github.com/thyagoo-dev/meu_portifolio',
+  online: 'https://cicero-thyago.vercel.app/',
   detailPath: '/projetos/meu-portfolio',
   technologies: ['React', 'TypeScript', 'Vite', 'CSS'],
   stack: ['React', 'TypeScript', 'Vite', 'CSS'],
@@ -49,7 +49,7 @@ export const meuPortfolio: Project = {
     ],
   },
   screenshots: [
-    '/images/fotos-projetos-pessoais/vk-portifolio/logotipo-vk.webp',
-    '/images/fotos-projetos-pessoais/vk-portifolio/victor_kaue.webp',
+    '/images/fotos-projetos-pessoais/ct-portifolio/logotipo-ct.webp',
+    '/images/fotos-projetos-pessoais/ct-portifolio/cicerothyago.webp',
   ],
 };

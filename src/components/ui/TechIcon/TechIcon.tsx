@@ -4,16 +4,17 @@ import {
   FiCpu, FiZap, FiSmartphone, FiCloud, FiSearch, FiCalendar,
   FiPackage, FiLayout, FiCode, FiTrendingUp, FiGlobe, FiLayers, FiBarChart2,
   FiPenTool, FiClipboard, FiMessageCircle, FiEdit3, FiDatabase, FiRefreshCw,
-  FiShare2, FiBookOpen, FiPlayCircle,
+  FiShare2, FiBookOpen, FiPlayCircle, FiBox, FiLink, FiShield
 } from 'react-icons/fi';
-import { FaAws } from 'react-icons/fa';
+import { FaAws, FaJava } from 'react-icons/fa';
 import {
   SiPython, SiJavascript, SiTypescript, SiReact, SiVite, SiCss, SiHtml5,
   SiDjango, SiFastapi, SiPytorch, SiOpenai, SiPhp, SiLaravel, SiBootstrap,
   SiPostgresql, SiMysql, SiSqlite, SiMongodb, SiDocker, SiNginx, SiGit,
   SiGithub, SiGunicorn, SiNodedotjs, SiHtmx, SiDbeaver, SiBruno,
   SiNextdotjs, SiNestjs, SiTailwindcss, SiShadcnui, SiFramer, SiRedis,
-  SiJest, SiSupabase, SiFlutter, SiLinux, SiSocketdotio,
+  SiJest, SiSupabase, SiFlutter, SiLinux, SiSocketdotio, SiSolidity, 
+  SiEthereum, SiSpringboot, SiPwa, SiFigma
 } from 'react-icons/si';
 
 interface TechEntry {
@@ -38,6 +39,7 @@ const TECH_ICONS: Record<string, TechEntry> = {
   CSS3: { Icon: SiCss, color: '#3D9CD8' },
   CSS: { Icon: SiCss, color: '#3D9CD8' },
   SQL: { Icon: SiPostgresql, color: '#7AA7E6' },
+  Java: { Icon: FaJava, color: '#007396' },
 
   // Frameworks / libs
   React: { Icon: SiReact, color: '#61DAFB' },
@@ -60,6 +62,16 @@ const TECH_ICONS: Record<string, TechEntry> = {
   Playwright: { Icon: FiPlayCircle, color: '#2EAD33' },
   Flutter: { Icon: SiFlutter, color: '#47C5FB' },
   WebSockets: { Icon: SiSocketdotio, color: '#FFFFFF' },
+  'Spring Boot': { Icon: SiSpringboot, color: '#6DB33F' },
+
+  // Web 3.0 & Blockchain
+  Solidity: { Icon: SiSolidity, color: '#AA6746' },
+  Blockchain: { Icon: SiEthereum, color: '#8A92B2' },
+  'Web 3.0': { Icon: SiEthereum, color: '#8A92B2' },
+  Chainlink: { Icon: FiLink, color: '#2A5ADA' },
+  Hardhat: { Icon: FiBox, color: '#FFF100' },
+  'Ethers.js': { Icon: FiCode, color: '#2C3E50' },
+  OpenZeppelin: { Icon: FiShield, color: '#4E5EE4' },
 
   // Bancos de dados
   PostgreSQL: { Icon: SiPostgresql, color: '#4F86E6' },
@@ -85,6 +97,8 @@ const TECH_ICONS: Record<string, TechEntry> = {
   DBeaver: { Icon: SiDbeaver, color: '#C9A66B' },
   Bruno: { Icon: SiBruno, color: '#F4AA41' },
   SEO: { Icon: FiSearch, color: '#8B5CF6' },
+  Figma: { Icon: SiFigma, color: '#F24E1E' },
+  PWA: { Icon: SiPwa, color: '#5A0FC8' },
 
   // Conceitos abstratos (herdam a cor do contexto)
   IA: { Icon: FiCpu },
@@ -114,6 +128,8 @@ const TECH_ICONS: Record<string, TechEntry> = {
   'Banco de Dados': { Icon: FiDatabase },
   Comunicação: { Icon: FiMessageCircle },
   'Produção de Conteúdo': { Icon: FiEdit3 },
+  'Web Workers': { Icon: FiCpu },
+  'Extensões': { Icon: FiLayout },
 };
 
 export function resolveTechIcon(name: string): TechEntry | undefined {

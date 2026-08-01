@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 
-const SITE_URL = 'https://victor-kaue.vercel.app';
-const DEFAULT_IMAGE = `${SITE_URL}/images/fotos-projetos-pessoais/vk-portifolio/victor_kaue.webp`;
+const SITE_URL = 'https://cicero-thyago.vercel.app';
+const DEFAULT_IMAGE = `${SITE_URL}/images/fotos-projetos-pessoais/ct-portifolio/cicerothyago.webp`;
 
 export interface SeoOptions {
   /** Título completo da aba/SERP. */
@@ -10,7 +10,7 @@ export interface SeoOptions {
   description: string;
   /** Caminho da rota, ex.: '/sobre'. Vira canonical + og:url absolutos. */
   path: string;
-  /** Imagem absoluta para OG/Twitter. Default: foto do Victor. */
+  /** Imagem absoluta para OG/Twitter. Default: foto do Cicero. */
   image?: string;
   /** true em páginas que não devem ser indexadas (ex.: 404). */
   noindex?: boolean;

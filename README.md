@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="public/images/readme/logotipo-vk.webp" alt="Victor Kauê — Portfólio" width="200" />
+<img src="public/images/readme/logotipo-ct.webp" alt="Cicero Thyago — Portfólio" width="200" />
 
-### Portfólio Full Stack de Victor Kauê
+### Portfólio Full Stack de Cicero Thyago
 
 SPA premium, bilíngue (PT/EN) e responsiva, construída para demonstrar capacidade técnica em
 **desenvolvimento web full stack** — backend (Python/Django) como especialidade e
@@ -10,7 +10,7 @@ SPA premium, bilíngue (PT/EN) e responsiva, construída para demonstrar capacid
 
 <br />
 
-[![Status](https://img.shields.io/badge/status-produção-2ea44f?style=for-the-badge)](https://victor-kaue.vercel.app/)
+[![Status](https://img.shields.io/badge/status-produção-2ea44f?style=for-the-badge)](https://cicero-thyago.vercel.app/)
 [![Versão](https://img.shields.io/badge/versão-2.0.0-blue?style=for-the-badge)](docs/CHANGELOG.md)
 
 [![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://react.dev/)
@@ -22,7 +22,7 @@ SPA premium, bilíngue (PT/EN) e responsiva, construída para demonstrar capacid
 [![i18next](https://img.shields.io/badge/i18next-PT%2FEN-26A69A?style=for-the-badge&logo=i18next&logoColor=white)](https://www.i18next.com/)
 [![Vercel](https://img.shields.io/badge/Vercel-Deploy-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
 
-🌐 **Produção:** **<https://victor-kaue.vercel.app/>**
+🌐 **Produção:** **<https://cicero-thyago.vercel.app/>**
 
 </div>
 
@@ -80,7 +80,7 @@ build e compilados no bundle. **O repositório é a fonte de verdade do conteúd
 
 ## 2. Demonstração / Produção
 
-🌐 **Ambiente de produção:** <https://victor-kaue.vercel.app/>
+🌐 **Ambiente de produção:** <https://cicero-thyago.vercel.app/>
 
 ![Home — Hero](public/images/readme/hero.webp)
 
@@ -164,7 +164,7 @@ Visão geral; detalhes completos em [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.m
 
 ```
 Browser (SPA)
-   │  HTTPS  →  https://victor-kaue.vercel.app  (arquivos estáticos)
+   │  HTTPS  →  https://cicero-thyago.vercel.app  (arquivos estáticos)
    ▼
 Vercel (CDN + fallback SPA)
    └─ dist/  ←  npm run build (tsc -b + vite build)
@@ -341,8 +341,8 @@ Sem Docker, sem banco, sem chaves — clona e roda.
 
 ```bash
 # 1. Clonar o repositório
-git clone https://github.com/Victorkaue333/Portifolio-VictorKaue.git
-cd Portifolio-VictorKaue
+git clone https://github.com/thyagoo-dev/Portifolio-CiceroThyago.git
+cd Portifolio-CiceroThyago
 
 # 2. Instalar dependências
 npm install
@@ -408,7 +408,7 @@ flowchart LR
     Dev["Push na branch de produção"] --> V["Vercel detecta"]
     V --> B["npm install + npm run build"]
     B --> P["Publica dist/ na CDN"]
-    P --> URL["https://victor-kaue.vercel.app"]
+    P --> URL["https://cicero-thyago.vercel.app"]
 ```
 
 - **Build command:** `npm run build` · **Output:** `dist/`
@@ -469,18 +469,32 @@ versionados junto ao código.
 | [ENVIRONMENT](docs/ENVIRONMENT.md) | Variáveis de ambiente (nenhuma) + aviso sobre `.env` legado |
 | [DECISIONS](docs/DECISIONS.md) | Decisões técnicas (ADRs) e histórico |
 | [CHANGELOG](docs/CHANGELOG.md) | Histórico de mudanças por versão (SemVer) |
-
+ 
+---
+ 
+## 20. Créditos e Agradecimentos
+ 
+Este projeto é um **fork customizado e adaptado**. A arquitetura original, o design UI/UX e a
+estrutura SPA estática de alto desempenho foram idealizados e desenvolvidos por
+**[Victor Kauê](https://github.com/Victorkaue333)**.
+ 
+Deixo aqui meus agradecimentos públicos pela excelente base de código disponibilizada, que
+serviu como ponto de partida para o desenvolvimento do meu portfólio pessoal. O projeto
+original pode ser encontrado e estudado no repositório abaixo:
+ 
+🔗 **[Victorkaue333/my-portfolio-vk](https://github.com/Victorkaue333/my-portfolio-vk)**
+ 
 ---
 
-## 20. Autor
+## 21. Autor
 
 <table>
   <tr>
     <td align="center" width="220">
-      <a href="https://github.com/Victorkaue333">
-        <img src="https://github.com/Victorkaue333.png" width="100px" alt="Victor Kauê" />
+      <a href="https://github.com/thyagoo-dev">
+        <img src="https://github.com/thyagoo-dev.png" width="100px" alt="Cicero Thyago" />
       </a>
-      <br /><sub><b>Victor Kauê</b></sub>
+      <br /><sub><b>Cicero Thyago</b></sub>
       <br /><sub>Full Stack · Backend (Python/Django) · APIs</sub>
     </td>
   </tr>
@@ -496,10 +510,10 @@ Convenção de commits: **Conventional Commits** (`feat:`, `fix:`, `docs:`, …)
 
 ## 21. Contato
 
-[![GitHub](https://img.shields.io/badge/GitHub-Victorkaue333-181717?style=for-the-badge&logo=github)](https://github.com/Victorkaue333)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Victor%20Kaue-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/victor-kaue-419926364/)
-[![Email](https://img.shields.io/badge/Email-kaue.alves.pg%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:kaue.alves.pg@gmail.com)
-[![WhatsApp](https://img.shields.io/badge/WhatsApp-+55%2087%2098167--7005-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/5587981677005)
+[![GitHub](https://img.shields.io/badge/GitHub-thyagoo-dev-181717?style=for-the-badge&logo=github)](https://github.com/thyagoo-dev)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Cicero%20Thyago-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/thyagoodev/)
+[![Email](https://img.shields.io/badge/Email-c.thyago.of%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:c.thyago.of.com)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-+55%2088%2098872--3523-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/5588988723523)
 
 ---
 

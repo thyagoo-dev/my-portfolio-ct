@@ -6,7 +6,7 @@ Processo de publicação. O projeto é estático (SPA) e é hospedado na **Verce
 
 | Ambiente | Origem | URL |
 | --- | --- | --- |
-| Produção | branch `online` (deploy Vercel) | https://victor-kaue.vercel.app/ |
+| Produção | branch `online` (deploy Vercel) | https://cicero-thyago.vercel.app/ |
 | Preview | qualquer branch / PR | URL de preview gerada pela Vercel |
 | Local | `npm run dev` | http://localhost:3000 |
 

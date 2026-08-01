@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://victor-kaue.vercel.app/sitemap.xml
+Sitemap: https://cicero-thyago.vercel.app/sitemap.xml

@@ -94,16 +94,16 @@ export default function Sobre() {
               <div className="profile-card reveal-on-scroll">
                 <div className="profile-image-container">
                   <div className="profile-glow" aria-hidden="true" />
-                  <img src="/images/eu/victor.webp" alt="Victor Kauê" className="profile-photo" />
+                  <img src="/images/eu/cicerothyago.webp" alt="Cicero Thyago" className="profile-photo" />
                 </div>
 
-                <h1 className="sidebar-name">Victor Kauê</h1>
+                <h1 className="sidebar-name">Cicero Thyago</h1>
                 <h2 className="sidebar-role">Desenvolvedor Full Stack</h2>
 
                 <div className="sidebar-pills">
                   <div className="sidebar-pill">
                     <FiMapPin size={14} />
-                    <span>Itacuruba, PE - Brasil</span>
+                    <span>Iguatu, CE - Brasil</span>
                   </div>
                 </div>
 
@@ -142,12 +142,12 @@ export default function Sobre() {
 
           <div className="about-main-content">
             <div className="content-header reveal-on-scroll">
-              <a href="https://wa.me/5587981774951" target="_blank" rel="noopener noreferrer" className="header-cta">
+              <a href="https://wa.me/88988723523" target="_blank" rel="noopener noreferrer" className="header-cta">
                 <FiCalendar size={16} />
                 Agendar uma chamada
                 <FiChevronRight size={16} />
               </a>
-              <h2 className="main-title">Victor Kauê</h2>
+              <h2 className="main-title">Cicero Thyago</h2>
               <h3 className="main-subtitle">Desenvolvedor Full Stack</h3>
 
               <div className="socials-list">
@@ -294,9 +294,9 @@ export default function Sobre() {
               </h2>
               {!githubStatsError ? (
                 <div className="github-stats-container">
-                  <a href="https://github.com/Victorkaue333" target="_blank" rel="noopener noreferrer" className="github-card-link">
+                  <a href="https://github.com/thyagoo-dev" target="_blank" rel="noopener noreferrer" className="github-card-link">
                     <img
-                      src="https://github-readme-stats.vercel.app/api?username=Victorkaue333&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0B1220&title_color=F59E0B&icon_color=F59E0B&text_color=F3F4F6"
+                      src="https://github-readme-stats.vercel.app/api?username=thyagoo-dev&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0B1220&title_color=F59E0B&icon_color=F59E0B&text_color=F3F4F6"
                       alt="GitHub Stats"
                       className="github-img"
                       loading="lazy"
@@ -304,9 +304,9 @@ export default function Sobre() {
                       onError={() => setGithubStatsError(true)}
                     />
                   </a>
-                  <a href="https://github.com/Victorkaue333" target="_blank" rel="noopener noreferrer" className="github-card-link">
+                  <a href="https://github.com/thyagoo-dev" target="_blank" rel="noopener noreferrer" className="github-card-link">
                     <img
-                      src="https://github-readme-stats.vercel.app/api/top-langs/?username=Victorkaue333&layout=compact&theme=tokyonight&hide_border=true&bg_color=0B1220&title_color=F59E0B&text_color=F3F4F6"
+                      src="https://github-readme-stats.vercel.app/api/top-langs/?username=thyagoo-dev&layout=compact&theme=tokyonight&hide_border=true&bg_color=0B1220&title_color=F59E0B&text_color=F3F4F6"
                       alt="Top Languages"
                       className="github-img"
                       loading="lazy"
@@ -318,7 +318,7 @@ export default function Sobre() {
               ) : (
                 <div className="github-fallback-card">
                   <p>Confira minhas atividades diretamente no meu perfil:</p>
-                  <Button href="https://github.com/Victorkaue333" variant="outline" external>
+                  <Button href="https://github.com/thyagoo-dev" variant="outline" external>
                     <SiGithub size={18} />
                     Ver GitHub
                   </Button>

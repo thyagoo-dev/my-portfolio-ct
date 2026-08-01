@@ -45,9 +45,9 @@ export function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`} id="main-navbar" aria-label="Navegação principal">
       <div className="navbar-container">
-        <Link to="/" className="navbar-logo" aria-label="Victor Kauê - Página inicial">
-          <span className="logo-white">Victor</span>
-          <span className="logo-orange"> Kauê</span>
+        <Link to="/" className="navbar-logo" aria-label="Cicero Thyago - Página inicial">
+          <span className="logo-white">Cicero</span>
+          <span className="logo-orange"> Thyago</span>
         </Link>
 
         <div className="nav-menu-wrapper">
@@ -84,7 +84,7 @@ export function Navbar() {
           </button>
 
           <a
-            href="/docs/Curriculo/Curriculo_Victor_Kaue.pdf"
+            href="/docs/Curriculo/Curriculo_Cicero_Thyago.pdf"
             className="btn-cv"
             target="_blank"
             rel="noopener noreferrer"
